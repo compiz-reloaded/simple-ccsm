@@ -50,18 +50,40 @@ class MainWin:
 
         self.Update()
 
+    def SetupBoxModel(self, box):
+        store = gtk.ListStore(gobject.TYPE_STRING)
+        box.set_model(store)
+        cell = gtk.CellRendererText()
+        box.pack_start(cell, True)
+        box.add_attribute(cell, 'text', 0)
+    
     def Update(self):
         profile = self.Context.CurrentProfile.Name
         self.CurrentProfile.set_markup(self.Layout % (profile != "" and profile or "Default"))
         
         self.FillAnimationBoxes()
+        self.FillAppearenceBox()
 
     def ProfileChanged(self, widget):
         value = int(widget.get_value()) -1
         profile = Profiles[value]
         
         #self.Context.CurrentProfile = profile
+    
+    def FillAppearenceBox(self):
+        box = self.GladeXML.get_widget("desktopPluginChooser") 
+        self.SetupBoxModel(box)
 
+        i = 0
+        self.DesktopPlugins = {}
+        for plugin in self.Context.Plugins.values():
+            if "largedesktop" in plugin.Features:
+                self.DesktopPlugins[plugin.ShortDesc] = plugin
+                box.append_text(plugin.ShortDesc)
+                if plugin.Enabled:
+                    box.set_active(i)
+                i += 1
+    
     def FillAnimationBoxes(self):
         plugin = self.Context.Plugins['animation']
         
@@ -74,14 +96,9 @@ class MainWin:
             box = self.GladeXML.get_widget(boxName)
             setting = plugin.Screens[0][settingName]
             items = sorted(setting.Info[1][2].items(), ccm.EnumSettingSortCompare)
-            store = gtk.ListStore(gobject.TYPE_STRING)
-            box.set_model(store)
-            cell = gtk.CellRendererText()
-            box.pack_start(cell, True)
-            box.add_attribute(cell, 'text', 0)
+            self.SetupBoxModel(box)
             for key, value in items:
-                iter = store.append(None)
-                store.set(iter, 0, key)
+                box.append_text(key)
             box.set_active(setting.Value[0])
 
     def Quit(self, widget):
