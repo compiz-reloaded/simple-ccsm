@@ -27,6 +27,10 @@ import compizconfig as ccs
 import ccm
 
 DataDir = './'
+Profiles = [\
+"Low Effects", "Easy to the eyes", "Medium Effects", "High Effects", "Hollywood got nothing"
+]
+
 
 class MainWin:
     def __init__(self, context):
@@ -38,7 +42,25 @@ class MainWin:
         self.Window.show_all()
         self.Window.connect('destroy', self.Quit)
 
+        profileSelector = self.GladeXML.get_widget("profileSelector")
+        profileSelector.connect('value-changed', self.ProfileChanged)
+
+        self.CurrentProfile = self.GladeXML.get_widget("currentProfile")
+        self.Layout = "<span size='large'><b>Profile:</b> %s</span>" 
+
+        self.Update()
+
+    def Update(self):
+        profile = self.Context.CurrentProfile.Name
+        self.CurrentProfile.set_markup(self.Layout % (profile != "" and profile or "Default"))
+        
         self.FillAnimationBoxes()
+
+    def ProfileChanged(self, widget):
+        value = int(widget.get_value()) -1
+        profile = Profiles[value]
+        
+        #self.Context.CurrentProfile = profile
 
     def FillAnimationBoxes(self):
         plugin = self.Context.Plugins['animation']
