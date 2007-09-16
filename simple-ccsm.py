@@ -20,19 +20,51 @@
 
 import pygtk
 import gtk
+import gobject
 import gtk.glade
+
+import compizconfig as ccs
+import ccm
 
 DataDir = './'
 
 class MainWin:
-	def __init__(self):
-		gladeXML = gtk.glade.XML(DataDir + "simple-ccsm.glade")
-		self.Window = gladeXML.get_widget("mainWin")
-		self.Window.show_all()
-		self.Window.connect('destroy', self.Quit)
-	
-	def Quit(self, widget):
-		gtk.main_quit()
+    def __init__(self, context):
+        self.GladeXML = gtk.glade.XML(DataDir + "simple-ccsm.glade")
+		
+        self.Context = context
+        
+        self.Window = self.GladeXML.get_widget("mainWin")
+        self.Window.show_all()
+        self.Window.connect('destroy', self.Quit)
 
-mainWin = MainWin()
+        self.FillAnimationBoxes()
+
+    def FillAnimationBoxes(self):
+        plugin = self.Context.Plugins['animation']
+        
+        boxes = {}
+        boxes['closeAnimationBox'] =  "close_effects"
+        boxes['openAnimationBox'] = "open_effects"
+        boxes['minimizeAnimationBox'] = "minimize_effects"
+
+        for boxName, settingName in boxes.items():
+            box = self.GladeXML.get_widget(boxName)
+            setting = plugin.Screens[0][settingName]
+            items = sorted(setting.Info[1][2].items(), ccm.EnumSettingSortCompare)
+            store = gtk.ListStore(gobject.TYPE_STRING)
+            box.set_model(store)
+            cell = gtk.CellRendererText()
+            box.pack_start(cell, True)
+            box.add_attribute(cell, 'text', 0)
+            for key, value in items:
+                iter = store.append(None)
+                store.set(iter, 0, key)
+            box.set_active(setting.Value[0])
+
+    def Quit(self, widget):
+        gtk.main_quit()
+
+context = ccs.Context()
+mainWin = MainWin(context)
 gtk.main()
