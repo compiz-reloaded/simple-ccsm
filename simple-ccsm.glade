@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.2.0 on Mon Sep 17 16:10:31 2007 by patrick@dark-laptop-->
+<!--Generated with glade3 3.2.0 on Mon Sep 17 18:52:16 2007 by patrick@dark-laptop-->
 <glade-interface>
   <widget class="GtkWindow" id="mainWin">
     <property name="width_request">500</property>
@@ -331,7 +331,7 @@
               </packing>
             </child>
             <child>
-              <widget class="GtkHScale" id="horizotalDesktops2">
+              <widget class="GtkHScale" id="verticalDesktops">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
@@ -348,7 +348,7 @@
               </packing>
             </child>
             <child>
-              <widget class="GtkHScale" id="horizotalDesktops">
+              <widget class="GtkHScale" id="horizontalDesktops">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>

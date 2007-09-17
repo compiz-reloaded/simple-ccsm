@@ -149,12 +149,22 @@ class MainWin:
         self.UpdateDesktopPlugins()
         self.FillAppearenceBox()
         self.SetDesktopLabel()
+        self.SetDesktopSize()
 
     def ProfileChanged(self, widget):
         value = int(widget.get_value()) -1
         profile = Profiles[value]
         
         #self.Context.CurrentProfile = profile
+    
+    def SetDesktopSize(self):
+        scales = {"horizontalDesktops" : "hsize",
+                  "verticalDesktops"   : "vsize"}
+
+        for widgetName, settingName in scales.items():
+            widget = self.GladeXML.get_widget(widgetName)
+            setting = self.Context.Plugins['core'].Screens[0][settingName]
+            widget.set_value(setting.Value)
     
     def SetDesktopLabel(self):
         label = self.GladeXML.get_widget("desktopLabel")
