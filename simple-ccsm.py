@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: UTF-8 -*-
+# -*-  coding: UTF-8 -*-
 
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -21,8 +21,9 @@
 import pygtk
 import gtk
 import gobject
-import gtk.glade
-
+import gtk.gdk as gdk
+import gtk.glade as glade
+import cairo
 import compizconfig as ccs
 import ccm
 
@@ -30,27 +31,102 @@ DataDir = './'
 Profiles = [\
 "Low Effects", "Easy to the eyes", "Medium Effects", "High Effects", "Hollywood got nothing"
 ]
+ 
+class StarScale(gtk.Widget):
+    def __init__(self, stars=0):
+       gtk.Widget.__init__(self)
+
+       self.stars = stars
+       self.star_size = 16
+       self.star_space = 5
+
+       self.star_surface = cairo.ImageSurface.create_from_png("%s/star.png" % DataDir)
+    
+    def set_value(self, stars):
+        self.stars = stars
+        self.queue_resize()
+
+    def get_value(self):
+        return self.stars
+    
+    def do_realize(self):
+        self.set_flags(self.flags() | gtk.REALIZED)
+
+        self.window = gdk.Window(
+            self.get_parent_window(),
+            width = self.allocation.width,
+            height = self.allocation.height,
+            window_type = gdk.WINDOW_CHILD,
+            wclass = gdk.INPUT_OUTPUT,
+            event_mask = self.get_events() | gdk.EXPOSURE_MASK)
+
+        self.window.set_user_data(self)
+        self.style.attach(self.window)
+        self.style.set_background(self.window, gtk.STATE_NORMAL)
+        self.window.move_resize(*self.allocation)
+        self.bg = self.style.bg[gtk.STATE_NORMAL]
+    
+    def do_unrealize(self):
+        self.window.destroy()
+
+    def do_size_request(self, req):
+        req.height = self.star_size
+        req.width = (self.star_size+self.star_space)*self.stars
+
+    def do_size_allocation(self, allocation):
+        if self.flags() & gtk.REALIZED:
+            self.window.move_resize(*alloaction)
+
+    def do_expose_event(self, event):
+        cr = self.window.cairo_create()
+        
+        cr.set_operator(cairo.OPERATOR_CLEAR)
+        cr.paint()
+        cr.set_operator(cairo.OPERATOR_OVER)
+
+        cr.set_source_rgb(self.bg.red/65535.0,
+                          self.bg.green/65535.0,
+                          self.bg.blue/65535.0)
+        cr.paint()
+
+        x = 0
+        for star in range(self.stars):
+            cr.set_source_surface(self.star_surface, x, 0)
+            cr.rectangle(x, 0, self.star_size, self.star_size)
+            cr.fill()
+            x += self.star_size + self.star_space
 
 
+gobject.type_register(StarScale)       
+        
 class MainWin:
     def __init__(self, context):
-        self.GladeXML = gtk.glade.XML(DataDir + "simple-ccsm.glade")
+        self.GladeXML = glade.XML(DataDir + "simple-ccsm.glade")
 		
         self.Context = context
         
         self.Window = self.GladeXML.get_widget("mainWin")
-        self.Window.show_all()
         self.Window.connect('destroy', self.Quit)
 
         profileSelector = self.GladeXML.get_widget("profileSelector")
         profileSelector.connect('value-changed', self.ProfileChanged)
 
+        checkList = self.GladeXML.get_widget("checkList")
+        effectStars = StarScale()
+        effectStars.set_value(3)
+        animationStars = StarScale()
+        animationStars.set_value(4)
+        checkList.attach(animationStars, 1, 2, 0, 1, gtk.EXPAND)
+        checkList.attach(effectStars, 1, 2, 1, 2, gtk.EXPAND)
+
         self.CurrentProfile = self.GladeXML.get_widget("currentProfile")
         self.ProfileLayout = "<span size='large'><b>Profile:</b> %s</span>" 
-
+        
         self.DesktopLayout = "<i><span size='large'>%s</span></i>"
 
         self.Update()
+
+        self.Window.show_all()
 
     def SetupBoxModel(self, box):
         store = gtk.ListStore(gobject.TYPE_STRING)
