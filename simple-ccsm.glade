@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.2.0 on Sun Sep 16 21:39:09 2007 by patrick@dark-laptop-->
+<!--Generated with glade3 3.2.0 on Sun Sep 16 22:07:23 2007 by patrick@dark-laptop-->
 <glade-interface>
   <widget class="GtkWindow" id="mainWin">
     <property name="width_request">500</property>
@@ -221,7 +221,7 @@
                   </packing>
                 </child>
                 <child>
-                  <widget class="GtkLabel" id="label7">
+                  <widget class="GtkLabel" id="desktopLabel">
                     <property name="visible">True</property>
                     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
                     <property name="label" translatable="yes">&lt;i&gt;&lt;span size='large'&gt;Wall&lt;/span&gt;&lt;/i&gt;</property>
@@ -318,12 +318,11 @@
             <property name="row_spacing">10</property>
             <child>
               <widget class="GtkLabel" id="label15">
-                <property name="height_request">60</property>
                 <property name="visible">True</property>
                 <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
                 <property name="xalign">0</property>
                 <property name="yalign">0</property>
-                <property name="label" translatable="yes">&lt;b&gt;&lt;span size='large'&gt;Select the animations which will be performed on windows on the specific event. Select 'None' to disable the animation.&lt;/span&gt;&lt;/b&gt;</property>
+                <property name="label" translatable="yes">&lt;b&gt;&lt;span size='large'&gt;Choose the window animations.&lt;/span&gt;&lt;/b&gt;</property>
                 <property name="use_markup">True</property>
                 <property name="wrap">True</property>
                 <property name="single_line_mode">True</property>

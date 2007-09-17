@@ -46,7 +46,9 @@ class MainWin:
         profileSelector.connect('value-changed', self.ProfileChanged)
 
         self.CurrentProfile = self.GladeXML.get_widget("currentProfile")
-        self.Layout = "<span size='large'><b>Profile:</b> %s</span>" 
+        self.ProfileLayout = "<span size='large'><b>Profile:</b> %s</span>" 
+
+        self.DesktopLayout = "<i><span size='large'>%s</span></i>"
 
         self.Update()
 
@@ -57,12 +59,20 @@ class MainWin:
         box.pack_start(cell, True)
         box.add_attribute(cell, 'text', 0)
     
+    def UpdateDesktopPlugins(self):
+        self.DesktopPlugins = {}
+        for plugin in self.Context.Plugins.values():
+            if "largedesktop" in plugin.Features:
+                self.DesktopPlugins[plugin.ShortDesc] = plugin
+    
     def Update(self):
         profile = self.Context.CurrentProfile.Name
-        self.CurrentProfile.set_markup(self.Layout % (profile != "" and profile or "Default"))
+        self.CurrentProfile.set_markup(self.ProfileLayout % (profile != "" and profile or "Default"))
         
         self.FillAnimationBoxes()
+        self.UpdateDesktopPlugins()
         self.FillAppearenceBox()
+        self.SetDesktopLabel()
 
     def ProfileChanged(self, widget):
         value = int(widget.get_value()) -1
@@ -70,19 +80,23 @@ class MainWin:
         
         #self.Context.CurrentProfile = profile
     
+    def SetDesktopLabel(self):
+        label = self.GladeXML.get_widget("desktopLabel")
+        for shortDesc, plugin in self.DesktopPlugins.items():
+            if plugin.Enabled:
+                label.set_markup(self.DesktopLayout % shortDesc)
+                break
+    
     def FillAppearenceBox(self):
         box = self.GladeXML.get_widget("desktopPluginChooser") 
         self.SetupBoxModel(box)
 
         i = 0
-        self.DesktopPlugins = {}
-        for plugin in self.Context.Plugins.values():
-            if "largedesktop" in plugin.Features:
-                self.DesktopPlugins[plugin.ShortDesc] = plugin
-                box.append_text(plugin.ShortDesc)
-                if plugin.Enabled:
-                    box.set_active(i)
-                i += 1
+        for shortDesc, plugin in self.DesktopPlugins.items():
+            box.append_text(shortDesc)
+            if plugin.Enabled:
+                box.set_active(i)
+            i += 1
     
     def FillAnimationBoxes(self):
         plugin = self.Context.Plugins['animation']
