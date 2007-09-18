@@ -111,6 +111,9 @@ class MainWin:
         profileSelector = self.GladeXML.get_widget("profileSelector")
         profileSelector.connect('value-changed', self.ProfileChanged)
 
+        desktopBox = self.GladeXML.get_widget("desktopPluginChooser")
+        desktopBox.connect('changed', self.AppearenceBoxChanged)
+
         checkList = self.GladeXML.get_widget("checkList")
         effectStars = StarScale()
         effectStars.set_value(3)
@@ -173,8 +176,14 @@ class MainWin:
                 label.set_markup(self.DesktopLayout % shortDesc)
                 break
     
+    def AppearenceBoxChanged(self, widget):
+        text = widget.get_active_text()
+
+        for shortDesc, plugin in self.DesktopPlugins.items():
+            plugin.Enabled = (text == shortDesc)
+    
     def FillAppearenceBox(self):
-        box = self.GladeXML.get_widget("desktopPluginChooser") 
+        box = self.GladeXML.get_widget("desktopPluginChooser")
         self.SetupBoxModel(box)
 
         i = 0
