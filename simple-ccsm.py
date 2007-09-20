@@ -104,15 +104,13 @@ class MainWin:
         self.GladeXML = glade.XML(DataDir + "simple-ccsm.glade")
 		
         self.Context = context
+        self.Block = 0
         
         self.Window = self.GladeXML.get_widget("mainWin")
         self.Window.connect('destroy', self.Quit)
 
         profileSelector = self.GladeXML.get_widget("profileSelector")
-        profileSelector.connect('value-changed', self.ProfileChanged)
-
-        desktopBox = self.GladeXML.get_widget("desktopPluginChooser")
-        desktopBox.connect('changed', self.AppearenceBoxChanged)
+        profileSelector.connect('value-changed', self.ProfileChanged) 
 
         checkList = self.GladeXML.get_widget("checkList")
         effectStars = StarScale()
@@ -129,8 +127,26 @@ class MainWin:
 
         self.Update()
 
+        desktopBox = self.GladeXML.get_widget("desktopPluginChooser")
+        desktopBox.connect('changed', self.AppearenceBoxChanged)
+
         self.Window.show_all()
 
+    def EnablePlugin(self, plugin, active):
+        if self.Block > 0:
+            return
+        self.Block += 1
+        # attempt to resolve conflicts...
+        conflicts = plugin.Enabled and plugin.DisableConflicts or plugin.EnableConflicts
+        conflict = ccm.PluginConflict(plugin, conflicts, autoResolve=True)
+        if conflict.Resolve():
+            plugin.Enabled = active
+        else:
+            return False
+        self.Context.Write()
+        self.Block = self.Block-1
+        return True
+    
     def SetupBoxModel(self, box):
         store = gtk.ListStore(gobject.TYPE_STRING)
         box.set_model(store)
@@ -180,8 +196,20 @@ class MainWin:
         text = widget.get_active_text()
 
         for shortDesc, plugin in self.DesktopPlugins.items():
-            plugin.Enabled = (text == shortDesc)
-    
+            if text != shortDesc:
+                self.EnablePlugin(plugin, False)
+        
+        self.Context.Write()
+
+        for shortDesc, plugin in self.DesktopPlugins.items():
+            if text == shortDesc:
+                plugin.Enabled = True
+                # exception for cube, since it requires rotate
+                if plugin.Name == 'cube':
+                    self.EnablePlugin(self.Context.Plugins['rotate'], True)
+
+        self.Context.Write()
+
     def FillAppearenceBox(self):
         box = self.GladeXML.get_widget("desktopPluginChooser")
         self.SetupBoxModel(box)
