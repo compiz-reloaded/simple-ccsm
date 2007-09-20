@@ -130,6 +130,11 @@ class MainWin:
         desktopBox = self.GladeXML.get_widget("desktopPluginChooser")
         desktopBox.connect('changed', self.AppearenceBoxChanged)
 
+        desktopHSize = self.GladeXML.get_widget("horizontalDesktops")
+        desktopHSize.connect('value-changed', self.DesktopSizeChanged, "hsize")
+        desktopVSize = self.GladeXML.get_widget("verticalDesktops")
+        desktopVSize.connect('value-changed', self.DesktopSizeChanged, "vsize")
+
         self.Window.show_all()
 
     def EnablePlugin(self, plugin, active):
@@ -175,6 +180,11 @@ class MainWin:
         profile = Profiles[value]
         
         #self.Context.CurrentProfile = profile
+    
+    def DesktopSizeChanged(self, widget, settingName):
+        value = widget.get_value()
+        self.Context.Plugins['core'].Screens[0][settingName].Value = value
+        self.Context.Write()
     
     def SetDesktopSize(self):
         scales = {"horizontalDesktops" : "hsize",
