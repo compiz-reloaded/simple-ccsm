@@ -135,6 +135,13 @@ class MainWin:
         desktopVSize = self.GladeXML.get_widget("verticalDesktops")
         desktopVSize.connect('value-changed', self.DesktopSizeChanged, "vsize")
 
+        animationClose = self.GladeXML.get_widget("closeAnimationBox")
+        animationClose.connect('changed', self.AnimationBoxChanged, "close_effects")
+        animationOpen = self.GladeXML.get_widget("openAnimationBox")
+        animationOpen.connect('changed', self.AnimationBoxChanged, "open_effects")
+        animationMinimize = self.GladeXML.get_widget("minimizeAnimationBox")
+        animationMinimize.connect('changed', self.AnimationBoxChanged, "minimize_effects")
+        
         self.Window.show_all()
 
     def EnablePlugin(self, plugin, active):
@@ -231,6 +238,21 @@ class MainWin:
                 box.set_active(i)
             i += 1
     
+    def AnimationBoxChanged(self, widget, settingName):
+        text = widget.get_active_text()
+        plugin = self.Context.Plugins['animation']
+        setting = plugin.Screens[0][settingName]
+        value = setting.Value
+        if len(value) >= 1:
+            value[0] = setting.Info[1][2][text]
+            setting.Value = value
+            self.Context.Write()
+        else:
+            for setting in plugin.Groups[setting.Group][setting.SubGroup].Screens[0].values():
+                setting.Reset()
+            self.Context.Write()
+            self.AnimationBoxChanged(widget, settingName)
+    
     def FillAnimationBoxes(self):
         plugin = self.Context.Plugins['animation']
         
@@ -246,7 +268,10 @@ class MainWin:
             self.SetupBoxModel(box)
             for key, value in items:
                 box.append_text(key)
-            box.set_active(setting.Value[0])
+            if len(setting.Value):
+                box.set_active(setting.Value[0])
+            else:
+                box.set_active(0)
 
     def Quit(self, widget):
         gtk.main_quit()
