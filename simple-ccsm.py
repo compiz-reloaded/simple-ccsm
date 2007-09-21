@@ -32,6 +32,89 @@ Profiles = [\
 "Low Effects", "Easy to the eyes", "Medium Effects", "High Effects", "Hollywood got nothing"
 ]
  
+class DesktopPreview(gtk.Widget):
+    def __init__(self, size=(0,0)):
+        gtk.Widget.__init__(self)
+
+        self.size = size
+        self.desktop_height = 30
+        self.desktop_width = 40
+        self.desktop_space = 5
+        self.line_width = 1.0
+
+    def set_value(self, size):
+        self.size = size
+        self.queue_resize()
+
+    def get_value(self):
+        return self.size
+
+    def do_realize(self):
+        self.set_flags(self.flags() | gtk.REALIZED)
+
+        self.window = gdk.Window(
+            self.get_parent_window(),
+            width = self.allocation.width,
+            height = self.allocation.height,
+            window_type = gdk.WINDOW_CHILD,
+            wclass = gdk.INPUT_OUTPUT,
+            event_mask = self.get_events() | gdk.EXPOSURE_MASK)
+
+        self.window.set_user_data(self)
+        self.style.attach(self.window)
+        self.style.set_background(self.window, gtk.STATE_NORMAL)
+        self.window.move_resize(*self.allocation)
+        self.bg = self.style.bg[gtk.STATE_NORMAL]
+        self.fg = self.style.bg[gtk.STATE_SELECTED]
+        self.dark = self.style.fg[gtk.STATE_NORMAL]
+    
+    def do_unrealize(self):
+        self.window.destroy()
+
+    def do_size_request(self, req):
+        req.height = (self.desktop_height+self.desktop_space)*self.size[1] - self.desktop_space + self.line_width
+        req.width = (self.desktop_width+self.desktop_space)*self.size[0] - self.desktop_space + self.line_width 
+
+    def do_size_allocation(self, allocation):
+        if self.flags() & gtk.REALIZED:
+            self.window.move_resize(*alloaction)
+
+    def do_expose_event(self, event):
+        cr = self.window.cairo_create()
+        
+        cr.set_operator(cairo.OPERATOR_CLEAR)
+        cr.paint()
+        cr.set_operator(cairo.OPERATOR_OVER)
+
+        cr.set_source_rgb(self.bg.red/65535.0,
+                          self.bg.green/65535.0,
+                          self.bg.blue/65535.0)
+        cr.paint()
+        cr.translate(self.line_width/2.0, self.line_width/2.0)
+
+        x = 0
+        y = 0
+        for i in range(self.size[1]):
+            for j in range(self.size[0]):
+                cr.set_source_rgb(self.fg.red/65535.0,
+                              self.fg.green/65535.0,
+                              self.fg.blue/65535.0)
+
+                cr.rectangle(x, y, self.desktop_width, self.desktop_height)
+                cr.fill_preserve()
+                
+                cr.set_line_width(self.line_width)
+                cr.set_source_rgb(self.dark.red/65535.0,
+                              self.dark.green/65535.0,
+                              self.dark.blue/65535.0)
+                cr.stroke()
+
+
+                x += self.desktop_width + self.desktop_space
+            y += self.desktop_height + self.desktop_space
+            x = 0
+
+
 class StarScale(gtk.Widget):
     def __init__(self, stars=0):
        gtk.Widget.__init__(self)
@@ -97,7 +180,8 @@ class StarScale(gtk.Widget):
             x += self.star_size + self.star_space
 
 
-gobject.type_register(StarScale)       
+gobject.type_register(StarScale)
+gobject.type_register(DesktopPreview)
         
 class MainWin:
     def __init__(self, context):
@@ -120,6 +204,10 @@ class MainWin:
         checkList.attach(animationStars, 1, 2, 0, 1, gtk.EXPAND)
         checkList.attach(effectStars, 1, 2, 1, 2, gtk.EXPAND)
 
+        desktopTable = self.GladeXML.get_widget("desktopTable")
+        self.DesktopPreview = DesktopPreview()
+        desktopTable.attach(self.DesktopPreview, 1, 2, 4, 5, 0, 0)
+        
         self.CurrentProfile = self.GladeXML.get_widget("currentProfile")
         self.ProfileLayout = "<span size='large'><b>Profile:</b> %s</span>" 
         
@@ -181,6 +269,7 @@ class MainWin:
         self.FillAppearenceBox()
         self.SetDesktopLabel()
         self.SetDesktopSize()
+        self.SetDesktopPreview()
 
     def ProfileChanged(self, widget):
         value = int(widget.get_value()) -1
@@ -188,10 +277,16 @@ class MainWin:
         
         #self.Context.CurrentProfile = profile
     
+    def SetDesktopPreview(self):
+        hsize = self.Context.Plugins['core'].Screens[0]["hsize"].Value
+        vsize = self.Context.Plugins['core'].Screens[0]["vsize"].Value
+        self.DesktopPreview.set_value((hsize, vsize))
+    
     def DesktopSizeChanged(self, widget, settingName):
         value = widget.get_value()
         self.Context.Plugins['core'].Screens[0][settingName].Value = value
         self.Context.Write()
+        self.SetDesktopPreview()
     
     def SetDesktopSize(self):
         scales = {"horizontalDesktops" : "hsize",
