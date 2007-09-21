@@ -72,6 +72,16 @@ class DesktopPreview(gtk.Widget):
         self.window.destroy()
 
     def do_size_request(self, req):
+        if self.size[0] >= 5 or (self.size[1] >= 5 and self.size[1] <= 7):
+            self.desktop_height = 15
+            self.desktop_width = 20
+        elif self.size[1] > 7:
+            self.desktop_height = 8
+            self.desktop_width = 10
+        else:
+            self.desktop_height = 30
+            self.desktop_width = 40
+        
         req.height = (self.desktop_height+self.desktop_space)*self.size[1] - self.desktop_space + self.line_width
         req.width = (self.desktop_width+self.desktop_space)*self.size[0] - self.desktop_space + self.line_width 
 
