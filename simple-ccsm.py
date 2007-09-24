@@ -31,7 +31,42 @@ DataDir = './'
 Profiles = [\
 "Low Effects", "Easy to the eyes", "Medium Effects", "High Effects", "Hollywood got nothing"
 ]
- 
+
+
+# Use the Compiz Fusion translation to identify option values/descriptions
+import locale
+import gettext
+locale.setlocale(locale.LC_ALL, "")
+gettext.bindtextdomain("compiz-fusion-plugins", "/usr/local/share/locale")
+gettext.textdomain("compiz-fusion-plugins")
+_ = gettext.gettext
+
+# 0 to 10 points
+AnimationRatings = {\
+_("None"): 0,
+_("Random"): 5,
+_("Airplane"): 10,
+_("Beam Up"): 7,
+_("Burn"): 8,
+_("Curved Fold"): 4,
+_("Domino"): 6,
+_("Dream"): 6,
+_("Explode"): 7,
+_("Fade"): 2,
+_("Fold"): 3,
+_("Glide 1"): 6,
+_("Glide 2"): 6,
+_("Horizontal Folds"): 6,
+_("Leaf Spread"): 8,
+_("Magic Lamp"): 10,
+_("Razr"): 8,
+_("Sidekick"): 6,
+_("Skewer"): 6,
+_("Vacuum"): 8,
+_("Wave"): 8,
+_("Zoom"): 3
+}
+
 class DesktopPreview(gtk.Widget):
     def __init__(self, size=(0,0)):
         gtk.Widget.__init__(self)
@@ -207,12 +242,10 @@ class MainWin:
         profileSelector.connect('value-changed', self.ProfileChanged) 
 
         checkList = self.GladeXML.get_widget("checkList")
-        effectStars = StarScale()
-        effectStars.set_value(3)
-        animationStars = StarScale()
-        animationStars.set_value(4)
-        checkList.attach(animationStars, 1, 2, 0, 1, gtk.EXPAND)
-        checkList.attach(effectStars, 1, 2, 1, 2, gtk.EXPAND)
+        self.EffectStars = StarScale()
+        self.AnimationStars = StarScale()
+        checkList.attach(self.AnimationStars, 1, 2, 0, 1, gtk.EXPAND)
+        checkList.attach(self.EffectStars, 1, 2, 1, 2, gtk.EXPAND)
 
         desktopTable = self.GladeXML.get_widget("desktopTable")
         self.DesktopPreview = DesktopPreview()
@@ -366,6 +399,7 @@ class MainWin:
         boxes['openAnimationBox'] = "open_effects"
         boxes['minimizeAnimationBox'] = "minimize_effects"
 
+        rating = 0.0
         for boxName, settingName in boxes.items():
             box = self.GladeXML.get_widget(boxName)
             setting = plugin.Screens[0][settingName]
@@ -374,9 +408,15 @@ class MainWin:
             for key, value in items:
                 box.append_text(key)
             if len(setting.Value):
-                box.set_active(setting.Value[0])
+                value = setting.Value[0]
+                box.set_active(value)
+                text = box.get_active_text()
+                rating += AnimationRatings[text]
             else:
                 box.set_active(0)
+        rating = rating / (10 * len(boxes)) * 10
+        
+        self.AnimationStars.set_value(int(rating))
 
     def Quit(self, widget):
         gtk.main_quit()
