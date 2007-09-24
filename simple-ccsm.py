@@ -52,8 +52,8 @@ _("Curved Fold"): 4,
 _("Domino"): 6,
 _("Dream"): 6,
 _("Explode"): 7,
-_("Fade"): 2,
-_("Fold"): 3,
+_("Fade"): 3,
+_("Fold"): 6,
 _("Glide 1"): 6,
 _("Glide 2"): 6,
 _("Horizontal Folds"): 6,
@@ -64,7 +64,7 @@ _("Sidekick"): 6,
 _("Skewer"): 6,
 _("Vacuum"): 8,
 _("Wave"): 8,
-_("Zoom"): 3
+_("Zoom"): 4
 }
 
 class DesktopPreview(gtk.Widget):
@@ -216,7 +216,7 @@ class StarScale(gtk.Widget):
                           self.bg.green/65535.0,
                           self.bg.blue/65535.0)
         cr.paint()
-
+ 
         x = 0
         for star in range(self.stars):
             cr.set_source_surface(self.star_surface, x, 0)
@@ -308,11 +308,12 @@ class MainWin:
         self.CurrentProfile.set_markup(self.ProfileLayout % (profile != "" and profile or "Default"))
         
         self.FillAnimationBoxes()
+        self.SetAnimationRating()
         self.UpdateDesktopPlugins()
         self.FillAppearenceBox()
         self.SetDesktopLabel()
         self.SetDesktopSize()
-        self.SetDesktopPreview()
+        self.SetDesktopPreview() 
 
     def ProfileChanged(self, widget):
         value = int(widget.get_value()) -1
@@ -375,7 +376,19 @@ class MainWin:
             if plugin.Enabled:
                 box.set_active(i)
             i += 1
-    
+
+    def SetAnimationRating(self):
+        boxes = ['closeAnimationBox', 'openAnimationBox', 'minimizeAnimationBox']
+        
+        rating = 0.0
+        for box in boxes:
+            box = self.GladeXML.get_widget(box)
+            text = box.get_active_text()
+            rating += AnimationRatings[text]
+        rating = rating / (10 * len(boxes)) * 5
+        
+        self.AnimationStars.set_value(int(rating))
+
     def AnimationBoxChanged(self, widget, settingName):
         text = widget.get_active_text()
         plugin = self.Context.Plugins['animation']
@@ -390,6 +403,8 @@ class MainWin:
                 setting.Reset()
             self.Context.Write()
             self.AnimationBoxChanged(widget, settingName)
+
+        self.SetAnimationRating()
     
     def FillAnimationBoxes(self):
         plugin = self.Context.Plugins['animation']
@@ -414,7 +429,7 @@ class MainWin:
                 rating += AnimationRatings[text]
             else:
                 box.set_active(0)
-        rating = rating / (10 * len(boxes)) * 10
+        rating = rating / (10 * len(boxes)) * 5
         
         self.AnimationStars.set_value(int(rating))
 
