@@ -176,7 +176,7 @@ class DesktopPreview(gtk.Widget):
 
 
 class StarScale(gtk.Widget):
-    def __init__(self, stars=0):
+    def __init__(self, stars=0.0):
        gtk.Widget.__init__(self)
 
        self.stars = stars
@@ -233,11 +233,16 @@ class StarScale(gtk.Widget):
         cr.paint()
  
         x = 0
-        for star in range(self.stars):
+        i = self.stars
+        while i > 0:
+            size = 1.0
+            if i < 1:
+                size = i
             cr.set_source_surface(self.star_surface, x, 0)
-            cr.rectangle(x, 0, self.star_size, self.star_size)
+            cr.rectangle(x, 0, self.star_size*size, self.star_size)
             cr.fill()
             x += self.star_size + self.star_space
+            i -= 1
 
 
 gobject.type_register(StarScale)
@@ -403,7 +408,7 @@ class MainWin:
 
         rating = (rating / 74.0) * 5
 
-        self.EffectStars.set_value(int(rating))
+        self.EffectStars.set_value(rating)
     
     def SetAnimationRating(self):
         boxes = ['closeAnimationBox', 'openAnimationBox', 'minimizeAnimationBox']
@@ -415,7 +420,7 @@ class MainWin:
             rating += AnimationRatings[text]
         rating = rating / (10 * len(boxes)) * 5
         
-        self.AnimationStars.set_value(int(rating))
+        self.AnimationStars.set_value(rating)
 
     def AnimationBoxChanged(self, widget, settingName):
         text = widget.get_active_text()
