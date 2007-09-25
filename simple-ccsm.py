@@ -67,6 +67,21 @@ _("Wave"): 8,
 _("Zoom"): 4
 }
 
+# Possible are 74 points (cube and wall conflict)
+EffectPluginRatings = {\
+'wobbly': 10,
+'cube': 3,
+'wall': 2,
+'expo': 5,
+'blur': 8,
+'mblur': 10,
+'3d': 8,
+'water': 10,
+'firepaint': 7,
+'shift': 5,
+'cubereflex': 8
+}
+
 class DesktopPreview(gtk.Widget):
     def __init__(self, size=(0,0)):
         gtk.Widget.__init__(self)
@@ -307,6 +322,7 @@ class MainWin:
         profile = self.Context.CurrentProfile.Name
         self.CurrentProfile.set_markup(self.ProfileLayout % (profile != "" and profile or "Default"))
         
+        self.SetEffectRating()
         self.FillAnimationBoxes()
         self.SetAnimationRating()
         self.UpdateDesktopPlugins()
@@ -377,6 +393,18 @@ class MainWin:
                 box.set_active(i)
             i += 1
 
+    def SetEffectRating(self):
+        rating = 0.0
+
+        for pluginName, points in EffectPluginRatings.items():
+            plugin = self.Context.Plugins[pluginName]
+            if plugin.Enabled:
+                rating += points
+
+        rating = (rating / 74.0) * 5
+
+        self.EffectStars.set_value(int(rating))
+    
     def SetAnimationRating(self):
         boxes = ['closeAnimationBox', 'openAnimationBox', 'minimizeAnimationBox']
         
