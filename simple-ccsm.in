@@ -27,7 +27,7 @@ import cairo
 import compizconfig as ccs
 import ccm
 
-DataDir = './'
+DataDir = '@prefix@/share/simple-ccsm/'
 Profiles = [\
 "Low Effects", "Easy to the eyes", "Medium Effects", "High Effects", "Hollywood got nothing"
 ]
