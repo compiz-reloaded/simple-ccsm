@@ -402,6 +402,8 @@ class MainWin:
         rating = 0.0
 
         for pluginName, points in EffectPluginRatings.items():
+	    if not pluginName in self.Context.Plugins:
+		continue
             plugin = self.Context.Plugins[pluginName]
             if plugin.Enabled:
                 rating += points
