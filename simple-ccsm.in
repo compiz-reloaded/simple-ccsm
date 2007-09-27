@@ -269,7 +269,7 @@ class MainWin:
 
         desktopTable = self.GladeXML.get_widget("desktopTable")
         self.DesktopPreview = DesktopPreview()
-        desktopTable.attach(self.DesktopPreview, 1, 2, 4, 5, 0, 0)
+        desktopTable.attach(self.DesktopPreview, 1, 2, 4, 5, gtk.EXPAND, 0)
         
         self.CurrentProfile = self.GladeXML.get_widget("currentProfile")
         self.ProfileLayout = "<span size='large'><b>Profile:</b> %s</span>" 
