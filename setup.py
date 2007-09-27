@@ -111,7 +111,7 @@ f.write (data)
 f.close ()
 
 data_files = [
-                ("share/simple-ccsm", ["src/simple-ccsm.glade"]),
+                ("share/simple-ccsm", ["simple-ccsm.glade"]),
                 ("share/simple-ccsm", ["images/star.png"])
              ]
 
