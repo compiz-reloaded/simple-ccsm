@@ -262,8 +262,8 @@ class MainWin:
         self.Window = self.GladeXML.get_widget("mainWin")
         self.Window.connect('destroy', self.Quit)
 
-        profileSelector = self.GladeXML.get_widget("profileSelector")
-        profileSelector.connect('value-changed', self.ProfileChanged) 
+        self.ProfileSelector = self.GladeXML.get_widget("profileSelector")
+        self.ProfileSelector.connect('value-changed', self.ProfileChanged) 
 
         checkList = self.GladeXML.get_widget("checkList")
         self.EffectStars = StarScale()
@@ -330,11 +330,9 @@ class MainWin:
                 self.DesktopPlugins[plugin.ShortDesc] = plugin
     
     def Update(self):
-        self.Block += 1
-
-        profile = self.Context.CurrentProfile.Name
-        self.CurrentProfile.set_markup(self.ProfileLayout % (profile != "" and profile or "Default"))
+        self.Block += 1 
         
+        self.SetProfile()
         self.SetEffectRating()
         self.FillAnimationBoxes()
         self.SetAnimationRating()
@@ -345,7 +343,7 @@ class MainWin:
         self.SetDesktopPreview()
 
         self.Block -= 1
-
+    
     def ProfileChanged(self, widget):
         if self.Block > 0:
             return
@@ -361,7 +359,16 @@ class MainWin:
         
         self.Context.UpdateProfiles()
         self.Context.CurrentProfile = self.Context.Profiles[profile]
+        self.Context.Write()
         self.Update()
+    
+    def SetProfile(self):
+        profile = self.Context.CurrentProfile.Name
+        self.CurrentProfile.set_markup(self.ProfileLayout % (profile != "" and profile or "Default"))
+
+        if profile in Profiles:
+            value = Profiles.index(profile) + 1
+            self.ProfileSelector.set_value(value)
     
     def SetDesktopPreview(self):
         hsize = self.Context.Plugins['core'].Screens[0]["hsize"].Value
