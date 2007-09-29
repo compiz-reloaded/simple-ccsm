@@ -110,9 +110,15 @@ f = open (os.path.join ("simple-ccsm"), "wt")
 f.write (data)
 f.close ()
 
+profile_files = os.listdir("profiles/")
+profiles = []
+for profile in profile_files: 
+    profiles.append('profiles/%s' % profile)
+
 data_files = [
                 ("share/simple-ccsm", ["simple-ccsm.glade"]),
-                ("share/simple-ccsm", ["images/star.png"])
+                ("share/simple-ccsm", ["images/star.png"]),
+                ("share/simple-ccsm/profiles", profiles)
              ]
 
 setup (

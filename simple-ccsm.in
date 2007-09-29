@@ -18,6 +18,8 @@
 # Authors: Patrick Niklaus (marex@opencompositing.org)
 # Copyright (C) 2007 Patrick Niklaus
 
+import shutil
+import os
 import pygtk
 import gtk
 import gobject
@@ -28,6 +30,8 @@ import compizconfig as ccs
 import ccm
 
 DataDir = '@prefix@/share/simple-ccsm/'
+ConfigDir = os.environ.has_key('XDG_CONFIG_HOME') and os.environ['XDG_CONFIG_HOME'] or "%s/.config" % os.environ['HOME']
+CompizConfigDir = "%s/compiz/compizconfig" % ConfigDir
 Profiles = [\
 "Low Effects", "Easy to the eyes", "Medium Effects", "High Effects", "Hollywood got nothing"
 ]
@@ -276,8 +280,6 @@ class MainWin:
         
         self.DesktopLayout = "<i><span size='large'>%s</span></i>"
 
-        self.Update()
-
         desktopBox = self.GladeXML.get_widget("desktopPluginChooser")
         desktopBox.connect('changed', self.AppearenceBoxChanged)
 
@@ -292,7 +294,8 @@ class MainWin:
         animationOpen.connect('changed', self.AnimationBoxChanged, "open_effects")
         animationMinimize = self.GladeXML.get_widget("minimizeAnimationBox")
         animationMinimize.connect('changed', self.AnimationBoxChanged, "minimize_effects")
-        
+
+        self.Update()        
         self.Window.show_all()
 
     def EnablePlugin(self, plugin, active):
@@ -311,11 +314,14 @@ class MainWin:
         return True
     
     def SetupBoxModel(self, box):
-        store = gtk.ListStore(gobject.TYPE_STRING)
-        box.set_model(store)
-        cell = gtk.CellRendererText()
-        box.pack_start(cell, True)
-        box.add_attribute(cell, 'text', 0)
+	if not box.get_model():
+	    store = gtk.ListStore(gobject.TYPE_STRING)
+            box.set_model(store)
+            cell = gtk.CellRendererText()
+            box.pack_start(cell, True)
+            box.add_attribute(cell, 'text', 0)
+        else:
+            box.get_model().clear()
     
     def UpdateDesktopPlugins(self):
         self.DesktopPlugins = {}
@@ -324,6 +330,8 @@ class MainWin:
                 self.DesktopPlugins[plugin.ShortDesc] = plugin
     
     def Update(self):
+        self.Block += 1
+
         profile = self.Context.CurrentProfile.Name
         self.CurrentProfile.set_markup(self.ProfileLayout % (profile != "" and profile or "Default"))
         
@@ -334,13 +342,26 @@ class MainWin:
         self.FillAppearenceBox()
         self.SetDesktopLabel()
         self.SetDesktopSize()
-        self.SetDesktopPreview() 
+        self.SetDesktopPreview()
+
+        self.Block -= 1
 
     def ProfileChanged(self, widget):
+        if self.Block > 0:
+            return
+
         value = int(widget.get_value()) -1
         profile = Profiles[value]
         
-        #self.Context.CurrentProfile = profile
+        # Copy profile from DataDir to home dir
+        profileDest = "%s/%s.ini" % (CompizConfigDir, profile)
+        profilePath = "%s/profiles/%s.ini" % (DataDir, profile)
+        if not os.path.exists(profileDest):
+            shutil.copyfile(profilePath, profileDest)
+        
+        self.Context.UpdateProfiles()
+        self.Context.CurrentProfile = self.Context.Profiles[profile]
+        self.Update()
     
     def SetDesktopPreview(self):
         hsize = self.Context.Plugins['core'].Screens[0]["hsize"].Value
@@ -348,6 +369,8 @@ class MainWin:
         self.DesktopPreview.set_value((hsize, vsize))
     
     def DesktopSizeChanged(self, widget, settingName):
+        if self.Block > 0:
+            return
         value = widget.get_value()
         self.Context.Plugins['core'].Screens[0][settingName].Value = value
         self.Context.Write()
@@ -370,6 +393,9 @@ class MainWin:
                 break
     
     def AppearenceBoxChanged(self, widget):
+        if self.Block > 0:
+            return
+
         text = widget.get_active_text()
 
         for shortDesc, plugin in self.DesktopPlugins.items():
@@ -420,11 +446,22 @@ class MainWin:
             box = self.GladeXML.get_widget(box)
             text = box.get_active_text()
             rating += AnimationRatings[text]
+        
+        if not self.Context.Plugins['animation'].Enabled:
+            rating = 0.0
+        if self.Context.Plugins['fade'].Enabled:
+            rating += AnimationRatings[_("Fade")] * 2
+        if self.Context.Plugins['minimize'].Enabled:
+            rating += AnimationRatings[_("Zoom")] / 3 
+        
         rating = rating / (10 * len(boxes)) * 5
         
         self.AnimationStars.set_value(rating)
 
     def AnimationBoxChanged(self, widget, settingName):
+        if self.Block > 0:
+            return
+
         text = widget.get_active_text()
         plugin = self.Context.Plugins['animation']
         setting = plugin.Screens[0][settingName]
@@ -460,14 +497,9 @@ class MainWin:
             if len(setting.Value):
                 value = setting.Value[0]
                 box.set_active(value)
-                text = box.get_active_text()
-                rating += AnimationRatings[text]
             else:
                 box.set_active(0)
-        rating = rating / (10 * len(boxes)) * 5
-        
-        self.AnimationStars.set_value(int(rating))
-
+ 
     def Quit(self, widget):
         gtk.main_quit()
 
