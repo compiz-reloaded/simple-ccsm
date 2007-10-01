@@ -30,8 +30,6 @@ import compizconfig as ccs
 import ccm
 
 DataDir = '@prefix@/share/simple-ccsm/'
-ConfigDir = os.environ.has_key('XDG_CONFIG_HOME') and os.environ['XDG_CONFIG_HOME'] or "%s/.config" % os.environ['HOME']
-CompizConfigDir = "%s/compiz/compizconfig" % ConfigDir
 Profiles = [\
 "Low Effects", "Easy to the eyes", "Medium Effects", "High Effects", "Hollywood got nothing"
 ]
@@ -314,8 +312,8 @@ class MainWin:
         return True
     
     def SetupBoxModel(self, box):
-	if not box.get_model():
-	    store = gtk.ListStore(gobject.TYPE_STRING)
+        if not box.get_model():
+            store = gtk.ListStore(gobject.TYPE_STRING)
             box.set_model(store)
             cell = gtk.CellRendererText()
             box.pack_start(cell, True)
@@ -351,15 +349,16 @@ class MainWin:
         value = int(widget.get_value()) -1
         profile = Profiles[value]
         
-        # Copy profile from DataDir to home dir
-        profileDest = "%s/%s.ini" % (CompizConfigDir, profile)
         profilePath = "%s/profiles/%s.ini" % (DataDir, profile)
-        if not os.path.exists(profileDest):
-            shutil.copyfile(profilePath, profileDest)
+        if not profile in self.Context.Profiles.keys():
+            self.Context.CurrentProfile = ccs.Profile(self.Context, profile)
+            self.Context.UpdateProfiles()
+            self.Context.Import(profilePath)
         
-        self.Context.UpdateProfiles()
-        self.Context.CurrentProfile = self.Context.Profiles[profile]
-        self.Context.Write()
+        else:
+            self.Context.UpdateProfiles()
+            self.Context.CurrentProfile = self.Context.Profiles[profile]
+        
         self.Update()
     
     def SetProfile(self):
