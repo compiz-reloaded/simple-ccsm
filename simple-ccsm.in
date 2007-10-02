@@ -266,6 +266,12 @@ class MainWin:
         animationMinimize = self.GladeXML.get_widget("minimizeAnimationBox")
         animationMinimize.connect('changed', self.AnimationBoxChanged, "minimize_effects")
 
+        enableColorFilter = self.GladeXML.get_widget("enableColorFilter")
+        enableColorFilter.connect('toggled', self.AccessibilityChanged, ['colorfilter'])
+        enableMagnification = self.GladeXML.get_widget("enableMagnification")
+        enableMagnification.connect('toggled', self.AccessibilityChanged, ['ezoom', 'zoom'])
+
+        
         self.Update()        
         self.Window.show_all()
 
@@ -312,6 +318,8 @@ class MainWin:
         self.SetDesktopLabel()
         self.SetDesktopSize()
         self.SetDesktopPreview()
+        self.CheckAccessibility()
+        self.SetAccessibility()
 
         self.Block -= 1
     
@@ -465,7 +473,6 @@ class MainWin:
         boxes['openAnimationBox'] = "open_effects"
         boxes['minimizeAnimationBox'] = "minimize_effects"
 
-        rating = 0.0
         for boxName, settingName in boxes.items():
             box = self.GladeXML.get_widget(boxName)
             setting = plugin.Screens[0][settingName]
@@ -479,6 +486,50 @@ class MainWin:
             else:
                 box.set_active(0)
  
+    def CheckAccessibility(self):
+        rating = 0.0
+        for name in AccessibilityPlugins.keys():
+            if self.Context.Plugins.has_key(name) and self.Context.Plugins[name].Enabled:
+                rating += AccessibilityPlugins[name]
+        
+        self.AccessibilityCheck.set_value(rating >= 2.0)
+    
+    def AccessibilityChanged(self, widget, pluginNames):
+        if self.Block > 0:
+            return
+        
+        plugin = None
+        for name in pluginNames:
+            if self.Context.Plugins.has_key(name):
+                plugin = self.Context.Plugins[name]
+                break
+        if not plugin:
+            return
+        
+        plugin.Enabled = widget.get_active()
+        self.Context.Write()
+
+        self.CheckAccessibility()
+
+    
+    def SetAccessibility(self):
+        boxes = {}
+        boxes['enableColorFilter'] = ["colorfilter"]
+        boxes['enableMagnification'] = ["ezoom", "zoom"]
+
+        for boxName, pluginNames in boxes.items():
+            box = self.GladeXML.get_widget(boxName)
+            
+            plugin = None
+            for name in pluginNames:
+                if self.Context.Plugins.has_key(name):
+                    plugin = self.Context.Plugins[name]
+                    break
+            if not plugin:
+                continue
+
+            box.set_active(plugin.Enabled)
+    
     def Quit(self, widget):
         gtk.main_quit()
 
