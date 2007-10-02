@@ -86,6 +86,13 @@ EffectPluginRatings = {\
 'cubereflex': 8
 }
 
+# Possible are 2 Points
+AccessibilityPlugins = {\
+'zoom': 1,
+'ezoom': 1,
+'colorfilter': 1
+}
+
 class DesktopPreview(gtk.Widget):
     def __init__(self, size=(0,0)):
         gtk.Widget.__init__(self)
@@ -251,7 +258,30 @@ class StarScale(gtk.Widget):
 
 gobject.type_register(StarScale)
 gobject.type_register(DesktopPreview)
-        
+
+class CheckImage(gtk.Image):
+    def __init__(self, value=False):
+        gtk.Image.__init__(self)
+
+        self.value = value
+
+        self.update_image()
+    
+    def set_value(self, value):
+        self.value = value
+
+        self.update_image()
+
+    def get_value(self):
+        return self.value
+    
+    def update_image(self):
+        size = gtk.ICON_SIZE_BUTTON
+        if self.value:
+            self.set_from_stock(gtk.STOCK_APPLY, size)
+        else:
+            self.set_from_stock(gtk.STOCK_DIALOG_ERROR, size)
+
 class MainWin:
     def __init__(self, context):
         self.GladeXML = glade.XML(DataDir + "simple-ccsm.glade")
@@ -268,8 +298,10 @@ class MainWin:
         checkList = self.GladeXML.get_widget("checkList")
         self.EffectStars = StarScale()
         self.AnimationStars = StarScale()
+        self.AccessibilityCheck = CheckImage()
         checkList.attach(self.AnimationStars, 1, 2, 0, 1, gtk.EXPAND)
         checkList.attach(self.EffectStars, 1, 2, 1, 2, gtk.EXPAND)
+        checkList.attach(self.AccessibilityCheck, 1, 2, 3, 4, gtk.EXPAND)
 
         desktopTable = self.GladeXML.get_widget("desktopTable")
         self.DesktopPreview = DesktopPreview()
