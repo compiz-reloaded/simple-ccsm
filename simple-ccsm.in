@@ -266,6 +266,9 @@ class MainWin:
         animationMinimize = self.GladeXML.get_widget("minimizeAnimationBox")
         animationMinimize.connect('changed', self.AnimationBoxChanged, "minimize_effects")
 
+        enableAnimations = self.GladeXML.get_widget("enableAnimations")
+        enableAnimations.connect('toggled', self.EnableAnimationsChanged)
+        
         enableColorFilter = self.GladeXML.get_widget("enableColorFilter")
         enableColorFilter.connect('toggled', self.AccessibilityChanged, ['colorfilter'])
         enableMagnification = self.GladeXML.get_widget("enableMagnification")
@@ -311,6 +314,7 @@ class MainWin:
         
         self.SetProfile()
         self.SetEffectRating()
+        self.SetEnableAnimations()
         self.FillAnimationBoxes()
         self.SetAnimationRating()
         self.UpdateDesktopPlugins()
@@ -445,6 +449,20 @@ class MainWin:
         
         self.AnimationStars.set_value(rating)
 
+    def EnableAnimationsChanged(self, widget):
+        if self.Block > 0:
+            return
+
+        plugin = self.Context.Plugins['animation']
+        self.EnablePlugin(plugin, widget.get_active())
+
+        self.SetAnimationRating()
+
+    def SetEnableAnimations(self):
+        plugin = self.Context.Plugins['animation']
+        widget = self.GladeXML.get_widget("enableAnimations")
+        widget.set_active(plugin.Enabled)
+    
     def AnimationBoxChanged(self, widget, settingName):
         if self.Block > 0:
             return
