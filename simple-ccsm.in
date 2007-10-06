@@ -20,6 +20,7 @@
 
 import shutil
 import os
+import subprocess
 import pygtk
 import gtk
 import gobject
@@ -271,6 +272,8 @@ class MainWin:
         
         enableColorFilter = self.GladeXML.get_widget("enableColorFilter")
         enableColorFilter.connect('toggled', self.AccessibilityChanged, ['colorfilter'])
+        executeFilterManager = self.GladeXML.get_widget("executeFilterManager")
+        executeFilterManager.connect('clicked', self.ExecFilterManager)
         enableMagnification = self.GladeXML.get_widget("enableMagnification")
         enableMagnification.connect('toggled', self.AccessibilityChanged, ['ezoom', 'zoom'])
 
@@ -547,6 +550,14 @@ class MainWin:
                 continue
 
             box.set_active(plugin.Enabled)
+    
+    def ExecFilterManager(self, widget): 
+        try:
+            proc = subprocess.Popen(["filters-manager"])
+        except:
+            errorDialog = self.GladeXML.get_widget("filterManagerError")
+            errorDialog.run()
+            errorDialog.destroy()
     
     def Quit(self, widget):
         gtk.main_quit()
