@@ -116,8 +116,10 @@ for profile in profile_files:
     profiles.append('profiles/%s' % profile)
 
 data_files = [
+                ("share/icons/hicolor/scalable/apps", ["images/simple-ccsm.svg"]),
                 ("share/simple-ccsm", ["simple-ccsm.glade"]),
                 ("share/simple-ccsm", ["images/star.png"]),
+                ("share/applications", ["simple-ccsm.desktop"]),
                 ("share/simple-ccsm/profiles", profiles)
              ]
 
@@ -138,3 +140,12 @@ setup (
      )
 
 os.remove ("simple-ccsm")
+if sys.argv[1] == "install":
+    gtk_update_icon_cache = '''gtk-update-icon-cache -f -t %s/share/icons/hicolor''' % prefix
+    root_specified = len (filter (lambda s: s.startswith ("--root"), sys.argv)) > 0
+    if not root_specified:
+        print "Updating Gtk icon cache."
+        os.system (gtk_update_icon_cache)
+    else:
+        print '''*** Icon cache not updated. After install, run this:
+***     %s''' % gtk_update_icon_cache
