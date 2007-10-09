@@ -123,6 +123,22 @@ data_files = [
                 ("share/simple-ccsm/profiles", profiles)
              ]
 
+podir = os.path.join (os.path.realpath ("."), "po")
+if os.path.isdir (podir):
+    buildcmd = "msgfmt -o build/locale/%s/simple-ccsm.mo po/%s.po"
+    mopath = "build/locale/%s/simple-ccsm.mo"
+    destpath = "share/locale/%s/LC_MESSAGES"
+    for name in os.listdir (podir):
+        if name[-2:] == "po":
+            name = name[:-3]
+            if sys.argv[1] == "build" \
+               or (sys.argv[1] == "install" and \
+                   not os.path.exists (mopath % name)):
+                if not os.path.isdir ("build/locale/" + name):
+                    os.makedirs ("build/locale/" + name)
+                os.system (buildcmd % (name, name))
+            data_files.append ((destpath % name, [mopath % name]))
+
 setup (
         name             = "simple-ccsm",
         version          = version,

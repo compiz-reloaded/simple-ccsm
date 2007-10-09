@@ -29,46 +29,52 @@ import gtk.glade as glade
 import cairo
 import compizconfig as ccs
 import ccm
+import locale
+import gettext
+locale.setlocale(locale.LC_ALL, "")
+_ = gettext.gettext
 
 DataDir = '@prefix@/share/simple-ccsm/'
 Profiles = [\
 "Low Effects", "Easy to the eyes", "Medium Effects", "High Effects", "Hollywood got nothing"
 ]
 
-
 # Use the Compiz Fusion translation to identify option values/descriptions
-import locale
-import gettext
-locale.setlocale(locale.LC_ALL, "")
-gettext.bindtextdomain("compiz-fusion-plugins", "/usr/local/share/locale")
+# But remember using the ' symbol instead of ", otherwise gettext will add it
+# to simple-ccsm's pot file
+# FIXME use compiz prefix
+gettext.bindtextdomain("compiz-fusion-plugins", "@prefix@/share/locale")
 gettext.textdomain("compiz-fusion-plugins")
-_ = gettext.gettext
 
 # 0 to 10 points
 AnimationRatings = {\
-_("None"): 0,
-_("Random"): 5,
-_("Airplane"): 10,
-_("Beam Up"): 7,
-_("Burn"): 8,
-_("Curved Fold"): 4,
-_("Domino"): 6,
-_("Dream"): 6,
-_("Explode"): 7,
-_("Fade"): 3,
-_("Fold"): 6,
-_("Glide 1"): 6,
-_("Glide 2"): 6,
-_("Horizontal Folds"): 6,
-_("Leaf Spread"): 8,
-_("Magic Lamp"): 10,
-_("Razr"): 8,
-_("Sidekick"): 6,
-_("Skewer"): 6,
-_("Vacuum"): 8,
-_("Wave"): 8,
-_("Zoom"): 4
+_('None'): 0,
+_('Random'): 5,
+_('Airplane'): 10,
+_('Beam Up'): 7,
+_('Burn'): 8,
+_('Curved Fold'): 4,
+_('Domino'): 6,
+_('Dream'): 6,
+_('Explode'): 7,
+_('Fade'): 3,
+_('Fold'): 6,
+_('Glide 1'): 6,
+_('Glide 2'): 6,
+_('Horizontal Folds'): 6,
+_('Leaf Spread'): 8,
+_('Magic Lamp'): 10,
+_('Razr'): 8,
+_('Sidekick'): 6,
+_('Skewer'): 6,
+_('Vacuum'): 8,
+_('Wave'): 8,
+_('Zoom'): 4
 }
+
+gtk.glade.bindtextdomain("simple-ccsm", "@prefix@/share/locale")
+gettext.bindtextdomain("simple-ccsm", "@prefix@/share/locale")
+gettext.textdomain("simple-ccsm")
 
 # Possible are 74 points (cube and wall conflict)
 EffectPluginRatings = {\
@@ -224,7 +230,7 @@ class CheckImage(gtk.Image):
 
 class MainWin:
     def __init__(self, context):
-        self.GladeXML = glade.XML(DataDir + "simple-ccsm.glade")
+        self.GladeXML = glade.XML(DataDir + "simple-ccsm.glade", domain="simple-ccsm")
 		
         self.Context = context
         self.Block = 0
@@ -445,9 +451,9 @@ class MainWin:
         if not self.Context.Plugins['animation'].Enabled:
             rating = 0.0
         if self.Context.Plugins['fade'].Enabled:
-            rating += AnimationRatings[_("Fade")] * 2
+            rating += AnimationRatings[_('Fade')] * 2
         if self.Context.Plugins['minimize'].Enabled:
-            rating += AnimationRatings[_("Zoom")] / 3 
+            rating += AnimationRatings[_('Zoom')] / 3 
         
         rating = rating / (10 * len(boxes)) * 5
         
