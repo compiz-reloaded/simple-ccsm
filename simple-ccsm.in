@@ -569,6 +569,7 @@ class MainWin:
     def Quit(self, widget):
         gtk.main_quit()
 
-context = ccs.Context()
-mainWin = MainWin(context)
-gtk.main()
+if __name__ == "__main__":
+    context = ccs.Context()
+    mainWin = MainWin(context)
+    gtk.main()
