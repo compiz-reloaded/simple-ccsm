@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import sys, os, glob
+import subprocess
 from stat import *
 from distutils.core import setup
 from distutils.command.install import install as _install
@@ -101,11 +102,15 @@ version = version_file.read ().strip ()
 if "=" in version:
     version = version.split ("=")[1]
 
+proc = subprocess.Popen (['pkg-config', '--variable=prefix', 'compiz'], stdout=subprocess.PIPE)
+compiz_prefix = proc.stdout.read () [:-1]
+
 f = open (os.path.join ("simple-ccsm.in"), "rt")
 data = f.read ()
 f.close ()
 data = data.replace ("@prefix@", prefix)
 data = data.replace ("@version@", version)
+data = data.replace ("@compiz_prefix@", compiz_prefix)
 f = open (os.path.join ("simple-ccsm"), "wt")
 f.write (data)
 f.close ()

@@ -43,8 +43,7 @@ Profiles = [\
 # Use the Compiz Fusion translation to identify option values/descriptions
 # But remember using the ' symbol instead of ", otherwise gettext will add it
 # to simple-ccsm's pot file
-# FIXME use compiz prefix
-gettext.bindtextdomain("compiz-fusion-plugins", "@prefix@/share/locale")
+gettext.bindtextdomain("compiz-fusion-plugins", "@compiz_prefix@/share/locale")
 gettext.textdomain("compiz-fusion-plugins")
 
 # 0 to 10 points
