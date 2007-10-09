@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Simple CompizConfig Settings Manager
+Comment=Configure Compiz with CompizConfig
+Icon=simple-ccsm
+Exec=simple-ccsm
+Terminal=false
+Type=Application
+Categories=Compiz;Settings;DesktopSettings;

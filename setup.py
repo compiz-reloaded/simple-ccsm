@@ -110,10 +110,34 @@ f = open (os.path.join ("simple-ccsm"), "wt")
 f.write (data)
 f.close ()
 
+profile_files = os.listdir("profiles/")
+profiles = []
+for profile in profile_files: 
+    profiles.append('profiles/%s' % profile)
+
 data_files = [
-                ("share/simple-ccsm", ["src/simple-ccsm.glade"]),
-                ("share/simple-ccsm", ["images/star.png"])
+                ("share/icons/hicolor/scalable/apps", ["images/simple-ccsm.svg"]),
+                ("share/simple-ccsm", ["simple-ccsm.glade"]),
+                ("share/simple-ccsm", ["images/star.png"]),
+                ("share/applications", ["simple-ccsm.desktop"]),
+                ("share/simple-ccsm/profiles", profiles)
              ]
+
+podir = os.path.join (os.path.realpath ("."), "po")
+if os.path.isdir (podir):
+    buildcmd = "msgfmt -o build/locale/%s/simple-ccsm.mo po/%s.po"
+    mopath = "build/locale/%s/simple-ccsm.mo"
+    destpath = "share/locale/%s/LC_MESSAGES"
+    for name in os.listdir (podir):
+        if name[-2:] == "po":
+            name = name[:-3]
+            if sys.argv[1] == "build" \
+               or (sys.argv[1] == "install" and \
+                   not os.path.exists (mopath % name)):
+                if not os.path.isdir ("build/locale/" + name):
+                    os.makedirs ("build/locale/" + name)
+                os.system (buildcmd % (name, name))
+            data_files.append ((destpath % name, [mopath % name]))
 
 setup (
         name             = "simple-ccsm",
@@ -132,3 +156,12 @@ setup (
      )
 
 os.remove ("simple-ccsm")
+if sys.argv[1] == "install":
+    gtk_update_icon_cache = '''gtk-update-icon-cache -f -t %s/share/icons/hicolor''' % prefix
+    root_specified = len (filter (lambda s: s.startswith ("--root"), sys.argv)) > 0
+    if not root_specified:
+        print "Updating Gtk icon cache."
+        os.system (gtk_update_icon_cache)
+    else:
+        print '''*** Icon cache not updated. After install, run this:
+***     %s''' % gtk_update_icon_cache
