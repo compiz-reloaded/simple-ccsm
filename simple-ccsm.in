@@ -31,6 +31,7 @@ import compizconfig as ccs
 import ccm
 import locale
 import gettext
+from optparse import OptionParser
 locale.setlocale(locale.LC_ALL, "")
 _ = gettext.gettext
 
@@ -89,6 +90,13 @@ EffectPluginRatings = {\
 'firepaint': 7,
 'shift': 5,
 'cubereflex': 8
+}
+
+Pages = {
+'profile': 0,
+'animations': 1,
+'desktop': 2,
+'accessibility': 3
 }
 
 # Possible are 2 Points
@@ -229,12 +237,16 @@ class CheckImage(gtk.Image):
             self.set_from_stock(gtk.STOCK_DIALOG_ERROR, size)
 
 class MainWin:
-    def __init__(self, context):
+    def __init__(self, context, page = -1):
         self.GladeXML = glade.XML(DataDir + "simple-ccsm.glade", domain="simple-ccsm")
 		
         self.Context = context
         self.Block = 0
-        
+
+	if page != -1 and page in Pages:
+	    notebook = self.GladeXML.get_widget("notebook1")
+	    notebook.set_current_page (Pages[page])
+
         self.Window = self.GladeXML.get_widget("mainWin")
         self.Window.connect('destroy', self.Quit)
         self.Window.set_icon(gtk.gdk.pixbuf_new_from_file("@prefix@/share/icons/hicolor/scalable/apps/simple-ccsm.svg"))
@@ -571,5 +583,12 @@ class MainWin:
 
 if __name__ == "__main__":
     context = ccs.Context()
-    mainWin = MainWin(context)
+    page = -1
+    parser = OptionParser()
+    parser.add_option("-p", "--page", dest = "page",
+		      help = "Directly jump to page PAGE", metavar = "PAGE")
+    (options, args) = parser.parse_args()
+    if options.page:
+	page = options.page
+    mainWin = MainWin(context, page)
     gtk.main()
