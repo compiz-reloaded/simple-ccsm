@@ -248,7 +248,13 @@ class MainWin:
 
         self.Window = self.GladeXML.get_widget("mainWin")
         self.Window.connect('destroy', self.Quit)
-        self.Window.set_icon(gtk.gdk.pixbuf_new_from_file("@prefix@/share/icons/hicolor/scalable/apps/simple-ccsm.svg"))
+        theme = gtk.icon_theme_get_default()
+        iconList = (\
+            theme.load_icon("simple-ccsm", 16, 0),
+            theme.load_icon("simple-ccsm", 32, 0),
+            theme.load_icon("simple-ccsm", 48, 0),
+        )
+        self.Window.set_icon_list(*iconList)
 
         self.ProfileSelector = self.GladeXML.get_widget("profileSelector")
         self.ProfileSelector.connect('value-changed', self.ProfileChanged) 
