@@ -177,7 +177,7 @@ class StarScale(gtk.Widget):
         self.star_size = 16
         self.star_space = 5
 
-        self.star_surface = cairo.ImageSurface.create_from_png("%s/star.png" % DataDir)
+        self.star_surface = cairo.ImageSurface.create_from_png("%s/images/star.png" % DataDir)
         
         self.set_flags(self.flags() | gtk.NO_WINDOW)
 

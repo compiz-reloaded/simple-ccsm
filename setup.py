@@ -121,12 +121,40 @@ for profile in profile_files:
     profiles.append('profiles/%s' % profile)
 
 data_files = [
-                ("share/icons/hicolor/scalable/apps", ["images/simple-ccsm.svg"]),
-                ("share/simple-ccsm", ["simple-ccsm.glade"]),
-                ("share/simple-ccsm", ["images/star.png"]),
                 ("share/applications", ["simple-ccsm.desktop"]),
                 ("share/simple-ccsm/profiles", profiles)
              ]
+
+custom_images = []
+
+global_icon_path = "share/icons/hicolor/"
+local_icon_path = "share/simple-ccsm/icons/hicolor/"
+
+for dir, subdirs, files in os.walk("images/"):
+    if dir == "images/":
+        for file in files:
+            custom_images.append(dir + file)
+    else:
+        images = []
+        global_images = []
+
+        for file in files:
+            if file.find(".svg") or file.find(".png"):
+                file_path = "%s/%s" % (dir, file)
+                # global image
+                if file[:-4] == "simple-ccsm":
+                    global_images.append(file_path)
+                # local image
+                else:
+                    images.append(file_path)
+        # local
+        if len(images) > 0:
+            data_files.append((local_icon_path + dir[7:], images))
+        # global
+        if len(global_images) > 0:
+            data_files.append((global_icon_path + dir[7:], global_images))
+
+data_files.append(("share/simple-ccsm/images", custom_images))
 
 podir = os.path.join (os.path.realpath ("."), "po")
 if os.path.isdir (podir):
