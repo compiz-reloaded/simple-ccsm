@@ -40,36 +40,47 @@ Profiles = [\
 "Low Effects", "Easy to the eyes", "Medium Effects", "High Effects", "Hollywood got nothing"
 ]
 
-# Use the Compiz Fusion translation to identify option values/descriptions
-# But remember using the ' symbol instead of ", otherwise gettext will add it
-# to simple-ccsm's pot file
-gettext.bindtextdomain("compiz-fusion-plugins", "@compiz_prefix@/share/locale")
-gettext.textdomain("compiz-fusion-plugins")
+# Since there seems no way to get the untranslated names,
+# we need to keep a list here.
+CloseOpenEffectNames = [\
+'None', 'Random', 'Airplane', 'Beam Up', 'Burn', 'Curved Fold',
+'Domino', 'Dream', 'Explode', 'Fade', 'Fold', 'Glide 1', 'Glide 2',
+'Horizontal Folds', 'Leaf Spread','Magic Lamp', 'Razr', 'Sidekick',
+'Skewer', 'Vacuum', 'Wave', 'Zoom'
+]
+
+MinimizeEffectNames = [\
+'None', 'Random', 'Airplane', 'Beam Up', 'Burn', 'Curved Fold',
+'Domino', 'Dream', 'Explode', 'Fade', 'Fold', 'Glide 1', 'Glide 2',
+'Horizontal Folds', 'Leaf Spread','Magic Lamp', 'Razr', 'Sidekick',
+'Skewer', 'Zoom'
+
+]
 
 # 0 to 10 points
 AnimationRatings = {\
-_('None'): 0,
-_('Random'): 5,
-_('Airplane'): 10,
-_('Beam Up'): 7,
-_('Burn'): 8,
-_('Curved Fold'): 4,
-_('Domino'): 6,
-_('Dream'): 6,
-_('Explode'): 7,
-_('Fade'): 3,
-_('Fold'): 6,
-_('Glide 1'): 6,
-_('Glide 2'): 6,
-_('Horizontal Folds'): 6,
-_('Leaf Spread'): 8,
-_('Magic Lamp'): 10,
-_('Razr'): 8,
-_('Sidekick'): 6,
-_('Skewer'): 6,
-_('Vacuum'): 8,
-_('Wave'): 8,
-_('Zoom'): 4
+'None': 0,
+'Random': 5,
+'Airplane': 10,
+'Beam Up': 7,
+'Burn': 8,
+'Curved Fold': 4,
+'Domino': 6,
+'Dream': 6,
+'Explode': 7,
+'Fade': 3,
+'Fold': 6,
+'Glide 1': 6,
+'Glide 2': 6,
+'Horizontal Folds': 6,
+'Leaf Spread': 8,
+'Magic Lamp': 10,
+'Razr': 8,
+'Sidekick': 6,
+'Skewer': 6,
+'Vacuum': 8,
+'Wave': 8,
+'Zoom': 4
 }
 
 gtk.glade.bindtextdomain("simple-ccsm", "@prefix@/share/locale")
@@ -457,15 +468,28 @@ class MainWin:
         self.EffectStars.set_value(rating)
     
     def SetAnimationRating(self):
-        boxes = ['closeAnimationBox', 'openAnimationBox', 'minimizeAnimationBox']
+        boxes = {
+            'closeAnimationBox': 'close_effects',
+            'openAnimationBox': 'open_effects',
+            'minimizeAnimationBox': 'minimize_effects'
+        }
+        names = {
+            'close_effects': CloseOpenEffectNames,
+            'open_effects': CloseOpenEffectNames,
+            'minimize_effects': MinimizeEffectNames
+        }
+        plugin = self.Context.Plugins['animation']
         
         rating = 0.0
-        for box in boxes:
+        for box, settingName in boxes.items():
             box = self.GladeXML.get_widget(box)
             text = box.get_active_text()
-            rating += AnimationRatings[text]
+            setting = plugin.Screens[0][settingName]
+            value = setting.Value[0]
+            name = names[settingName][value]
+            rating += AnimationRatings[name]
         
-        if not self.Context.Plugins['animation'].Enabled:
+        if not plugin.Enabled:
             rating = 0.0
         if self.Context.Plugins['fade'].Enabled:
             rating += AnimationRatings[_('Fade')] * 2
