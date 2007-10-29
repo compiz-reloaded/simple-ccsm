@@ -122,6 +122,7 @@ for profile in profile_files:
 
 data_files = [
                 ("share/applications", ["simple-ccsm.desktop"]),
+                ("share/simple-ccsm", ["simple-ccsm.glade"]),
                 ("share/simple-ccsm/profiles", profiles)
              ]
 

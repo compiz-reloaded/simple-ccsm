@@ -1,6 +1,7 @@
 include po/*
 include TODO README INSTALL AUTHORS COPYING LICENSE NEWS VERSION ChangeLog
-include ccsm.desktop
-include ccm/Constants.py.in
+include simple-ccsm.in
+include simple-ccsm.glade
 include Makefile MANIFEST.in
+recursive-include profiles *
 recursive-include images *
