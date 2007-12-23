@@ -153,14 +153,12 @@ class DesktopPreview(gtk.Widget):
         height = self.allocation.height
         self.desktop_width = (width / self.size[0]) - self.desktop_space
         self.desktop_height = (self.desktop_width * 3.0) / 4.0
-        faktor = height / ((self.desktop_height + self.desktop_space) * self.size[1])
-        
-        if faktor < 1.0:
-            self.desktop_width = int(self.desktop_width * faktor)
-            self.desktop_height = int(self.desktop_height * faktor)
+        factor = ((height / self.size[1]) - self.desktop_space) / self.desktop_height
+        #factor = height / ((self.desktop_height + self.desktop_space) * self.size[1])
 
-        if self.flags() & gtk.REALIZED:
-            self.window.resize(allocation.width, allocation.height) 
+        if factor < 1.0:
+            self.desktop_width = int(int(self.desktop_width) * factor)
+            self.desktop_height = int(int(self.desktop_height) * factor)
         
     def do_expose_event(self, event):
         cr = self.window.cairo_create()
