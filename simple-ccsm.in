@@ -39,6 +39,14 @@ DataDir = '@prefix@/share/simple-ccsm/'
 Profiles = [\
 "Low Effects", "Easy to the eyes", "Medium Effects", "High Effects", "Hollywood got nothing"
 ]
+# TODO Write descriptions
+Descriptions = {\
+'Low Effects': "",
+'Easy to the eyes': "",
+'Medium Effects': "",
+'High Effects': "",
+'Hollywood got nothing': ""
+}
 
 # Since there seems no way to get the untranslated names,
 # we need to keep a list here.
@@ -138,20 +146,22 @@ class DesktopPreview(gtk.Widget):
     def do_unrealize(self):
         self.window.destroy()
 
-    def do_size_request(self, req):
-        if self.size[0] >= 5 or (self.size[1] >= 5 and self.size[1] <= 7):
-            self.desktop_height = 15
-            self.desktop_width = 20
-        elif self.size[1] > 7:
-            self.desktop_height = 8
-            self.desktop_width = 10
-        else:
-            self.desktop_height = 30
-            self.desktop_width = 40
-        
-        req.height = (self.desktop_height+self.desktop_space)*self.size[1] - self.desktop_space + self.line_width
-        req.width = (self.desktop_width+self.desktop_space)*self.size[0] - self.desktop_space + self.line_width 
+    def do_size_allocate(self, allocation):
+        self.allocation = allocation
 
+        width = self.allocation.width
+        height = self.allocation.height
+        self.desktop_width = (width / self.size[0]) - self.desktop_space
+        self.desktop_height = (self.desktop_width * 3.0) / 4.0
+        faktor = height / ((self.desktop_height + self.desktop_space) * self.size[1])
+        
+        if faktor < 1.0:
+            self.desktop_width = int(self.desktop_width * faktor)
+            self.desktop_height = int(self.desktop_height * faktor)
+
+        if self.flags() & gtk.REALIZED:
+            self.window.resize(allocation.width, allocation.height) 
+        
     def do_expose_event(self, event):
         cr = self.window.cairo_create()
         
@@ -267,25 +277,26 @@ class MainWin:
         )
         self.Window.set_icon_list(*iconList)
 
-        self.ProfileSelector = self.GladeXML.get_widget("profileSelector")
-        self.ProfileSelector.connect('value-changed', self.ProfileChanged) 
+        self.ProfileChooser = self.GladeXML.get_widget("profileChooser")
+        applyButton = self.GladeXML.get_widget("applyButton")
+        applyButton.connect('clicked', self.ApplyProfile)
 
         checkList = self.GladeXML.get_widget("checkList")
         self.EffectStars = StarScale()
         self.AnimationStars = StarScale()
         self.AccessibilityCheck = CheckImage()
-        checkList.attach(self.AnimationStars, 1, 2, 0, 1, gtk.EXPAND)
-        checkList.attach(self.EffectStars, 1, 2, 1, 2, gtk.EXPAND)
-        checkList.attach(self.AccessibilityCheck, 1, 2, 3, 4, gtk.EXPAND)
+        checkList.attach(self.AnimationStars, 1, 2, 1, 2, gtk.EXPAND, 0)
+        checkList.attach(self.EffectStars, 1, 2, 2, 3, gtk.EXPAND, 0)
+        checkList.attach(self.AccessibilityCheck, 1, 2, 4, 5, gtk.EXPAND, 0)
+
+        closeButton = self.GladeXML.get_widget("closeButton")
+        closeButton.connect('clicked', self.Quit)
 
         desktopTable = self.GladeXML.get_widget("desktopTable")
         self.DesktopPreview = DesktopPreview()
-        desktopTable.attach(self.DesktopPreview, 1, 2, 5, 6, gtk.EXPAND, 0)
+        desktopTable.attach(self.DesktopPreview, 1, 2, 3, 4, gtk.EXPAND | gtk.FILL, gtk.EXPAND | gtk.FILL)
         
-        self.CurrentProfile = self.GladeXML.get_widget("currentProfile")
-        self.ProfileLayout = "<span size='large'><b>Profile:</b> %s</span>" 
-        
-        self.DesktopLayout = "<i><span size='large'>%s</span></i>"
+        self.DesktopLayout = "<i>%s</i>"
 
         desktopBox = self.GladeXML.get_widget("desktopPluginChooser")
         desktopBox.connect('changed', self.AppearenceBoxChanged)
@@ -349,6 +360,8 @@ class MainWin:
     
     def Update(self):
         self.Block += 1 
+
+        self.Context.Read()
         
         self.SetProfile()
         self.SetEffectRating()
@@ -365,33 +378,44 @@ class MainWin:
 
         self.Block -= 1
     
-    def ProfileChanged(self, widget):
-        if self.Block > 0:
-            return
-
-        value = int(widget.get_value()) -1
-        profile = Profiles[value]
+    def ApplyProfile(self, widget):
+        profile = self.ProfileChooser.get_active_text()
         
-        profilePath = "%s/profiles/%s.ini" % (DataDir, profile)
         if not profile in self.Context.Profiles.keys():
+            profilePath = "%s/profiles/%s.profile" % (DataDir, profile)
             self.Context.CurrentProfile = ccs.Profile(self.Context, profile)
+            self.Context.Read()
             self.Context.UpdateProfiles()
-            self.Context.Import(profilePath)
-        
+            self.Context.Import(profilePath) 
         else:
-            self.Context.UpdateProfiles()
-            self.Context.CurrentProfile = self.Context.Profiles[profile]
+            if profile == _("Default"):
+                self.Context.ResetProfile()
+            else:
+                self.Context.UpdateProfiles()
+                self.Context.CurrentProfile = self.Context.Profiles[profile]
         
         self.Update()
+        self.Context.Write()
     
     def SetProfile(self):
-        profile = self.Context.CurrentProfile.Name
-        self.CurrentProfile.set_markup(self.ProfileLayout % (profile != "" and profile or "Default"))
+        self.SetupBoxModel(self.ProfileChooser)
 
-        if profile in Profiles:
-            value = Profiles.index(profile) + 1
-            self.ProfileSelector.set_value(value)
-    
+        self.Context.UpdateProfiles()
+
+        self.ProfileChooser.append_text(_("Default"))
+        for profile in Profiles:
+            self.ProfileChooser.append_text(profile)
+
+        current = self.Context.CurrentProfile.Name or _("Default")
+        if current in Profiles:
+            pos = Profiles.index(current) + 1
+            self.ProfileChooser.set_active(pos)
+        elif current != _("Default"):
+            self.ProfileChooser.prepend_text(current)
+            self.ProfileChooser.set_active(0)
+        else:
+            self.ProfileChooser.set_active(0)
+
     def SetDesktopPreview(self):
         hsize = self.Context.Plugins['core'].Screens[0]["hsize"].Value
         vsize = self.Context.Plugins['core'].Screens[0]["vsize"].Value
@@ -618,6 +642,6 @@ if __name__ == "__main__":
 		      help = "Directly jump to page PAGE", metavar = "PAGE")
     (options, args) = parser.parse_args()
     if options.page:
-	page = options.page
+        page = options.page
     mainWin = MainWin(context, page)
     gtk.main()
