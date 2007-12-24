@@ -314,13 +314,11 @@ class MainWin:
         enableAnimations = self.GladeXML.get_widget("enableAnimations")
         enableAnimations.connect('toggled', self.EnableAnimationsChanged)
         
-        enableColorFilter = self.GladeXML.get_widget("enableColorFilter")
-        enableColorFilter.connect('toggled', self.AccessibilityChanged, ['colorfilter'])
-        executeFilterManager = self.GladeXML.get_widget("executeFilterManager")
-        executeFilterManager.connect('clicked', self.ExecFilterManager)
-        enableMagnification = self.GladeXML.get_widget("enableMagnification")
-        enableMagnification.connect('toggled', self.AccessibilityChanged, ['ezoom', 'zoom'])
-
+        self.EnableZoom = self.GladeXML.get_widget("enableZoom")
+        self.EnableZoom.connect('toggled', self.ZoomChanged)
+        self.ZoomIn = None
+        self.ZoomOut = None
+        self.ZoomBox = self.GladeXML.get_widget("zoomBox")
         
         self.Update()        
         self.Window.show_all()
@@ -372,7 +370,7 @@ class MainWin:
         self.SetDesktopSize()
         self.SetDesktopPreview()
         self.CheckAccessibility()
-        self.SetAccessibility()
+        self.SetZoom()
 
         self.Block -= 1
     
@@ -588,11 +586,12 @@ class MainWin:
         
         self.AccessibilityCheck.set_value(rating >= 2.0)
     
-    def AccessibilityChanged(self, widget, pluginNames):
+    def ZoomChanged(self, widget):
         if self.Block > 0:
             return
         
         plugin = None
+        pluginNames = ["ezoom", "zoom"]
         for name in pluginNames:
             if self.Context.Plugins.has_key(name):
                 plugin = self.Context.Plugins[name]
@@ -606,32 +605,30 @@ class MainWin:
         self.CheckAccessibility()
 
     
-    def SetAccessibility(self):
-        boxes = {}
-        boxes['enableColorFilter'] = ["colorfilter"]
-        boxes['enableMagnification'] = ["ezoom", "zoom"]
-
-        for boxName, pluginNames in boxes.items():
-            box = self.GladeXML.get_widget(boxName)
+    def SetZoom(self):
+        pluginNames = ["ezoom", "zoom"]
             
-            plugin = None
-            for name in pluginNames:
-                if self.Context.Plugins.has_key(name):
-                    plugin = self.Context.Plugins[name]
-                    break
-            if not plugin:
-                continue
+        plugin = None
+        for name in pluginNames:
+             if self.Context.Plugins.has_key(name):
+                plugin = self.Context.Plugins[name]
+                break
+        if not plugin:
+            return
 
-            box.set_active(plugin.Enabled)
-    
-    def ExecFilterManager(self, widget): 
-        try:
-            proc = subprocess.Popen(["filters-manager"])
-        except:
-            errorDialog = self.GladeXML.get_widget("filterManagerError")
-            errorDialog.run()
-            errorDialog.destroy()
-    
+        if plugin.Name == "ezoom":
+            if self.ZoomIn == None:
+                self.ZoomIn = ccm.MakeSetting(plugin.Display['zoom_in'])
+                self.ZoomBox.pack_start(self.ZoomIn.Widget, True, False)
+            if self.ZoomOut == None:
+                self.ZoomOut = ccm.MakeSetting(plugin.Display['zoom_out'])
+                self.ZoomBox.pack_start(self.ZoomOut.Widget, True, False)
+
+            self.ZoomIn.Read()
+            self.ZoomOut.Read()
+
+        self.EnableZoom.set_active(plugin.Enabled)
+
     def Quit(self, widget):
         gtk.main_quit()
 
