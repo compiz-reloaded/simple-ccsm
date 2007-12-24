@@ -460,9 +460,12 @@ class MainWin:
                 plugin.Enabled = True
                 # exception for cube, since it requires rotate
                 if plugin.Name == 'cube':
+                    setting = self.Context.Plugins['core'].Screens[0]['vsize']
+                    setting.Value = 1 # Cube can only use 1 vertical viewport
                     self.EnablePlugin(self.Context.Plugins['rotate'], True)
 
         self.Context.Write()
+        self.SetDesktopSize()
 
     def FillAppearenceBox(self):
         box = self.GladeXML.get_widget("desktopPluginChooser")
