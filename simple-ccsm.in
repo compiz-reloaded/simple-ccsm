@@ -261,9 +261,9 @@ class MainWin:
         self.Context = context
         self.Block = 0
 
-	if page != -1 and page in Pages:
-	    notebook = self.GladeXML.get_widget("notebook1")
-	    notebook.set_current_page (Pages[page])
+        if page != -1 and page in Pages:
+            notebook = self.GladeXML.get_widget("notebook1")
+            notebook.set_current_page (Pages[page])
 
         self.Window = self.GladeXML.get_widget("mainWin")
         self.Window.connect('destroy', self.Quit)
