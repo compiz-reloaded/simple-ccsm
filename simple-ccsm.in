@@ -313,13 +313,25 @@ class MainWin:
 
         enableAnimations = self.GladeXML.get_widget("enableAnimations")
         enableAnimations.connect('toggled', self.EnableAnimationsChanged)
+
+        switcherPluginBox = self.GladeXML.get_widget("switcherPluginChooser")
+        switcherPluginBox.connect('changed', self.SwitcherBoxChanged)
         
         self.EnableZoom = self.GladeXML.get_widget("enableZoom")
         self.EnableZoom.connect('toggled', self.ZoomChanged)
         self.ZoomIn = None
         self.ZoomOut = None
         self.ZoomBox = self.GladeXML.get_widget("zoomBox")
-        
+
+        self.EnableScale = self.GladeXML.get_widget("enableScale")
+        self.EnableScale.connect('toggled', self.EffectPluginChanged, "scale")
+
+        self.EnableWobbly = self.GladeXML.get_widget("enableWobbly")
+        self.EnableWobbly.connect('toggled', self.EffectPluginChanged, "wobbly")
+
+        self.EnableBlur = self.GladeXML.get_widget("enableBlur")
+        self.EnableBlur.connect('toggled', self.EffectPluginChanged, "blur")
+
         self.Update()        
         self.Window.show_all()
 
@@ -347,12 +359,23 @@ class MainWin:
             box.add_attribute(cell, 'text', 0)
         else:
             box.get_model().clear()
-    
+
     def UpdateDesktopPlugins(self):
         self.DesktopPlugins = {}
         for plugin in self.Context.Plugins.values():
             if "largedesktop" in plugin.Features:
                 self.DesktopPlugins[plugin.ShortDesc] = plugin
+
+    def UpdateSwitcherPlugins(self):
+        self.SwitcherPlugins = {}
+        for pluginName in ('switcher', 'shift', 'ring'):
+            if self.Context.Plugins.has_key(pluginName):
+                plugin = self.Context.Plugins[pluginName]
+                if pluginName == 'shift':
+                    self.SwitcherPlugins[_("%s (Cover)") % plugin.ShortDesc] = plugin
+                    self.SwitcherPlugins[_("%s (Flip)") % plugin.ShortDesc] = plugin
+                else:
+                    self.SwitcherPlugins[plugin.ShortDesc] = plugin
     
     def Update(self):
         self.Block += 1 
@@ -364,6 +387,9 @@ class MainWin:
         self.SetEnableAnimations()
         self.FillAnimationBoxes()
         self.SetAnimationRating()
+        self.UpdateSwitcherPlugins()
+        self.FillSwitcherBox()
+        self.SetEffectPlugins()
         self.UpdateDesktopPlugins()
         self.FillAppearenceBox()
         self.SetDesktopLabel()
@@ -577,7 +603,70 @@ class MainWin:
                 box.set_active(value)
             else:
                 box.set_active(0)
+
+    def EffectPluginChanged(self, widget, pluginName):
+        if self.Block > 0:
+            return
+
+        plugin = self.Context.Plugins[pluginName]
+        value  = widget.get_active()
+
+        self.EnablePlugin(plugin, value)
+
+    def SetEffectPlugins(self):
+        plugins = {}
+        plugins['scale'] = self.EnableScale
+        plugins['wobbly'] = self.EnableWobbly
+        plugins['blur'] = self.EnableBlur
+
+        for pluginName, widget in plugins.items():
+            plugin = self.Context.Plugins[pluginName]
+            widget.set_active(plugin.Enabled)
  
+    def SwitcherBoxChanged(self, widget):
+        if self.Block > 0:
+            return
+
+        text = widget.get_active_text()
+
+        for shortDesc, plugin in self.SwitcherPlugins.items():
+            if text != shortDesc:
+                self.EnablePlugin(plugin, False)
+
+        self.Context.Write()
+
+        for shortDesc, plugin in self.SwitcherPlugins.items():
+            if text == shortDesc:
+                plugin.Enabled = True
+                # Exception for shift, since it has 2 modes
+                if plugin.Name == 'shift':
+                    setting = plugin.Screens[0]['mode']
+
+                    if text.find(_("Cover")) != -1:
+                        setting.Value = 0
+                    elif text.find(_("Flip")) != -1:
+                        setting.Value = 1
+
+        self.Context.Write()
+
+    def FillSwitcherBox(self):
+        box = self.GladeXML.get_widget("switcherPluginChooser")
+        self.SetupBoxModel(box)
+
+        i = 0
+        for shortDesc, plugin in self.SwitcherPlugins.items():
+            box.append_text(shortDesc)
+            if plugin.Enabled:
+                if plugin.Name == 'shift':
+                    modes = [_("Cover"), _("Flip")]
+                    setting = plugin.Screens[0]['mode']
+                    mode = modes[setting.Value]
+                    if shortDesc.find(mode) != -1:
+                        box.set_active(i)
+                else:
+                    box.set_active(i)
+            i += 1
+
     def CheckAccessibility(self):
         rating = 0.0
         for name in AccessibilityPlugins.keys():
