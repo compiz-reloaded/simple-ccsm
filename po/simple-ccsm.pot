@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2007-10-09 19:12+0200\n"
+"POT-Creation-Date: 2008-01-10 22:13+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,22 +16,24 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "<b><span size='large'>Filter Manager was not found.</span></b>"
+#, c-format
+msgid "%s (Cover)"
 msgstr ""
 
-msgid "<b>Accessibilty:</b>"
+#, c-format
+msgid "%s (Flip)"
 msgstr ""
 
-msgid "<b>Animations:</b>"
+msgid "Cover"
 msgstr ""
 
-msgid "<b>Desktop:</b>"
+msgid "Flip"
 msgstr ""
 
-msgid "<b>Effects:</b>"
+msgid "Default"
 msgstr ""
 
-msgid "Accessibility"
+msgid "Accessibilty"
 msgstr ""
 
 msgid "Animations"
@@ -43,12 +45,7 @@ msgstr ""
 msgid "Close Animation"
 msgstr ""
 
-msgid ""
-"Configurate accessibility settings for visually impaired people by "
-"activating this helper plugins."
-msgstr ""
-
-msgid "Configure Color Filter"
+msgid "Description"
 msgstr ""
 
 msgid "Desktop"
@@ -57,13 +54,22 @@ msgstr ""
 msgid "Desktop Preview"
 msgstr ""
 
+msgid "Effects"
+msgstr ""
+
 msgid "Enable Animations"
 msgstr ""
 
-msgid "Enable Color Filter"
+msgid "Enable Blur"
 msgstr ""
 
-msgid "Enable Magnification"
+msgid "Enable Scale"
+msgstr ""
+
+msgid "Enable Wobbly"
+msgstr ""
+
+msgid "Enable Zoom"
 msgstr ""
 
 msgid "Minimize Animation"
@@ -78,25 +84,20 @@ msgstr ""
 msgid "Open Animation"
 msgstr ""
 
-msgid ""
-"Please check if you have the filter-manager package installed correctly."
+msgid "Profil:"
 msgstr ""
 
 msgid "Profile"
 msgstr ""
 
-msgid ""
-"Select the desktop plugin in the drop down box and change the size of the "
-"desktop."
-msgstr ""
-
-msgid ""
-"Select the window animations which should be used for the specific events in "
-"the drop down boxes."
-msgstr ""
-
 msgid "Simple Compiz Config Settings Manager"
 msgstr ""
 
-msgid "gtk-ok"
+msgid "Switcher"
+msgstr ""
+
+msgid "Zoom"
+msgstr ""
+
+msgid "gtk-close"
 msgstr ""
