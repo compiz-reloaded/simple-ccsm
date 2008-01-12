@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm 0.0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2007-10-09 19:12+0200\n"
+"POT-Creation-Date: 2008-01-12 20:39+0100\n"
 "PO-Revision-Date: 2007-10-09 19:16+0200\n"
 "Last-Translator: Patrick Niklaus <marex@opencompositing.org>\n"
 "Language-Team: Compiz Fusion translators <i18n@lists.compiz-fusion.org>\n"
@@ -16,26 +16,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "<b><span size='large'>Filter Manager was not found.</span></b>"
-msgstr "<b><span size='large'>Filter Manager wurde nicht gefunden.</span></b>"
+#, c-format
+msgid "%s (Cover)"
+msgstr "%s (Cover)"
 
-msgid "<b>Accessibilty:</b>"
-msgstr "<b>Barrierefreiheit:</b>"
+#, c-format
+msgid "%s (Flip)"
+msgstr "%s (Flip)"
 
-msgid "<b>Animations:</b>"
-msgstr "<b>Animationen:</b>"
+msgid "Cover"
+msgstr "Cover"
 
-msgid "<b>Desktop:</b>"
-msgstr "<b>Arbeitsfläche:</b>"
+msgid "Flip"
+msgstr "Flip"
 
-msgid "<b>Effects:</b>"
-msgstr "<b>Effekte:</b>"
-
-msgid "Accessibility"
-msgstr "Barrierefreiheit"
+msgid "Profile"
+msgstr "Profil"
 
 msgid "Animations"
 msgstr "Animationen"
+
+msgid "Desktop"
+msgstr "Arbeitsfläche"
+
+msgid "Effects"
+msgstr "Effekte"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "Default"
+msgstr "Standard"
+
+msgid "Accessibilty"
+msgstr "Barrierefreiheit"
+
+msgid "Advanced"
+msgstr "Erweitert"
 
 msgid "Appearence"
 msgstr "Aussehen"
@@ -43,18 +60,8 @@ msgstr "Aussehen"
 msgid "Close Animation"
 msgstr "Beenden Animation"
 
-msgid ""
-"Configurate accessibility settings for visually impaired people by "
-"activating this helper plugins."
-msgstr ""
-"Verändern sie die Einstellungen für sehbehinderte Menschen, "
-"indem sie eines dieser Plugins aktivieren."
-
-msgid "Configure Color Filter"
-msgstr "Farbfilter einstellen"
-
-msgid "Desktop"
-msgstr "Arbeitsfläche"
+msgid "Description"
+msgstr "Beschreibung"
 
 msgid "Desktop Preview"
 msgstr "Arbeitsflächen Vorschau"
@@ -62,11 +69,17 @@ msgstr "Arbeitsflächen Vorschau"
 msgid "Enable Animations"
 msgstr "Animationen aktivieren"
 
-msgid "Enable Color Filter"
-msgstr "Farbfilter aktivieren"
+msgid "Enable Blur"
+msgstr "Unschärfe aktivieren"
 
-msgid "Enable Magnification"
-msgstr "Vergrößerung aktivieren"
+msgid "Enable Scale"
+msgstr "Scale aktivieren"
+
+msgid "Enable Wobbly"
+msgstr "Wobbly aktivieren"
+
+msgid "Enable Zoom"
+msgstr "Zoom aktivieren"
 
 msgid "Minimize Animation"
 msgstr "Minimieren Animation"
@@ -80,30 +93,60 @@ msgstr "Anzahl der vertikalen Arbeitsflächen"
 msgid "Open Animation"
 msgstr "Öffnen Animation"
 
-msgid ""
-"Please check if you have the filter-manager package installed correctly."
-msgstr ""
-"Bitte überprüfen sie, ob sie den Filter Manager korrekt installiert haben."
-
-msgid "Profile"
-msgstr "Profil"
-
-msgid ""
-"Select the desktop plugin in the drop down box and change the size of the "
-"desktop."
-msgstr ""
-"Wählen sie eines der Arbeitsflächen Plugins aus und verändern sie die Größe "
-"der Arbeitsfläche"
-
-msgid ""
-"Select the window animations which should be used for the specific events in "
-"the drop down boxes."
-msgstr ""
-"Wählen sie die Fenster Animationen aus, die bei den gegebenen Ereignissen ausgeführt "
-"werden sollen."
+msgid "Profil:"
+msgstr "Profil:"
 
 msgid "Simple Compiz Config Settings Manager"
 msgstr "Einfacher Compiz Config Einstellungs-Manager"
 
-msgid "gtk-ok"
-msgstr ""
+#, fuzzy
+msgid "Switcher"
+msgstr "Anwendungsumschalter"
+
+msgid "gtk-close"
+msgstr "gtk-close"
+
+#~ msgid "<b><span size='large'>Filter Manager was not found.</span></b>"
+#~ msgstr ""
+#~ "<b><span size='large'>Filter Manager wurde nicht gefunden.</span></b>"
+
+#~ msgid "<b>Accessibilty:</b>"
+#~ msgstr "<b>Barrierefreiheit:</b>"
+
+#~ msgid "<b>Animations:</b>"
+#~ msgstr "<b>Animationen:</b>"
+
+#~ msgid "<b>Desktop:</b>"
+#~ msgstr "<b>Arbeitsfläche:</b>"
+
+#~ msgid ""
+#~ "Configurate accessibility settings for visually impaired people by "
+#~ "activating this helper plugins."
+#~ msgstr ""
+#~ "Verändern sie die Einstellungen für sehbehinderte Menschen, indem sie "
+#~ "eines dieser Plugins aktivieren."
+
+#~ msgid "Configure Color Filter"
+#~ msgstr "Farbfilter einstellen"
+
+#~ msgid "Enable Magnification"
+#~ msgstr "Vergrößerung aktivieren"
+
+#~ msgid ""
+#~ "Please check if you have the filter-manager package installed correctly."
+#~ msgstr ""
+#~ "Bitte überprüfen sie, ob sie den Filter Manager korrekt installiert haben."
+
+#~ msgid ""
+#~ "Select the desktop plugin in the drop down box and change the size of the "
+#~ "desktop."
+#~ msgstr ""
+#~ "Wählen sie eines der Arbeitsflächen Plugins aus und verändern sie die "
+#~ "Größe der Arbeitsfläche"
+
+#~ msgid ""
+#~ "Select the window animations which should be used for the specific events "
+#~ "in the drop down boxes."
+#~ msgstr ""
+#~ "Wählen sie die Fenster Animationen aus, die bei den gegebenen Ereignissen "
+#~ "ausgeführt werden sollen."

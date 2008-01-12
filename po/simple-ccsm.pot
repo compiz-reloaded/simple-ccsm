@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-01-10 22:13+0530\n"
+"POT-Creation-Date: 2008-01-12 20:39+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,13 +30,28 @@ msgstr ""
 msgid "Flip"
 msgstr ""
 
+msgid "Profile"
+msgstr ""
+
+msgid "Animations"
+msgstr ""
+
+msgid "Desktop"
+msgstr ""
+
+msgid "Effects"
+msgstr ""
+
+msgid "Zoom"
+msgstr ""
+
 msgid "Default"
 msgstr ""
 
 msgid "Accessibilty"
 msgstr ""
 
-msgid "Animations"
+msgid "Advanced"
 msgstr ""
 
 msgid "Appearence"
@@ -48,13 +63,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-msgid "Desktop"
-msgstr ""
-
 msgid "Desktop Preview"
-msgstr ""
-
-msgid "Effects"
 msgstr ""
 
 msgid "Enable Animations"
@@ -87,16 +96,10 @@ msgstr ""
 msgid "Profil:"
 msgstr ""
 
-msgid "Profile"
-msgstr ""
-
 msgid "Simple Compiz Config Settings Manager"
 msgstr ""
 
 msgid "Switcher"
-msgstr ""
-
-msgid "Zoom"
 msgstr ""
 
 msgid "gtk-close"
