@@ -95,7 +95,7 @@ gtk.glade.bindtextdomain("simple-ccsm", "@prefix@/share/locale")
 gettext.bindtextdomain("simple-ccsm", "@prefix@/share/locale")
 gettext.textdomain("simple-ccsm")
 
-# Possible are 74 points (cube and wall conflict)
+# Possible are 77 points (cube and wall conflict)
 EffectPluginRatings = {\
 'wobbly': 10,
 'cube': 3,
@@ -107,6 +107,7 @@ EffectPluginRatings = {\
 'water': 10,
 'firepaint': 7,
 'shift': 5,
+'scale': 3,
 'cubereflex': 8
 }
 
@@ -122,6 +123,12 @@ AccessibilityPlugins = {\
 'zoom': 1,
 'ezoom': 1,
 'colorfilter': 1
+}
+
+AnimationSettings = {
+'openAnimationBox': "open_effects",
+'closeAnimationBox': "close_effects",
+'minimizeAnimationBox': "minimize_effects"
 }
 
 # Utility Functions
@@ -296,25 +303,7 @@ class ProfilePage:
         self.DesktopLayout = "<i>%s</i>"
         self.DesktopLabel = self.GladeXML.get_widget("desktopLabel")
 
-        # Effect Rating
-        switcherPluginBox = self.GladeXML.get_widget("switcherPluginChooser")
-        switcherPluginBox.connect('changed', self.SetEffectRating)
-        self.EnableScale = self.GladeXML.get_widget("enableScale")
-        self.EnableScale.connect('toggled', self.SetEffectRating)
-        self.EnableWobbly = self.GladeXML.get_widget("enableWobbly")
-        self.EnableWobbly.connect('toggled', self.SetEffectRating)
-        self.EnableBlur = self.GladeXML.get_widget("enableBlur")
-        self.EnableBlur.connect('toggled', self.SetEffectRating)
-
-        # Animation Rating
-        enableAnimations = self.GladeXML.get_widget("enableAnimations")
-        enableAnimations.connect('toggled', self.SetAnimationRating)
-        animationClose = self.GladeXML.get_widget("closeAnimationBox")
-        animationClose.connect('changed', self.SetAnimationRating)
-        animationOpen = self.GladeXML.get_widget("openAnimationBox")
-        animationOpen.connect('changed', self.SetAnimationRating)
-        animationMinimize = self.GladeXML.get_widget("minimizeAnimationBox")
-        animationMinimize.connect('changed', self.SetAnimationRating)
+        self.GladeXML.signal_autoconnect(self)
 
     def UpdateDesktopPlugins(self):
         self.DesktopPlugins = {}
@@ -338,16 +327,11 @@ class ProfilePage:
             if plugin.Enabled:
                 rating += points
 
-        rating = (rating / 74.0) * 5
+        rating = (rating / 77.0) * 5
 
         self.EffectStars.set_value(rating)
 
     def SetAnimationRating(self, widget=None):
-        boxes = {
-            'closeAnimationBox': 'close_effects',
-            'openAnimationBox': 'open_effects',
-            'minimizeAnimationBox': 'minimize_effects'
-        }
         names = {
             'close_effects': CloseOpenEffectNames,
             'open_effects': CloseOpenEffectNames,
@@ -356,7 +340,7 @@ class ProfilePage:
         plugin = self.Context.Plugins['animation']
 
         rating = 0.0
-        for box, settingName in boxes.items():
+        for box, settingName in AnimationSettings.items():
             box = self.GladeXML.get_widget(box)
             if not box.get_model():
                 continue
@@ -373,11 +357,11 @@ class ProfilePage:
         if self.Context.Plugins['minimize'].Enabled:
             rating += AnimationRatings[_('Zoom')] / 3 
 
-        rating = rating / (10 * len(boxes)) * 5
+        rating = rating / (10 * len(AnimationSettings)) * 5
 
         self.AnimationStars.set_value(rating)
 
-    def CheckAccessibility(self):
+    def CheckAccessibility(self, widget=None):
         rating = 0.0
         for name in AccessibilityPlugins.keys():
             if self.Context.Plugins.has_key(name) and self.Context.Plugins[name].Enabled:
@@ -398,17 +382,7 @@ class AnimationPage:
         self.Context  = context
         self.Block    = 0
 
-        # Enable Animations
-        enableAnimations = self.GladeXML.get_widget("enableAnimations")
-        enableAnimations.connect('toggled', self.EnableAnimationsChanged)
-
-        # Animation Boxes
-        animationClose = self.GladeXML.get_widget("closeAnimationBox")
-        animationClose.connect('changed', self.AnimationBoxChanged, "close_effects")
-        animationOpen = self.GladeXML.get_widget("openAnimationBox")
-        animationOpen.connect('changed', self.AnimationBoxChanged, "open_effects")
-        animationMinimize = self.GladeXML.get_widget("minimizeAnimationBox")
-        animationMinimize.connect('changed', self.AnimationBoxChanged, "minimize_effects")
+        self.GladeXML.signal_autoconnect(self)
 
     def EnableAnimationsChanged(self, widget):
         if self.Block > 0:
@@ -417,9 +391,12 @@ class AnimationPage:
         plugin = self.Context.Plugins['animation']
         EnablePlugin(plugin, widget.get_active())
     
-    def AnimationBoxChanged(self, widget, settingName):
+    def AnimationBoxChanged(self, widget):
         if self.Block > 0:
             return
+
+        name = widget.get_name()
+        settingName = AnimationSettings[name]
 
         text = widget.get_active_text()
         plugin = self.Context.Plugins['animation']
@@ -443,12 +420,7 @@ class AnimationPage:
     def FillAnimationBoxes(self):
         plugin = self.Context.Plugins['animation']
         
-        boxes = {}
-        boxes['closeAnimationBox'] =  "close_effects"
-        boxes['openAnimationBox'] = "open_effects"
-        boxes['minimizeAnimationBox'] = "minimize_effects"
-
-        for boxName, settingName in boxes.items():
+        for boxName, settingName in AnimationSettings.items():
             box = self.GladeXML.get_widget(boxName)
             setting = plugin.Screens[0][settingName]
             items = sorted(setting.Info[1][2].items(), ccm.EnumSettingSortCompare)
@@ -473,17 +445,7 @@ class EffectPage:
         self.Context  = context
         self.Block    = 0
 
-        # Window Switcher Box
-        switcherPluginBox = self.GladeXML.get_widget("switcherPluginChooser")
-        switcherPluginBox.connect('changed', self.SwitcherBoxChanged)
-
-        # Effect Plugins
-        self.EnableScale = self.GladeXML.get_widget("enableScale")
-        self.EnableScale.connect('toggled', self.EffectPluginChanged, "scale")
-        self.EnableWobbly = self.GladeXML.get_widget("enableWobbly")
-        self.EnableWobbly.connect('toggled', self.EffectPluginChanged, "wobbly")
-        self.EnableBlur = self.GladeXML.get_widget("enableBlur")
-        self.EnableBlur.connect('toggled', self.EffectPluginChanged, "blur")
+        self.GladeXML.signal_autoconnect(self)
 
     def UpdateSwitcherPlugins(self):
         self.SwitcherPlugins = {}
@@ -496,9 +458,17 @@ class EffectPage:
                 else:
                     self.SwitcherPlugins[plugin.ShortDesc] = plugin
 
-    def EffectPluginChanged(self, widget, pluginName):
+    def EffectPluginChanged(self, widget):
         if self.Block > 0:
             return
+
+        name = widget.get_name()
+        effectPlugins = {
+        'enableScale': "scale",
+        'enableWobbly': "wobbly",
+        'enableBlur': "blur"
+        }
+        pluginName = effectPlugins[name]
 
         plugin = self.Context.Plugins[pluginName]
         value  = widget.get_active()
@@ -532,12 +502,14 @@ class EffectPage:
         self.Context.Write()
 
     def SetEffectPlugins(self):
-        plugins = {}
-        plugins['scale'] = self.EnableScale
-        plugins['wobbly'] = self.EnableWobbly
-        plugins['blur'] = self.EnableBlur
+        widgets = {
+        'scale': "enableScale",
+        'wobbly': "enableWobbly",
+        'blur': "enableBlur"
+        }
 
-        for pluginName, widget in plugins.items():
+        for pluginName, widgetName in widgets.items():
+            widget = self.GladeXML.get_widget(widgetName)
             plugin = self.Context.Plugins[pluginName]
             widget.set_active(plugin.Enabled)
 
@@ -572,20 +544,12 @@ class DesktopPage:
         self.Context  = context
         self.Block    = 0
 
+        self.GladeXML.signal_autoconnect(self)
+
         # Preview Widget
         desktopTable = self.GladeXML.get_widget("desktopTable")
         self.DesktopPreview = DesktopPreview()
         desktopTable.attach(self.DesktopPreview, 1, 2, 3, 4, gtk.EXPAND | gtk.FILL, gtk.EXPAND | gtk.FILL)
-
-        # Desktop Chooser
-        desktopBox = self.GladeXML.get_widget("desktopPluginChooser")
-        desktopBox.connect('changed', self.AppearenceBoxChanged)
-        
-        # Size Slider
-        desktopHSize = self.GladeXML.get_widget("horizontalDesktops")
-        desktopHSize.connect('value-changed', self.DesktopSizeChanged, "hsize")
-        desktopVSize = self.GladeXML.get_widget("verticalDesktops")
-        desktopVSize.connect('value-changed', self.DesktopSizeChanged, "vsize")
 
     def UpdateDesktopPlugins(self):
         self.DesktopPlugins = {}
@@ -593,9 +557,17 @@ class DesktopPage:
             if "largedesktop" in plugin.Features:
                 self.DesktopPlugins[plugin.ShortDesc] = plugin
     
-    def DesktopSizeChanged(self, widget, settingName):
+    def DesktopSizeChanged(self, widget):
         if self.Block > 0:
             return
+
+        name = widget.get_name()
+        settings = {
+        'horizontalDesktops': "hsize",
+        'verticalDesktops': "vsize"
+        }
+        settingName = settings[name]
+
         value = widget.get_value()
         self.Context.Plugins['core'].Screens[0][settingName].Value = value
         self.Context.Write()
@@ -664,9 +636,7 @@ class ZoomPage:
         self.Context  = context
         self.Block    = 0
 
-        # Enable Zoom
-        self.EnableZoom = self.GladeXML.get_widget("enableZoom")
-        self.EnableZoom.connect('toggled', self.ZoomChanged)
+        self.GladeXML.signal_autoconnect(self)
 
         # Zoom Keybindings
         self.ZoomIn = None
@@ -688,8 +658,6 @@ class ZoomPage:
         
         plugin.Enabled = widget.get_active()
         self.Context.Write()
-
-        self.CheckAccessibility()
     
     def SetZoom(self):
         pluginNames = ["ezoom", "zoom"]
@@ -713,7 +681,8 @@ class ZoomPage:
             self.ZoomIn.Read()
             self.ZoomOut.Read()
 
-        self.EnableZoom.set_active(plugin.Enabled)
+        widget = self.GladeXML.get_widget("enableZoom")
+        widget.set_active(plugin.Enabled)
 
     def Update(self):
         self.Block += 1
@@ -723,6 +692,7 @@ class ZoomPage:
 class MainWin:
     def __init__(self, context, page = -1):
         self.GladeXML = glade.XML(DataDir + "simple-ccsm.glade", domain="simple-ccsm")
+        self.GladeXML.signal_autoconnect(self)
 
         self.Context = context
         self.Block = 0
@@ -732,8 +702,7 @@ class MainWin:
             notebook.set_current_page (Pages[page])
 
         # Window
-        self.Window = self.GladeXML.get_widget("mainWin")
-        self.Window.connect('destroy', self.Quit)
+        window = self.GladeXML.get_widget("mainWin")
 
         # Icon
         theme = gtk.icon_theme_get_default()
@@ -742,16 +711,10 @@ class MainWin:
             theme.load_icon("simple-ccsm", 32, 0),
             theme.load_icon("simple-ccsm", 48, 0),
         )
-        self.Window.set_icon_list(*iconList)
+        window.set_icon_list(*iconList)
 
         # Profile Chooser
         self.ProfileChooser = self.GladeXML.get_widget("profileChooser")
-        applyButton = self.GladeXML.get_widget("applyButton")
-        applyButton.connect('clicked', self.ApplyProfile)
-
-        # Close Button
-        closeButton = self.GladeXML.get_widget("closeButton")
-        closeButton.connect('clicked', self.Quit)
 
         # Pages
         self.AnimationPage = AnimationPage(self.Context, self.GladeXML)
@@ -761,7 +724,7 @@ class MainWin:
         self.ProfilePage   = ProfilePage(self.Context, self.GladeXML)
 
         self.Update()
-        self.Window.show_all()
+        window.show_all()
 
     def Update(self):
         self.Context.Read()
@@ -771,6 +734,8 @@ class MainWin:
         self.DesktopPage.Update()
         self.ZoomPage.Update()
         self.ProfilePage.Update()
+
+        self.SetProfile()
 
     def ApplyProfile(self, widget):
         profile = self.ProfileChooser.get_active_text()
