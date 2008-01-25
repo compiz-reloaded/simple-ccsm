@@ -48,6 +48,9 @@ Descriptions = {\
 'Hollywood got nothing': ""
 }
 
+# Switcher keybinding
+SwitcherKey = "<Alt>Tab"
+
 # Since there seems no way to get the untranslated names,
 # we need to keep a list here.
 CloseOpenEffectNames = [\
@@ -458,6 +461,12 @@ class EffectPage:
                 else:
                     self.SwitcherPlugins[plugin.ShortDesc] = plugin
 
+        self.SwitcherKeySettings = {}
+        for pluginName in ('switcher', 'shift', 'ring'):
+            plugin = self.Context.Plugins[pluginName]
+            setting = plugin.Display['next_key']
+            self.SwitcherKeySettings[pluginName] = setting
+
     def EffectPluginChanged(self, widget):
         if self.Block > 0:
             return
@@ -484,12 +493,23 @@ class EffectPage:
         for shortDesc, plugin in self.SwitcherPlugins.items():
             if text != shortDesc:
                 EnablePlugin(plugin, False)
+                setting = self.SwitcherKeySettings[plugin.Name]
+                if not setting.IsDefault and setting.DefaultValue != SwitcherKey:
+                    setting.Reset()
 
         self.Context.Write()
 
         for shortDesc, plugin in self.SwitcherPlugins.items():
             if text == shortDesc:
-                plugin.Enabled = True
+                EnablePlugin(plugin, True)
+
+                # Set default key binding to Alt-Tab
+                setting = self.SwitcherKeySettings[plugin.Name]
+                settings = self.SwitcherKeySettings.values()
+                conflict = ccm.ActionConflict(setting, key=SwitcherKey, settings=settings, autoResolve=True)
+                if conflict.Resolve(ccm.GlobalUpdater):
+                    setting.Value = SwitcherKey
+
                 # Exception for shift, since it has 2 modes
                 if plugin.Name == 'shift':
                     setting = plugin.Screens[0]['mode']
