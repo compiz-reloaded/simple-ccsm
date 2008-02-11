@@ -223,7 +223,7 @@ class DesktopPreview(gtk.Widget):
             x = self.allocation.x + self.line_width / 2.0
 
 class StarScale(gtk.Widget):
-    def __init__(self, stars=0.0, max=6):
+    def __init__(self, stars=0.0, max=5):
         gtk.Widget.__init__(self)
 
         self.stars = stars
