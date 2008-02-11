@@ -223,43 +223,94 @@ class DesktopPreview(gtk.Widget):
             x = self.allocation.x + self.line_width / 2.0
 
 class StarScale(gtk.Widget):
-    def __init__(self, stars=0.0):
+    def __init__(self, stars=0.0, max=6):
         gtk.Widget.__init__(self)
 
         self.stars = stars
+        self.max = max
         self.star_size = 16
         self.star_space = 5
 
-        self.star_surface = cairo.ImageSurface.create_from_png("%s/images/star.png" % DataDir)
+        self.image_star = cairo.ImageSurface.create_from_png("%s/images/star.png" % DataDir)
+        self.image_dark = cairo.ImageSurface.create_from_png("%s/images/star_dark.png" % DataDir)
+        self.surface_star = None
+        self.surface_dark = None
+        self.surface      = None
+
+        self._size_changed = False
         
         self.set_flags(self.flags() | gtk.NO_WINDOW)
 
     def set_value(self, stars):
         self.stars = stars
+        if self.surface:
+            self.draw_surface()
+
+    def set_max(self, max):
+        self.max = max
         self.queue_resize()
 
     def get_value(self):
         return self.stars
     
+    def get_max(self):
+        return self.max
+
     def do_size_request(self, req):
         req.height = self.star_size
-        req.width = (self.star_size+self.star_space)*self.stars 
+        req.width = (self.star_size+self.star_space)*self.max
+        self._size_changed = True
+
+    def draw_sources(self):
+        width = self.allocation.width
+        height = self.allocation.height
+        self.surface_star = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
+        self.surface_dark = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
+
+        data = ((self.surface_star, self.image_star), (self.surface_dark, self.image_dark))
+
+        for target, source in data:
+            cr = cairo.Context(target)
+            x = 0
+            for i in range(self.max):
+                cr.set_source_surface(source, x, 0)
+                cr.rectangle(x, 0, self.star_size, self.star_size)
+                cr.fill()
+                x += self.star_size + self.star_space
+
+    def draw_surface(self):
+        if not self.surface_dark or not self.surface_star or self._size_changed:
+            self.draw_sources()
+            self._size_changed = False
+
+        width = self.allocation.width
+        height = self.allocation.height
+        self.surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
+        cr = cairo.Context(self.surface)
+
+        q = (self.max - self.stars) / self.max
+        cr.set_source_surface(self.surface_dark)
+        cr.rectangle(width - q*width, 0, q*width, self.star_size)
+        cr.fill()
+
+        q = self.stars / self.max
+        cr.set_source_surface(self.surface_star)
+        cr.rectangle(0, 0, q*width, self.star_size)
+        cr.fill()
 
     def do_expose_event(self, event):
-        cr = self.window.cairo_create()  
+        if not self.surface or self._size_changed:
+            self.draw_surface()
 
         x = self.allocation.x
         y = self.allocation.y
-        i = self.stars
-        while i > 0:
-            size = 1.0
-            if i < 1:
-                size = i
-            cr.set_source_surface(self.star_surface, x, y)
-            cr.rectangle(x, y, self.star_size*size, self.star_size)
-            cr.fill()
-            x += self.star_size + self.star_space
-            i -= 1
+        width  = self.allocation.width
+        height = self.allocation.height
+
+        cr = self.window.cairo_create()
+        cr.set_source_surface(self.surface, x, y)
+        cr.rectangle(x, y, width, height)
+        cr.fill()
 
 
 gobject.type_register(StarScale)
