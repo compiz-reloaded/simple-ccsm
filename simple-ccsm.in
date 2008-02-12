@@ -163,6 +163,8 @@ class DesktopPreview(gtk.Widget):
         gtk.Widget.__init__(self)
 
         self.size = size
+        self.default_desktop_height = 30
+        self.default_desktop_width = 40
         self.desktop_height = 30
         self.desktop_width = 40
         self.desktop_space = 5
@@ -179,6 +181,10 @@ class DesktopPreview(gtk.Widget):
     
     def do_unrealize(self):
         self.window.destroy()
+
+    def do_size_request(self, req):
+        req.width = (self.default_desktop_width+self.desktop_space)*4
+        req.height = (self.default_desktop_height+self.desktop_space)*2
 
     def do_size_allocate(self, allocation):
         self.allocation = allocation
@@ -288,6 +294,8 @@ class StarScale(gtk.Widget):
         self.surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
         cr = cairo.Context(self.surface)
 
+        width = (self.star_size+self.star_space)*self.max
+
         q = (self.max - self.stars) / self.max
         cr.set_source_surface(self.surface_dark)
         cr.rectangle(width - q*width, 0, q*width, self.star_size)
@@ -316,28 +324,40 @@ class StarScale(gtk.Widget):
 gobject.type_register(StarScale)
 gobject.type_register(DesktopPreview)
 
-class CheckImage(gtk.Image):
+class CheckImage(gtk.HBox):
     def __init__(self, value=False):
-        gtk.Image.__init__(self)
+        gtk.HBox.__init__(self)
+        self.image = gtk.Image()
+        self.label = gtk.Label()
+
+        self.set_spacing(5)
+
+        self.pack_start(self.image, False, False)
+        self.pack_start(self.label, False, False)
 
         self.value = value
 
-        self.update_image()
+        self.image.props.xalign = 0.0
+        self.label.props.xalign = 0.0
+
+        self.update()
     
     def set_value(self, value):
         self.value = value
 
-        self.update_image()
+        self.update()
 
     def get_value(self):
         return self.value
     
-    def update_image(self):
+    def update(self):
         size = gtk.ICON_SIZE_BUTTON
         if self.value:
-            self.set_from_stock(gtk.STOCK_APPLY, size)
+            self.image.set_from_stock(gtk.STOCK_APPLY, size)
+            self.label.set_text(_("Enabled"))
         else:
-            self.set_from_stock(gtk.STOCK_DIALOG_ERROR, size)
+            self.image.set_from_stock(gtk.STOCK_DIALOG_ERROR, size)
+            self.label.set_text(_("Disabled"))
 
 class ProfilePage:
     def __init__(self, context, gladeXML):
@@ -345,13 +365,15 @@ class ProfilePage:
         self.Context  = context
 
         # Check List
-        checkList = self.GladeXML.get_widget("checkList")
         self.EffectStars = StarScale()
         self.AnimationStars = StarScale()
         self.AccessibilityCheck = CheckImage()
-        checkList.attach(self.AnimationStars, 1, 2, 1, 2, gtk.EXPAND, 0)
-        checkList.attach(self.EffectStars, 1, 2, 2, 3, gtk.EXPAND, 0)
-        checkList.attach(self.AccessibilityCheck, 1, 2, 4, 5, gtk.EXPAND, 0)
+        effectsAlign = self.GladeXML.get_widget("effectsAlignment")
+        effectsAlign.add(self.EffectStars)
+        animationAlign = self.GladeXML.get_widget("animationsAlignment")
+        animationAlign.add(self.AnimationStars)
+        accessibilityAlign = self.GladeXML.get_widget("accessibilityAlignment")
+        accessibilityAlign.add(self.AccessibilityCheck)
 
         # Desktop Label
         self.DesktopLayout = "<i>%s</i>"
@@ -618,9 +640,9 @@ class DesktopPage:
         self.GladeXML.signal_autoconnect(self)
 
         # Preview Widget
-        desktopTable = self.GladeXML.get_widget("desktopTable")
         self.DesktopPreview = DesktopPreview()
-        desktopTable.attach(self.DesktopPreview, 1, 2, 3, 4, gtk.EXPAND | gtk.FILL, gtk.EXPAND | gtk.FILL)
+        previewAlign = self.GladeXML.get_widget("previewAlignment")
+        previewAlign.add(self.DesktopPreview)
 
     def UpdateDesktopPlugins(self):
         self.DesktopPlugins = {}
@@ -712,7 +734,6 @@ class ZoomPage:
         # Zoom Keybindings
         self.ZoomIn = None
         self.ZoomOut = None
-        self.ZoomBox = self.GladeXML.get_widget("zoomBox")
 
     def ZoomChanged(self, widget):
         if self.Block > 0:
@@ -744,10 +765,12 @@ class ZoomPage:
         if plugin.Name == "ezoom":
             if self.ZoomIn == None:
                 self.ZoomIn = ccm.MakeSetting(plugin.Display['zoom_in'])
-                self.ZoomBox.pack_start(self.ZoomIn.Widget, True, False)
+                zoomInAlign = self.GladeXML.get_widget("zoomInAlignment")
+                zoomInAlign.add(self.ZoomIn.Widget)
             if self.ZoomOut == None:
                 self.ZoomOut = ccm.MakeSetting(plugin.Display['zoom_out'])
-                self.ZoomBox.pack_start(self.ZoomOut.Widget, True, False)
+                zoomOutAlign = self.GladeXML.get_widget("zoomOutAlignment")
+                zoomOutAlign.add(self.ZoomOut.Widget)
 
             self.ZoomIn.Read()
             self.ZoomOut.Read()
