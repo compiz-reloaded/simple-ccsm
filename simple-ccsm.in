@@ -499,7 +499,7 @@ class AnimationPage:
         for boxName, settingName in AnimationSettings.items():
             box = self.GladeXML.get_widget(boxName)
             setting = plugin.Screens[0][settingName]
-            items = sorted(setting.Info[1][2].items(), ccm.EnumSettingSortCompare)
+            items = sorted(setting.Info[1][2].items(), key=ccm.EnumSettingKeyFunc)
             SetupBoxModel(box)
             for key, value in items:
                 box.append_text(key)
