@@ -376,7 +376,7 @@ class ProfilePage:
         accessibilityAlign.add(self.AccessibilityCheck)
 
         # Desktop Label
-        self.DesktopLayout = "<i>%s</i>"
+        self.DesktopLayout = "%s"
         self.DesktopLabel = self.GladeXML.get_widget("desktopLabel")
 
         self.GladeXML.signal_autoconnect(self)
