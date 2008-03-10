@@ -548,7 +548,8 @@ class EffectPage:
         effectPlugins = {
         'enableScale': "scale",
         'enableWobbly': "wobbly",
-        'enableBlur': "blur"
+        'enableBlur': "blur",
+        'enableExpo': "expo"
         }
         pluginName = effectPlugins[name]
 
@@ -598,7 +599,8 @@ class EffectPage:
         widgets = {
         'scale': "enableScale",
         'wobbly': "enableWobbly",
-        'blur': "enableBlur"
+        'blur': "enableBlur",
+        'expo': "enableExpo"
         }
 
         for pluginName, widgetName in widgets.items():
