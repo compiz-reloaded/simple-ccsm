@@ -785,6 +785,19 @@ class ZoomPage:
         self.SetZoom()
         self.Block -= 1
 
+class EdgePage:
+    def __init__(self, context, gladeXML):
+        self.GladeXML = gladeXML
+        self.Context  = context
+        self.Block    = 0
+
+        align = self.GladeXML.get_widget("edgesAlignment")
+        self.EdgeSelector = ccm.GlobalEdgeSelector(self.Context)
+        align.add(self.EdgeSelector)
+
+    def Update(self):
+        pass
+
 class MainWin:
     def __init__(self, context, page = -1):
         self.GladeXML = glade.XML(DataDir + "simple-ccsm.glade", domain="simple-ccsm")
@@ -818,6 +831,7 @@ class MainWin:
         self.DesktopPage   = DesktopPage(self.Context, self.GladeXML)
         self.ZoomPage      = ZoomPage(self.Context, self.GladeXML)
         self.ProfilePage   = ProfilePage(self.Context, self.GladeXML)
+        self.EdgePage      = EdgePage(self.Context, self.GladeXML)
 
         self.Update()
         window.show_all()
@@ -830,6 +844,7 @@ class MainWin:
         self.DesktopPage.Update()
         self.ZoomPage.Update()
         self.ProfilePage.Update()
+        self.EdgePage.Update()
 
         self.SetProfile()
 
