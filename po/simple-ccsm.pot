@@ -8,13 +8,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-01-12 20:39+0100\n"
+"POT-Creation-Date: 2008-03-12 13:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
 
 #, c-format
 msgid "%s (Cover)"
@@ -48,28 +54,67 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-msgid "Accessibilty"
+msgid "<b>Accessibility</b>"
 msgstr ""
 
-msgid "Advanced"
+msgid "<b>Additions</b>"
 msgstr ""
 
-msgid "Appearence"
+msgid "<b>Animations</b>"
 msgstr ""
 
-msgid "Close Animation"
+msgid "<b>Appearance</b>"
 msgstr ""
 
-msgid "Description"
+msgid "<b>Close Window</b>"
 msgstr ""
 
-msgid "Desktop Preview"
+msgid "<b>Description</b>"
 msgstr ""
 
-msgid "Enable Animations"
+msgid "<b>Desktop columns</b>"
+msgstr ""
+
+msgid "<b>Desktop preview</b>"
+msgstr ""
+
+msgid "<b>Desktop rows</b>"
+msgstr ""
+
+msgid "<b>Desktop</b>"
+msgstr ""
+
+msgid "<b>Effects</b>"
+msgstr ""
+
+msgid "<b>Minimize window</b>"
+msgstr ""
+
+msgid "<b>Open window</b>"
+msgstr ""
+
+msgid "<b>Screen Edges</b>"
+msgstr ""
+
+msgid "<b>Switcher</b>"
+msgstr ""
+
+msgid "<b>Zoom in</b>"
+msgstr ""
+
+msgid "<b>Zoom out</b>"
+msgstr ""
+
+msgid "Accessibility"
+msgstr ""
+
+msgid "Edges"
 msgstr ""
 
 msgid "Enable Blur"
+msgstr ""
+
+msgid "Enable Expo"
 msgstr ""
 
 msgid "Enable Scale"
@@ -78,19 +123,13 @@ msgstr ""
 msgid "Enable Wobbly"
 msgstr ""
 
-msgid "Enable Zoom"
+msgid "Enable animations"
 msgstr ""
 
-msgid "Minimize Animation"
+msgid "Enable zoom"
 msgstr ""
 
-msgid "Number of Horizontal Dekstops"
-msgstr ""
-
-msgid "Number of Vertical Dekstops"
-msgstr ""
-
-msgid "Open Animation"
+msgid "Info"
 msgstr ""
 
 msgid "Profil:"
@@ -99,8 +138,8 @@ msgstr ""
 msgid "Simple Compiz Config Settings Manager"
 msgstr ""
 
-msgid "Switcher"
+msgid "gtk-close"
 msgstr ""
 
-msgid "gtk-close"
+msgid "gtk-help"
 msgstr ""
