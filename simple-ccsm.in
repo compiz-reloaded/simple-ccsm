@@ -429,9 +429,9 @@ class ProfilePage:
         if not plugin.Enabled:
             rating = 0.0
         if self.Context.Plugins['fade'].Enabled:
-            rating += AnimationRatings[_('Fade')] * 2
+            rating += AnimationRatings['Fade'] * 2
         if self.Context.Plugins['minimize'].Enabled:
-            rating += AnimationRatings[_('Zoom')] / 3 
+            rating += AnimationRatings['Zoom'] / 3
 
         rating = rating / (10 * len(AnimationSettings)) * 5
 
