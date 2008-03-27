@@ -121,7 +121,7 @@ Pages = {
 'accessibility': 3
 }
 
-# Possible are 2 Points
+# Possible are 2 points
 AccessibilityPlugins = {\
 'zoom': 1,
 'ezoom': 1,
@@ -734,51 +734,82 @@ class ZoomPage:
         self.GladeXML.signal_autoconnect(self)
 
         # Zoom Keybindings
-        self.ZoomIn = None
-        self.ZoomOut = None
+        self.Widgets = {}
+        self.Settings = {
+        # identifier  -   plugin   -    setting     -      container
+        'screenZoomIn':  ('ezoom', 'zoom_in',         'screenZoomBox'),
+        'screenZoomOut': ('ezoom', 'zoom_out',        'screenZoomBox'),
+        'areaZoomIn':    ('mag',   'zoom_in_button',  'areaZoomBox'),
+        'areaZoomOut':   ('mag',   'zoom_out_button', 'areaZoomBox')
+        }
 
     def ZoomChanged(self, widget):
         if self.Block > 0:
             return
         
-        plugin = None
-        pluginNames = ["ezoom", "zoom"]
-        for name in pluginNames:
-            if self.Context.Plugins.has_key(name):
+        available = {}
+        for name in ('ezoom', 'zoom', 'mag'):
+            if name in self.Context.Plugins:
                 plugin = self.Context.Plugins[name]
-                break
-        if not plugin:
-            return
+                available[name] = plugin
         
-        plugin.Enabled = widget.get_active()
+        widget = self.GladeXML.get_widget("enableZoom")
+        if 'ezoom' in available:
+            available['ezoom'].Enabled = widget.get_active()
+        elif 'zomm' in available:
+            available['zoom'].Enabled = widget.get_active()
+
+        widget = self.GladeXML.get_widget("enableMag")
+        if 'mag' in available:
+            available['mag'].Enabled = widget.get_active()
+
         self.Context.Write()
     
     def SetZoom(self):
-        pluginNames = ["ezoom", "zoom"]
-            
-        plugin = None
-        for name in pluginNames:
-             if self.Context.Plugins.has_key(name):
+        for identifier, data in self.Settings.items():
+            pluginName, settingName, containerName = data
+
+            if pluginName not in self.Context.Plugins:
+                continue
+
+            if identifier not in self.Widgets:
+                plugin    = self.Context.Plugins[pluginName]
+                setting   = plugin.Display[settingName]
+                widget    = ccm.MakeSetting(setting)
+                container = self.GladeXML.get_widget(containerName)
+                container.pack_start(widget.EBox)
+                if not plugin.Enabled:
+                    container.set_sensitive(False)
+                self.Widgets[identifier] = widget
+
+            self.Widgets[identifier].Read()
+
+        available = {}
+        for name in ('ezoom', 'zoom', 'mag'):
+            if name in self.Context.Plugins:
                 plugin = self.Context.Plugins[name]
-                break
-        if not plugin:
-            return
-
-        if plugin.Name == "ezoom":
-            if self.ZoomIn == None:
-                self.ZoomIn = ccm.MakeSetting(plugin.Display['zoom_in'])
-                zoomInAlign = self.GladeXML.get_widget("zoomInAlignment")
-                zoomInAlign.add(self.ZoomIn.EBox)
-            if self.ZoomOut == None:
-                self.ZoomOut = ccm.MakeSetting(plugin.Display['zoom_out'])
-                zoomOutAlign = self.GladeXML.get_widget("zoomOutAlignment")
-                zoomOutAlign.add(self.ZoomOut.EBox)
-
-            self.ZoomIn.Read()
-            self.ZoomOut.Read()
+                available[name] = plugin
 
         widget = self.GladeXML.get_widget("enableZoom")
-        widget.set_active(plugin.Enabled)
+        widget.set_sensitive(True)
+        if 'ezoom' in available:
+            plugin = available['ezoom']
+            widget.set_active(plugin.Enabled)
+        elif 'zoom' in available:
+            plugin = available['zoom']
+            widget.set_active(plugin.Enabled)
+        else:
+            widget.set_sensitive(False)
+            widget.set_active(False)
+
+        widget = self.GladeXML.get_widget("enableMag")
+        widget.set_sensitive(True)
+        if 'mag' in available:
+            plugin = available['mag']
+            widget.set_active(plugin.Enabled)
+        else:
+            widget.set_sensitive(False)
+            widget.set_active(False)
 
     def Update(self):
         self.Block += 1
