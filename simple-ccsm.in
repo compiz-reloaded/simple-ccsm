@@ -440,7 +440,7 @@ class ProfilePage:
     def CheckAccessibility(self, widget=None):
         rating = 0.0
         for name in AccessibilityPlugins.keys():
-            if self.Context.Plugins.has_key(name) and self.Context.Plugins[name].Enabled:
+            if name in self.Context.Plugins and self.Context.Plugins[name].Enabled:
                 rating += AccessibilityPlugins[name]
 
         self.AccessibilityCheck.set_value(rating >= 2.0)
@@ -526,7 +526,7 @@ class EffectPage:
     def UpdateSwitcherPlugins(self):
         self.SwitcherPlugins = {}
         for pluginName in ('switcher', 'shift', 'ring'):
-            if self.Context.Plugins.has_key(pluginName):
+            if pluginName in self.Context.Plugins:
                 plugin = self.Context.Plugins[pluginName]
                 if pluginName == 'shift':
                     self.SwitcherPlugins[_("%s (Cover)") % plugin.ShortDesc] = plugin
