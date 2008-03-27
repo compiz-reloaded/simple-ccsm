@@ -768,11 +768,11 @@ class ZoomPage:
             if self.ZoomIn == None:
                 self.ZoomIn = ccm.MakeSetting(plugin.Display['zoom_in'])
                 zoomInAlign = self.GladeXML.get_widget("zoomInAlignment")
-                zoomInAlign.add(self.ZoomIn.Widget)
+                zoomInAlign.add(self.ZoomIn.EBox)
             if self.ZoomOut == None:
                 self.ZoomOut = ccm.MakeSetting(plugin.Display['zoom_out'])
                 zoomOutAlign = self.GladeXML.get_widget("zoomOutAlignment")
-                zoomOutAlign.add(self.ZoomOut.Widget)
+                zoomOutAlign.add(self.ZoomOut.EBox)
 
             self.ZoomIn.Read()
             self.ZoomOut.Read()
