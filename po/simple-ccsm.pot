@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-03-12 13:53+0100\n"
+"POT-Creation-Date: 2008-03-31 12:27+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,6 +66,9 @@ msgstr ""
 msgid "<b>Appearance</b>"
 msgstr ""
 
+msgid "<b>Area zoom</b>"
+msgstr ""
+
 msgid "<b>Close Window</b>"
 msgstr ""
 
@@ -87,6 +90,9 @@ msgstr ""
 msgid "<b>Effects</b>"
 msgstr ""
 
+msgid "<b>Enable zoom</b>"
+msgstr ""
+
 msgid "<b>Minimize window</b>"
 msgstr ""
 
@@ -96,16 +102,16 @@ msgstr ""
 msgid "<b>Screen Edges</b>"
 msgstr ""
 
+msgid "<b>Screen zoom</b>"
+msgstr ""
+
 msgid "<b>Switcher</b>"
 msgstr ""
 
-msgid "<b>Zoom in</b>"
-msgstr ""
-
-msgid "<b>Zoom out</b>"
-msgstr ""
-
 msgid "Accessibility"
+msgstr ""
+
+msgid "Area zoom"
 msgstr ""
 
 msgid "Edges"
@@ -126,13 +132,13 @@ msgstr ""
 msgid "Enable animations"
 msgstr ""
 
-msgid "Enable zoom"
-msgstr ""
-
 msgid "Info"
 msgstr ""
 
 msgid "Profil:"
+msgstr ""
+
+msgid "Screen zoom"
 msgstr ""
 
 msgid "Simple Compiz Config Settings Manager"
