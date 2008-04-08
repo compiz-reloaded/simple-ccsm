@@ -422,9 +422,10 @@ class ProfilePage:
                 continue
             text = box.get_active_text()
             setting = plugin.Screens[0][settingName]
-            value = setting.Value[0]
-            name = names[settingName][value]
-            rating += AnimationRatings[name]
+            if len(setting.Value) >= 1:
+                value = setting.Value[0]
+                name = names[settingName][value]
+                rating += AnimationRatings[name]
 
         if not plugin.Enabled:
             rating = 0.0
@@ -503,7 +504,7 @@ class AnimationPage:
             SetupBoxModel(box)
             for key, value in items:
                 box.append_text(key)
-            if len(setting.Value):
+            if len(setting.Value) >= 1:
                 value = setting.Value[0]
                 box.set_active(value)
             else:
