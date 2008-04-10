@@ -845,15 +845,6 @@ class MainWin:
         # Window
         window = self.GladeXML.get_widget("mainWin")
 
-        # Icon
-        theme = gtk.icon_theme_get_default()
-        iconList = (\
-            theme.load_icon("simple-ccsm", 16, 0),
-            theme.load_icon("simple-ccsm", 32, 0),
-            theme.load_icon("simple-ccsm", 48, 0),
-        )
-        window.set_icon_list(*iconList)
-
         # Profile Chooser
         self.ProfileChooser = self.GladeXML.get_widget("profileChooser")
 
@@ -947,5 +938,6 @@ if __name__ == "__main__":
     (options, args) = parser.parse_args()
     if options.page:
         page = options.page
+    gtk.window_set_default_icon_name('simple-ccsm')
     mainWin = MainWin(context, page)
     gtk.main()
