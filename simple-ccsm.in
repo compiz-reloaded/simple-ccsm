@@ -581,7 +581,7 @@ class EffectPage:
                 # Set default key binding to Alt-Tab
                 setting = self.SwitcherKeySettings[plugin.Name]
                 settings = self.SwitcherKeySettings.values()
-                conflict = ccm.ActionConflict(setting, key=SwitcherKey, settings=settings, autoResolve=True)
+                conflict = ccm.KeyConflict(setting, SwitcherKey, settings=settings, autoResolve=True)
                 if conflict.Resolve(ccm.GlobalUpdater):
                     setting.Value = SwitcherKey
 
