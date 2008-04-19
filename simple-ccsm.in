@@ -871,23 +871,6 @@ class MainWin:
 
         self.SetProfile()
 
-    def OpenAdvanced(self, widget):
-        notebook = self.GladeXML.get_widget("notebook")
-        page = notebook.get_current_page()
-        child = notebook.get_nth_page(page)
-        name = notebook.get_tab_label_text(child)
-        options = {
-        _("Profile"): "",
-        _("Animations"): "--plugin animation",
-        _("Desktop"): "--category Desktop",
-        _("Effects"): "--category Effects",
-        _("Zoom"): "--plugin ezoom"
-        }
-        option = options[name]
-        cmd = "ccsm %s" % option
-        cmd = cmd.split(" ")
-        subprocess.Popen(cmd)
-
     def ApplyProfile(self, widget):
         profile = self.ProfileChooser.get_active_text()
 
