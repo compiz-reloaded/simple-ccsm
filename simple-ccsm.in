@@ -121,18 +121,13 @@ Pages = {
 'accessibility': 3
 }
 
-# Possible are 2 points
-AccessibilityPlugins = {\
-'zoom': 1,
-'ezoom': 1,
-'colorfilter': 1
-}
-
 AnimationSettings = {
 'openAnimationBox': "open_effects",
 'closeAnimationBox': "close_effects",
 'minimizeAnimationBox': "minimize_effects"
 }
+
+Tooltips = gtk.Tooltips()
 
 # Utility Functions
 def EnablePlugin(plugin, active):
@@ -325,11 +320,10 @@ gobject.type_register(StarScale)
 gobject.type_register(DesktopPreview)
 
 class CheckImage(gtk.HBox):
-    def __init__(self, value=False):
+    def __init__(self, text="", value=False):
         gtk.HBox.__init__(self)
         self.image = gtk.Image()
-        self.label = gtk.Label()
-
+        self.label = gtk.Label(text)
         self.set_spacing(5)
 
         self.pack_start(self.image, False, False)
@@ -354,10 +348,10 @@ class CheckImage(gtk.HBox):
         size = gtk.ICON_SIZE_BUTTON
         if self.value:
             self.image.set_from_stock(gtk.STOCK_APPLY, size)
-            self.label.set_text(_("Enabled"))
+            Tooltips.set_tip(self, _("Enabled"))
         else:
             self.image.set_from_stock(gtk.STOCK_DIALOG_ERROR, size)
-            self.label.set_text(_("Disabled"))
+            Tooltips.set_tip(self, _("Disabled"))
 
 class ProfilePage:
     def __init__(self, context, gladeXML):
@@ -368,13 +362,15 @@ class ProfilePage:
         # Check List
         self.EffectStars = StarScale()
         self.AnimationStars = StarScale()
-        self.AccessibilityCheck = CheckImage()
+        self.ZoomCheck = CheckImage(_("Zoom"))
+        self.ColorfilterCheck = CheckImage(_("Colorfilter"))
         effectsAlign = self.GladeXML.get_widget("effectsAlignment")
         effectsAlign.add(self.EffectStars)
         animationAlign = self.GladeXML.get_widget("animationsAlignment")
         animationAlign.add(self.AnimationStars)
-        accessibilityAlign = self.GladeXML.get_widget("accessibilityAlignment")
-        accessibilityAlign.add(self.AccessibilityCheck)
+        accessibilityBox = self.GladeXML.get_widget("accessibilityBox")
+        accessibilityBox.pack_start(self.ZoomCheck, False, False)
+        accessibilityBox.pack_start(self.ColorfilterCheck, False, False)
 
         # Desktop Label
         self.DesktopLayout = "%s"
@@ -436,12 +432,16 @@ class ProfilePage:
         self.AnimationStars.set_value(rating)
 
     def CheckAccessibility(self, widget=None):
-        rating = 0.0
-        for name in AccessibilityPlugins.keys():
-            if name in self.Context.Plugins and self.Context.Plugins[name].Enabled:
-                rating += AccessibilityPlugins[name]
+        enabled = False
+        for name in ('ezoom', 'zoom', 'mag'):
+            plugin = self.Context.Plugins[name]
+            if plugin.Enabled:
+                enabled = True
+                break
+        self.ZoomCheck.set_value(enabled)
 
-        self.AccessibilityCheck.set_value(rating >= 2.0)
+        enabled = self.Context.Plugins['colorfilter'].Enabled
+        self.ColorfilterCheck.set_value(enabled)
 
     def Update(self):
         self.UpdateDesktopPlugins()
@@ -754,7 +754,7 @@ class ZoomPage:
         widget = self.GladeXML.get_widget("enableZoom")
         if 'ezoom' in available:
             available['ezoom'].Enabled = widget.get_active()
-        elif 'zomm' in available:
+        elif 'zoom' in available:
             available['zoom'].Enabled = widget.get_active()
 
         widget = self.GladeXML.get_widget("enableMag")
@@ -762,6 +762,15 @@ class ZoomPage:
             available['mag'].Enabled = widget.get_active()
 
         self.Context.Write()
+        for identifier, data in self.Settings.items():
+            pluginName, settingName, containerName = data
+
+            if pluginName not in self.Context.Plugins:
+                continue
+
+            plugin    = self.Context.Plugins[pluginName]
+            container = self.GladeXML.get_widget(containerName)
+            container.set_sensitive(plugin.Enabled)
     
     def SetZoom(self):
         for identifier, data in self.Settings.items():

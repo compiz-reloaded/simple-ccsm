@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.2 on Sun Apr 27 15:50:42 2008 -->
+<!--Generated with glade3 3.4.2 on Sun Apr 27 16:57:12 2008 -->
 <glade-interface>
   <widget class="GtkWindow" id="mainWin">
     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
@@ -237,7 +237,10 @@
                         <property name="border_width">6</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <placeholder/>
+                          <widget class="GtkVBox" id="accessibilityBox">
+                            <property name="visible">True</property>
+                            <property name="spacing">8</property>
+                          </widget>
                         </child>
                       </widget>
                     </child>
