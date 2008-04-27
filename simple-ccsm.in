@@ -363,6 +363,7 @@ class ProfilePage:
     def __init__(self, context, gladeXML):
         self.GladeXML = gladeXML
         self.Context  = context
+        self.DesktopPlugins = {}
 
         # Check List
         self.EffectStars = StarScale()
@@ -387,7 +388,7 @@ class ProfilePage:
             if "largedesktop" in plugin.Features:
                 self.DesktopPlugins[plugin.ShortDesc] = plugin
     
-    def SetDesktopLabel(self):
+    def SetDesktopLabel(self, widget=None):
         for shortDesc, plugin in self.DesktopPlugins.items():
             if plugin.Enabled:
                 self.DesktopLabel.set_markup(self.DesktopLayout % shortDesc)

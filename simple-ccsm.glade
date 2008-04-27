@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.2 on Sat Apr 26 17:46:59 2008 -->
+<!--Generated with glade3 3.4.2 on Sun Apr 27 15:50:42 2008 -->
 <glade-interface>
   <widget class="GtkWindow" id="mainWin">
     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
@@ -288,6 +288,7 @@
                     <property name="response_id">0</property>
                     <property name="draw_indicator">True</property>
                     <signal name="toggled" handler="EnableAnimationsChanged"/>
+                    <signal name="toggled" handler="SetAnimationRating"/>
                   </widget>
                   <packing>
                     <property name="expand">False</property>
@@ -519,6 +520,7 @@
                                 <property name="response_id">0</property>
                                 <property name="draw_indicator">True</property>
                                 <signal name="toggled" handler="EffectPluginChanged"/>
+                                <signal name="toggled" handler="SetEffectRating"/>
                               </widget>
                               <packing>
                                 <property name="expand">False</property>
@@ -622,6 +624,7 @@
                             <property name="visible">True</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
                             <signal name="changed" handler="AppearenceBoxChanged"/>
+                            <signal name="changed" handler="SetDesktopLabel"/>
                           </widget>
                         </child>
                       </widget>
@@ -812,6 +815,7 @@
                                 <property name="response_id">0</property>
                                 <property name="draw_indicator">True</property>
                                 <signal name="toggled" handler="ZoomChanged"/>
+                                <signal name="toggled" handler="CheckAccessibility"/>
                               </widget>
                               <packing>
                                 <property name="expand">False</property>
@@ -828,6 +832,7 @@
                                 <property name="response_id">0</property>
                                 <property name="draw_indicator">True</property>
                                 <signal name="toggled" handler="ZoomChanged"/>
+                                <signal name="toggled" handler="CheckAccessibility"/>
                               </widget>
                               <packing>
                                 <property name="expand">False</property>
