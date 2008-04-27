@@ -68,50 +68,50 @@ MinimizeEffectNames = [\
 
 ]
 
-# 0 to 10 points
+# 0 to 5 stars
 AnimationRatings = {\
 'None': 0,
 'Random': 5,
-'Airplane': 10,
-'Beam Up': 7,
-'Burn': 8,
-'Curved Fold': 4,
-'Domino': 6,
-'Dream': 6,
-'Explode': 7,
-'Fade': 3,
-'Fold': 6,
-'Glide 1': 6,
-'Glide 2': 6,
-'Horizontal Folds': 6,
-'Leaf Spread': 8,
-'Magic Lamp': 10,
-'Razr': 8,
-'Sidekick': 6,
-'Skewer': 6,
-'Vacuum': 8,
-'Wave': 8,
-'Zoom': 4
+'Airplane': 5,
+'Beam Up': 4,
+'Burn': 4,
+'Curved Fold': 2,
+'Domino': 3,
+'Dream': 4,
+'Explode': 4,
+'Fade': 1,
+'Fold': 2,
+'Glide 1': 2,
+'Glide 2': 2,
+'Horizontal Folds': 2,
+'Leaf Spread': 4,
+'Magic Lamp': 5,
+'Razr': 4,
+'Sidekick': 3,
+'Skewer': 3,
+'Vacuum': 5,
+'Wave': 4,
+'Zoom': 2
 }
 
 gtk.glade.bindtextdomain("simple-ccsm", "@prefix@/share/locale")
 gettext.bindtextdomain("simple-ccsm", "@prefix@/share/locale")
 gettext.textdomain("simple-ccsm")
 
-# Possible are 77 points (cube and wall conflict)
+# 0 to 5 stars
 EffectPluginRatings = {\
-'wobbly': 10,
+'wobbly': 5,
 'cube': 3,
-'wall': 2,
-'expo': 5,
-'blur': 8,
-'mblur': 10,
-'3d': 8,
-'water': 10,
-'firepaint': 7,
+'wall': 1,
+'expo': 4,
+'blur': 5,
+'mblur': 5,
+'3d': 4,
+'water': 5,
+'firepaint': 4,
 'shift': 5,
-'scale': 3,
-'cubereflex': 8
+'scale': 2,
+'cubereflex': 5
 }
 
 Pages = {
@@ -397,14 +397,14 @@ class ProfilePage:
     def SetEffectRating(self, widget=None):
         rating = 0.0
 
-        for pluginName, points in EffectPluginRatings.items():
+        for pluginName, stars in EffectPluginRatings.items():
             if not pluginName in self.Context.Plugins:
                 continue
             plugin = self.Context.Plugins[pluginName]
             if plugin.Enabled:
-                rating += points
+                rating += stars
 
-        rating = (rating / 77.0) * 5
+        rating = rating / float(len(EffectPluginRatings) - 1)
 
         self.EffectStars.set_value(rating)
 
@@ -430,12 +430,8 @@ class ProfilePage:
 
         if not plugin.Enabled:
             rating = 0.0
-        if self.Context.Plugins['fade'].Enabled:
-            rating += AnimationRatings['Fade'] * 2
-        if self.Context.Plugins['minimize'].Enabled:
-            rating += AnimationRatings['Zoom'] / 3
 
-        rating = rating / (10 * len(AnimationSettings)) * 5
+        rating = rating / 3.0
 
         self.AnimationStars.set_value(rating)
 
