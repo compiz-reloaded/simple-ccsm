@@ -537,20 +537,19 @@ class EffectPage:
 
     def UpdateSwitcherPlugins(self):
         self.SwitcherPlugins = {}
+        self.SwitcherKeySettings = {}
         for pluginName in ('switcher', 'shift', 'ring'):
             if pluginName in self.Context.Plugins:
                 plugin = self.Context.Plugins[pluginName]
+
                 if pluginName == 'shift':
                     self.SwitcherPlugins[_("%s (Cover)") % plugin.ShortDesc] = plugin
                     self.SwitcherPlugins[_("%s (Flip)") % plugin.ShortDesc] = plugin
                 else:
                     self.SwitcherPlugins[plugin.ShortDesc] = plugin
 
-        self.SwitcherKeySettings = {}
-        for pluginName in ('switcher', 'shift', 'ring'):
-            plugin = self.Context.Plugins[pluginName]
-            setting = plugin.Display['next_key']
-            self.SwitcherKeySettings[pluginName] = setting
+                setting = plugin.Display['next_key']
+                self.SwitcherKeySettings[pluginName] = setting
 
     def EffectPluginChanged(self, widget):
         if self.Block > 0:
@@ -617,8 +616,13 @@ class EffectPage:
 
         for pluginName, widgetName in widgets.items():
             widget = self.GladeXML.get_widget(widgetName)
-            plugin = self.Context.Plugins[pluginName]
-            widget.set_active(plugin.Enabled)
+            active = False
+            if pluginName in self.Context.Plugins:
+                plugin = self.Context.Plugins[pluginName]
+                active = plugin.Enabled
+            else:
+                widget.set_sensitive(False)
+            widget.set_active(active)
 
     def FillSwitcherBox(self):
         box = self.GladeXML.get_widget("switcherPluginChooser")
