@@ -462,8 +462,12 @@ class AnimationPage:
         if self.Block > 0:
             return
 
+        active = widget.get_active()
         plugin = self.Context.Plugins['animation']
-        EnablePlugin(plugin, widget.get_active())
+        EnablePlugin(plugin, active)
+        for name in ("openAnimationBox", "closeAnimationBox", "minimizeAnimationBox"):
+            widget = self.GladeXML.get_widget(name)
+            widget.set_sensitive(active)
     
     def AnimationBoxChanged(self, widget):
         if self.Block > 0:
@@ -487,11 +491,21 @@ class AnimationPage:
             self.AnimationBoxChanged(widget, settingName)
 
     def SetEnableAnimations(self):
-        plugin = self.Context.Plugins['animation']
         widget = self.GladeXML.get_widget("enableAnimations")
-        widget.set_active(plugin.Enabled)
+        active = False
+        if 'animation' in self.Context.Plugins:
+            plugin = self.Context.Plugins['animation']
+            active = plugin.Enabled
+
+        widget.set_active(active)
+        for name in ("openAnimationBox", "closeAnimationBox", "minimizeAnimationBox"):
+            widget = self.GladeXML.get_widget(name)
+            widget.set_sensitive(active)
     
     def FillAnimationBoxes(self):
+        if 'animation' not in self.Context.Plugins:
+            return
+
         plugin = self.Context.Plugins['animation']
         
         for boxName, settingName in AnimationSettings.items():
