@@ -115,6 +115,10 @@ f = open (os.path.join ("simple-ccsm"), "wt")
 f.write (data)
 f.close ()
 
+cmd = "intltool-merge -d -u po/ simple-ccsm.desktop.in simple-ccsm.desktop".split(" ")
+proc = subprocess.Popen(cmd)
+proc.wait()
+
 profile_files = os.listdir("profiles/")
 profiles = []
 for profile in profile_files: 
