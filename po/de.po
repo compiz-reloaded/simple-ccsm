@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm 0.0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-03-12 13:53+0100\n"
+"POT-Creation-Date: 2008-05-12 18:14+0200\n"
 "PO-Revision-Date: 2007-10-09 19:16+0200\n"
 "Last-Translator: Patrick Niklaus <marex@opencompositing.org>\n"
 "Language-Team: Compiz Fusion translators <i18n@lists.compiz-fusion.org>\n"
@@ -21,6 +21,12 @@ msgstr "Aktiviert"
 
 msgid "Disabled"
 msgstr "Deaktiviert"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "Colorfilter"
+msgstr "Farbfilter"
 
 #, c-format
 msgid "%s (Cover)"
@@ -35,21 +41,6 @@ msgstr "Cover"
 
 msgid "Flip"
 msgstr "Flip"
-
-msgid "Profile"
-msgstr "Profil"
-
-msgid "Animations"
-msgstr "Animationen"
-
-msgid "Desktop"
-msgstr "Arbeitsfläche"
-
-msgid "Effects"
-msgstr "Effekte"
-
-msgid "Zoom"
-msgstr "Zoom"
 
 msgid "Default"
 msgstr "Standard"
@@ -67,8 +58,15 @@ msgstr "<b>Animationen</b>"
 msgid "<b>Appearance</b>"
 msgstr "<b>Aussehen</b>"
 
+# FIXME
+msgid "<b>Area zoom</b>"
+msgstr "<b>Gebietszoom</b>"
+
 msgid "<b>Close Window</b>"
 msgstr "<b>Fenster schließen</b>"
+
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Desktop-Würfel Effekte</b>"
 
 msgid "<b>Description</b>"
 msgstr "<b>Beschreibung</b>"
@@ -90,6 +88,9 @@ msgstr "<b>Arbeitsfläche</b>"
 msgid "<b>Effects</b>"
 msgstr "<b>Effekte</b>"
 
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Zoom aktivieren</b>"
+
 msgid "<b>Minimize window</b>"
 msgstr "<b>Fenster minimieren</b>"
 
@@ -99,28 +100,44 @@ msgstr "<b>Fenster öffnen</b>"
 msgid "<b>Screen Edges</b>"
 msgstr "<b>Bildschirmecken</b>"
 
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Bildschrimzoom</b>"
+
 msgid "<b>Switcher</b>"
 msgstr "<b>Anwendungsumschalter</b>"
-
-# FIXME
-msgid "<b>Zoom in</b>"
-msgstr "<b>Herein zoomen</b>"
-
-# FIXME
-msgid "<b>Zoom out</b>"
-msgstr "<b>Heraus zoomen</b>"
 
 msgid "Accessibility"
 msgstr "Barrierefreiheit"
 
+msgid "Animations"
+msgstr "Animationen"
+
+msgid "Area zoom"
+msgstr "Gebietszoom"
+
+msgid "Deformation:"
+msgstr "Deformation"
+
+msgid "Desktop"
+msgstr "Arbeitsfläche"
+
 msgid "Edges"
 msgstr "Ecken"
+
+msgid "Effects"
+msgstr "Effekte"
+
+msgid "Enable 3D Windows"
+msgstr "3D Fenster aktivieren"
 
 msgid "Enable Blur"
 msgstr "Unschärfe aktivieren"
 
 msgid "Enable Expo"
 msgstr "Expo aktivieren"
+
+msgid "Enable Reflection"
+msgstr "Reflektion aktivieren"
 
 msgid "Enable Scale"
 msgstr "Scale aktivieren"
@@ -131,23 +148,36 @@ msgstr "Wobbly aktivieren"
 msgid "Enable animations"
 msgstr "Animationen aktivieren"
 
-msgid "Enable zoom"
-msgstr "Zoom aktivieren"
-
 msgid "Info"
 msgstr "Info"
+
+msgid "Opacity:"
+msgstr "Sichtbarkeit"
 
 msgid "Profil:"
 msgstr "Profil:"
 
-msgid "Simple Compiz Config Settings Manager"
-msgstr "Einfacher Compiz Config Einstellungs-Manager"
+msgid "Screen zoom"
+msgstr "Bildschirmzoom"
 
-msgid "gtk-close"
-msgstr "gtk-close"
+msgid "Simple CompizConfig Settings Manager"
+msgstr "Einfacher CompizConfig Einstellungs-Manager"
 
-msgid "gtk-help"
-msgstr "gtk-help"
+msgid "Configure Compiz with CompizConfig"
+msgstr "Konfiguriere Compiz mit CompizConfig"
+
+#~ msgid "Profile"
+#~ msgstr "Profil"
+
+# FIXME
+#~ msgid "<b>Zoom out</b>"
+#~ msgstr "<b>Heraus zoomen</b>"
+
+#~ msgid "gtk-close"
+#~ msgstr "gtk-close"
+
+#~ msgid "gtk-help"
+#~ msgstr "gtk-help"
 
 #~ msgid "Advanced"
 #~ msgstr "Erweitert"
@@ -177,12 +207,6 @@ msgstr "gtk-help"
 #~ msgstr ""
 #~ "Verändern sie die Einstellungen für sehbehinderte Menschen, indem sie "
 #~ "eines dieser Plugins aktivieren."
-
-#~ msgid "Configure Color Filter"
-#~ msgstr "Farbfilter einstellen"
-
-#~ msgid "Enable Magnification"
-#~ msgstr "Vergrößerung aktivieren"
 
 #~ msgid ""
 #~ "Please check if you have the filter-manager package installed correctly."
