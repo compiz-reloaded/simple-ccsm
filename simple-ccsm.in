@@ -65,7 +65,10 @@ MinimizeEffectNames = [\
 'Domino', 'Dream', 'Explode', 'Fade', 'Fold', 'Glide 1', 'Glide 2',
 'Horizontal Folds', 'Leaf Spread','Magic Lamp', 'Razr', 'Sidekick',
 'Skewer', 'Zoom'
+]
 
+FocusEffectNames = [\
+'None', 'Dodge', 'Fade', 'Wave'
 ]
 
 # 0 to 5 stars
@@ -91,7 +94,8 @@ AnimationRatings = {\
 'Skewer': 3,
 'Vacuum': 5,
 'Wave': 4,
-'Zoom': 2
+'Zoom': 2,
+'Dodge': 5
 }
 
 gtk.glade.bindtextdomain("simple-ccsm", "@prefix@/share/locale")
@@ -124,7 +128,8 @@ Pages = {
 AnimationSettings = {
 'openAnimationBox': "open_effects",
 'closeAnimationBox': "close_effects",
-'minimizeAnimationBox': "minimize_effects"
+'minimizeAnimationBox': "minimize_effects",
+'focusAnimationBox': "focus_effects"
 }
 
 Tooltips = gtk.Tooltips()
@@ -408,7 +413,8 @@ class ProfilePage:
         names = {
             'close_effects': CloseOpenEffectNames,
             'open_effects': CloseOpenEffectNames,
-            'minimize_effects': MinimizeEffectNames
+            'minimize_effects': MinimizeEffectNames,
+            'focus_effects': FocusEffectNames
         }
         plugin = self.Context.Plugins['animation']
 
@@ -427,7 +433,7 @@ class ProfilePage:
         if not plugin.Enabled:
             rating = 0.0
 
-        rating = rating / 3.0
+        rating = rating / len(AnimationSettings)
 
         self.AnimationStars.set_value(rating)
 
@@ -465,7 +471,8 @@ class AnimationPage:
         active = widget.get_active()
         plugin = self.Context.Plugins['animation']
         EnablePlugin(plugin, active)
-        for name in ("openAnimationBox", "closeAnimationBox", "minimizeAnimationBox"):
+        for prefix in ("open", "close", "minimize", "focus"):
+            name = prefix + "AnimationBox"
             widget = self.GladeXML.get_widget(name)
             widget.set_sensitive(active)
     
@@ -498,7 +505,8 @@ class AnimationPage:
             active = plugin.Enabled
 
         widget.set_active(active)
-        for name in ("openAnimationBox", "closeAnimationBox", "minimizeAnimationBox"):
+        for prefix in ("open", "close", "minimize", "focus"):
+            name = prefix + "AnimationBox"
             widget = self.GladeXML.get_widget(name)
             widget.set_sensitive(active)
     
