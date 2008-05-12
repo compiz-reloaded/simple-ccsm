@@ -106,12 +106,12 @@ EffectPluginRatings = {\
 'expo': 4,
 'blur': 5,
 'mblur': 5,
-'3d': 4,
+'3d': 5,
 'water': 5,
 'firepaint': 4,
 'shift': 5,
 'scale': 2,
-'cubereflex': 5
+'cubeaddon': 5
 }
 
 Pages = {
@@ -560,7 +560,8 @@ class EffectPage:
         'enableScale': "scale",
         'enableWobbly': "wobbly",
         'enableBlur': "blur",
-        'enableExpo': "expo"
+        'enableExpo': "expo",
+        'enable3D': "3d"
         }
         pluginName = effectPlugins[name]
 
@@ -606,23 +607,92 @@ class EffectPage:
 
         self.Context.Write()
 
+    def DeformationBoxChanged(self, widget):
+        if self.Block > 0:
+            return
+
+        text = widget.get_active_text()
+        plugin = self.Context.Plugins['cubeaddon']
+        setting = plugin.Screens[0]['deformation']
+        value = setting.Info[2][text]
+        if value != 0 and not plugin.Enabled:
+            EnablePlugin(plugin, True)
+        setting.Value = value
+
+        self.Context.Write()
+
+    def OpacityChanged(self, widget):
+        if self.Block > 0:
+            return
+
+        value = widget.get_value()
+        plugin = self.Context.Plugins['cube']
+        # Only change cube opacity on rotate
+        setting = plugin.Screens[0]['active_opacity']
+        setting.Value = float(value)
+
+        self.Context.Write()
+
+    def EnableReflectionChanged(self, widget):
+        if self.Block > 0:
+            return
+
+        value = widget.get_active()
+        plugin = self.Context.Plugins['cubeaddon']
+        setting = plugin.Screens[0]['reflection']
+        setting.Value = value
+
+        self.Context.Write()
+
     def SetEffectPlugins(self):
         widgets = {
         'scale': "enableScale",
         'wobbly': "enableWobbly",
         'blur': "enableBlur",
-        'expo': "enableExpo"
+        'expo': "enableExpo",
+        '3d': "enable3D"
         }
 
         for pluginName, widgetName in widgets.items():
             widget = self.GladeXML.get_widget(widgetName)
             active = False
+            sensitive = False
             if pluginName in self.Context.Plugins:
                 plugin = self.Context.Plugins[pluginName]
                 active = plugin.Enabled
-            else:
-                widget.set_sensitive(False)
+                sensitive = True
+            widget.set_sensitive(sensitive)
             widget.set_active(active)
+
+    def SetCubeEffects(self, widget=None):
+        alignment = self.GladeXML.get_widget("cubeEffectsAlignment")
+        sensitive = False
+        if 'cube' in self.Context.Plugins:
+            plugin = self.Context.Plugins['cube']
+            sensitive = plugin.Enabled
+        alignment.set_sensitive(sensitive)
+
+    def SetOpacity(self):
+        widget = self.GladeXML.get_widget("cubeOpacity")
+
+        if not 'cube' in self.Context.Plugins:
+            return
+
+        plugin = self.Context.Plugins['cube']
+        setting = plugin.Screens[0]['active_opacity']
+        value = setting.Value
+        widget.set_value(int(value))
+
+    def SetReflection(self):
+        widget = self.GladeXML.get_widget("enableReflection")
+
+        if not 'cubeaddon' in self.Context.Plugins:
+            return
+
+        plugin = self.Context.Plugins['cubeaddon']
+        setting = plugin.Screens[0]['reflection']
+        value = setting.Value
+        widget.set_active(value)
 
     def FillSwitcherBox(self):
         box = self.GladeXML.get_widget("switcherPluginChooser")
@@ -636,17 +706,37 @@ class EffectPage:
                     modes = [_("Cover"), _("Flip")]
                     setting = plugin.Screens[0]['mode']
                     mode = modes[setting.Value]
-                    if shortDesc.find(mode) != -1:
+                    if mode in shortDesc:
                         box.set_active(i)
                 else:
                     box.set_active(i)
             i += 1
 
+    def FillDeformationBox(self):
+        box = self.GladeXML.get_widget("deformationChooser")
+        SetupBoxModel(box)
+
+        if not 'cubeaddon' in self.Context.Plugins:
+            box.set_sensitive(False)
+            return
+
+        plugin = self.Context.Plugins['cubeaddon']
+        setting = plugin.Screens[0]['deformation']
+
+        items = sorted(setting.Info[2].items(), key=ccm.EnumSettingKeyFunc)
+        for key, value in items:
+            box.append_text(key)
+        box.set_active(setting.Value)
+
     def Update(self):
         self.Block += 1
         self.SetEffectPlugins()
+        self.SetCubeEffects()
+        self.SetOpacity()
+        self.SetReflection()
         self.UpdateSwitcherPlugins()
         self.FillSwitcherBox()
+        self.FillDeformationBox()
         self.Block -= 1
 
 class DesktopPage:
@@ -704,6 +794,7 @@ class DesktopPage:
                     setting = self.Context.Plugins['core'].Screens[0]['vsize']
                     setting.Value = 1 # Cube can only use 1 vertical viewport
                     EnablePlugin(self.Context.Plugins['rotate'], True)
+                    EnablePlugin(self.Context.Plugins['cubeaddon'], True)
 
         self.Context.Write()
         self.SetDesktopSize()
@@ -874,8 +965,8 @@ class MainWin:
 
         # Pages
         self.AnimationPage = AnimationPage(self.Context, self.GladeXML)
-        self.EffectPage    = EffectPage(self.Context, self.GladeXML)
         self.DesktopPage   = DesktopPage(self.Context, self.GladeXML)
+        self.EffectPage    = EffectPage(self.Context, self.GladeXML)
         self.ZoomPage      = ZoomPage(self.Context, self.GladeXML)
         self.ProfilePage   = ProfilePage(self.Context, self.GladeXML)
         self.EdgePage      = EdgePage(self.Context, self.GladeXML)
@@ -887,8 +978,8 @@ class MainWin:
         self.Context.Read()
 
         self.AnimationPage.Update()
-        self.EffectPage.Update()
         self.DesktopPage.Update()
+        self.EffectPage.Update()
         self.ZoomPage.Update()
         self.ProfilePage.Update()
         self.EdgePage.Update()
