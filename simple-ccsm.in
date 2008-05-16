@@ -1007,21 +1007,17 @@ class MainWin:
     def ApplyProfile(self, widget):
         profile = self.ProfileChooser.get_active_text()
 
-        if not profile in self.Context.Profiles.keys():
+        if profile == _("Default"):
+            self.Context.ResetProfile()
+        else:
             profilePath = "%s/profiles/%s.profile" % (DataDir, profile)
             self.Context.CurrentProfile = ccs.Profile(self.Context, profile)
             self.Context.Read()
             self.Context.UpdateProfiles()
             self.Context.Import(profilePath)
-        else:
-            if profile == _("Default"):
-                self.Context.ResetProfile()
-            else:
-                self.Context.UpdateProfiles()
-                self.Context.CurrentProfile = self.Context.Profiles[profile]
 
-        self.Update()
         self.Context.Write()
+        self.Update()
 
     def SetProfile(self):
         SetupBoxModel(self.ProfileChooser)
