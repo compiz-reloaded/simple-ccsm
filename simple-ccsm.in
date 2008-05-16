@@ -37,15 +37,14 @@ _ = gettext.gettext
 
 DataDir = '@prefix@/share/simple-ccsm/'
 Profiles = [\
-"Low Effects", "Easy to the eyes", "Medium Effects", "High Effects", "Hollywood got nothing"
+"Minimal", "Medium", "Advanced", "Ultimate"
 ]
 # TODO Write descriptions
 Descriptions = {\
-'Low Effects': "",
-'Easy to the eyes': "",
-'Medium Effects': "",
-'High Effects': "",
-'Hollywood got nothing': ""
+'Minimal': _("Provides a simple desktop environment with very few effects."),
+'Medium': _("Provides good balance between attractiveness and moderate performence requirements."),
+'Advanced': _("Provides more aesthetically pleasing set of effects."),
+'Ultimate': _("Provides very advanced and eye-catching set of effects. Requires faster graphics card.")
 }
 
 # Switcher keybinding
@@ -395,6 +394,16 @@ class ProfilePage:
                 self.DesktopLabel.set_markup(self.DesktopLayout % shortDesc)
                 break
 
+    def SetDescriptionLabel(self):
+        label = self.GladeXML.get_widget("descriptionLabel")
+        name = self.Context.CurrentProfile.Name
+
+        description = _("None")
+        if name in Descriptions:
+            description = Descriptions[name]
+
+        label.set_text(description)
+
     def SetEffectRating(self, widget=None):
         rating = 0.0
 
@@ -452,6 +461,7 @@ class ProfilePage:
     def Update(self):
         self.UpdateDesktopPlugins()
         self.SetDesktopLabel()
+        self.SetDescriptionLabel()
         self.SetEffectRating()
         self.SetAnimationRating()
         self.CheckAccessibility()
