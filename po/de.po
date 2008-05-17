@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm 0.0.1\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-05-17 12:29+0200\n"
+"POT-Creation-Date: 2008-05-17 22:04+0200\n"
 "PO-Revision-Date: 2007-10-09 19:16+0200\n"
 "Last-Translator: Patrick Niklaus <marex@opencompositing.org>\n"
 "Language-Team: Compiz Fusion translators <i18n@lists.compiz-fusion.org>\n"
@@ -16,13 +16,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+# FIXME
+msgid "Minimal"
+msgstr "Minimal"
+
+# FIXME
+msgid "Medium"
+msgstr "Mittel"
+
+# FIXME
+msgid "Advanced"
+msgstr "Erweitert"
+
+# FIXME
+msgid "Ultimate"
+msgstr "Ultimativ"
+
 msgid "Provides a simple desktop environment with very few effects."
 msgstr "Bietet eine schlichte Desktop-Umgebung mit wenigen visuellen Effekten."
 
 msgid ""
 "Provides good balance between attractiveness and moderate performence "
 "requirements."
-msgstr "Bietet dezente Effekte mit gemäßigten Anforderungen an die Rechnerleistung."
+msgstr ""
+"Bietet dezente Effekte mit gemäßigten Anforderungen an die Rechnerleistung."
 
 msgid "Provides more aesthetically pleasing set of effects."
 msgstr "Bietet eine größere Auswahl grafischer Effekte."
@@ -30,8 +47,9 @@ msgstr "Bietet eine größere Auswahl grafischer Effekte."
 msgid ""
 "Provides very advanced and eye-catching set of effects. Requires faster "
 "graphics card."
-msgstr "Bietet eine große Auswahl aufwendiger grafischer Effekte. Eine "
-"schnellere Grafikkarte wird benötigt."
+msgstr ""
+"Bietet eine große Auswahl aufwendiger grafischer Effekte. Eine schnellere "
+"Grafikkarte wird benötigt."
 
 msgid "Enabled"
 msgstr "Aktiviert"
@@ -201,9 +219,6 @@ msgstr "Konfiguriere Compiz mit CompizConfig"
 
 #~ msgid "gtk-help"
 #~ msgstr "gtk-help"
-
-#~ msgid "Advanced"
-#~ msgstr "Erweitert"
 
 #~ msgid "Close Animation"
 #~ msgstr "Beenden Animation"
