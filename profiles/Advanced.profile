@@ -20,6 +20,8 @@ s0_focus_effects = 2;
 
 [core]
 as_active_plugins = core;text;workarounds;thumbnail;imgjpeg;shift;crashhandler;dbus;resize;decoration;svg;place;png;move;regex;cube;animation;scale;rotate;cubeaddon;expo;ezoom;
+s0_hsize = 1
+s0_vsize = 4
 
 [switcher]
 as_next_key = Disabled
