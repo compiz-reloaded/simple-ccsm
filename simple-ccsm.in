@@ -603,25 +603,27 @@ class EffectPage:
 
         self.Context.Write()
 
-        for shortDesc, plugin in self.SwitcherPlugins.items():
-            if text == shortDesc:
-                EnablePlugin(plugin, True)
+        if not text in self.SwitcherPlugins:
+            return
 
-                # Set default key binding to Alt-Tab
-                setting = self.SwitcherKeySettings[plugin.Name]
-                settings = self.SwitcherKeySettings.values()
-                conflict = ccm.KeyConflict(setting, SwitcherKey, settings=settings, autoResolve=True)
-                if conflict.Resolve(ccm.GlobalUpdater):
-                    setting.Value = SwitcherKey
+        plugin = self.SwitcherPlugins[text]
+        EnablePlugin(plugin, True)
 
-                # Exception for shift, since it has 2 modes
-                if plugin.Name == 'shift':
-                    setting = plugin.Screens[0]['mode']
+        # Set default key binding to Alt-Tab
+        setting = self.SwitcherKeySettings[plugin.Name]
+        settings = self.SwitcherKeySettings.values()
+        conflict = ccm.KeyConflict(setting, SwitcherKey, settings=settings, autoResolve=True)
+        if conflict.Resolve(ccm.GlobalUpdater):
+            setting.Value = SwitcherKey
 
-                    if text.find(_("Cover")) != -1:
-                        setting.Value = 0
-                    elif text.find(_("Flip")) != -1:
-                        setting.Value = 1
+            # Exception for shift, since it has 2 modes
+            if plugin.Name == 'shift':
+                setting = plugin.Screens[0]['mode']
+
+                if text.find(_("Cover")) != -1:
+                    setting.Value = 0
+                elif text.find(_("Flip")) != -1:
+                    setting.Value = 1
 
         self.Context.Write()
 
@@ -715,6 +717,8 @@ class EffectPage:
     def FillSwitcherBox(self):
         box = self.GladeXML.get_widget("switcherPluginChooser")
         SetupBoxModel(box)
+        box.append_text(_("None"))
+        box.set_active(0)
 
         i = 0
         for shortDesc, plugin in self.SwitcherPlugins.items():
