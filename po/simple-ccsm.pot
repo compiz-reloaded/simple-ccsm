@@ -8,13 +8,29 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-05-12 18:14+0200\n"
+"POT-Creation-Date: 2008-05-17 12:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+msgid "Provides a simple desktop environment with very few effects."
+msgstr ""
+
+msgid ""
+"Provides good balance between attractiveness and moderate performence "
+"requirements."
+msgstr ""
+
+msgid "Provides more aesthetically pleasing set of effects."
+msgstr ""
+
+msgid ""
+"Provides very advanced and eye-catching set of effects. Requires faster "
+"graphics card."
+msgstr ""
 
 msgid "Enabled"
 msgstr ""
@@ -26,6 +42,9 @@ msgid "Zoom"
 msgstr ""
 
 msgid "Colorfilter"
+msgstr ""
+
+msgid "None"
 msgstr ""
 
 #, c-format
@@ -85,6 +104,9 @@ msgid "<b>Effects</b>"
 msgstr ""
 
 msgid "<b>Enable zoom</b>"
+msgstr ""
+
+msgid "<b>Focus window</b>"
 msgstr ""
 
 msgid "<b>Minimize window</b>"

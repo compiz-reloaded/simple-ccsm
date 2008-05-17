@@ -39,13 +39,6 @@ DataDir = '@prefix@/share/simple-ccsm/'
 Profiles = [\
 "Minimal", "Medium", "Advanced", "Ultimate"
 ]
-# TODO Write descriptions
-Descriptions = {\
-'Minimal': _("Provides a simple desktop environment with very few effects."),
-'Medium': _("Provides good balance between attractiveness and moderate performence requirements."),
-'Advanced': _("Provides more aesthetically pleasing set of effects."),
-'Ultimate': _("Provides very advanced and eye-catching set of effects. Requires faster graphics card.")
-}
 
 # Switcher keybinding
 SwitcherKey = "<Alt>Tab"
@@ -100,6 +93,13 @@ AnimationRatings = {\
 gtk.glade.bindtextdomain("simple-ccsm", "@prefix@/share/locale")
 gettext.bindtextdomain("simple-ccsm", "@prefix@/share/locale")
 gettext.textdomain("simple-ccsm")
+
+Descriptions = {\
+'Minimal': _("Provides a simple desktop environment with very few effects."),
+'Medium': _("Provides good balance between attractiveness and moderate performence requirements."),
+'Advanced': _("Provides more aesthetically pleasing set of effects."),
+'Ultimate': _("Provides very advanced and eye-catching set of effects. Requires faster graphics card.")
+}
 
 # 0 to 5 stars
 EffectPluginRatings = {\
