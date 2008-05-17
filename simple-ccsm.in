@@ -36,9 +36,6 @@ locale.setlocale(locale.LC_ALL, "")
 _ = gettext.gettext
 
 DataDir = '@prefix@/share/simple-ccsm/'
-Profiles = [\
-"Minimal", "Medium", "Advanced", "Ultimate"
-]
 
 # Switcher keybinding
 SwitcherKey = "<Alt>Tab"
@@ -93,6 +90,13 @@ AnimationRatings = {\
 gtk.glade.bindtextdomain("simple-ccsm", "@prefix@/share/locale")
 gettext.bindtextdomain("simple-ccsm", "@prefix@/share/locale")
 gettext.textdomain("simple-ccsm")
+
+Profiles = {\
+_("Minimal"): 'Minimal',
+_("Medium"): 'Medium',
+_("Advanced"): 'Advanced',
+_("Ultimate"): 'Ultimate'
+}
 
 Descriptions = {\
 'Minimal': _("Provides a simple desktop environment with very few effects."),
@@ -1009,7 +1013,8 @@ class MainWin:
         self.SetProfile()
 
     def ApplyProfile(self, widget):
-        profile = self.ProfileChooser.get_active_text()
+        text = self.ProfileChooser.get_active_text()
+        profile = Profiles[text]
 
         if profile == _("Default"):
             self.Context.ResetProfile()
@@ -1029,12 +1034,13 @@ class MainWin:
         self.Context.UpdateProfiles()
 
         self.ProfileChooser.append_text(_("Default"))
-        for profile in Profiles:
-            self.ProfileChooser.append_text(profile)
+        profiles = sorted(Profiles.values())
+        for profile in profiles:
+            self.ProfileChooser.append_text(_(profile))
 
         current = self.Context.CurrentProfile.Name or _("Default")
-        if current in Profiles:
-            pos = Profiles.index(current) + 1
+        if current in profiles:
+            pos = profiles.index(current) + 1
             self.ProfileChooser.set_active(pos)
         elif current != _("Default"):
             self.ProfileChooser.prepend_text(current)
