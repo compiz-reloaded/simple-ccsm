@@ -724,7 +724,7 @@ class EffectPage:
         box.append_text(_("None"))
         box.set_active(0)
 
-        i = 0
+        i = 1
         for shortDesc, plugin in self.SwitcherPlugins.items():
             box.append_text(shortDesc)
             if plugin.Enabled:
