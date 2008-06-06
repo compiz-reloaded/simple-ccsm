@@ -1,5 +1,5 @@
 # Simple CCSM Finnish (fi) translation
-# Copyright (C) 2008 Timo Jyrinki
+# Copyright (C) 2008 Timo Jyrinki Copyright (C) 2008 compiz-fusion.org
 # This file is distributed under the same license as the simple-ccsm package.
 # Timo Jyrinki <timo.jyrinki@iki.fi>, 2008.
 #
