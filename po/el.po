@@ -1,0 +1,208 @@
+# simple-ccsm translation templete
+# Copyright (C) 2008 compiz-fusion.org
+# This file is distributed under the same license as the simple-ccsm package.
+# Jim Dusis <jimdusis@yahoo.gr>.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.7.4\n"
+"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
+"POT-Creation-Date: 2008-06-16 15:29+0530\n"
+"PO-Revision-Date: 2008-06-06 03:29+0200\n"
+"Last-Translator: Jim Dusis <jimdusis@yahoo.gr>\n"
+"Language-Team: Jim Dusis <jimdusis@yahoo.gr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
+
+msgid "Minimal"
+msgstr ""
+
+msgid "Medium"
+msgstr ""
+
+msgid "Advanced"
+msgstr ""
+
+msgid "Ultimate"
+msgstr ""
+
+msgid "Provides a simple desktop environment with very few effects."
+msgstr ""
+
+msgid ""
+"Provides good balance between attractiveness and moderate performence "
+"requirements."
+msgstr ""
+
+msgid "Provides more aesthetically pleasing set of effects."
+msgstr ""
+
+msgid ""
+"Provides very advanced and eye-catching set of effects. Requires faster "
+"graphics card."
+msgstr ""
+
+msgid "Enabled"
+msgstr "Ενεργοποιημένο"
+
+msgid "Disabled"
+msgstr "Απενεργοποιημένο"
+
+msgid "Zoom"
+msgstr "Ζουμ"
+
+msgid "Colorfilter"
+msgstr "Φίλτρο χρώματος"
+
+msgid "None"
+msgstr ""
+
+#, c-format
+msgid "%s (Cover)"
+msgstr ""
+
+#, c-format
+msgid "%s (Flip)"
+msgstr ""
+
+msgid "Cover"
+msgstr ""
+
+msgid "Flip"
+msgstr ""
+
+msgid "Default"
+msgstr "Προεπιλογή"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>Προσβασιμότητα</b>"
+
+msgid "<b>Additions</b>"
+msgstr "<b>Εναλλακτικές</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>Γραφικές Απεικονίσεις</b>"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>Εμφάνιση</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Περιοχή ζουμαρίσματος</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>Κλείσιμο Παραθύρου</b>"
+
+#, fuzzy
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Εφέ</b>"
+
+msgid "<b>Description</b>"
+msgstr "<b>Περιγραφή</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Στήλες επιφάνειας εργασίας</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Προεπισκόπιση επιφάνειας εργασίας</b>"
+
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Σειρές επιφάνειας εργασίας</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>Επιφάνεια εργασίας</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>Εφέ</b>"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Ενεργοποίηση ζουμ</b>"
+
+#, fuzzy
+msgid "<b>Focus window</b>"
+msgstr "<b>Κλείσιμο Παραθύρου</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>Ελαχιστοποίηση παραθύρου</b>"
+
+msgid "<b>Open window</b>"
+msgstr "<b>Άνοιγμα παραθύρου</b>"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Άκρες οθόνης</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Ζουμ οθόνης</b>"
+
+msgid "<b>Switcher</b>"
+msgstr "<b>Επιλογέας</b>"
+
+msgid "Accessibility"
+msgstr "Προσβασιμότητα"
+
+msgid "Animations"
+msgstr "Γραφικές Απεικονίσεις"
+
+msgid "Area zoom"
+msgstr "Περιοχή ζουμαρίσματος"
+
+msgid "Deformation:"
+msgstr ""
+
+msgid "Desktop"
+msgstr "Επιφάνεια εργασίας"
+
+msgid "Edges"
+msgstr "Άκρες"
+
+msgid "Effects"
+msgstr "Εφέ"
+
+#, fuzzy
+msgid "Enable 3D Windows"
+msgstr "Ενεργοποίηση Wobbly"
+
+msgid "Enable Blur"
+msgstr "Ενεργοποίηση Θολώματος"
+
+msgid "Enable Expo"
+msgstr "Ενεργοποίηση Expo"
+
+#, fuzzy
+msgid "Enable Reflection"
+msgstr "Ενεργοποίηση γραφικών απεικονίσεων"
+
+msgid "Enable Scale"
+msgstr "Ενεργοποίηση Κλιμάκωσης"
+
+msgid "Enable Wobbly"
+msgstr "Ενεργοποίηση Wobbly"
+
+msgid "Enable animations"
+msgstr "Ενεργοποίηση γραφικών απεικονίσεων"
+
+msgid "Info"
+msgstr "Πληροφορίες"
+
+msgid "Opacity:"
+msgstr ""
+
+msgid "Profil:"
+msgstr "Προφίλ:"
+
+msgid "Screen zoom"
+msgstr "Ζουμ οθόνης"
+
+#, fuzzy
+msgid "Simple CompizConfig Settings Manager"
+msgstr "Απλός Διαχειριστής Ρυθμίσεων του Compiz"
+
+msgid "Configure Compiz with CompizConfig"
+msgstr ""
+
+#~ msgid "gtk-close"
+#~ msgstr "κλείσιμο-gtk"
+
+#~ msgid "gtk-help"
+#~ msgstr "βοήθεια-gtk"

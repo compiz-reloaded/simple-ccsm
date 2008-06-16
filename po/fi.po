@@ -1,5 +1,5 @@
 # Simple CCSM Finnish (fi) translation
-# Copyright (C) 2008 Timo Jyrinki Copyright (C) 2008 compiz-fusion.org
+# Copyright (C) 2008 Timo Jyrinki
 # This file is distributed under the same license as the simple-ccsm package.
 # Timo Jyrinki <timo.jyrinki@iki.fi>, 2008.
 #
@@ -7,14 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm trunk\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-06-06 23:38+0530\n"
-"PO-Revision-Date: 2008-05-20 14:13+0200\n"
+"POT-Creation-Date: 2008-06-16 15:29+0530\n"
+"PO-Revision-Date: 2008-06-08 16:19+0200\n"
 "Last-Translator: Timo Jyrinki <timo.jyrinki@iki.fi>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
 msgstr "Minimaalinen"
@@ -197,3 +198,12 @@ msgstr "Yksinkertainen CompizConfig-asetusten hallinta"
 
 msgid "Configure Compiz with CompizConfig"
 msgstr "Compizin hallinta CompizConfigia käyttäen"
+
+#~ msgid "Simple Compiz Config Settings Manager"
+#~ msgstr "Yksinkertainen Compiz-asetusten hallinta"
+
+#~ msgid "gtk-close"
+#~ msgstr "gtk-close"
+
+#~ msgid "gtk-help"
+#~ msgstr "gtk-help"

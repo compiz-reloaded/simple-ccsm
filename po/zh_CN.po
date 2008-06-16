@@ -1,20 +1,20 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# simple-ccsm translation templete
+# Copyright (C) 2008 compiz-fusion.org
+# This file is distributed under the same license as the simple-ccsm package.
+# JING Cheng <jingcheng01@gmail.com>, 2008.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
 "POT-Creation-Date: 2008-06-16 15:29+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2008-06-14 04:07+0200\n"
+"Last-Translator: JING Cheng <jingcheng01@gmail.com>\n"
+"Language-Team: Chinese\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
 msgstr ""
@@ -45,153 +45,170 @@ msgid ""
 msgstr ""
 
 msgid "Enabled"
-msgstr ""
+msgstr "已启用"
 
 msgid "Disabled"
-msgstr ""
+msgstr "已禁用"
 
 msgid "Zoom"
-msgstr ""
+msgstr "缩放"
 
+#, fuzzy
 msgid "Colorfilter"
-msgstr ""
+msgstr "颜色过滤"
 
 msgid "None"
 msgstr ""
 
-#, c-format
+#, fuzzy, c-format
 msgid "%s (Cover)"
-msgstr ""
+msgstr "%s (遮蔽式)"
 
-#, c-format
+#, fuzzy, c-format
 msgid "%s (Flip)"
-msgstr ""
+msgstr "%s (翻阅式)"
 
+#, fuzzy
 msgid "Cover"
-msgstr ""
+msgstr "遮蔽式"
 
+#, fuzzy
 msgid "Flip"
-msgstr ""
+msgstr "翻阅式"
 
 msgid "Default"
-msgstr ""
+msgstr "默认"
 
 msgid "<b>Accessibility</b>"
-msgstr ""
+msgstr "<b>辅助工具</b>"
 
 msgid "<b>Additions</b>"
-msgstr ""
+msgstr "<b>附加效果</b>"
 
 msgid "<b>Animations</b>"
-msgstr ""
+msgstr "<b>动画</b>"
 
 msgid "<b>Appearance</b>"
-msgstr ""
+msgstr "<b>外观</b>"
 
 msgid "<b>Area zoom</b>"
-msgstr ""
+msgstr "<b>区域缩放</b>"
 
 msgid "<b>Close Window</b>"
-msgstr ""
+msgstr "<b>关闭窗口</b>"
 
+#, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr ""
+msgstr "<b>特效</b>"
 
 msgid "<b>Description</b>"
-msgstr ""
+msgstr "<b>说明</b>"
 
 msgid "<b>Desktop columns</b>"
-msgstr ""
+msgstr "<b>桌面列数</b>"
 
 msgid "<b>Desktop preview</b>"
-msgstr ""
+msgstr "<b>桌面预览</b>"
 
 msgid "<b>Desktop rows</b>"
-msgstr ""
+msgstr "<b>桌面行数</b>"
 
 msgid "<b>Desktop</b>"
-msgstr ""
+msgstr "<b>桌面</b>"
 
 msgid "<b>Effects</b>"
-msgstr ""
+msgstr "<b>特效</b>"
 
 msgid "<b>Enable zoom</b>"
-msgstr ""
+msgstr "<b>启用缩放</b>"
 
+#, fuzzy
 msgid "<b>Focus window</b>"
-msgstr ""
+msgstr "<b>关闭窗口</b>"
 
 msgid "<b>Minimize window</b>"
-msgstr ""
+msgstr "<b>最小化窗口</b>"
 
 msgid "<b>Open window</b>"
-msgstr ""
+msgstr "<b>打开窗口</b>"
 
 msgid "<b>Screen Edges</b>"
-msgstr ""
+msgstr "<b>屏幕边缘</b>"
 
 msgid "<b>Screen zoom</b>"
-msgstr ""
+msgstr "<b>屏幕缩放</b>"
 
 msgid "<b>Switcher</b>"
-msgstr ""
+msgstr "<b>切换工具</b>"
 
 msgid "Accessibility"
-msgstr ""
+msgstr "辅助工具"
 
 msgid "Animations"
-msgstr ""
+msgstr "动画"
 
 msgid "Area zoom"
-msgstr ""
+msgstr "区域缩放"
 
 msgid "Deformation:"
 msgstr ""
 
 msgid "Desktop"
-msgstr ""
+msgstr "桌面"
 
 msgid "Edges"
-msgstr ""
+msgstr "边缘"
 
 msgid "Effects"
-msgstr ""
+msgstr "特效"
 
+#, fuzzy
 msgid "Enable 3D Windows"
-msgstr ""
+msgstr "启用震颤特效"
 
+#, fuzzy
 msgid "Enable Blur"
-msgstr ""
+msgstr "启用朦胧特效"
 
+#, fuzzy
 msgid "Enable Expo"
-msgstr ""
+msgstr "启用展览特效"
 
+#, fuzzy
 msgid "Enable Reflection"
-msgstr ""
+msgstr "启用动画特效"
 
 msgid "Enable Scale"
-msgstr ""
+msgstr "启用比例排列特效"
 
+#, fuzzy
 msgid "Enable Wobbly"
-msgstr ""
+msgstr "启用震颤特效"
 
 msgid "Enable animations"
-msgstr ""
+msgstr "启用动画特效"
 
 msgid "Info"
-msgstr ""
+msgstr "信息"
 
 msgid "Opacity:"
 msgstr ""
 
 msgid "Profil:"
-msgstr ""
+msgstr "配置文件："
 
 msgid "Screen zoom"
-msgstr ""
+msgstr "屏幕缩放"
 
+#, fuzzy
 msgid "Simple CompizConfig Settings Manager"
-msgstr ""
+msgstr "简化版CompizConfig设置管理器"
 
 msgid "Configure Compiz with CompizConfig"
 msgstr ""
+
+#~ msgid "gtk-close"
+#~ msgstr "关闭"
+
+#~ msgid "gtk-help"
+#~ msgstr "帮助"

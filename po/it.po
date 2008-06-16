@@ -1,0 +1,210 @@
+# Italian translations for simple-ccsm package.
+# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the simple-ccsm package.
+# Milo Casagrande <milo_casagrande@yahoo.it>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: simple-ccsm\n"
+"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
+"POT-Creation-Date: 2008-06-16 15:29+0530\n"
+"PO-Revision-Date: 2008-05-18 11:54+0200\n"
+"Last-Translator: Milo Casagrande <milo_casagrande@yahoo.it>\n"
+"Language-Team: Italian <tp@lists.linux.it>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# (ndt) si riferisco a Profilo
+msgid "Minimal"
+msgstr "Minimale"
+
+msgid "Medium"
+msgstr "Medio"
+
+msgid "Advanced"
+msgstr "Avanzato"
+
+msgid "Ultimate"
+msgstr "Completo"
+
+msgid "Provides a simple desktop environment with very few effects."
+msgstr "Fornisce un ambiente di lavoro semplice con pochi effetti visivi."
+
+msgid ""
+"Provides good balance between attractiveness and moderate performence "
+"requirements."
+msgstr ""
+"Fornisce un buon compromesso tra effetti visivi e requisiti di sistema."
+
+msgid "Provides more aesthetically pleasing set of effects."
+msgstr "Fornisce un insieme di effetti visivi più appaganti."
+
+msgid ""
+"Provides very advanced and eye-catching set of effects. Requires faster "
+"graphics card."
+msgstr ""
+"Fornisce effetti visivi altamente avanzati. Richiede schede grafiche molto "
+"veloci."
+
+msgid "Enabled"
+msgstr "Abilitato"
+
+msgid "Disabled"
+msgstr "Disabilitato"
+
+msgid "Zoom"
+msgstr "Ingrandimento"
+
+msgid "Colorfilter"
+msgstr "Filtro colore"
+
+msgid "None"
+msgstr "Nessuno"
+
+#, c-format
+msgid "%s (Cover)"
+msgstr "%s (Copertina)"
+
+#, c-format
+msgid "%s (Flip)"
+msgstr "%s (Sfoglia)"
+
+msgid "Cover"
+msgstr "Copertina"
+
+msgid "Flip"
+msgstr "Sfoglia"
+
+msgid "Default"
+msgstr "Predefinito"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>Accessibilità</b>"
+
+msgid "<b>Additions</b>"
+msgstr "<b>Aggiunte</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>Animazioni</b>"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>Aspetto</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Lente d'ingrandimento</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>Chiusura finestra</b>"
+
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Effetti cubo</b>"
+
+msgid "<b>Description</b>"
+msgstr "<b>Descrizione</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Colonne di desktop</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Anteprima</b>"
+
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Righe di desktop</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>Desktop</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>Effetti</b>"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Abilita ingrandimento</b>"
+
+msgid "<b>Focus window</b>"
+msgstr "<b>Focus della finestra</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>Minimizzazione finestra</b>"
+
+msgid "<b>Open window</b>"
+msgstr "<b>Apertura finestra</b>"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Bordi dello schermo</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Ingrandimento schermo</b>"
+
+msgid "<b>Switcher</b>"
+msgstr "<b>Selettore</b>"
+
+msgid "Accessibility"
+msgstr "Accessibilità"
+
+msgid "Animations"
+msgstr "Animazioni"
+
+msgid "Area zoom"
+msgstr "Lente d'ingrandimento"
+
+msgid "Deformation:"
+msgstr "Deformazione:"
+
+msgid "Desktop"
+msgstr "Desktop"
+
+msgid "Edges"
+msgstr "Bordi"
+
+msgid "Effects"
+msgstr "Effetti"
+
+msgid "Enable 3D Windows"
+msgstr "Abilitare «Finestre 3D»"
+
+msgid "Enable Blur"
+msgstr "Abilitare «Finestre sfocate»"
+
+msgid "Enable Expo"
+msgstr "Abilitare «Expo»"
+
+msgid "Enable Reflection"
+msgstr "Abilitare «Riflesso del cubo»"
+
+msgid "Enable Scale"
+msgstr "Abilitare «Scala finestre»"
+
+msgid "Enable Wobbly"
+msgstr "Abilitare «Finestre tremolanti»"
+
+msgid "Enable animations"
+msgstr "Abilitare animazioni"
+
+msgid "Info"
+msgstr "Informazioni"
+
+msgid "Opacity:"
+msgstr "Opacità:"
+
+msgid "Profil:"
+msgstr "Profilo:"
+
+msgid "Screen zoom"
+msgstr "Ingrandimento schermo"
+
+msgid "Simple CompizConfig Settings Manager"
+msgstr "Gestore configurazione CompizConfig semplice"
+
+msgid "Configure Compiz with CompizConfig"
+msgstr "Configura Compiz attraverso CompizConfig"
+
+#~ msgid "Simple Compiz Config Settings Manager"
+#~ msgstr "Gestore configurazione CompizConfig semplice"
+
+#~ msgid "gtk-close"
+#~ msgstr "gtk-close"
+
+#~ msgid "gtk-help"
+#~ msgstr "gtk-help"

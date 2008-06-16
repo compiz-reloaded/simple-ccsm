@@ -1,5 +1,5 @@
 # Simple CompizConfig Japanese translation.
-# Copyright (C)2008 compiz-fusion.org 
+# Copyright (C)2008 compiz-fusion.org
 # This file is distributed under the same license as the simple-ccsm package.
 #
 # Jiro Kawada <jiro.kawada@gmail.com>, 2008.
@@ -7,19 +7,60 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm 0.7.2\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-03-31 12:27+0530\n"
-"PO-Revision-Date: 2008-03-22 18:32+0900\n"
+"POT-Creation-Date: 2008-06-16 15:29+0530\n"
+"PO-Revision-Date: 2008-05-17 09:39+0900\n"
 "Last-Translator: jiro kawada <jiro.kawada@gmail.com>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid "Minimal"
+msgstr ""
+
+msgid "Medium"
+msgstr ""
+
+msgid "Advanced"
+msgstr ""
+
+msgid "Ultimate"
+msgstr ""
+
+msgid "Provides a simple desktop environment with very few effects."
+msgstr "少数の効果によるシンプルなデスクトップ環境を提供します。"
+
+msgid ""
+"Provides good balance between attractiveness and moderate performence "
+"requirements."
+msgstr ""
+"見栄えと中程度の処理能力要求との間で適度に釣り合いを持たせた効果群を提供しま"
+"す。"
+
+msgid "Provides more aesthetically pleasing set of effects."
+msgstr "目をより楽しませる効果群を提供します。"
+
+msgid ""
+"Provides very advanced and eye-catching set of effects. Requires faster "
+"graphics card."
+msgstr ""
+"非常に目を引く高度な効果群を提供します。より処理の速いグラフィックカードが必"
+"要です。"
+
 msgid "Enabled"
 msgstr "有効"
 
 msgid "Disabled"
 msgstr "無効"
+
+msgid "Zoom"
+msgstr "ズーム"
+
+msgid "Colorfilter"
+msgstr "カラーフィルタ"
+
+msgid "None"
+msgstr "なし"
 
 #, c-format
 msgid "%s (Cover)"
@@ -34,21 +75,6 @@ msgstr "カバー"
 
 msgid "Flip"
 msgstr "フリップ"
-
-msgid "Profile"
-msgstr "プロファイル"
-
-msgid "Animations"
-msgstr "アニメーション"
-
-msgid "Desktop"
-msgstr "デスクトップ"
-
-msgid "Effects"
-msgstr "効果"
-
-msgid "Zoom"
-msgstr "ズーム"
 
 msgid "Default"
 msgstr "デフォルト"
@@ -65,24 +91,26 @@ msgstr "<b>アニメーション</b>"
 msgid "<b>Appearance</b>"
 msgstr "<b>外観</b>"
 
-#, fuzzy
 msgid "<b>Area zoom</b>"
-msgstr "<b>ズームイン</b>"
+msgstr "<b>部分ズーム</b>"
 
 msgid "<b>Close Window</b>"
 msgstr "<b>ウィンドウを閉じる</b>"
+
+msgid "<b>Cube Effects</b>"
+msgstr "<b>キューブ効果</b>"
 
 msgid "<b>Description</b>"
 msgstr "<b>説明</b>"
 
 msgid "<b>Desktop columns</b>"
-msgstr "<b>デスクトップの縦列</b>"
+msgstr "<b>デスクトップの横列</b>"
 
 msgid "<b>Desktop preview</b>"
 msgstr "<b>デスクトップのプレビュー</b>"
 
 msgid "<b>Desktop rows</b>"
-msgstr "<b>デスクトップの横列</b>"
+msgstr "<b>デスクトップの縦列</b>"
 
 msgid "<b>Desktop</b>"
 msgstr "<b>デスクトップ</b>"
@@ -90,9 +118,11 @@ msgstr "<b>デスクトップ</b>"
 msgid "<b>Effects</b>"
 msgstr "<b>効果</b>"
 
-#, fuzzy
 msgid "<b>Enable zoom</b>"
-msgstr "ズーム有効化"
+msgstr "<b>ズーム有効化</b>"
+
+msgid "<b>Focus window</b>"
+msgstr "<b>ウィンドウをフォーカス</b>"
 
 msgid "<b>Minimize window</b>"
 msgstr "<b>ウィンドウを最小化</b>"
@@ -103,55 +133,68 @@ msgstr "<b>ウィンドウを開く</b>"
 msgid "<b>Screen Edges</b>"
 msgstr "<b>スクリーンエッジ</b>"
 
-#, fuzzy
 msgid "<b>Screen zoom</b>"
-msgstr "<b>スクリーンエッジ</b>"
+msgstr "<b>画面ズーム</b>"
 
 msgid "<b>Switcher</b>"
-msgstr "<b>スイッチャ</b>"
+msgstr "<b>スイッチャー</b>"
 
 msgid "Accessibility"
 msgstr "アクセシビリティ"
 
-#, fuzzy
+msgid "Animations"
+msgstr "アニメーション"
+
 msgid "Area zoom"
-msgstr "ズーム有効化"
+msgstr "部分ズーム"
+
+msgid "Deformation:"
+msgstr "変形:"
+
+msgid "Desktop"
+msgstr "デスクトップ"
 
 msgid "Edges"
 msgstr "エッジ"
 
+msgid "Effects"
+msgstr "効果"
+
+msgid "Enable 3D Windows"
+msgstr "3D ウィンドウを有効化"
+
 msgid "Enable Blur"
-msgstr "ブラー有効化"
+msgstr "ブラーを有効化"
 
 msgid "Enable Expo"
-msgstr "展開有効化"
+msgstr "展開を有効化"
+
+msgid "Enable Reflection"
+msgstr "反射を有効化"
 
 msgid "Enable Scale"
-msgstr "スケール有効化"
+msgstr "スケールを有効化"
 
 msgid "Enable Wobbly"
-msgstr "揺れるウィンドウ有効化"
+msgstr "揺れるウィンドウを有効化"
 
 msgid "Enable animations"
-msgstr "アニメーション有効化"
+msgstr "アニメーションを有効化"
 
 msgid "Info"
 msgstr "情報"
+
+msgid "Opacity:"
+msgstr "不透明度:"
 
 msgid "Profil:"
 msgstr "形態:"
 
 msgid "Screen zoom"
-msgstr ""
+msgstr "画面ズーム"
 
-msgid "Simple Compiz Config Settings Manager"
-msgstr "簡易版 Compiz Config 設定マネージャ"
+msgid "Simple CompizConfig Settings Manager"
+msgstr "簡易版 CompizConfig 設定マネージャ"
 
-msgid "gtk-close"
-msgstr "gtk-close"
-
-msgid "gtk-help"
-msgstr "gtk-help"
-
-#~ msgid "<b>Zoom out</b>"
-#~ msgstr "<b>ズームアウト</b>"
+msgid "Configure Compiz with CompizConfig"
+msgstr "CompizConfig で Compiz の設定"

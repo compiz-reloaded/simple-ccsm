@@ -1,20 +1,20 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# simple-ccsm translation templete
+# Copyright (C) 2008 compiz-fusion.org
+# This file is distributed under the same license as the simple-ccsm package.
+# Michal Kaluzniak <the_hooltay@o2.pl>.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
 "POT-Creation-Date: 2008-06-16 15:29+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2008-06-06 18:33+0200\n"
+"Last-Translator: Michal Kaluzniak <the_hooltay@o2.pl>\n"
+"Language-Team: Michal Kaluzniak <the_hooltay@o2.pl>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
 msgstr ""
@@ -45,153 +45,166 @@ msgid ""
 msgstr ""
 
 msgid "Enabled"
-msgstr ""
+msgstr "Włączone"
 
 msgid "Disabled"
-msgstr ""
+msgstr "Wyłączone"
 
 msgid "Zoom"
-msgstr ""
+msgstr "Przybliżenie"
 
 msgid "Colorfilter"
-msgstr ""
+msgstr "Filtr kolorów"
 
 msgid "None"
 msgstr ""
 
 #, c-format
 msgid "%s (Cover)"
-msgstr ""
+msgstr "%s (Przykrywanie)"
 
 #, c-format
 msgid "%s (Flip)"
-msgstr ""
+msgstr "%s (Odwracanie)"
 
 msgid "Cover"
-msgstr ""
+msgstr "Przykrywanie"
 
 msgid "Flip"
-msgstr ""
+msgstr "Odwracanie"
 
 msgid "Default"
-msgstr ""
+msgstr "Domyślne"
 
 msgid "<b>Accessibility</b>"
-msgstr ""
+msgstr "<b>Dostępność</b>"
 
 msgid "<b>Additions</b>"
-msgstr ""
+msgstr "<b>Dodatki</b>"
 
 msgid "<b>Animations</b>"
-msgstr ""
+msgstr "<b>Animacje</b>"
 
 msgid "<b>Appearance</b>"
-msgstr ""
+msgstr "<b>Wygląd</b>"
 
 msgid "<b>Area zoom</b>"
-msgstr ""
+msgstr "<b>Przybliżenie obszaru</b>"
 
 msgid "<b>Close Window</b>"
-msgstr ""
+msgstr "<b>Zamknij Okno</b>"
 
+#, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr ""
+msgstr "<b>Efekty</b>"
 
 msgid "<b>Description</b>"
-msgstr ""
+msgstr "<b>Opis</b>"
 
+#, fuzzy
 msgid "<b>Desktop columns</b>"
-msgstr ""
+msgstr "<b>Kolumny pulpitu</b>"
 
 msgid "<b>Desktop preview</b>"
-msgstr ""
+msgstr "<b>Podgląd pulpitu</b>"
 
+#, fuzzy
 msgid "<b>Desktop rows</b>"
-msgstr ""
+msgstr "<b>Wiersze pulpitu</b>"
 
 msgid "<b>Desktop</b>"
-msgstr ""
+msgstr "<b>Pulpit</b>"
 
 msgid "<b>Effects</b>"
-msgstr ""
+msgstr "<b>Efekty</b>"
 
 msgid "<b>Enable zoom</b>"
-msgstr ""
+msgstr "<b>Włącz przybliżenie</b>"
 
+#, fuzzy
 msgid "<b>Focus window</b>"
-msgstr ""
+msgstr "<b>Zamknij Okno</b>"
 
 msgid "<b>Minimize window</b>"
-msgstr ""
+msgstr "<b>Minimalizuj okno</b>"
 
 msgid "<b>Open window</b>"
-msgstr ""
+msgstr "<b>Otwórz okno</b>"
 
 msgid "<b>Screen Edges</b>"
-msgstr ""
+msgstr "<b>Krawędzie ekranu</b>"
 
 msgid "<b>Screen zoom</b>"
-msgstr ""
+msgstr "<b>Przybliżenie ekranu</b>"
 
 msgid "<b>Switcher</b>"
-msgstr ""
+msgstr "<b>Przełącznik</b>"
 
 msgid "Accessibility"
-msgstr ""
+msgstr "Dostępność"
 
 msgid "Animations"
-msgstr ""
+msgstr "Animacje"
 
 msgid "Area zoom"
-msgstr ""
+msgstr "Przybliżenie obszaru"
 
 msgid "Deformation:"
 msgstr ""
 
 msgid "Desktop"
-msgstr ""
+msgstr "Pulpit"
 
 msgid "Edges"
-msgstr ""
+msgstr "Krawędzie"
 
 msgid "Effects"
-msgstr ""
+msgstr "Efekty"
 
+#, fuzzy
 msgid "Enable 3D Windows"
-msgstr ""
+msgstr "Włącz trzęsące się okna"
 
 msgid "Enable Blur"
-msgstr ""
+msgstr "Włącz rozmycie"
 
 msgid "Enable Expo"
-msgstr ""
+msgstr "Włącz Expo"
 
+#, fuzzy
 msgid "Enable Reflection"
-msgstr ""
+msgstr "Włącz animacje"
 
 msgid "Enable Scale"
 msgstr ""
 
 msgid "Enable Wobbly"
-msgstr ""
+msgstr "Włącz trzęsące się okna"
 
 msgid "Enable animations"
-msgstr ""
+msgstr "Włącz animacje"
 
 msgid "Info"
-msgstr ""
+msgstr "Informacje"
 
 msgid "Opacity:"
 msgstr ""
 
 msgid "Profil:"
-msgstr ""
+msgstr "Profil:"
 
 msgid "Screen zoom"
-msgstr ""
+msgstr "Przybliżenie ekranu"
 
+#, fuzzy
 msgid "Simple CompizConfig Settings Manager"
-msgstr ""
+msgstr "Menadżer ustawień Simple Compiz Config"
 
 msgid "Configure Compiz with CompizConfig"
 msgstr ""
+
+#~ msgid "gtk-close"
+#~ msgstr "gtk-zamknij"
+
+#~ msgid "gtk-help"
+#~ msgstr "gtk-pomoc"
