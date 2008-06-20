@@ -560,7 +560,7 @@ class EffectPage:
     def UpdateSwitcherPlugins(self):
         self.SwitcherPlugins = {}
         self.SwitcherKeySettings = {}
-        for pluginName in ('switcher', 'shift', 'ring'):
+        for pluginName in ('switcher', 'shift', 'ring', 'staticswitcher', 'stackswitch'):
             if pluginName in self.Context.Plugins:
                 plugin = self.Context.Plugins[pluginName]
 
