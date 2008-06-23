@@ -17,7 +17,7 @@ s0_open_effects = 3;9;9;
 s0_focus_effects = 1;
 
 [core]
-as_active_plugins = core;text;workarounds;thumbnail;imgjpeg;shift;crashhandler;dbus;resize;decoration;svg;wobbly;place;png;move;regex;cube;animation;3d;scale;rotate;cubeaddon;expo;ezoom;
+as_active_plugins = core;workarounds;dbus;resize;crashhandler;mousepoll;decoration;svg;wobbly;place;png;text;imgjpeg;move;regex;animation;cube;3d;shift;scale;rotate;cubeaddon;expo;ezoom;
 s0_hsize = 4
 s0_vsize = 1
 

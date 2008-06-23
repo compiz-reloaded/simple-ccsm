@@ -19,7 +19,7 @@ s0_minimize_effects = 17;
 s0_focus_effects = 2;
 
 [core]
-as_active_plugins = core;text;workarounds;thumbnail;imgjpeg;shift;crashhandler;dbus;resize;decoration;svg;place;png;move;regex;cube;animation;scale;rotate;cubeaddon;expo;ezoom;
+as_active_plugins = core;workarounds;dbus;resize;crashhandler;mousepoll;decoration;svg;place;png;text;imgjpeg;move;regex;animation;cube;shift;scale;rotate;cubeaddon;expo;ezoom;
 s0_hsize = 4
 s0_vsize = 1
 

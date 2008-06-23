@@ -9,7 +9,7 @@ as_border_color = #8080808a
 as_fill_color = #0000004f
 
 [core]
-as_active_plugins = core;text;ezoom;workarounds;imgjpeg;crashhandler;dbus;resize;decoration;svg;place;png;move;regex;wall;animation;
+as_active_plugins = core;workarounds;dbus;resize;crashhandler;mousepoll;decoration;svg;wall;place;png;text;imgjpeg;move;regex;animation;ezoom;
 s0_hsize = 2
 s0_vsize = 2
 
