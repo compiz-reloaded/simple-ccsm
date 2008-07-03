@@ -7,3 +7,4 @@ Exec=simple-ccsm
 Terminal=false
 Type=Application
 Categories=Compiz;Settings;DesktopSettings;
+StartupNotify=true

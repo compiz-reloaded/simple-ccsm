@@ -136,6 +136,13 @@ AnimationSettings = {
 }
 
 Tooltips = gtk.Tooltips()
+CompizName = "compiz"
+
+# Change to your default
+CompizEnableDesktopEffects = @enable_desktop_effects@
+CompizStartCommand = "compiz-manager"
+CompizDryRunCommand = "CM_DRY=yes compiz-manager"
+CompizNoChecksCommand = "SKIP_CHECKS=yes compiz-manager"
 
 # Utility Functions
 def EnablePlugin(plugin, active):
@@ -984,7 +991,15 @@ class MainWin:
             notebook.set_current_page (Pages[page])
 
         # Window
-        window = self.GladeXML.get_widget("mainWin")
+        self.Window = self.GladeXML.get_widget("mainWin")
+
+        # Enable effects button
+        self.EnableEffectsButton = self.GladeXML.get_widget("enableEffects")
+        self.EnableEffectsButton.connect ("toggled", self.EnableDesktopEffectsChanged)
+        self.Notebook = self.GladeXML.get_widget("notebook")
+        if not CompizEnableDesktopEffects:
+            self.EnableEffectsButton.hide_all()
+            self.EnableEffectsButton.set_no_show_all(True)
 
         # Profile Chooser
         self.ProfileChooser = self.GladeXML.get_widget("profileChooser")
@@ -998,10 +1013,28 @@ class MainWin:
         self.EdgePage      = EdgePage(self.Context, self.GladeXML)
 
         self.Update()
-        window.show_all()
+        self.Window.show_all()
+
+    def CheckForCompiz(self):
+        composited = self.Window.is_composited()
+        if composited:
+            # Now do the dirty work - check if it is really Compiz
+            psCMD = "ps -e".split(" ")
+            ps = subprocess.Popen(psCMD, stdout=subprocess.PIPE)
+            grepCMD = "grep compiz".split(" ")
+            grep = subprocess.Popen(grepCMD, stdin=ps.stdout, stdout=subprocess.PIPE)
+            grep.wait()
+            lines = grep.stdout.readlines()
+            for l in lines:
+                name = l.replace("\n", "").split(" ")[-1]
+                if name == CompizName:
+                    return True
+
+        return False
 
     def Update(self):
         self.Context.Read()
+        self.Block += 1
 
         self.AnimationPage.Update()
         self.DesktopPage.Update()
@@ -1011,6 +1044,87 @@ class MainWin:
         self.EdgePage.Update()
 
         self.SetProfile()
+        self.SetEnableDesktopEffects()
+
+        self.Block -= 1
+
+    def SetEnableDesktopEffects(self):
+        running = self.CheckForCompiz()
+        self.EnableEffectsButton.set_active(running)
+        self.Notebook.set_sensitive(running)
+        self.ProfileChooser.set_sensitive(running)
+
+    def EnableDesktopEffectsChanged(self, widget):
+        if self.Block > 0:
+            return
+
+        enabled = self.EnableEffectsButton.get_active()
+        if enabled:
+            # First try to check if compiz can be run
+            cmd = CompizDryRunCommand.split(" ")
+            proc = subprocess.Popen(cmd, shell=True)
+            proc.wait()
+            if proc.returncode != 0:
+                # Dry run detected problems, warn the user
+                dialog = gtk.Dialog ()
+                dialog.set_title("Error")
+                dialog.set_border_width(6)
+                label = gtk.Label(_("Desktop effects are not supported on your current hardware / configuration. Would you like to cancel enabling of desktop effects or run them anyway?"))
+                label.set_line_wrap(True)
+                dialog.vbox.pack_start(label,
+                                       gtk.TRUE,
+                                       gtk.FALSE,
+                                       3)
+                dialog.add_button(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL)
+                dialog.add_button("Run anyway", gtk.RESPONSE_OK)
+                dialog.show_all()
+                response = dialog.run()
+                dialog.destroy()
+                if response != gtk.RESPONSE_OK:
+                    self.EnableEffectsButton.set_active(False)
+                    return
+
+            # Make compiz manager skip further checks
+            path = os.path.expanduser("~/.config/compiz/compiz-manager")
+            hasSkip = False
+
+            try:
+                config = open(path, "r")
+                for l in config.readlines():
+                    if "SKIP_CHECKS" in l:
+                        hasSkip = True
+                        break
+                config.close()
+            except IOError, e:
+                print "No compiz manager config found!"
+                dir = os.path.expanduser("~/.config/compiz/")
+                if not os.path.exists(dir):
+                    os.makedirs(dir)
+
+            if not hasSkip:
+                config = open(path, "a")
+                config.write("SKIP_CHECKS=yes")
+                config.close()
+
+            # Start compiz
+            cmd = CompizStartCommand.split(" ")
+            subprocess.Popen(cmd)
+
+            # Create a file that indicates wether compiz is enabled or not
+            path = os.path.expanduser("~/.config/compiz/enable-compiz")
+            open(path, "w+").close() # touch replacement
+        else:
+            cmd = "metacity --replace".split(" ")
+            subprocess.Popen(cmd)
+            # Remove old config
+            files = ("~/.config/compiz/enable-compiz", "~/.config/compiz/compiz-manager")
+            for file in files:
+                path = os.path.expanduser(file)
+                os.remove(path)
+
+        self.Notebook.set_sensitive(enabled)
+        self.ProfileChooser.set_sensitive(enabled)
+
 
     def ApplyProfile(self, widget):
         text = self.ProfileChooser.get_active_text()

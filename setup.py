@@ -76,6 +76,10 @@ if len (sys.argv) < 2 or sys.argv[1] not in ops:
     raise SystemExit
 
 prefix = None
+enableDesktopEffects = False
+if "--enableDesktopEffects" in sys.argv:
+    enableDesktopEffects = True
+    sys.argv.remove ("--enableDesktopEffects")
 if len (sys.argv) > 2:
     i = 0
     for o in sys.argv:
@@ -87,7 +91,6 @@ if len (sys.argv) > 2:
             elif o.startswith ("--prefix=") and len (o[9:]):
                 prefix = o[9:]
             sys.argv.remove (o)
-            break
         i += 1
 if not prefix and "PREFIX" in os.environ:
     prefix = os.environ["PREFIX"]
@@ -111,6 +114,7 @@ f.close ()
 data = data.replace ("@prefix@", prefix)
 data = data.replace ("@version@", version)
 data = data.replace ("@compiz_prefix@", compiz_prefix)
+data = data.replace ("@enable_desktop_effects@", str(enableDesktopEffects))
 f = open (os.path.join ("simple-ccsm"), "wt")
 f.write (data)
 f.close ()
