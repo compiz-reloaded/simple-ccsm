@@ -143,6 +143,8 @@ CompizEnableDesktopEffects = @enable_desktop_effects@
 CompizStartCommand = "compiz-manager"
 CompizDryRunCommand = "CM_DRY=yes compiz-manager"
 CompizNoChecksCommand = "SKIP_CHECKS=yes compiz-manager"
+GnomeSession = "GNOME_DESKTOP_SESSION_ID"
+KdeSession = "KDE_FULL_SESSION"
 
 # Utility Functions
 def EnablePlugin(plugin, active):
@@ -1114,10 +1116,21 @@ class MainWin:
             path = os.path.expanduser("~/.config/compiz/enable-compiz")
             open(path, "w+").close() # touch replacement
         else:
-            cmd = "metacity --replace".split(" ")
-            subprocess.Popen(cmd)
+            fallbackWM = ""
+            if GnomeSession in os.environ and os.environ[GnomeSession]:
+                fallbackWM = "metacity"
+            elif KdeSession in os.environ and os.environ[KdeSession]:
+                fallbackWM = "kwin"
+
+            if fallbackWM:
+                cmd = "%s --replace" % fallbackWM
+                cmd = cmd.split(" ")
+                subprocess.Popen(cmd)
+
+            # Reset window manager config for KDE
             cmd = "kwriteconfig --file ksmserverrc --group General --key windowManager kwin".split(" ")
             subprocess.Popen(cmd)
+
             # Remove old config
             files = ("~/.config/compiz/enable-compiz", "~/.config/compiz/compiz-manager")
             for file in files:
