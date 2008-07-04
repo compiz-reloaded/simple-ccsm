@@ -1116,6 +1116,8 @@ class MainWin:
         else:
             cmd = "metacity --replace".split(" ")
             subprocess.Popen(cmd)
+            cmd = "kwriteconfig --file ksmserverrc --group General --key windowManager kwin".split(" ")
+            subprocess.Popen(cmd)
             # Remove old config
             files = ("~/.config/compiz/enable-compiz", "~/.config/compiz/compiz-manager")
             for file in files:
