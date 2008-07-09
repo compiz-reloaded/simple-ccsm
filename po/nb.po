@@ -1,23 +1,20 @@
-# translation of simple-ccsm.po to Russian
 # simple-ccsm translation templete
 # Copyright (C) 2008 compiz-fusion.org
 # This file is distributed under the same license as the simple-ccsm package.
+# Markus Igeland <markusigeland@gmail.com>, 2008.
 #
-# Dimitriy Ryazantcev <DJm00n@mail.ru>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: simple-ccsm\n"
+"Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
 "POT-Creation-Date: 2008-07-09 16:35+0530\n"
-"PO-Revision-Date: 2008-05-28 17:45+0300\n"
-"Last-Translator: Dimitriy Ryazantcev <DJm00n@mail.ru>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2008-06-10 22:51+0200\n"
+"Last-Translator: Markus Igeland <markusigeland@gmail.com>\n"
+"Language-Team: Markus Igeland <markusigeland@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
 msgstr ""
@@ -48,33 +45,33 @@ msgid ""
 msgstr ""
 
 msgid "Enabled"
-msgstr "Включено"
+msgstr "Påslått"
 
 msgid "Disabled"
-msgstr "Отключено"
+msgstr "Avslått"
 
 msgid "Zoom"
-msgstr "Масштаб"
+msgstr "Zoom"
 
 msgid "Colorfilter"
-msgstr "Цветовой фильтр"
+msgstr "Fargefilter"
 
 msgid "None"
 msgstr ""
 
 #, c-format
 msgid "%s (Cover)"
-msgstr "%s (Накрытие)"
+msgstr "%s (Skjul)"
 
 #, c-format
 msgid "%s (Flip)"
-msgstr "%s (Переворот)"
+msgstr "%s (Flipp)"
 
 msgid "Cover"
-msgstr "Нарытие"
+msgstr "Skjul"
 
 msgid "Flip"
-msgstr "Переворот"
+msgstr "Flipp"
 
 msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
@@ -82,130 +79,136 @@ msgid ""
 msgstr ""
 
 msgid "Default"
-msgstr "По умолчанию"
+msgstr "Standard"
 
 msgid "<b>Accessibility</b>"
-msgstr "<b>Специальные возможности</b>"
+msgstr "<b>Tilgjengelighet</b>"
 
 msgid "<b>Additions</b>"
-msgstr "<b>Дополнения</b>"
+msgstr "<b>Tillegg</b>"
 
 msgid "<b>Animations</b>"
-msgstr "<b>Анимации</b>"
+msgstr "<b>Animasjoner</b>"
 
 msgid "<b>Appearance</b>"
-msgstr "<b>Поведение</b>"
+msgstr "<b>Utseende</b>"
 
 msgid "<b>Area zoom</b>"
-msgstr "<b>Масштабирование области</b>"
+msgstr "<b>Område-zoom</b>"
 
 msgid "<b>Close Window</b>"
-msgstr "<b>Закрыть окно</b>"
+msgstr "<b>Lukk vindu</b>"
 
 #, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr "<b>Эффекты</b>"
+msgstr "<b>Effekter</b>"
 
 msgid "<b>Description</b>"
-msgstr "<b>Описание</b>"
+msgstr "<b>Beskrivelse</b>"
 
 msgid "<b>Desktop columns</b>"
-msgstr "<b>Столбцы рабочего стола</b>"
+msgstr "<b>Skrivebordskolonner</b>"
 
 msgid "<b>Desktop preview</b>"
-msgstr "<b>Предварительный просмотр рабочего стола</b>"
+msgstr "<b>Forhåndsvisning av skrivebord</b>"
 
 msgid "<b>Desktop rows</b>"
-msgstr "<b>Строки экрана</b>"
+msgstr "<b>Skrivebordsrader</b>"
 
 msgid "<b>Desktop</b>"
-msgstr "<b>Рабочий стол</b>"
+msgstr "<b>Skrivebord</b>"
 
 msgid "<b>Effects</b>"
-msgstr "<b>Эффекты</b>"
+msgstr "<b>Effekter</b>"
 
 msgid "<b>Enable zoom</b>"
-msgstr "<b>Разрешить масштабирование</b>"
+msgstr "<b>Slå på zoom</b>"
 
 #, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>Закрыть окно</b>"
+msgstr "<b>Lukk vindu</b>"
 
 msgid "<b>Minimize window</b>"
-msgstr "<b>Свернуть окно</b>"
+msgstr "<b>Minimer vindu</b>"
 
 msgid "<b>Open window</b>"
-msgstr "<b>Открыть окно</b>"
+msgstr "<b>Åpne vindu</b>"
 
 msgid "<b>Screen Edges</b>"
-msgstr "<b>Края экрана</b>"
+msgstr "<b>Skjermkanter</b>"
 
 msgid "<b>Screen zoom</b>"
-msgstr "<b>Масштабирование экрана</b>"
+msgstr "<b>Skjermzoom</b>"
 
+# maybe a bad translation...?
 msgid "<b>Switcher</b>"
-msgstr "<b>Переключатель</b>"
+msgstr "<b>Bytter</b>"
 
 msgid "Accessibility"
-msgstr "Специальные возможности"
+msgstr "Tilgjengelighet"
 
 msgid "Animations"
-msgstr "Анимации"
+msgstr "Animasjoner"
 
 msgid "Area zoom"
-msgstr "Масштабирование области"
+msgstr "Områdezoom"
 
 msgid "Deformation:"
 msgstr ""
 
 msgid "Desktop"
-msgstr "Рабочий стол"
+msgstr "Skrivebord"
 
 msgid "Edges"
-msgstr "Грани"
+msgstr "Kanter"
 
 msgid "Effects"
-msgstr "Эффекты"
+msgstr "Effekter"
 
+# The effects name is "Wobbly", so I used it in this translation.
 #, fuzzy
 msgid "Enable 3D Windows"
-msgstr "Включить вязкие окна"
+msgstr "Slå på \"Wobbly\""
 
+# Can't find a proper word in Norwegian for "blur"...
 msgid "Enable Blur"
-msgstr "Включить смазывание"
+msgstr "Slå på uskarphet"
 
+# I think this is a 'OK' translation, but I'm unsure...
 msgid "Enable Expo"
-msgstr "Включить экспо"
+msgstr "Slå på forhåndsvisning"
 
 #, fuzzy
 msgid "Enable Reflection"
-msgstr "Включить анимации"
+msgstr "Slå på animasjoner"
 
 msgid "Enable Scale"
-msgstr "Включить масштабирование"
+msgstr "Slå på skalering"
 
+# The effects name is "Wobbly", so I used it in this translation.
 msgid "Enable Wobbly"
-msgstr "Включить вязкие окна"
+msgstr "Slå på \"Wobbly\""
 
 msgid "Enable animations"
-msgstr "Включить анимации"
+msgstr "Slå på animasjoner"
 
 msgid "Info"
-msgstr "Информация"
+msgstr "Info"
 
 msgid "Opacity:"
 msgstr ""
 
 #, fuzzy
 msgid "Profile:"
-msgstr "Профиль:"
+msgstr "Profil:"
 
 msgid "Screen zoom"
-msgstr "Масштабирование экрана"
+msgstr "Skjermzoom"
 
+# As "Simple Compiz Config Settings Manager" is a name for an application, I made up a name I think fit the application.
 #, fuzzy
 msgid "Simple CompizConfig Settings Manager"
-msgstr "Простой менеджер настройки CompizConfig"
+msgstr "Det Enkle Compiz Konfigurasjonspanel"
 
 msgid "_Enable desktop effects"
 msgstr ""

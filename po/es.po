@@ -1,23 +1,20 @@
-# translation of simple-ccsm.po to Russian
 # simple-ccsm translation templete
 # Copyright (C) 2008 compiz-fusion.org
 # This file is distributed under the same license as the simple-ccsm package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Dimitriy Ryazantcev <DJm00n@mail.ru>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: simple-ccsm\n"
+"Project-Id-Version: Compiz\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
 "POT-Creation-Date: 2008-07-09 16:35+0530\n"
-"PO-Revision-Date: 2008-05-28 17:45+0300\n"
-"Last-Translator: Dimitriy Ryazantcev <DJm00n@mail.ru>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2008-06-28 16:39+0100\n"
+"Last-Translator: Rafa Ramírez <berylog@gmail.com>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
 msgstr ""
@@ -48,33 +45,33 @@ msgid ""
 msgstr ""
 
 msgid "Enabled"
-msgstr "Включено"
+msgstr "Activado"
 
 msgid "Disabled"
-msgstr "Отключено"
+msgstr "Desactivado"
 
 msgid "Zoom"
-msgstr "Масштаб"
+msgstr "Zoom"
 
 msgid "Colorfilter"
-msgstr "Цветовой фильтр"
+msgstr "Filtro de color"
 
 msgid "None"
 msgstr ""
 
 #, c-format
 msgid "%s (Cover)"
-msgstr "%s (Накрытие)"
+msgstr "%s (Cubierta)"
 
 #, c-format
 msgid "%s (Flip)"
-msgstr "%s (Переворот)"
+msgstr "%s (Voltear)"
 
 msgid "Cover"
-msgstr "Нарытие"
+msgstr "Cubierta"
 
 msgid "Flip"
-msgstr "Переворот"
+msgstr "Voltear"
 
 msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
@@ -82,130 +79,139 @@ msgid ""
 msgstr ""
 
 msgid "Default"
-msgstr "По умолчанию"
+msgstr "Por defecto"
 
 msgid "<b>Accessibility</b>"
-msgstr "<b>Специальные возможности</b>"
+msgstr "<b>Accesibilidad</b>"
 
+# ¿Tal vez añadidos?
+# berylog: queda mejor añadidos en lugar de adiciones
 msgid "<b>Additions</b>"
-msgstr "<b>Дополнения</b>"
+msgstr "<b>Añadidos</b>"
 
 msgid "<b>Animations</b>"
-msgstr "<b>Анимации</b>"
+msgstr "<b>Animaciones</b>"
 
 msgid "<b>Appearance</b>"
-msgstr "<b>Поведение</b>"
+msgstr "<b>Apariencia</b>"
 
 msgid "<b>Area zoom</b>"
-msgstr "<b>Масштабирование области</b>"
+msgstr "<b>Zoom de área</b>"
 
 msgid "<b>Close Window</b>"
-msgstr "<b>Закрыть окно</b>"
+msgstr "<b>Cerrar ventana</b>"
 
 #, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr "<b>Эффекты</b>"
+msgstr "<b>Efectos</b>"
 
 msgid "<b>Description</b>"
-msgstr "<b>Описание</b>"
+msgstr "<b>Descripción</b>"
 
 msgid "<b>Desktop columns</b>"
-msgstr "<b>Столбцы рабочего стола</b>"
+msgstr "<b>Columnas del escritorio</b>"
 
 msgid "<b>Desktop preview</b>"
-msgstr "<b>Предварительный просмотр рабочего стола</b>"
+msgstr "<b>Vista previa del escritorio</b>"
 
 msgid "<b>Desktop rows</b>"
-msgstr "<b>Строки экрана</b>"
+msgstr "<b>Filas del escritorio</b>"
 
 msgid "<b>Desktop</b>"
-msgstr "<b>Рабочий стол</b>"
+msgstr "<b>Escritorio</b>"
 
 msgid "<b>Effects</b>"
-msgstr "<b>Эффекты</b>"
+msgstr "<b>Efectos</b>"
 
 msgid "<b>Enable zoom</b>"
-msgstr "<b>Разрешить масштабирование</b>"
+msgstr "<b>Activar zoom</b>"
 
 #, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>Закрыть окно</b>"
+msgstr "<b>Cerrar ventana</b>"
 
 msgid "<b>Minimize window</b>"
-msgstr "<b>Свернуть окно</b>"
+msgstr "<b>Minimizar ventana</b>"
 
 msgid "<b>Open window</b>"
-msgstr "<b>Открыть окно</b>"
+msgstr "<b>Abrir ventana</b>"
 
 msgid "<b>Screen Edges</b>"
-msgstr "<b>Края экрана</b>"
+msgstr "<b>Bordes de la pantalla</b>"
 
 msgid "<b>Screen zoom</b>"
-msgstr "<b>Масштабирование экрана</b>"
+msgstr "<b>Zoom de la pantalla</b>"
 
+# berylog: en lugar de Cambiador, dejo la palabra original Switcher
 msgid "<b>Switcher</b>"
-msgstr "<b>Переключатель</b>"
+msgstr "<b>Switcher</b>"
 
 msgid "Accessibility"
-msgstr "Специальные возможности"
+msgstr "Accesibilidad"
 
 msgid "Animations"
-msgstr "Анимации"
+msgstr "Animaciones"
 
 msgid "Area zoom"
-msgstr "Масштабирование области"
+msgstr "Zoom de área"
 
 msgid "Deformation:"
 msgstr ""
 
 msgid "Desktop"
-msgstr "Рабочий стол"
+msgstr "Escritorio"
 
 msgid "Edges"
-msgstr "Грани"
+msgstr "Bordes"
 
 msgid "Effects"
-msgstr "Эффекты"
+msgstr "Efectos"
 
+# Gelatinoso, gelatinosa, depende del contexto.
+# berylog: ¿y por qué no: "Activar Ventanas Gelatinosas"?
 #, fuzzy
 msgid "Enable 3D Windows"
-msgstr "Включить вязкие окна"
+msgstr "Activar Ventanas Gelatinosas"
 
+# Habilitar emborronado, dispersión
 msgid "Enable Blur"
-msgstr "Включить смазывание"
+msgstr "Habilitar difuminado"
 
 msgid "Enable Expo"
-msgstr "Включить экспо"
+msgstr "Activar Expo"
 
 #, fuzzy
 msgid "Enable Reflection"
-msgstr "Включить анимации"
+msgstr "Activar Animaciones"
 
+# berylog: Si es "Enable Scale" debería ser "Activar Escala" en lugar de "Activar escala"
 msgid "Enable Scale"
-msgstr "Включить масштабирование"
+msgstr "Activar Escala"
 
+# Gelatinoso, gelatinosa, depende del contexto.
+# berylog: ¿y por qué no: "Activar Ventanas Gelatinosas"?
 msgid "Enable Wobbly"
-msgstr "Включить вязкие окна"
+msgstr "Activar Ventanas Gelatinosas"
 
 msgid "Enable animations"
-msgstr "Включить анимации"
+msgstr "Activar Animaciones"
 
 msgid "Info"
-msgstr "Информация"
+msgstr "Info"
 
 msgid "Opacity:"
 msgstr ""
 
 #, fuzzy
 msgid "Profile:"
-msgstr "Профиль:"
+msgstr "Perfil:"
 
 msgid "Screen zoom"
-msgstr "Масштабирование экрана"
+msgstr "Zoom de la pantalla"
 
 #, fuzzy
 msgid "Simple CompizConfig Settings Manager"
-msgstr "Простой менеджер настройки CompizConfig"
+msgstr "Administrador Simple de Configuraciones de Compiz"
 
 msgid "_Enable desktop effects"
 msgstr ""
@@ -214,7 +220,7 @@ msgid "Configure Compiz with CompizConfig"
 msgstr ""
 
 #~ msgid "gtk-close"
-#~ msgstr "gtk-close"
+#~ msgstr "gtk-cerrar"
 
 #~ msgid "gtk-help"
-#~ msgstr "gtk-help"
+#~ msgstr "gtk-ayuda"

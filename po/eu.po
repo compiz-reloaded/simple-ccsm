@@ -1,16 +1,16 @@
 # simple-ccsm translation templete
 # Copyright (C) 2008 compiz-fusion.org
 # This file is distributed under the same license as the simple-ccsm package.
-# Maxime Corteel <mcorteel@yahoo.fr>, 2008.
+# Ander Elortondo <ander.elor@gmail.com>, 2008
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
 "POT-Creation-Date: 2008-07-09 16:35+0530\n"
-"PO-Revision-Date: 2008-06-25 12:24+0200\n"
-"Last-Translator: Maxime Corteel <mcorteel@yahoo.fr>\n"
-"Language-Team: Maxime Corteel <mcorteel@yahoo.fr>\n"
+"PO-Revision-Date: 2008-06-28 01:11+0200\n"
+"Last-Translator: Ander Elortondo <ander.elor@gmail.com>\n"
+"Language-Team: Ander Elortondo <ander.elor@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,16 +45,16 @@ msgid ""
 msgstr ""
 
 msgid "Enabled"
-msgstr ""
+msgstr "Gaitua"
 
 msgid "Disabled"
-msgstr ""
+msgstr "Ezgaitua"
 
 msgid "Zoom"
 msgstr "Zoom"
 
 msgid "Colorfilter"
-msgstr ""
+msgstr "Kolore iragazkia"
 
 msgid "None"
 msgstr ""
@@ -79,19 +79,19 @@ msgid ""
 msgstr ""
 
 msgid "Default"
-msgstr "Par défaut"
+msgstr "Lehenetsia"
 
 msgid "<b>Accessibility</b>"
-msgstr "<b>Accessibilité</b>"
+msgstr ""
 
 msgid "<b>Additions</b>"
 msgstr ""
 
 msgid "<b>Animations</b>"
-msgstr "<b>Animations</b>"
+msgstr ""
 
 msgid "<b>Appearance</b>"
-msgstr "<b>Aspect</b>"
+msgstr ""
 
 msgid "<b>Area zoom</b>"
 msgstr ""
@@ -99,12 +99,11 @@ msgstr ""
 msgid "<b>Close Window</b>"
 msgstr ""
 
-#, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr "<b>Effets</b>"
+msgstr ""
 
 msgid "<b>Description</b>"
-msgstr "<b>Description</b>"
+msgstr ""
 
 msgid "<b>Desktop columns</b>"
 msgstr ""
@@ -116,23 +115,22 @@ msgid "<b>Desktop rows</b>"
 msgstr ""
 
 msgid "<b>Desktop</b>"
-msgstr "<b>Desktop</b>"
+msgstr ""
 
 msgid "<b>Effects</b>"
-msgstr "<b>Effets</b>"
+msgstr ""
 
 msgid "<b>Enable zoom</b>"
 msgstr ""
 
-#, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>Ouverture de la fenêtre</b>"
+msgstr ""
 
 msgid "<b>Minimize window</b>"
-msgstr "<b>Réduction de la fenêtre</b>"
+msgstr ""
 
 msgid "<b>Open window</b>"
-msgstr "<b>Ouverture de la fenêtre</b>"
+msgstr ""
 
 msgid "<b>Screen Edges</b>"
 msgstr ""
@@ -144,10 +142,10 @@ msgid "<b>Switcher</b>"
 msgstr ""
 
 msgid "Accessibility"
-msgstr "Accessibilité"
+msgstr ""
 
 msgid "Animations"
-msgstr "Animations"
+msgstr ""
 
 msgid "Area zoom"
 msgstr ""
@@ -156,13 +154,13 @@ msgid "Deformation:"
 msgstr ""
 
 msgid "Desktop"
-msgstr "Bureau"
+msgstr ""
 
 msgid "Edges"
 msgstr ""
 
 msgid "Effects"
-msgstr "Effets"
+msgstr ""
 
 msgid "Enable 3D Windows"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-06-16 15:29+0530\n"
+"POT-Creation-Date: 2008-07-09 16:35+0530\n"
 "PO-Revision-Date: 28-12-2007 19:30\n"
 "Last-Translator: Serdar Soytetir <tulliana@gmail.com>\n"
 "Language-Team:  <yerellestirme@kde.org.tr>\n"
@@ -74,6 +74,11 @@ msgid "Cover"
 msgstr ""
 
 msgid "Flip"
+msgstr ""
+
+msgid ""
+"Desktop effects are not supported on your current hardware / configuration. "
+"Would you like to cancel enabling of desktop effects or run them anyway?"
 msgstr ""
 
 msgid "Default"
@@ -206,7 +211,7 @@ msgid "Opacity:"
 msgstr ""
 
 #, fuzzy
-msgid "Profil:"
+msgid "Profile:"
 msgstr "Profil"
 
 msgid "Screen zoom"
@@ -215,6 +220,10 @@ msgstr ""
 #, fuzzy
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Basit Compiz Yapılandırma Ayarları Yöneticisi"
+
+#, fuzzy
+msgid "_Enable desktop effects"
+msgstr "Büyütmeyi Etkinleştir"
 
 msgid "Configure Compiz with CompizConfig"
 msgstr ""

@@ -1,23 +1,20 @@
-# translation of simple-ccsm.po to Russian
 # simple-ccsm translation templete
 # Copyright (C) 2008 compiz-fusion.org
 # This file is distributed under the same license as the simple-ccsm package.
+# Brusnica P <pepino@pobox.sk>, 2008
 #
-# Dimitriy Ryazantcev <DJm00n@mail.ru>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: simple-ccsm\n"
+"Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
 "POT-Creation-Date: 2008-07-09 16:35+0530\n"
-"PO-Revision-Date: 2008-05-28 17:45+0300\n"
-"Last-Translator: Dimitriy Ryazantcev <DJm00n@mail.ru>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2008-06-16 21:26+0200\n"
+"Last-Translator: Brusnica P <pepino@pobox.sk>\n"
+"Language-Team: Brusnica P <pepino@pobox.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
 msgstr ""
@@ -48,33 +45,33 @@ msgid ""
 msgstr ""
 
 msgid "Enabled"
-msgstr "Включено"
+msgstr "Zapnutý"
 
 msgid "Disabled"
-msgstr "Отключено"
+msgstr "Vypnutý"
 
 msgid "Zoom"
-msgstr "Масштаб"
+msgstr "Priblíženie"
 
 msgid "Colorfilter"
-msgstr "Цветовой фильтр"
+msgstr "Farebný filter"
 
 msgid "None"
 msgstr ""
 
 #, c-format
 msgid "%s (Cover)"
-msgstr "%s (Накрытие)"
+msgstr "%s (Obálka)"
 
 #, c-format
 msgid "%s (Flip)"
-msgstr "%s (Переворот)"
+msgstr "%s (Obrátiť)"
 
 msgid "Cover"
-msgstr "Нарытие"
+msgstr "Obálka"
 
 msgid "Flip"
-msgstr "Переворот"
+msgstr "Obrátiť"
 
 msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
@@ -82,130 +79,130 @@ msgid ""
 msgstr ""
 
 msgid "Default"
-msgstr "По умолчанию"
+msgstr "Implicitné"
 
 msgid "<b>Accessibility</b>"
-msgstr "<b>Специальные возможности</b>"
+msgstr "<b>Prístupnosť</b>"
 
 msgid "<b>Additions</b>"
-msgstr "<b>Дополнения</b>"
+msgstr "<b>Prídavky</b>"
 
 msgid "<b>Animations</b>"
-msgstr "<b>Анимации</b>"
+msgstr "<b>Animácie</b>"
 
 msgid "<b>Appearance</b>"
-msgstr "<b>Поведение</b>"
+msgstr "<b>Vzhľad</b>"
 
 msgid "<b>Area zoom</b>"
-msgstr "<b>Масштабирование области</b>"
+msgstr "<b>Oblasť priblíženia</b>"
 
 msgid "<b>Close Window</b>"
-msgstr "<b>Закрыть окно</b>"
+msgstr "<b>Zavrieť okno</b>"
 
 #, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr "<b>Эффекты</b>"
+msgstr "<b>Efekty</b>"
 
 msgid "<b>Description</b>"
-msgstr "<b>Описание</b>"
+msgstr "<b>Popis</b>"
 
 msgid "<b>Desktop columns</b>"
-msgstr "<b>Столбцы рабочего стола</b>"
+msgstr "<b>Stĺpce plochy</b>"
 
 msgid "<b>Desktop preview</b>"
-msgstr "<b>Предварительный просмотр рабочего стола</b>"
+msgstr "<b>Náhľad plochy</b>"
 
 msgid "<b>Desktop rows</b>"
-msgstr "<b>Строки экрана</b>"
+msgstr "<b>Riadky plochy</b>"
 
 msgid "<b>Desktop</b>"
-msgstr "<b>Рабочий стол</b>"
+msgstr "<b>Plocha</b>"
 
 msgid "<b>Effects</b>"
-msgstr "<b>Эффекты</b>"
+msgstr "<b>Efekty</b>"
 
 msgid "<b>Enable zoom</b>"
-msgstr "<b>Разрешить масштабирование</b>"
+msgstr "<b>Zapnúť priblíženie</b>"
 
 #, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>Закрыть окно</b>"
+msgstr "<b>Zavrieť okno</b>"
 
 msgid "<b>Minimize window</b>"
-msgstr "<b>Свернуть окно</b>"
+msgstr "<b>Minimalizovať okno</b>"
 
 msgid "<b>Open window</b>"
-msgstr "<b>Открыть окно</b>"
+msgstr "<b>Otvoriť okno</b>"
 
 msgid "<b>Screen Edges</b>"
-msgstr "<b>Края экрана</b>"
+msgstr "<b>Okraje obrazovky</b>"
 
 msgid "<b>Screen zoom</b>"
-msgstr "<b>Масштабирование экрана</b>"
+msgstr "<b>Priblíženie obrazovky</b>"
 
 msgid "<b>Switcher</b>"
-msgstr "<b>Переключатель</b>"
+msgstr "<b>Prepínač</b>"
 
 msgid "Accessibility"
-msgstr "Специальные возможности"
+msgstr "Prístupnosť"
 
 msgid "Animations"
-msgstr "Анимации"
+msgstr "Animácie"
 
 msgid "Area zoom"
-msgstr "Масштабирование области"
+msgstr "Oblasť priblíženia"
 
 msgid "Deformation:"
 msgstr ""
 
 msgid "Desktop"
-msgstr "Рабочий стол"
+msgstr "Plocha"
 
 msgid "Edges"
-msgstr "Грани"
+msgstr "Okraje"
 
 msgid "Effects"
-msgstr "Эффекты"
+msgstr "Efekty"
 
 #, fuzzy
 msgid "Enable 3D Windows"
-msgstr "Включить вязкие окна"
+msgstr "Zapnúť trasľavosť"
 
 msgid "Enable Blur"
-msgstr "Включить смазывание"
+msgstr "Zapnúť rozmazanie"
 
 msgid "Enable Expo"
-msgstr "Включить экспо"
+msgstr "Zapnúť výstavu"
 
 #, fuzzy
 msgid "Enable Reflection"
-msgstr "Включить анимации"
+msgstr "Zapnúť animácie"
 
 msgid "Enable Scale"
-msgstr "Включить масштабирование"
+msgstr "Zapnúť rozsah"
 
 msgid "Enable Wobbly"
-msgstr "Включить вязкие окна"
+msgstr "Zapnúť trasľavosť"
 
 msgid "Enable animations"
-msgstr "Включить анимации"
+msgstr "Zapnúť animácie"
 
 msgid "Info"
-msgstr "Информация"
+msgstr "Informácie"
 
 msgid "Opacity:"
 msgstr ""
 
 #, fuzzy
 msgid "Profile:"
-msgstr "Профиль:"
+msgstr "Profil:"
 
 msgid "Screen zoom"
-msgstr "Масштабирование экрана"
+msgstr "Zväčšiť obrazovku"
 
 #, fuzzy
 msgid "Simple CompizConfig Settings Manager"
-msgstr "Простой менеджер настройки CompizConfig"
+msgstr "Jednoduchý Compiz Config Manažér Nastavení"
 
 msgid "_Enable desktop effects"
 msgstr ""
@@ -214,7 +211,7 @@ msgid "Configure Compiz with CompizConfig"
 msgstr ""
 
 #~ msgid "gtk-close"
-#~ msgstr "gtk-close"
+#~ msgstr "gtk-zavrieť"
 
 #~ msgid "gtk-help"
-#~ msgstr "gtk-help"
+#~ msgstr "gtk-pomoc"

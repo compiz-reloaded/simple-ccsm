@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm trunk\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-06-16 15:29+0530\n"
+"POT-Creation-Date: 2008-07-09 16:35+0530\n"
 "PO-Revision-Date: 2008-06-08 16:19+0200\n"
 "Last-Translator: Timo Jyrinki <timo.jyrinki@iki.fi>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
@@ -75,6 +75,11 @@ msgstr "Kannet"
 
 msgid "Flip"
 msgstr "Kääntö"
+
+msgid ""
+"Desktop effects are not supported on your current hardware / configuration. "
+"Would you like to cancel enabling of desktop effects or run them anyway?"
+msgstr ""
 
 msgid "Default"
 msgstr "Oletus"
@@ -187,7 +192,8 @@ msgstr "Tiedot"
 msgid "Opacity:"
 msgstr "Läpikuultamattomuus:"
 
-msgid "Profil:"
+#, fuzzy
+msgid "Profile:"
 msgstr "Profiili:"
 
 msgid "Screen zoom"
@@ -195,6 +201,10 @@ msgstr "Näytön suurennus"
 
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Yksinkertainen CompizConfig-asetusten hallinta"
+
+#, fuzzy
+msgid "_Enable desktop effects"
+msgstr "Ota heijastukset käyttöön"
 
 msgid "Configure Compiz with CompizConfig"
 msgstr "Compizin hallinta CompizConfigia käyttäen"

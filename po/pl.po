@@ -1,14 +1,14 @@
 # simple-ccsm translation templete
 # Copyright (C) 2008 compiz-fusion.org
 # This file is distributed under the same license as the simple-ccsm package.
-# Michal Kaluzniak <the_hooltay@o2.pl>.
+# Michal Kaluzniak <the_hooltay@o2.pl>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-06-16 15:29+0530\n"
-"PO-Revision-Date: 2008-06-06 18:33+0200\n"
+"POT-Creation-Date: 2008-07-09 16:35+0530\n"
+"PO-Revision-Date: 2008-06-18 22:51+0200\n"
 "Last-Translator: Michal Kaluzniak <the_hooltay@o2.pl>\n"
 "Language-Team: Michal Kaluzniak <the_hooltay@o2.pl>\n"
 "MIME-Version: 1.0\n"
@@ -73,6 +73,11 @@ msgstr "Przykrywanie"
 msgid "Flip"
 msgstr "Odwracanie"
 
+msgid ""
+"Desktop effects are not supported on your current hardware / configuration. "
+"Would you like to cancel enabling of desktop effects or run them anyway?"
+msgstr ""
+
 msgid "Default"
 msgstr "Domyślne"
 
@@ -101,14 +106,12 @@ msgstr "<b>Efekty</b>"
 msgid "<b>Description</b>"
 msgstr "<b>Opis</b>"
 
-#, fuzzy
 msgid "<b>Desktop columns</b>"
 msgstr "<b>Kolumny pulpitu</b>"
 
 msgid "<b>Desktop preview</b>"
 msgstr "<b>Podgląd pulpitu</b>"
 
-#, fuzzy
 msgid "<b>Desktop rows</b>"
 msgstr "<b>Wiersze pulpitu</b>"
 
@@ -175,8 +178,9 @@ msgstr "Włącz Expo"
 msgid "Enable Reflection"
 msgstr "Włącz animacje"
 
+# ta nazwa nie jest tak do konca szczesliwa, ale w koncu o to chodzi w tym pluginie
 msgid "Enable Scale"
-msgstr ""
+msgstr "Włącz Szybki Wybór Okien"
 
 msgid "Enable Wobbly"
 msgstr "Włącz trzęsące się okna"
@@ -190,7 +194,8 @@ msgstr "Informacje"
 msgid "Opacity:"
 msgstr ""
 
-msgid "Profil:"
+#, fuzzy
+msgid "Profile:"
 msgstr "Profil:"
 
 msgid "Screen zoom"
@@ -199,6 +204,9 @@ msgstr "Przybliżenie ekranu"
 #, fuzzy
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Menadżer ustawień Simple Compiz Config"
+
+msgid "_Enable desktop effects"
+msgstr ""
 
 msgid "Configure Compiz with CompizConfig"
 msgstr ""

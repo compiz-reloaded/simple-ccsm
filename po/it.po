@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-06-16 15:29+0530\n"
-"PO-Revision-Date: 2008-05-18 11:54+0200\n"
+"POT-Creation-Date: 2008-07-09 16:35+0530\n"
+"PO-Revision-Date: 2008-07-08 22:43+0200\n"
 "Last-Translator: Milo Casagrande <milo_casagrande@yahoo.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -76,6 +76,14 @@ msgstr "Copertina"
 
 msgid "Flip"
 msgstr "Sfoglia"
+
+msgid ""
+"Desktop effects are not supported on your current hardware / configuration. "
+"Would you like to cancel enabling of desktop effects or run them anyway?"
+msgstr ""
+"Gli effetti visivi non sono supportati dal proprio hardware o dalla propria "
+"configurazione. Annullare l'abilitazione degli effetti visivi o continuare "
+"in ogni caso?"
 
 msgid "Default"
 msgstr "Predefinito"
@@ -188,7 +196,7 @@ msgstr "Informazioni"
 msgid "Opacity:"
 msgstr "Opacità:"
 
-msgid "Profil:"
+msgid "Profile:"
 msgstr "Profilo:"
 
 msgid "Screen zoom"
@@ -196,6 +204,10 @@ msgstr "Ingrandimento schermo"
 
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Gestore configurazione CompizConfig semplice"
+
+# (ndt) opzione
+msgid "_Enable desktop effects"
+msgstr "Abilitare _effetti visivi"
 
 msgid "Configure Compiz with CompizConfig"
 msgstr "Configura Compiz attraverso CompizConfig"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-06-16 15:29+0530\n"
+"POT-Creation-Date: 2008-07-09 16:35+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,6 +71,11 @@ msgid "Cover"
 msgstr ""
 
 msgid "Flip"
+msgstr ""
+
+msgid ""
+"Desktop effects are not supported on your current hardware / configuration. "
+"Would you like to cancel enabling of desktop effects or run them anyway?"
 msgstr ""
 
 msgid "Default"
@@ -184,13 +189,16 @@ msgstr ""
 msgid "Opacity:"
 msgstr ""
 
-msgid "Profil:"
+msgid "Profile:"
 msgstr ""
 
 msgid "Screen zoom"
 msgstr ""
 
 msgid "Simple CompizConfig Settings Manager"
+msgstr ""
+
+msgid "_Enable desktop effects"
 msgstr ""
 
 msgid "Configure Compiz with CompizConfig"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-06-16 15:29+0530\n"
-"PO-Revision-Date: 2008-06-14 04:07+0200\n"
+"POT-Creation-Date: 2008-07-09 16:35+0530\n"
+"PO-Revision-Date: 2008-06-20 06:36+0200\n"
 "Last-Translator: JING Cheng <jingcheng01@gmail.com>\n"
 "Language-Team: Chinese\n"
 "MIME-Version: 1.0\n"
@@ -53,34 +53,36 @@ msgstr "已禁用"
 msgid "Zoom"
 msgstr "缩放"
 
-#, fuzzy
 msgid "Colorfilter"
 msgstr "颜色过滤"
 
 msgid "None"
 msgstr ""
 
-#, fuzzy, c-format
+#, c-format
 msgid "%s (Cover)"
-msgstr "%s (遮蔽式)"
+msgstr "%s (覆盖式)"
 
-#, fuzzy, c-format
+#, c-format
 msgid "%s (Flip)"
 msgstr "%s (翻阅式)"
 
-#, fuzzy
 msgid "Cover"
-msgstr "遮蔽式"
+msgstr "覆盖式"
 
-#, fuzzy
 msgid "Flip"
 msgstr "翻阅式"
+
+msgid ""
+"Desktop effects are not supported on your current hardware / configuration. "
+"Would you like to cancel enabling of desktop effects or run them anyway?"
+msgstr ""
 
 msgid "Default"
 msgstr "默认"
 
 msgid "<b>Accessibility</b>"
-msgstr "<b>辅助工具</b>"
+msgstr "<b>辅助工能</b>"
 
 msgid "<b>Additions</b>"
 msgstr "<b>附加效果</b>"
@@ -178,6 +180,7 @@ msgstr "启用展览特效"
 msgid "Enable Reflection"
 msgstr "启用动画特效"
 
+#, fuzzy
 msgid "Enable Scale"
 msgstr "启用比例排列特效"
 
@@ -194,7 +197,8 @@ msgstr "信息"
 msgid "Opacity:"
 msgstr ""
 
-msgid "Profil:"
+#, fuzzy
+msgid "Profile:"
 msgstr "配置文件："
 
 msgid "Screen zoom"
@@ -203,6 +207,9 @@ msgstr "屏幕缩放"
 #, fuzzy
 msgid "Simple CompizConfig Settings Manager"
 msgstr "简化版CompizConfig设置管理器"
+
+msgid "_Enable desktop effects"
+msgstr ""
 
 msgid "Configure Compiz with CompizConfig"
 msgstr ""
