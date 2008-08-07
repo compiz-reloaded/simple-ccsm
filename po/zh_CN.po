@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-07-09 16:35+0530\n"
-"PO-Revision-Date: 2008-06-20 06:36+0200\n"
+"POT-Creation-Date: 2008-08-07 11:24+0530\n"
+"PO-Revision-Date: 2008-07-11 10:25+0200\n"
 "Last-Translator: JING Cheng <jingcheng01@gmail.com>\n"
 "Language-Team: Chinese\n"
 "MIME-Version: 1.0\n"
@@ -166,27 +166,23 @@ msgstr "特效"
 
 #, fuzzy
 msgid "Enable 3D Windows"
-msgstr "启用震颤特效"
+msgstr "启用震颤"
 
-#, fuzzy
 msgid "Enable Blur"
-msgstr "启用朦胧特效"
+msgstr "启用朦胧"
 
-#, fuzzy
 msgid "Enable Expo"
-msgstr "启用展览特效"
+msgstr "启用展览"
 
 #, fuzzy
 msgid "Enable Reflection"
 msgstr "启用动画特效"
 
-#, fuzzy
 msgid "Enable Scale"
-msgstr "启用比例排列特效"
+msgstr "启用比例排列"
 
-#, fuzzy
 msgid "Enable Wobbly"
-msgstr "启用震颤特效"
+msgstr "启用震颤"
 
 msgid "Enable animations"
 msgstr "启用动画特效"

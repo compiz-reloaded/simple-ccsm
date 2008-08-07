@@ -1,14 +1,14 @@
 # simple-ccsm translation templete
 # Copyright (C) 2008 compiz-fusion.org
 # This file is distributed under the same license as the simple-ccsm package.
-# Ander Elortondo <ander.elor@gmail.com>, 2008
+# Ander Elortondo <ander.elor@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-07-09 16:35+0530\n"
-"PO-Revision-Date: 2008-06-28 01:11+0200\n"
+"POT-Creation-Date: 2008-08-07 11:24+0530\n"
+"PO-Revision-Date: 2008-07-18 13:25+0200\n"
 "Last-Translator: Ander Elortondo <ander.elor@gmail.com>\n"
 "Language-Team: Ander Elortondo <ander.elor@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -61,17 +61,17 @@ msgstr ""
 
 #, c-format
 msgid "%s (Cover)"
-msgstr ""
+msgstr "%s (Estali)"
 
 #, c-format
 msgid "%s (Flip)"
-msgstr ""
+msgstr "%s (Flip)"
 
 msgid "Cover"
-msgstr ""
+msgstr "Estali"
 
 msgid "Flip"
-msgstr ""
+msgstr "Flip"
 
 msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
@@ -82,124 +82,135 @@ msgid "Default"
 msgstr "Lehenetsia"
 
 msgid "<b>Accessibility</b>"
-msgstr ""
+msgstr "<b>Erabilerreztasuna</b>"
 
 msgid "<b>Additions</b>"
-msgstr ""
+msgstr "<b>Gehigarriak</b>"
 
 msgid "<b>Animations</b>"
-msgstr ""
+msgstr "<b>Animazioak</b>"
 
 msgid "<b>Appearance</b>"
-msgstr ""
+msgstr "<b>Itxura</b>"
 
 msgid "<b>Area zoom</b>"
-msgstr ""
+msgstr "<b>Zoom eremua</b>"
 
 msgid "<b>Close Window</b>"
-msgstr ""
+msgstr "<b>Itxi leihoa</b>"
 
+#, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr ""
+msgstr "<b>Efektuak</b>"
 
 msgid "<b>Description</b>"
-msgstr ""
+msgstr "<b>Azalpena</b>"
 
 msgid "<b>Desktop columns</b>"
-msgstr ""
+msgstr "<b>Mahaigain zutabeak</b>"
 
 msgid "<b>Desktop preview</b>"
-msgstr ""
+msgstr "<b>Mahaigain aurrebista</b>"
 
 msgid "<b>Desktop rows</b>"
-msgstr ""
+msgstr "<b>Mahaigain lerroak</b>"
 
 msgid "<b>Desktop</b>"
-msgstr ""
+msgstr "<b>Mahaigaina</b>"
 
 msgid "<b>Effects</b>"
-msgstr ""
+msgstr "<b>Efektuak</b>"
 
 msgid "<b>Enable zoom</b>"
-msgstr ""
+msgstr "<b>Gaitu zoom</b>"
 
+#, fuzzy
 msgid "<b>Focus window</b>"
-msgstr ""
+msgstr "<b>Itxi leihoa</b>"
 
 msgid "<b>Minimize window</b>"
-msgstr ""
+msgstr "<b>Txikitu leihoa</b>"
 
 msgid "<b>Open window</b>"
-msgstr ""
+msgstr "<b>Ireki leihoa</b>"
 
 msgid "<b>Screen Edges</b>"
-msgstr ""
+msgstr "<b>Pantaila Ertzak</b>"
 
 msgid "<b>Screen zoom</b>"
-msgstr ""
+msgstr "<b>Pantaila zoom</b>"
 
 msgid "<b>Switcher</b>"
-msgstr ""
+msgstr "<b>Aldatzailea</b>"
 
 msgid "Accessibility"
-msgstr ""
+msgstr "Erabilerreztasuna"
 
 msgid "Animations"
-msgstr ""
+msgstr "Animazioak"
 
 msgid "Area zoom"
-msgstr ""
+msgstr "Eremuko zoom "
 
 msgid "Deformation:"
 msgstr ""
 
 msgid "Desktop"
-msgstr ""
+msgstr "Mahaigaina"
 
 msgid "Edges"
-msgstr ""
+msgstr "Ertzak"
 
 msgid "Effects"
-msgstr ""
+msgstr "Efektuak"
 
 msgid "Enable 3D Windows"
 msgstr ""
 
 msgid "Enable Blur"
-msgstr ""
+msgstr "Gaitu lausotzea"
 
 msgid "Enable Expo"
-msgstr ""
+msgstr "Gaitu Expo"
 
+#, fuzzy
 msgid "Enable Reflection"
-msgstr ""
+msgstr "Gaitu animazioak"
 
 msgid "Enable Scale"
-msgstr ""
+msgstr "Gaitu eskalatu"
 
 msgid "Enable Wobbly"
 msgstr ""
 
 msgid "Enable animations"
-msgstr ""
+msgstr "Gaitu animazioak"
 
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 msgid "Opacity:"
 msgstr ""
 
+#, fuzzy
 msgid "Profile:"
-msgstr ""
+msgstr "Perfila:"
 
 msgid "Screen zoom"
-msgstr ""
+msgstr "Pantaila zoom"
 
+#, fuzzy
 msgid "Simple CompizConfig Settings Manager"
-msgstr ""
+msgstr "Simple Compiz Config Settings Manager"
 
 msgid "_Enable desktop effects"
 msgstr ""
 
 msgid "Configure Compiz with CompizConfig"
 msgstr ""
+
+#~ msgid "gtk-close"
+#~ msgstr "gtk-itxi"
+
+#~ msgid "gtk-help"
+#~ msgstr "gtk-laguntza"
