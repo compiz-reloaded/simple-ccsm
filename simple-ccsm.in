@@ -35,6 +35,8 @@ from optparse import OptionParser
 locale.setlocale(locale.LC_ALL, "")
 _ = gettext.gettext
 
+Tooltips = gtk.Tooltips()
+
 DataDir = '@prefix@/share/simple-ccsm/'
 
 # Switcher keybinding
@@ -42,23 +44,62 @@ SwitcherKey = "<Alt>Tab"
 
 # Since there seems no way to get the untranslated names,
 # we need to keep a list here.
-CloseOpenEffectNames = [\
-'None', 'Random', 'Airplane', 'Beam Up', 'Burn', 'Curved Fold',
-'Domino', 'Dream', 'Explode', 'Fade', 'Fold', 'Glide 1', 'Glide 2',
-'Horizontal Folds', 'Leaf Spread','Magic Lamp', 'Razr', 'Sidekick',
-'Skewer', 'Vacuum', 'Wave', 'Zoom'
-]
+CloseOpenEffectNames = {\
+'animation:None':'None',
+'animation:Random':'Random',
+'animation:Curved Fold':'Curved Fold',
+'animation:Dream':'Dream',
+'animation:Fade':'Fade',
+'animation:Glide 1':'Glide 1',
+'animation:Glide 2':'Glide 2',
+'animation:Horizontal Folds':'Horizontal Folds',
+'animation:Magic Lamp':'Magic Lamp',
+'animation:Sidekick':'Sidekick',
+'animation:Vacuum':'Vacuum',
+'animation:Wave':'Wave',
+'animationaddon:Zoom':'Zoom',
+'animationaddon:Airplane':'Airplane',
+'animationaddon:Beam Up':'Beam Up',
+'animationaddon:Burn':'Burn',
+'animationaddon:Domino':'Domino',
+'animationaddon:Explode':'Explode',
+'animationaddon:Fold':'Fold',
+'animationaddon:Glide 3':'Glide 3',
+'animationaddon:Leaf Spread':'Leaf Spread',
+'animationaddon:Razr':'Razr',
+'animationaddon:Skewer':'Skewer'
+}
 
-MinimizeEffectNames = [\
-'None', 'Random', 'Airplane', 'Beam Up', 'Burn', 'Curved Fold',
-'Domino', 'Dream', 'Explode', 'Fade', 'Fold', 'Glide 1', 'Glide 2',
-'Horizontal Folds', 'Leaf Spread','Magic Lamp', 'Razr', 'Sidekick',
-'Skewer', 'Zoom'
-]
+MinimizeEffectNames = {\
+'animation:None':'None',
+'animation:Random':'Random',
+'animation:Curved Fold':'Curved Fold',
+'animation:Dream':'Dream',
+'animation:Fade':'Fade',
+'animation:Glide 1':'Glide 1',
+'animation:Glide 2':'Glide 2',
+'animation:Horizontal Folds':'Horizontal Folds',
+'animation:Magic Lamp':'Magic Lamp',
+'animation:Sidekick':'Sidekick',
+'animation:Zoom':'Zoom',
+'animationaddon:Airplane':'Airplane',
+'animationaddon:Beam Up':'Beam Up',
+'animationaddon:Burn':'Burn',
+'animationaddon:Domino':'Domino',
+'animationaddon:Explode':'Explode',
+'animationaddon:Fold':'Fold',
+'animationaddon:Glide 3':'Glide 3',
+'animationaddon:Leaf Spread':'Leaf Spread',
+'animationaddon:Razr':'Razr',
+'animationaddon:Skewer':'Skewer'
+}
 
-FocusEffectNames = [\
-'None', 'Dodge', 'Fade', 'Wave'
-]
+FocusEffectNames = {\
+'animation:None':'None',
+'animation:Dodge':'Dodge',
+'animation:Fade':'Fade',
+'animation:Wave':'Wave'
+}
 
 # 0 to 5 stars
 AnimationRatings = {\
@@ -75,6 +116,7 @@ AnimationRatings = {\
 'Fold': 2,
 'Glide 1': 2,
 'Glide 2': 2,
+'Glide 3': 2,
 'Horizontal Folds': 2,
 'Leaf Spread': 4,
 'Magic Lamp': 5,
@@ -149,7 +191,7 @@ KdeSession = "KDE_FULL_SESSION"
 # Utility Functions
 def EnablePlugin(plugin, active):
     # attempt to resolve conflicts...
-    conflicts = plugin.Enabled and plugin.DisableConflicts or plugin.EnableConflicts
+    conflicts = (plugin.Enabled and plugin.DisableConflicts) or plugin.EnableConflicts
     conflict = ccm.PluginConflict(plugin, conflicts, autoResolve=True)
     if conflict.Resolve():
         plugin.Enabled = active
@@ -449,8 +491,11 @@ class ProfilePage:
             setting = plugin.Screens[0][settingName]
             if len(setting.Value) >= 1:
                 value = setting.Value[0]
-                name = names[settingName][value]
-                rating += AnimationRatings[name]
+                if names[settingName].has_key(value):
+                    name = names[settingName][value]
+                    rating += AnimationRatings[name]
+                else:
+                    rating += 5 # Assume "medium" rating for unknown animations
 
         if not plugin.Enabled:
             rating = 0.0
@@ -484,8 +529,22 @@ class AnimationPage:
         self.GladeXML = gladeXML
         self.Context  = context
         self.Block    = 0
+        self.AnimExtensionPlugins = []
 
         self.GladeXML.signal_autoconnect(self)
+
+        # Get a list of plugins that extend the animation plugin
+        for (name, plugin) in self.Context.Plugins.items():
+            if name == 'animation':
+                continue
+            for basePlugin in plugin.GetExtensionBasePlugins():
+                if basePlugin.Name == 'animation':
+                    self.AnimExtensionPlugins.append(plugin)
+        if len(self.AnimExtensionPlugins) == 0:
+            # Disable extra animations CheckButton
+            widget = self.GladeXML.get_widget("enableExtraAnim")
+            widget.set_sensitive(False)
+            Tooltips.set_tip(widget, _(("Can't find any animation extension plugins.")))
 
     def EnableAnimationsChanged(self, widget):
         if self.Block > 0:
@@ -498,7 +557,36 @@ class AnimationPage:
             name = prefix + "AnimationBox"
             widget = self.GladeXML.get_widget(name)
             widget.set_sensitive(active)
+        widget = self.GladeXML.get_widget('enableExtraAnim')
+        widget.set_sensitive(active)
+        if active:
+            if widget.get_active():
+                # If enableExtraAnim is checked, enable the extension plugins
+                self.EnableExtraAnimationsChanged(widget)
+            else:
+                # Otherwise, just fill boxes with the base animation effects
+                self.Context.UpdateExtensiblePlugins()
+                self.FillAnimationBoxes()
     
+    def EnableExtraAnimationsChanged(self, widget):
+        if self.Block > 0:
+            return
+
+        # Enable/disable all extension plugins, considering dependencies
+        pluginsToChange = list(self.AnimExtensionPlugins)
+        while len(pluginsToChange) > 0:
+            lastPluginsToActivate = list(pluginsToChange)
+            pluginList = list(pluginsToChange)
+            for plugin in pluginList:
+                if plugin.Enabled != widget.get_active() and \
+                    EnablePlugin(plugin, widget.get_active()):
+                    pluginsToChange.remove(plugin)
+            if pluginsToChange == lastPluginsToActivate:
+                break  # no progress this iteration, so stop
+
+        self.Context.UpdateExtensiblePlugins()
+        self.FillAnimationBoxes()
+
     def AnimationBoxChanged(self, widget):
         if self.Block > 0:
             return
@@ -511,9 +599,10 @@ class AnimationPage:
         setting = plugin.Screens[0][settingName]
         value = setting.Value
         if len(value) >= 1:
-            value[0] = setting.Info[1][2][text]
-            setting.Value = value
-            self.Context.Write()
+            if text:  # Handle "chosen animation is in an extension plugin" case
+                value[0] = setting.Info[1][0][text]
+                setting.Value = value
+                self.Context.Write()
         else:
             for setting in plugin.Groups[setting.Group][setting.SubGroup].Screens[0].values():
                 setting.Reset()
@@ -528,6 +617,17 @@ class AnimationPage:
             active = plugin.Enabled
 
         widget.set_active(active)
+
+        # If at least one animation extension plugin is active,
+        # make the enableExtraAnimations widget active
+        widget = self.GladeXML.get_widget("enableExtraAnim")
+        atLeastOneActive = False
+        for plugin in self.AnimExtensionPlugins:
+            if plugin.Enabled:
+                atLeastOneActive = True
+                break
+        widget.set_active(atLeastOneActive)
+
         for prefix in ("open", "close", "minimize", "focus"):
             name = prefix + "AnimationBox"
             widget = self.GladeXML.get_widget(name)
@@ -542,13 +642,16 @@ class AnimationPage:
         for boxName, settingName in AnimationSettings.items():
             box = self.GladeXML.get_widget(boxName)
             setting = plugin.Screens[0][settingName]
-            items = sorted(setting.Info[1][2].items(), key=ccm.EnumSettingKeyFunc)
+            info = setting.Info[1]
+            itemsByValue = info[1]
+            items = info[2]
             SetupBoxModel(box)
             for key, value in items:
                 box.append_text(key)
             if len(setting.Value) >= 1:
                 value = setting.Value[0]
-                box.set_active(value)
+                if itemsByValue.has_key(value):
+                    box.set_active(itemsByValue[value][1])
             else:
                 box.set_active(0)
 
