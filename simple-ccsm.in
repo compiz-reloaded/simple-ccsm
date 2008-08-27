@@ -989,7 +989,7 @@ class MainWin:
         self.Block = 0
 
         if page != -1 and page in Pages:
-            notebook = self.GladeXML.get_widget("notebook1")
+            notebook = self.GladeXML.get_widget("notebook")
             notebook.set_current_page (Pages[page])
 
         # Window
