@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-08-07 11:24+0530\n"
+"POT-Creation-Date: 2008-08-30 12:08+0530\n"
 "PO-Revision-Date: 2008-07-11 10:25+0200\n"
 "Last-Translator: JING Cheng <jingcheng01@gmail.com>\n"
 "Language-Team: Chinese\n"
@@ -185,6 +185,10 @@ msgid "Enable Wobbly"
 msgstr "启用震颤"
 
 msgid "Enable animations"
+msgstr "启用动画特效"
+
+#, fuzzy
+msgid "Enable extra animations"
 msgstr "启用动画特效"
 
 msgid "Info"

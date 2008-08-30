@@ -1,16 +1,16 @@
 # simple-ccsm translation templete
 # Copyright (C) 2008 compiz-fusion.org
 # This file is distributed under the same license as the simple-ccsm package.
-# Maxime Corteel <mcorteel@yahoo.fr>
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-08-07 11:24+0530\n"
-"PO-Revision-Date: 2008-06-25 12:24+0200\n"
-"Last-Translator: Maxime Corteel <mcorteel@yahoo.fr>\n"
-"Language-Team: Maxime Corteel <mcorteel@yahoo.fr>\n"
+"POT-Creation-Date: 2008-08-30 12:08+0530\n"
+"PO-Revision-Date: 2008-08-11 15:51+0200\n"
+"Last-Translator: Florent <cartman@igstaff.com>\n"
+"Language-Team: C-F Language team <i18n@opencompositing.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,33 +45,34 @@ msgid ""
 msgstr ""
 
 msgid "Enabled"
-msgstr ""
+msgstr "Activé"
 
 msgid "Disabled"
-msgstr ""
+msgstr "Désactivé"
 
 msgid "Zoom"
 msgstr "Zoom"
 
 msgid "Colorfilter"
-msgstr ""
+msgstr "Filtre de Couleurs"
 
 msgid "None"
 msgstr ""
 
 #, c-format
 msgid "%s (Cover)"
-msgstr ""
+msgstr "%s (Couvrir)"
 
+# Traduction approximative.
 #, c-format
 msgid "%s (Flip)"
-msgstr ""
+msgstr "%s (Virer)"
 
 msgid "Cover"
-msgstr ""
+msgstr "Couvrir"
 
 msgid "Flip"
-msgstr ""
+msgstr "Virer"
 
 msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
@@ -79,25 +80,25 @@ msgid ""
 msgstr ""
 
 msgid "Default"
-msgstr "Par défaut"
+msgstr "Par Défaut"
 
 msgid "<b>Accessibility</b>"
 msgstr "<b>Accessibilité</b>"
 
 msgid "<b>Additions</b>"
-msgstr ""
+msgstr "<b>Ajouts</b>"
 
 msgid "<b>Animations</b>"
 msgstr "<b>Animations</b>"
 
 msgid "<b>Appearance</b>"
-msgstr "<b>Aspect</b>"
+msgstr "<b>Apparence</b>"
 
 msgid "<b>Area zoom</b>"
-msgstr ""
+msgstr "<b>Zone de zoom</b>"
 
 msgid "<b>Close Window</b>"
-msgstr ""
+msgstr "<b>Fermer la fenêtre</b>"
 
 #, fuzzy
 msgid "<b>Cube Effects</b>"
@@ -107,41 +108,42 @@ msgid "<b>Description</b>"
 msgstr "<b>Description</b>"
 
 msgid "<b>Desktop columns</b>"
-msgstr ""
+msgstr "<b>Colonnes du Bureau</b>"
 
 msgid "<b>Desktop preview</b>"
-msgstr ""
+msgstr "<b>Aperçu du Bureau</b>"
 
 msgid "<b>Desktop rows</b>"
-msgstr ""
+msgstr "<b>Lignes du Bureau</b>"
 
 msgid "<b>Desktop</b>"
-msgstr "<b>Desktop</b>"
+msgstr "<b>Bureau</b>"
 
 msgid "<b>Effects</b>"
 msgstr "<b>Effets</b>"
 
 msgid "<b>Enable zoom</b>"
-msgstr ""
+msgstr "<b>Activer le Zoom</b>"
 
 #, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>Ouverture de la fenêtre</b>"
+msgstr "<b>Fermer la fenêtre</b>"
 
 msgid "<b>Minimize window</b>"
-msgstr "<b>Réduction de la fenêtre</b>"
+msgstr "<b>Minimiser la fenêtre</b>"
 
 msgid "<b>Open window</b>"
-msgstr "<b>Ouverture de la fenêtre</b>"
+msgstr "<b>Ouvrir la fenêtre</b>"
 
 msgid "<b>Screen Edges</b>"
-msgstr ""
+msgstr "<b>Bordures de l'écran</b>"
 
 msgid "<b>Screen zoom</b>"
-msgstr ""
+msgstr "<b>Zoom de l'écran</b>"
 
+# Ce mot ne semble pas être le plus adapté.
 msgid "<b>Switcher</b>"
-msgstr ""
+msgstr "<b>Basculeur</b>"
 
 msgid "Accessibility"
 msgstr "Accessibilité"
@@ -150,7 +152,7 @@ msgid "Animations"
 msgstr "Animations"
 
 msgid "Area zoom"
-msgstr ""
+msgstr "Zone de Zoom"
 
 msgid "Deformation:"
 msgstr ""
@@ -159,49 +161,67 @@ msgid "Desktop"
 msgstr "Bureau"
 
 msgid "Edges"
-msgstr ""
+msgstr "Bordures"
 
 msgid "Effects"
 msgstr "Effets"
 
+#, fuzzy
 msgid "Enable 3D Windows"
-msgstr ""
+msgstr "Activer \"Wobbly\""
 
 msgid "Enable Blur"
-msgstr ""
+msgstr "Activer \"Blur\""
 
 msgid "Enable Expo"
-msgstr ""
+msgstr "Activer \"Expo\""
 
+#, fuzzy
 msgid "Enable Reflection"
-msgstr ""
+msgstr "Activer \"Animations\""
 
 msgid "Enable Scale"
-msgstr ""
+msgstr "Activer \"Scale\""
 
 msgid "Enable Wobbly"
-msgstr ""
+msgstr "Activer \"Wobbly\""
 
 msgid "Enable animations"
-msgstr ""
+msgstr "Activer \"Animations\""
 
+#, fuzzy
+msgid "Enable extra animations"
+msgstr "Activer \"Animations\""
+
+# Mot transparent.
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 msgid "Opacity:"
 msgstr ""
 
+# Mot transparent.
+#, fuzzy
 msgid "Profile:"
-msgstr ""
+msgstr "Profil:"
 
+# Mot ambigu.
 msgid "Screen zoom"
-msgstr ""
+msgstr "Zoom de l'écran"
 
+# Des doutes sur ce qui est Simple.
+#, fuzzy
 msgid "Simple CompizConfig Settings Manager"
-msgstr ""
+msgstr "Simple Gestionnaire de Paramètres de Configuration de Compiz"
 
 msgid "_Enable desktop effects"
 msgstr ""
 
 msgid "Configure Compiz with CompizConfig"
 msgstr ""
+
+#~ msgid "gtk-close"
+#~ msgstr "gtk-fermeture"
+
+#~ msgid "gtk-help"
+#~ msgstr "gtk-aide"

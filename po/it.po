@@ -1,15 +1,15 @@
 # Italian translations for simple-ccsm package.
 # Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the simple-ccsm package.
-# Milo Casagrande <milo_casagrande@yahoo.it>, 2008.
+# Milo Casagrande <milo@ubuntu.com>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-08-07 11:24+0530\n"
-"PO-Revision-Date: 2008-07-08 22:43+0200\n"
-"Last-Translator: Milo Casagrande <milo_casagrande@yahoo.it>\n"
+"POT-Creation-Date: 2008-08-30 12:08+0530\n"
+"PO-Revision-Date: 2008-08-11 16:07+0200\n"
+"Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -190,6 +190,10 @@ msgstr "Abilitare «Finestre tremolanti»"
 msgid "Enable animations"
 msgstr "Abilitare animazioni"
 
+#, fuzzy
+msgid "Enable extra animations"
+msgstr "Abilitare animazioni"
+
 msgid "Info"
 msgstr "Informazioni"
 
@@ -211,12 +215,3 @@ msgstr "Abilitare _effetti visivi"
 
 msgid "Configure Compiz with CompizConfig"
 msgstr "Configura Compiz attraverso CompizConfig"
-
-#~ msgid "Simple Compiz Config Settings Manager"
-#~ msgstr "Gestore configurazione CompizConfig semplice"
-
-#~ msgid "gtk-close"
-#~ msgstr "gtk-close"
-
-#~ msgid "gtk-help"
-#~ msgstr "gtk-help"
