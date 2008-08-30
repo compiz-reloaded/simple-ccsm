@@ -535,7 +535,8 @@ class AnimationPage:
 
         # Get a list of plugins that extend the animation plugin
         for (name, plugin) in self.Context.Plugins.items():
-            if name == 'animation':
+            # Assume the name of extension plugins will start with 'animation'
+            if name == 'animation' or name[:9] != 'animation':
                 continue
             for basePlugin in plugin.GetExtensionBasePlugins():
                 if basePlugin.Name == 'animation':
