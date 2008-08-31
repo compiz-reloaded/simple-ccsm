@@ -31,7 +31,9 @@ import compizconfig as ccs
 import ccm
 import locale
 import gettext
+import time
 from optparse import OptionParser
+from threading import Thread
 locale.setlocale(locale.LC_ALL, "")
 _ = gettext.gettext
 
@@ -1102,6 +1104,32 @@ class EdgePage:
     def Update(self):
         pass
 
+class PagesThread(Thread):
+    def __init__(self, mainWin):
+        self.mainWin = mainWin
+        Thread.__init__(self)
+
+    def InitPages(self):
+        mainWin = self.mainWin
+
+        # Wait until main window is shown
+        while not mainWin.DoneUpdate:
+            time.sleep(0.1)
+
+        mainWin.EffectPage = EffectPage(mainWin.Context, mainWin.GladeXML)
+        mainWin.EffectPage.Update()
+        mainWin.Window.show_all()
+
+        mainWin.EdgePage = EdgePage(mainWin.Context, mainWin.GladeXML)
+        mainWin.EdgePage.Update()
+        mainWin.Window.show_all()
+
+    def run(self):
+        self.InitPages()
+
+    def Quit (self):
+        gtk.main_quit()
+
 class MainWin:
     def __init__(self, context, page = -1):
         self.GladeXML = glade.XML(DataDir + "simple-ccsm.glade", domain="simple-ccsm")
@@ -1131,13 +1159,17 @@ class MainWin:
         # Pages
         self.AnimationPage = AnimationPage(self.Context, self.GladeXML)
         self.DesktopPage   = DesktopPage(self.Context, self.GladeXML)
-        self.EffectPage    = EffectPage(self.Context, self.GladeXML)
         self.ZoomPage      = ZoomPage(self.Context, self.GladeXML)
         self.ProfilePage   = ProfilePage(self.Context, self.GladeXML)
-        self.EdgePage      = EdgePage(self.Context, self.GladeXML)
+        self.EffectPage    = None
+        self.EdgePage      = None
+
+        self.DoneUpdate = False
+        PagesThread(self).start()
 
         self.Update()
         self.Window.show_all()
+        self.DoneUpdate = True
 
     def CheckForCompiz(self):
         composited = self.Window.is_composited()
@@ -1162,10 +1194,12 @@ class MainWin:
 
         self.AnimationPage.Update()
         self.DesktopPage.Update()
-        self.EffectPage.Update()
+        if self.EffectPage:
+            self.EffectPage.Update()
         self.ZoomPage.Update()
         self.ProfilePage.Update()
-        self.EdgePage.Update()
+        if self.EdgePage:
+            self.EdgePage.Update()
 
         self.SetProfile()
         self.SetEnableDesktopEffects()
@@ -1313,4 +1347,5 @@ if __name__ == "__main__":
         page = options.page
     gtk.window_set_default_icon_name('simple-ccsm')
     mainWin = MainWin(context, page)
+    gdk.threads_init()
     gtk.main()
