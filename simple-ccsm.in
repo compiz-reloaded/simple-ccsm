@@ -474,6 +474,9 @@ class ProfilePage:
         self.EffectStars.set_value(rating)
 
     def SetAnimationRating(self, widget=None):
+        if 'animation' not in self.Context.Plugins:
+            return
+
         names = {
             'close_effects': CloseOpenEffectNames,
             'open_effects': CloseOpenEffectNames,
@@ -533,6 +536,19 @@ class AnimationPage:
 
         self.GladeXML.signal_autoconnect(self)
 
+        if 'animation' not in self.Context.Plugins:
+            # Disable animations CheckButton
+            widget = self.GladeXML.get_widget("enableAnimations")
+            widget.set_sensitive(False)
+            Tooltips.set_tip(widget, _(("Can't find the animation plugin.")))
+
+            # Disable extra animations CheckButton
+            widget = self.GladeXML.get_widget("enableExtraAnim")
+            widget.set_sensitive(False)
+            return
+
+        context.Plugins['animation'].Update()
+
         # Get a list of plugins that extend the animation plugin
         for (name, plugin) in self.Context.Plugins.items():
             # Assume the name of extension plugins will start with 'animation'
@@ -541,6 +557,8 @@ class AnimationPage:
             for basePlugin in plugin.GetExtensionBasePlugins():
                 if basePlugin.Name == 'animation':
                     self.AnimExtensionPlugins.append(plugin)
+                    context.Plugins[name].Update()
+
         if len(self.AnimExtensionPlugins) == 0:
             # Disable extra animations CheckButton
             widget = self.GladeXML.get_widget("enableExtraAnim")
