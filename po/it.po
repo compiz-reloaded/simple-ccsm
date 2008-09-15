@@ -1,5 +1,5 @@
 # Italian translations for simple-ccsm package.
-# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) 2008 THE simple-ccsm COPYRIGHT HOLDER
 # This file is distributed under the same license as the simple-ccsm package.
 # Milo Casagrande <milo@ubuntu.com>, 2008.
 #
@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-08-30 12:08+0530\n"
-"PO-Revision-Date: 2008-08-11 16:07+0200\n"
+"POT-Creation-Date: 2008-09-15 14:43+0530\n"
+"PO-Revision-Date: 2008-09-08 21:29+0200\n"
 "Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -190,9 +190,8 @@ msgstr "Abilitare «Finestre tremolanti»"
 msgid "Enable animations"
 msgstr "Abilitare animazioni"
 
-#, fuzzy
 msgid "Enable extra animations"
-msgstr "Abilitare animazioni"
+msgstr "Abilitare animazioni aggiuntive"
 
 msgid "Info"
 msgstr "Informazioni"
