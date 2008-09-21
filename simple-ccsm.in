@@ -1202,7 +1202,8 @@ class MainWin:
             self.EdgePage.Update()
 
         self.SetProfile()
-        self.SetEnableDesktopEffects()
+        if CompizEnableDesktopEffects:
+            self.SetEnableDesktopEffects()
 
         self.Block -= 1
 
@@ -1298,17 +1299,18 @@ class MainWin:
 
 
     def ApplyProfile(self, widget):
-        text = self.ProfileChooser.get_active_text()
-        profile = Profiles[text]
+        profile = self.ProfileChooser.get_active_text()
 
         if profile == _("Default"):
             self.Context.ResetProfile()
-        else:
-            profilePath = "%s/profiles/%s.profile" % (DataDir, profile)
-            self.Context.CurrentProfile = ccs.Profile(self.Context, profile)
-            self.Context.Read()
-            self.Context.UpdateProfiles()
-            self.Context.Import(profilePath)
+        elif profile in Profiles:
+            profile = Profiles[profile]
+
+        profilePath = "%s/profiles/%s.profile" % (DataDir, profile)
+        self.Context.CurrentProfile = ccs.Profile(self.Context, profile)
+        self.Context.Read()
+        self.Context.UpdateProfiles()
+        self.Context.Import(profilePath)
 
         self.Context.Write()
         self.Update()
