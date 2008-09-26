@@ -1269,6 +1269,12 @@ class MainWin:
             cmd = CompizStartCommand.split(" ")
             subprocess.Popen(cmd)
 
+            # Enable compiz in kde
+            try:
+                 subprocess.call('kwriteconfig --file ksmserverrc --group General --key windowManager compiz'.split())
+            except (IOError, OSError):
+                 pass
+
             # Create a file that indicates wether compiz is enabled or not
             path = os.path.expanduser("~/.config/compiz/enable-compiz")
             open(path, "w+").close() # touch replacement
