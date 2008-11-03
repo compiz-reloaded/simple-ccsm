@@ -8,3 +8,4 @@ Terminal=false
 Type=Application
 Categories=Compiz;Settings;DesktopSettings;
 StartupNotify=true
+NotShowIn=KDE;
