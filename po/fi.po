@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm trunk\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-10-14 14:59+0530\n"
-"PO-Revision-Date: 2008-06-08 16:19+0200\n"
+"POT-Creation-Date: 2008-11-04 12:12+0530\n"
+"PO-Revision-Date: 2008-10-24 15:40+0200\n"
 "Last-Translator: Timo Jyrinki <timo.jyrinki@iki.fi>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
 "MIME-Version: 1.0\n"
@@ -204,14 +204,14 @@ msgid "Screen zoom"
 msgstr "Näytön suurennus"
 
 msgid "Simple CompizConfig Settings Manager"
-msgstr "Yksinkertainen CompizConfig-asetusten hallinta"
+msgstr "Yksinkertainen Compiz-asetusten hallinta"
 
 #, fuzzy
 msgid "_Enable desktop effects"
 msgstr "Ota heijastukset käyttöön"
 
 msgid "Configure Compiz with CompizConfig"
-msgstr "Compizin hallinta CompizConfigia käyttäen"
+msgstr "Compiz-asetusten hallinta CompizConfigilla"
 
 #~ msgid "Simple Compiz Config Settings Manager"
 #~ msgstr "Yksinkertainen Compiz-asetusten hallinta"
