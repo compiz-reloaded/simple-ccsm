@@ -1,20 +1,20 @@
 # simple-ccsm translation templete
 # Copyright (C) 2008 compiz-fusion.org
 # This file is distributed under the same license as the simple-ccsm package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Fran Diéguez (GLUG) <fran.dieguez@glug.es>, 2008.
+#
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-11-04 12:12+0530\n"
-"PO-Revision-Date: 2008-06-17 13:45+0200\n"
+"POT-Creation-Date: 2008-12-15 15:23+0530\n"
+"PO-Revision-Date: 2008-12-07 23:36+0100\n"
 "Last-Translator: Fran Diéguez (GLUG) <fran.dieguez@glug.es>\n"
-"Language-Team: C-F Language team <i18n@opencompositing.org>\n"
+"Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
 msgstr ""
@@ -61,17 +61,17 @@ msgstr ""
 
 #, c-format
 msgid "%s (Cover)"
-msgstr ""
+msgstr "%s (Capa)"
 
 #, c-format
 msgid "%s (Flip)"
-msgstr ""
+msgstr "%s (Xirar)"
 
 msgid "Cover"
-msgstr ""
+msgstr "Cubrir"
 
 msgid "Flip"
-msgstr ""
+msgstr "Xirar"
 
 msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
@@ -141,7 +141,7 @@ msgid "<b>Screen zoom</b>"
 msgstr "<b>Zoom da pantalla<b>"
 
 msgid "<b>Switcher</b>"
-msgstr ""
+msgstr "<b>Trocador</b>"
 
 msgid "Accessibility"
 msgstr "Accesibilidade"
@@ -164,8 +164,9 @@ msgstr "Límites"
 msgid "Effects"
 msgstr "Efectos"
 
+#, fuzzy
 msgid "Enable 3D Windows"
-msgstr ""
+msgstr "Activar Fiestras Temblantes"
 
 msgid "Enable Blur"
 msgstr "Activar Desenfoque"
@@ -181,7 +182,7 @@ msgid "Enable Scale"
 msgstr "Activar Escalado"
 
 msgid "Enable Wobbly"
-msgstr ""
+msgstr "Activar Fiestras Temblantes"
 
 msgid "Enable animations"
 msgstr "Activar animacións"
@@ -196,8 +197,9 @@ msgstr "Información"
 msgid "Opacity:"
 msgstr ""
 
+#, fuzzy
 msgid "Profile:"
-msgstr ""
+msgstr "Perfil:"
 
 msgid "Screen zoom"
 msgstr "Zoom de pantalla"
@@ -211,3 +213,9 @@ msgstr ""
 
 msgid "Configure Compiz with CompizConfig"
 msgstr ""
+
+#~ msgid "gtk-close"
+#~ msgstr "Pechar"
+
+#~ msgid "gtk-help"
+#~ msgstr "Axuda"
