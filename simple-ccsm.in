@@ -511,7 +511,7 @@ class ProfilePage:
 
     def CheckAccessibility(self, widget=None):
         enabled = False
-        for name in ('ezoom', 'zoom', 'mag'):
+        for name in ('ezoom', 'mag'):
             plugin = self.Context.Plugins[name]
             if plugin.Enabled:
                 enabled = True
@@ -1003,8 +1003,8 @@ class ZoomPage:
         self.Widgets = {}
         self.Settings = {
         # identifier  -   plugin   -    setting     -      container
-        'screenZoomIn':  ('ezoom', 'zoom_in',         'screenZoomBox'),
-        'screenZoomOut': ('ezoom', 'zoom_out',        'screenZoomBox'),
+        'screenZoomIn':  ('ezoom', 'zoom_in_button',  'screenZoomBox'),
+        'screenZoomOut': ('ezoom', 'zoom_out_button', 'screenZoomBox'),
         'areaZoomIn':    ('mag',   'zoom_in_button',  'areaZoomBox'),
         'areaZoomOut':   ('mag',   'zoom_out_button', 'areaZoomBox')
         }
@@ -1014,7 +1014,7 @@ class ZoomPage:
             return
         
         available = {}
-        for name in ('ezoom', 'zoom', 'mag'):
+        for name in ('ezoom', 'mag'):
             if name in self.Context.Plugins:
                 plugin = self.Context.Plugins[name]
                 available[name] = plugin
@@ -1022,8 +1022,6 @@ class ZoomPage:
         widget = self.GladeXML.get_widget("enableZoom")
         if 'ezoom' in available:
             available['ezoom'].Enabled = widget.get_active()
-        elif 'zoom' in available:
-            available['zoom'].Enabled = widget.get_active()
 
         widget = self.GladeXML.get_widget("enableMag")
         if 'mag' in available:
@@ -1060,7 +1058,7 @@ class ZoomPage:
             self.Widgets[identifier].Read()
 
         available = {}
-        for name in ('ezoom', 'zoom', 'mag'):
+        for name in ('ezoom', 'mag'):
             if name in self.Context.Plugins:
                 plugin = self.Context.Plugins[name]
                 available[name] = plugin
@@ -1069,9 +1067,6 @@ class ZoomPage:
         widget.set_sensitive(True)
         if 'ezoom' in available:
             plugin = available['ezoom']
-            widget.set_active(plugin.Enabled)
-        elif 'zoom' in available:
-            plugin = available['zoom']
             widget.set_active(plugin.Enabled)
         else:
             widget.set_sensitive(False)
