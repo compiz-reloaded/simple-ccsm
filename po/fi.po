@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm trunk\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-12-15 15:23+0530\n"
-"PO-Revision-Date: 2008-10-24 15:40+0200\n"
+"POT-Creation-Date: 2008-12-26 12:27+0530\n"
+"PO-Revision-Date: 2008-12-16 14:56+0100\n"
 "Last-Translator: Timo Jyrinki <timo.jyrinki@iki.fi>\n"
 "Language-Team: C-F Language team <i18n@opencompositing.org>\n"
 "MIME-Version: 1.0\n"
@@ -80,6 +80,8 @@ msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
 "Would you like to cancel enabling of desktop effects or run them anyway?"
 msgstr ""
+"Nykyinen laitteisto/asetukset ei tue työpöytätehosteita. Haluatko perua "
+"työpöytätehosteiden käyttöönoton vai suorittaa ne joka tapauksessa?"
 
 msgid "Default"
 msgstr "Oletus"
@@ -186,9 +188,8 @@ msgstr "Ota huojuvat ikkunat käyttöön"
 msgid "Enable animations"
 msgstr "Ota animaatiot käyttöön"
 
-#, fuzzy
 msgid "Enable extra animations"
-msgstr "Ota animaatiot käyttöön"
+msgstr "Ota lisäanimaatiot käyttöön"
 
 msgid "Info"
 msgstr "Tiedot"
@@ -196,7 +197,6 @@ msgstr "Tiedot"
 msgid "Opacity:"
 msgstr "Läpikuultamattomuus:"
 
-#, fuzzy
 msgid "Profile:"
 msgstr "Profiili:"
 
@@ -206,9 +206,8 @@ msgstr "Näytön suurennus"
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Yksinkertainen Compiz-asetusten hallinta"
 
-#, fuzzy
 msgid "_Enable desktop effects"
-msgstr "Ota heijastukset käyttöön"
+msgstr "Ota työpöytät_ehosteet käyttöön"
 
 msgid "Configure Compiz with CompizConfig"
 msgstr "Compiz-asetusten hallinta CompizConfigilla"

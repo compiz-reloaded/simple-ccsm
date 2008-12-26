@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-12-15 15:23+0530\n"
-"PO-Revision-Date: 2008-06-13 17:05+0200\n"
-"Last-Translator: KAMI <kamihir@freemail.hu>\n"
+"POT-Creation-Date: 2008-12-26 12:27+0530\n"
+"PO-Revision-Date: 2008-12-16 19:18+0100\n"
+"Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: C-F Language team <i18n@opencompositing.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,32 +18,35 @@ msgstr ""
 "X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
-msgstr ""
+msgstr "Minimális"
 
 msgid "Medium"
-msgstr ""
+msgstr "Közepes"
 
 msgid "Advanced"
-msgstr ""
+msgstr "Fejlett"
 
+#, fuzzy
 msgid "Ultimate"
-msgstr ""
+msgstr "Mindent bele"
 
 msgid "Provides a simple desktop environment with very few effects."
-msgstr ""
+msgstr "Egyszerű asztali környezetet biztosít kevés effekttel."
 
 msgid ""
 "Provides good balance between attractiveness and moderate performence "
 "requirements."
-msgstr ""
+msgstr "A megnyerőség és a mérsékelt teljesítményigény egyensúlyát biztosítja."
 
 msgid "Provides more aesthetically pleasing set of effects."
-msgstr ""
+msgstr "Effektek esztétikailag megnyerőbb halmazát biztosítja."
 
 msgid ""
 "Provides very advanced and eye-catching set of effects. Requires faster "
 "graphics card."
 msgstr ""
+"Fejlett effektek szemet gyönyörködtető halmazát biztosítja. Gyorsabb "
+"videokártyát igényel."
 
 msgid "Enabled"
 msgstr "Engedélyezve"
@@ -58,19 +61,21 @@ msgid "Colorfilter"
 msgstr "Színszűrő"
 
 msgid "None"
-msgstr ""
+msgstr "Nincs"
 
 #, c-format
 msgid "%s (Cover)"
 msgstr "%s lefedés"
 
-#, c-format
+#, fuzzy, c-format
 msgid "%s (Flip)"
 msgstr "%s pattog"
 
 msgid "Cover"
 msgstr "Lefedés"
 
+# inkább valami tükrözés nem?
+#, fuzzy
 msgid "Flip"
 msgstr "Pattog"
 
@@ -78,6 +83,8 @@ msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
 "Would you like to cancel enabling of desktop effects or run them anyway?"
 msgstr ""
+"A jelenlegi hardver vagy beállítások nem támogatják az asztali effekteket. "
+"Megszakítja az asztali effektek bekapcsolását vagy mindenképp engedélyezi?"
 
 msgid "Default"
 msgstr "Alapértelmezett"
@@ -100,21 +107,20 @@ msgstr "<b>Terület nagyítása</b>"
 msgid "<b>Close Window</b>"
 msgstr "<b>Ablak bezárása</b>"
 
-#, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr "<b>Effektusok</b>"
+msgstr "<b>Kockaeffektusok</b>"
 
 msgid "<b>Description</b>"
 msgstr "<b>Leírás</b>"
 
 msgid "<b>Desktop columns</b>"
-msgstr "<b>Asztal oszlopok</b>"
+msgstr "<b>Asztal oszlopai</b>"
 
 msgid "<b>Desktop preview</b>"
 msgstr "<b>Asztal előnézet</b>"
 
 msgid "<b>Desktop rows</b>"
-msgstr "<b>Asztal sorok</b>"
+msgstr "<b>Asztal sorai</b>"
 
 msgid "<b>Desktop</b>"
 msgstr "<b>Asztal</b>"
@@ -125,9 +131,8 @@ msgstr "<b>Effektusok</b>"
 msgid "<b>Enable zoom</b>"
 msgstr "<b>Nagyítás engedélyezése</b>"
 
-#, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>Ablak bezárása</b>"
+msgstr "<b>Ablak fókuszba</b>"
 
 msgid "<b>Minimize window</b>"
 msgstr "<b>Ablak minimalizálása</b>"
@@ -136,10 +141,10 @@ msgid "<b>Open window</b>"
 msgstr "<b>Ablak megnyitása</b>"
 
 msgid "<b>Screen Edges</b>"
-msgstr "<b>Képernyő élek</b>"
+msgstr "<b>Képernyő élei</b>"
 
 msgid "<b>Screen zoom</b>"
-msgstr "<b>Képernyő nagyítás</b>"
+msgstr "<b>Képernyőnagyítás</b>"
 
 msgid "<b>Switcher</b>"
 msgstr "<b>Programváltó</b>"
@@ -154,7 +159,7 @@ msgid "Area zoom"
 msgstr "Terület nagyítása"
 
 msgid "Deformation:"
-msgstr ""
+msgstr "Torzítás:"
 
 msgid "Desktop"
 msgstr "Asztal"
@@ -165,19 +170,18 @@ msgstr "Élek"
 msgid "Effects"
 msgstr "Effektusok"
 
-#, fuzzy
 msgid "Enable 3D Windows"
-msgstr "Imbolygó ablakok engedélyezése"
+msgstr "3D ablakok engedélyezése"
 
 msgid "Enable Blur"
 msgstr "Elmosás engedélyezése"
 
+#, fuzzy
 msgid "Enable Expo"
 msgstr "Közszemle engedélyezése"
 
-#, fuzzy
 msgid "Enable Reflection"
-msgstr "Animációk engedélyezése"
+msgstr "Tükröződés engedélyezése"
 
 msgid "Enable Scale"
 msgstr "Áttekintés engedélyezése"
@@ -188,32 +192,29 @@ msgstr "Imbolygó ablakok engedélyezése"
 msgid "Enable animations"
 msgstr "Animációk engedélyezése"
 
-#, fuzzy
 msgid "Enable extra animations"
-msgstr "Animációk engedélyezése"
+msgstr "Extra animációk engedélyezése"
 
 msgid "Info"
 msgstr "Információk"
 
 msgid "Opacity:"
-msgstr ""
+msgstr "Átlátszatlanság:"
 
-#, fuzzy
 msgid "Profile:"
 msgstr "Profil:"
 
 msgid "Screen zoom"
 msgstr "Képernyő nagyítása"
 
-#, fuzzy
 msgid "Simple CompizConfig Settings Manager"
-msgstr "Egyszerűsített Compiz beállításkezelő"
+msgstr "Egyszerű Compiz-beállításkezelő"
 
 msgid "_Enable desktop effects"
-msgstr ""
+msgstr "_Asztali effektek engedélyezése"
 
 msgid "Configure Compiz with CompizConfig"
-msgstr ""
+msgstr "A Compiz beállítása a CompizConfiggal"
 
 #~ msgid "gtk-close"
 #~ msgstr "gtk-close"
