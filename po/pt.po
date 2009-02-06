@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-12-26 12:27+0530\n"
-"PO-Revision-Date: 2008-05-03 00:32+0200\n"
+"POT-Creation-Date: 2009-02-06 11:25+0530\n"
+"PO-Revision-Date: 2009-01-13 16:46+0200\n"
 "Last-Translator: Nicolau Gonçalves <excentriko@gmail.com>\n"
 "Language-Team: C-F Language team <i18n@opencompositing.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,32 +18,36 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Minimal"
-msgstr ""
+msgstr "Mínimo"
 
 msgid "Medium"
-msgstr ""
+msgstr "Médio"
 
 msgid "Advanced"
-msgstr ""
+msgstr "Avançado"
 
 msgid "Ultimate"
-msgstr ""
+msgstr "Poderoso"
 
 msgid "Provides a simple desktop environment with very few effects."
-msgstr ""
+msgstr "Proporciona um ambiente de trabalho simples, com poucos efeitos."
 
 msgid ""
 "Provides good balance between attractiveness and moderate performence "
 "requirements."
 msgstr ""
+"Proporciona um bom balanço entre eye-candy e requisitos de performance "
+"moderados."
 
 msgid "Provides more aesthetically pleasing set of effects."
-msgstr ""
+msgstr "Proporciona um conjunto de efeitos esteticamente agradáveis."
 
 msgid ""
 "Provides very advanced and eye-catching set of effects. Requires faster "
 "graphics card."
 msgstr ""
+"Proporciona um conjunto de efeitos bastante avançado e poderoso. Requere uma "
+"boa placa gráfica."
 
 msgid "Enabled"
 msgstr "Activado"
@@ -58,7 +62,7 @@ msgid "Colorfilter"
 msgstr "FiltroCor"
 
 msgid "None"
-msgstr ""
+msgstr "Nenhum"
 
 #, c-format
 msgid "%s (Cover)"
@@ -78,6 +82,8 @@ msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
 "Would you like to cancel enabling of desktop effects or run them anyway?"
 msgstr ""
+"Efeitos visuais não são suportados pelo seu hardware / configuração. Deseja "
+"cancelar a activação dos efeitos ou corrê-los à mesma?"
 
 msgid "Default"
 msgstr "Padrão"
@@ -100,9 +106,8 @@ msgstr "<b>Ampliação área ecrã</b>"
 msgid "<b>Close Window</b>"
 msgstr "<b>Fechar Janela</b>"
 
-#, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr "<b>Efeitos</b>"
+msgstr "<b>Efeitos do Cubo</b>"
 
 msgid "<b>Description</b>"
 msgstr "<b>Descrição</b>"
@@ -125,9 +130,8 @@ msgstr "<b>Efeitos</b>"
 msgid "<b>Enable zoom</b>"
 msgstr "<b>Activar ampliação</b>"
 
-#, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>Fechar Janela</b>"
+msgstr "<b>Focar Janela</b>"
 
 msgid "<b>Minimize window</b>"
 msgstr "<b>Minimizar janela</b>"
@@ -154,7 +158,7 @@ msgid "Area zoom"
 msgstr "Ampliação área ecrã"
 
 msgid "Deformation:"
-msgstr ""
+msgstr "Deformação:"
 
 msgid "Desktop"
 msgstr "Ambiente de Trabalho"
@@ -165,9 +169,8 @@ msgstr "Margens"
 msgid "Effects"
 msgstr "Efeitos"
 
-#, fuzzy
 msgid "Enable 3D Windows"
-msgstr "Activar Janelas Instáveis"
+msgstr "Activar Janelas 3D"
 
 msgid "Enable Blur"
 msgstr "Activar Borrão"
@@ -175,9 +178,8 @@ msgstr "Activar Borrão"
 msgid "Enable Expo"
 msgstr "Activar Expo"
 
-#, fuzzy
 msgid "Enable Reflection"
-msgstr "Activar animações"
+msgstr "Activar Reflexão"
 
 msgid "Enable Scale"
 msgstr "Activar Scale"
@@ -188,32 +190,29 @@ msgstr "Activar Janelas Instáveis"
 msgid "Enable animations"
 msgstr "Activar animações"
 
-#, fuzzy
 msgid "Enable extra animations"
-msgstr "Activar animações"
+msgstr "Activar animações extra"
 
 msgid "Info"
 msgstr "Informação"
 
 msgid "Opacity:"
-msgstr ""
+msgstr "Opacidade:"
 
-#, fuzzy
 msgid "Profile:"
 msgstr "Perfil:"
 
 msgid "Screen zoom"
 msgstr "Ampliação ecrã"
 
-#, fuzzy
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Gestor Simples de Configuração do Compiz"
 
 msgid "_Enable desktop effects"
-msgstr ""
+msgstr "Activar os _efeitos visuais"
 
 msgid "Configure Compiz with CompizConfig"
-msgstr ""
+msgstr "Configurar Compiz com CompizConfig"
 
 #~ msgid "gtk-close"
 #~ msgstr "gtk-fechar"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2008-12-26 12:27+0530\n"
-"PO-Revision-Date: 2008-12-21 03:35+0100\n"
+"POT-Creation-Date: 2009-02-06 11:25+0530\n"
+"PO-Revision-Date: 2009-01-06 15:18+0800\n"
 "Last-Translator: JING Cheng <jingcheng01@gmail.com>\n"
 "Language-Team: C-F Language team <i18n@opencompositing.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,32 +17,32 @@ msgstr ""
 "X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
-msgstr ""
+msgstr "最少"
 
 msgid "Medium"
-msgstr ""
+msgstr "中等"
 
 msgid "Advanced"
-msgstr ""
+msgstr "高级"
 
 msgid "Ultimate"
-msgstr ""
+msgstr "终极"
 
 msgid "Provides a simple desktop environment with very few effects."
-msgstr ""
+msgstr "只有少量特效的简单桌面环境."
 
 msgid ""
 "Provides good balance between attractiveness and moderate performence "
 "requirements."
-msgstr ""
+msgstr "华丽特效与稳定性能的平衡."
 
 msgid "Provides more aesthetically pleasing set of effects."
-msgstr ""
+msgstr "华丽一些的特效"
 
 msgid ""
 "Provides very advanced and eye-catching set of effects. Requires faster "
 "graphics card."
-msgstr ""
+msgstr "最引入注目的特效, 需要更快的显卡."
 
 msgid "Enabled"
 msgstr "已启用"
@@ -57,7 +57,7 @@ msgid "Colorfilter"
 msgstr "颜色过滤"
 
 msgid "None"
-msgstr ""
+msgstr "无"
 
 #, c-format
 msgid "%s (Cover)"
@@ -76,7 +76,7 @@ msgstr "翻阅式"
 msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
 "Would you like to cancel enabling of desktop effects or run them anyway?"
-msgstr ""
+msgstr "当前硬件/配置不支持桌面特效. 放弃启用桌面特效还是强行启用?"
 
 msgid "Default"
 msgstr "默认"
@@ -99,8 +99,9 @@ msgstr "<b>区域缩放</b>"
 msgid "<b>Close Window</b>"
 msgstr "<b>关闭窗口</b>"
 
+#, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr "<b>立方体特效</b>"
+msgstr "<b>特效</b>"
 
 msgid "<b>Description</b>"
 msgstr "<b>说明</b>"
@@ -123,8 +124,9 @@ msgstr "<b>特效</b>"
 msgid "<b>Enable zoom</b>"
 msgstr "<b>启用缩放</b>"
 
+#, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>聚焦窗口</b>"
+msgstr "<b>关闭窗口</b>"
 
 msgid "<b>Minimize window</b>"
 msgstr "<b>最小化窗口</b>"
@@ -151,7 +153,7 @@ msgid "Area zoom"
 msgstr "区域缩放"
 
 msgid "Deformation:"
-msgstr "变形："
+msgstr "变形:"
 
 msgid "Desktop"
 msgstr "桌面"
@@ -162,8 +164,9 @@ msgstr "边缘"
 msgid "Effects"
 msgstr "特效"
 
+#, fuzzy
 msgid "Enable 3D Windows"
-msgstr "启用3D窗口"
+msgstr "启用震颤"
 
 msgid "Enable Blur"
 msgstr "启用朦胧"
@@ -171,8 +174,9 @@ msgstr "启用朦胧"
 msgid "Enable Expo"
 msgstr "启用展览"
 
+#, fuzzy
 msgid "Enable Reflection"
-msgstr "启用倒影"
+msgstr "启用动画特效"
 
 msgid "Enable Scale"
 msgstr "启用比例排列"
@@ -183,29 +187,32 @@ msgstr "启用震颤"
 msgid "Enable animations"
 msgstr "启用动画特效"
 
+#, fuzzy
 msgid "Enable extra animations"
-msgstr "启用附加动画特效"
+msgstr "启用动画特效"
 
 msgid "Info"
 msgstr "信息"
 
 msgid "Opacity:"
-msgstr "不透明度："
+msgstr "透明度:"
 
+#, fuzzy
 msgid "Profile:"
 msgstr "配置文件："
 
 msgid "Screen zoom"
 msgstr "屏幕缩放"
 
+#, fuzzy
 msgid "Simple CompizConfig Settings Manager"
 msgstr "简化版CompizConfig设置管理器"
 
 msgid "_Enable desktop effects"
-msgstr "启用桌面特效"
+msgstr "启用桌面特效(_E)"
 
 msgid "Configure Compiz with CompizConfig"
-msgstr "使用CompizConfig配置Compiz"
+msgstr "用 CompizConfig 配置 Compiz"
 
 #~ msgid "gtk-close"
 #~ msgstr "关闭"
