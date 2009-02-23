@@ -1166,6 +1166,23 @@ class MainWin:
         self.Window.show_all()
         self.DoneUpdate = True
 
+        gobject.timeout_add(1000, self.EnableIntegration)
+
+    def EnableIntegration(self):
+        if GnomeSession in os.environ and os.environ[GnomeSession]:
+            if not self.Context.Integration:
+                self.Context.Integration = True
+
+            compat = self.Context.Plugins["gnomecompat"]
+            if not compat.Enabled:
+                EnablePlugin(compat, True)
+        elif KdeSession in os.environ and os.environ[KdeSession]:
+            if not self.Context.Integration:
+                self.Context.Integration = True
+
+        self.Context.Write()
+
+
     def CheckForCompiz(self):
         composited = self.Window.is_composited()
         if composited:
