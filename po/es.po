@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Compiz\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2009-02-06 11:25+0530\n"
-"PO-Revision-Date: 2009-02-05 01:05+0100\n"
+"POT-Creation-Date: 2009-03-24 12:32+0530\n"
+"PO-Revision-Date: 2009-03-21 14:37+0100\n"
 "Last-Translator: Gabriel Ferreiro Blazetic <gbril9119@gmail.com>\n"
 "Language-Team: C-F Language team <i18n@opencompositing.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,15 +26,17 @@ msgid "Advanced"
 msgstr "Avanzado"
 
 msgid "Ultimate"
-msgstr ""
+msgstr "Definitivo"
 
 msgid "Provides a simple desktop environment with very few effects."
-msgstr ""
+msgstr "Provee un ambiente de escritorio simple con algunos efectos."
 
 msgid ""
 "Provides good balance between attractiveness and moderate performence "
 "requirements."
 msgstr ""
+"Provee un buen balance entre atractivo y requerimientos moderados de "
+"funcionamiento."
 
 msgid "Provides more aesthetically pleasing set of effects."
 msgstr ""
@@ -77,9 +79,6 @@ msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
 "Would you like to cancel enabling of desktop effects or run them anyway?"
 msgstr ""
-"Los efectos de escritorio no son soportados con su actual hardware / "
-"configuración. ¿Quiere cancelar la activación de los efectos de escritorio o "
-"ejecutarlos de todas formas?"
 
 msgid "Default"
 msgstr "Por defecto"
@@ -106,7 +105,7 @@ msgstr "<b>Cerrar ventana</b>"
 
 #, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr "<b>Efectos de cubo</b>"
+msgstr "<b>Efectos</b>"
 
 msgid "<b>Description</b>"
 msgstr "<b>Descripción</b>"
@@ -129,8 +128,9 @@ msgstr "<b>Efectos</b>"
 msgid "<b>Enable zoom</b>"
 msgstr "<b>Activar zoom</b>"
 
+#, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>Enfocar ventana</b>"
+msgstr "<b>Cerrar ventana</b>"
 
 msgid "<b>Minimize window</b>"
 msgstr "<b>Minimizar ventana</b>"
@@ -171,9 +171,9 @@ msgstr "Efectos"
 
 # Gelatinoso, gelatinosa, depende del contexto.
 # berylog: ¿y por qué no: "Activar Ventanas Gelatinosas"?
-# Garolard: Las gelatinosas son Wobbly
+#, fuzzy
 msgid "Enable 3D Windows"
-msgstr "Activar Ventanas 3D"
+msgstr "Activar Ventanas Gelatinosas"
 
 # Habilitar emborronado, dispersión
 msgid "Enable Blur"
@@ -184,7 +184,7 @@ msgstr "Activar Expo"
 
 #, fuzzy
 msgid "Enable Reflection"
-msgstr "Activar Reflejo"
+msgstr "Activar Animaciones"
 
 # berylog: Si es "Enable Scale" debería ser "Activar Escala" en lugar de "Activar escala"
 msgid "Enable Scale"
@@ -198,8 +198,9 @@ msgstr "Activar Ventanas Gelatinosas"
 msgid "Enable animations"
 msgstr "Activar Animaciones"
 
+#, fuzzy
 msgid "Enable extra animations"
-msgstr "Activar Animaciones extra"
+msgstr "Activar Animaciones"
 
 msgid "Info"
 msgstr "Info"
@@ -207,6 +208,7 @@ msgstr "Info"
 msgid "Opacity:"
 msgstr "Opacidad:"
 
+#, fuzzy
 msgid "Profile:"
 msgstr "Perfil:"
 
@@ -218,7 +220,7 @@ msgid "Simple CompizConfig Settings Manager"
 msgstr "Administrador Simple de Configuraciones de Compiz"
 
 msgid "_Enable desktop effects"
-msgstr "_Activar efectos de escritorio"
+msgstr ""
 
 msgid "Configure Compiz with CompizConfig"
 msgstr "Configurar Compiz con CompizConfig"
