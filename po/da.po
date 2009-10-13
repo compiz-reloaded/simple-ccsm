@@ -1,0 +1,203 @@
+# Danish translation of simple-cssm package.
+# Copyright (C) 2009 THE simple-ccsm COPYRIGHT HOLDER.
+# This file is distributed under the same license as the simple-ccsm package.
+# Mads Bille Lundby <lundbymads@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: simple-ccsm\n"
+"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
+"POT-Creation-Date: 2009-02-06 11:25+0530\n"
+"PO-Revision-Date: 2009-04-05 19:14+0100\n"
+"Last-Translator: Mads Lundby <lundbymads@gmail.com>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Minimal"
+msgstr "Minimal"
+
+msgid "Medium"
+msgstr "Middel"
+
+msgid "Advanced"
+msgstr "Avanceret"
+
+msgid "Ultimate"
+msgstr "Maksimal"
+
+msgid "Provides a simple desktop environment with very few effects."
+msgstr "Giver et simpelt skrivebordsmiljø med meget få effekter."
+
+msgid "Provides good balance between attractiveness and moderate performence requirements."
+msgstr "Giver en god balance mellem flot udseende og moderate krav til ydelsen."
+
+msgid "Provides more aesthetically pleasing set of effects."
+msgstr "Giver et sæt effekter, der er mere æstetisk tilfredsstillende."
+
+msgid "Provides very advanced and eye-catching set of effects. Requires faster graphics card."
+msgstr "Giver et sæt effekter, der er meget avancerede og iøjnefaldende. Kræver et hurtigere grafikkort."
+
+msgid "Enabled"
+msgstr "Aktiveret"
+
+msgid "Disabled"
+msgstr "Deaktiveret"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "Colorfilter"
+msgstr "Farvefilter"
+
+msgid "None"
+msgstr "Ingen"
+
+#, c-format
+msgid "%s (Cover)"
+msgstr "%s (Omslag)"
+
+#, c-format
+msgid "%s (Flip)"
+msgstr "%s (Bladre)"
+
+msgid "Cover"
+msgstr "Omslag"
+
+msgid "Flip"
+msgstr "Bladre"
+
+msgid "Desktop effects are not supported on your current hardware / configuration. Would you like to cancel enabling of desktop effects or run them anyway?"
+msgstr "Skrivebordeffekter er ikke understøttet med din nuværende hardware/konfiguration. Vil du annullere aktivering af skrivebordseffekter eller køre dem alligevel?"
+
+msgid "Default"
+msgstr "Standard"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>Tilgængelighed</b>"
+
+msgid "<b>Additions</b>"
+msgstr "<b>Tilføjelser</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>Animationer</b>"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>Udseende</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Områdezoom</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>Luk vindue</b>"
+
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Terningeffekter</b>"
+
+msgid "<b>Description</b>"
+msgstr "<b>Beskrivelse</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Skrivebordskolonner</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Forhåndsvisning af skriveborde</b>"
+
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Skrivebordsrækker</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>Skrivebord</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>Effekter</b>"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Aktivér zoom</b>"
+
+msgid "<b>Focus window</b>"
+msgstr "<b>Fokusér vindue</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>Minimér vindue</b>"
+
+msgid "<b>Open window</b>"
+msgstr "<b>Åbn vindue</b>"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Skærmkanter</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Skærmzoom</b>"
+
+# Der er reelt tale om en vinduesskifter her.
+msgid "<b>Switcher</b>"
+msgstr "<b>Vinduesskifter</b>"
+
+msgid "Accessibility"
+msgstr "Tilgængelighed"
+
+msgid "Animations"
+msgstr "Animationer"
+
+msgid "Area zoom"
+msgstr "Områdezoom"
+
+msgid "Deformation:"
+msgstr "Deformation:"
+
+msgid "Desktop"
+msgstr "Skrivebord"
+
+msgid "Edges"
+msgstr "Kanter"
+
+msgid "Effects"
+msgstr "Effekter"
+
+msgid "Enable 3D Windows"
+msgstr "Aktivér 3D-vinduer"
+
+msgid "Enable Blur"
+msgstr "Aktivér sløring"
+
+msgid "Enable Expo"
+msgstr "Aktivér galleri"
+
+msgid "Enable Reflection"
+msgstr "Aktivér reflekser"
+
+msgid "Enable Scale"
+msgstr "Aktivér skalering"
+
+msgid "Enable Wobbly"
+msgstr "Aktivér slingren"
+
+msgid "Enable animations"
+msgstr "Aktivér animationer"
+
+msgid "Enable extra animations"
+msgstr "Aktivér ekstra animationer"
+
+msgid "Info"
+msgstr "Information"
+
+msgid "Opacity:"
+msgstr "Uigennemsigtighed:"
+
+msgid "Profile:"
+msgstr "Profil:"
+
+msgid "Screen zoom"
+msgstr "Skærmzoom"
+
+msgid "Simple CompizConfig Settings Manager"
+msgstr "Simpelt værktøj til CompizConfig-indstillinger"
+
+msgid "_Enable desktop effects"
+msgstr "_Aktivér skrivebordseffekter"
+
+msgid "Configure Compiz with CompizConfig"
+msgstr "Indstil Compiz med CompizConfig"
+

@@ -1,0 +1,151 @@
+# simple-ccsm translation templete
+# Copyright (C) 2008 compiz-fusion.org
+# This file is distributed under the same license as the simple-ccsm package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.7.4\n"
+"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
+"POT-Creation-Date: 2008-04-30 20:47+0530\n"
+"PO-Revision-Date: 2009-10-05 03:11+0200\n"
+"Last-Translator: Yichih Liu <liueigi@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
+
+msgid "Enabled"
+msgstr "啟用"
+
+msgid "Disabled"
+msgstr "不使用"
+
+msgid "Zoom"
+msgstr "縮放"
+
+msgid "Colorfilter"
+msgstr "色彩濾鏡"
+
+#, c-format
+msgid "%s (Cover)"
+msgstr "%s (封面效果)"
+
+#, c-format
+msgid "%s (Flip)"
+msgstr "%s (翻頁效果)"
+
+msgid "Cover"
+msgstr "封面效果"
+
+msgid "Flip"
+msgstr "翻頁效果"
+
+msgid "Default"
+msgstr "預設值"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>無障礙功能</b>"
+
+msgid "<b>Additions</b>"
+msgstr "<b>附加功能</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>動畫功能</b>"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>外觀功能</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>區域縮放</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>關閉視窗</b>"
+
+msgid "<b>Description</b>"
+msgstr "<b>描述</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr "<b>桌面欄數</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>桌面預覽</b>"
+
+msgid "<b>Desktop rows</b>"
+msgstr "<b>桌面行數</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>桌面</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>特效</b>"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>啟用縮放</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>最小化視窗</b>"
+
+msgid "<b>Open window</b>"
+msgstr "<b>開啟視窗</b>"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>顯示畫面邊界</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>顯示畫面縮放</b>"
+
+msgid "<b>Switcher</b>"
+msgstr "<b>視窗切換</b>"
+
+msgid "Accessibility"
+msgstr "無障礙功能"
+
+msgid "Animations"
+msgstr "動畫功能"
+
+msgid "Area zoom"
+msgstr "區域縮放"
+
+msgid "Desktop"
+msgstr "桌面"
+
+msgid "Edges"
+msgstr "邊緣"
+
+msgid "Effects"
+msgstr "特效"
+
+msgid "Enable Blur"
+msgstr "啟用模糊效果功能"
+
+msgid "Enable Expo"
+msgstr "啟用桌面總覽功能"
+
+msgid "Enable Scale"
+msgstr "啟用視窗總覽功能"
+
+msgid "Enable Wobbly"
+msgstr "啟用視窗布丁效果"
+
+msgid "Enable animations"
+msgstr "啟用動畫效果"
+
+msgid "Info"
+msgstr "資訊"
+
+msgid "Profil:"
+msgstr "設定檔"
+
+msgid "Screen zoom"
+msgstr "畫面縮放"
+
+msgid "Simple Compiz Config Settings Manager"
+msgstr "Compiz簡易設定管理程式"
+
+msgid "gtk-close"
+msgstr "gtk-close"
+
+msgid "gtk-help"
+msgstr "gtk-求助"

@@ -1,0 +1,153 @@
+# simple-ccsm translation templete
+# Copyright (C) 2008 compiz-fusion.org
+# This file is distributed under the same license as the simple-ccsm package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.7.4\n"
+"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
+"POT-Creation-Date: 2008-04-30 20:47+0530\n"
+"PO-Revision-Date: 2009-05-23 19:38+0200\n"
+"Last-Translator: Alexander Cornillie <dworffish@hotmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
+
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+msgid "Disabled"
+msgstr "Uitgeschakeld"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "Colorfilter"
+msgstr "Kleurfilter"
+
+#, c-format
+msgid "%s (Cover)"
+msgstr "%s (Bedekken)"
+
+#, c-format
+msgid "%s (Flip)"
+msgstr "%s (Omkeren)"
+
+msgid "Cover"
+msgstr "Bedekken"
+
+msgid "Flip"
+msgstr "Omkeren"
+
+msgid "Default"
+msgstr "Standaard"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>Toegankelijkheid</b>"
+
+msgid "<b>Additions</b>"
+msgstr "<b>Toevoegingen</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>Animaties</b>"
+
+# I don't know how this is traditionally called.
+# "Uiterlijk" is also possible.
+msgid "<b>Appearance</b>"
+msgstr "<b>Vormgeving</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Zoomgebied</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>Venster Sluiten</b>"
+
+msgid "<b>Description</b>"
+msgstr "<b>Beschrijving</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Desktop kolommen</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Bureaublad voorbeeld</b>"
+
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Bureaublad rijen</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>Bureaublad</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>Effecten</b>"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Zoom Activeren</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>Venster Minimalizeren</b>"
+
+msgid "<b>Open window</b>"
+msgstr "<b>Venster Openen</b>"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Schermranden</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Scherm Zoom</b>"
+
+msgid "<b>Switcher</b>"
+msgstr "<b>Wisselaar</b>"
+
+msgid "Accessibility"
+msgstr "Toegankelijkheid"
+
+msgid "Animations"
+msgstr "Animaties"
+
+msgid "Area zoom"
+msgstr "Gebiedzoom"
+
+msgid "Desktop"
+msgstr "Bureaublad"
+
+msgid "Edges"
+msgstr "Randen"
+
+msgid "Effects"
+msgstr "Effecten"
+
+msgid "Enable Blur"
+msgstr "Vervagen Activeren"
+
+msgid "Enable Expo"
+msgstr "Expo Activeren"
+
+msgid "Enable Scale"
+msgstr "Verschalen inschakelen"
+
+msgid "Enable Wobbly"
+msgstr "Wiebelende vensters inschakelen"
+
+msgid "Enable animations"
+msgstr "Animaties Activeren"
+
+msgid "Info"
+msgstr "Over"
+
+msgid "Profil:"
+msgstr "Profiel:"
+
+msgid "Screen zoom"
+msgstr "Scherm zoom"
+
+msgid "Simple Compiz Config Settings Manager"
+msgstr "Simpele Compiz Config instellingen beheer"
+
+msgid "gtk-close"
+msgstr "gtk-sluiten"
+
+msgid "gtk-help"
+msgstr "gtk-help"

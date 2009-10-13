@@ -1,0 +1,151 @@
+# simple-ccsm translation templete
+# Copyright (C) 2008 compiz-fusion.org
+# This file is distributed under the same license as the simple-ccsm package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.7.4\n"
+"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
+"POT-Creation-Date: 2008-04-30 20:47+0530\n"
+"PO-Revision-Date: 2008-11-03 23:01+0100\n"
+"Last-Translator: Jan Brázdil <ja.brazdil@post.cz>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
+
+msgid "Enabled"
+msgstr "Povoleno"
+
+msgid "Disabled"
+msgstr "Zakázáno"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "Colorfilter"
+msgstr "Barevný filtr"
+
+#, c-format
+msgid "%s (Cover)"
+msgstr ""
+
+#, c-format
+msgid "%s (Flip)"
+msgstr ""
+
+msgid "Cover"
+msgstr "Zakrytý"
+
+msgid "Flip"
+msgstr ""
+
+msgid "Default"
+msgstr "Původní"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>Přístupnost</b>"
+
+msgid "<b>Additions</b>"
+msgstr "<b>Přídavky</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>Animace</b>"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>Vzhled</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Přiblížení oblasti</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>Zavřít okno</b>"
+
+msgid "<b>Description</b>"
+msgstr "<b>Popis</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr ""
+
+msgid "<b>Desktop preview</b>"
+msgstr ""
+
+msgid "<b>Desktop rows</b>"
+msgstr ""
+
+msgid "<b>Desktop</b>"
+msgstr ""
+
+msgid "<b>Effects</b>"
+msgstr "<b>Efekty</b>"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Povolit zoom</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>Minimalizovat okno</b>"
+
+msgid "<b>Open window</b>"
+msgstr "<b>Otevřít okno</b>"
+
+msgid "<b>Screen Edges</b>"
+msgstr ""
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Přiblížení obrazovky</b>"
+
+msgid "<b>Switcher</b>"
+msgstr "<b>Přepínač</b>"
+
+msgid "Accessibility"
+msgstr "Přístupnost"
+
+msgid "Animations"
+msgstr "Animace"
+
+msgid "Area zoom"
+msgstr ""
+
+msgid "Desktop"
+msgstr "Plocha"
+
+msgid "Edges"
+msgstr "Okraje"
+
+msgid "Effects"
+msgstr "Efekty"
+
+msgid "Enable Blur"
+msgstr "Povolit rozmazání"
+
+msgid "Enable Expo"
+msgstr "Povolit Expo"
+
+msgid "Enable Scale"
+msgstr "Povolit zvětšení"
+
+msgid "Enable Wobbly"
+msgstr ""
+
+msgid "Enable animations"
+msgstr "Povolit animace"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Profil:"
+msgstr "Profil:"
+
+msgid "Screen zoom"
+msgstr "Přiblížení obrazovky"
+
+msgid "Simple Compiz Config Settings Manager"
+msgstr ""
+
+msgid "gtk-close"
+msgstr "gtk-close"
+
+msgid "gtk-help"
+msgstr "gtk-help"

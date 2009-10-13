@@ -1,0 +1,212 @@
+# translation of simple-ccsm.po to Russian
+# simple-ccsm translation templete
+# Copyright (C) 2008 compiz-fusion.org
+# This file is distributed under the same license as the simple-ccsm package.
+#
+# Dimitriy Ryazantcev <DJm00n@mail.ru>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: simple-ccsm-0.8.2\n"
+"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
+"POT-Creation-Date: 2009-02-06 11:25+0530\n"
+"PO-Revision-Date: 2009-05-19 22:19+0200\n"
+"Last-Translator: Svetoslav Stefanov <lfu.project@gmail.com>\n"
+"Language-Team: Svetoslav Stefanov <lfu.project@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
+"X-Poedit-Language: Bulgarian\n"
+"X-Poedit-Country: BULGARIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Minimal"
+msgstr "Минимален"
+
+msgid "Medium"
+msgstr "Среден"
+
+msgid "Advanced"
+msgstr "Разширен"
+
+msgid "Ultimate"
+msgstr "Ултимативен"
+
+msgid "Provides a simple desktop environment with very few effects."
+msgstr "Осигурява проста работна среда с няколко ефекта."
+
+msgid "Provides good balance between attractiveness and moderate performence requirements."
+msgstr "Осигурява добър баланс между привлекателност и умерени работни изисквания."
+
+msgid "Provides more aesthetically pleasing set of effects."
+msgstr "Осигурява по-естетически приятен набор от ефекти."
+
+msgid "Provides very advanced and eye-catching set of effects. Requires faster graphics card."
+msgstr "Осигурява много модерен и привлекателен набор от ефекти. Изисква по-бърза видео карта."
+
+msgid "Enabled"
+msgstr "Включено"
+
+msgid "Disabled"
+msgstr "Отключено"
+
+msgid "Zoom"
+msgstr "Мащаб"
+
+msgid "Colorfilter"
+msgstr "Цветен филтър"
+
+msgid "None"
+msgstr "Няма"
+
+#, c-format
+msgid "%s (Cover)"
+msgstr ""
+
+#, c-format
+msgid "%s (Flip)"
+msgstr ""
+
+msgid "Cover"
+msgstr ""
+
+msgid "Flip"
+msgstr ""
+
+msgid "Desktop effects are not supported on your current hardware / configuration. Would you like to cancel enabling of desktop effects or run them anyway?"
+msgstr "Ефектите на Работния плот не се поддържат на вашата текуща хардуерна / конфигурация. Желаете ли да откажете включването им или ще ги пуснете въпреки това?"
+
+msgid "Default"
+msgstr "Стандартен"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>Достъпност</b>"
+
+msgid "<b>Additions</b>"
+msgstr "<b>Допълнения</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>Анимации</b>"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>Изглед</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Мащабиране на област</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>Затваряне на прозорец</b>"
+
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Ефекти на Куб</b>"
+
+msgid "<b>Description</b>"
+msgstr "<b>Описание</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Колони на Работния плот</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Предварителен преглед на Работния плот</b>"
+
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Редове на Работния плот</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>Работен плот</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>Ефекти</b>"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Включване на мащабиране</b>"
+
+msgid "<b>Focus window</b>"
+msgstr "<b>Фокусиране на прозорец</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>Минимизиране на прозорец</b>"
+
+msgid "<b>Open window</b>"
+msgstr "<b>Отваряне на прозорец</b>"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Краища на екрана</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Мащабиране на екрана</b>"
+
+msgid "<b>Switcher</b>"
+msgstr "<b>Превключвател</b>"
+
+msgid "Accessibility"
+msgstr "Достъпност"
+
+msgid "Animations"
+msgstr "Анимации"
+
+msgid "Area zoom"
+msgstr "Мащабиране на област"
+
+msgid "Deformation:"
+msgstr "Деформация:"
+
+msgid "Desktop"
+msgstr "Работен плот"
+
+msgid "Edges"
+msgstr "Краища"
+
+msgid "Effects"
+msgstr "Ефекти"
+
+msgid "Enable 3D Windows"
+msgstr "Включване на 3D прозорци"
+
+msgid "Enable Blur"
+msgstr "Включване на Замъгляване"
+
+msgid "Enable Expo"
+msgstr "Включване на Експо"
+
+msgid "Enable Reflection"
+msgstr "Включване на Отражение"
+
+msgid "Enable Scale"
+msgstr "Включване на Мащабиране"
+
+msgid "Enable Wobbly"
+msgstr "Включване на Треперещи прозорци"
+
+msgid "Enable animations"
+msgstr "Включване на анимации"
+
+msgid "Enable extra animations"
+msgstr "Включване на екстра анимации"
+
+msgid "Info"
+msgstr "Информация"
+
+msgid "Opacity:"
+msgstr "Плътност:"
+
+msgid "Profile:"
+msgstr "Профил:"
+
+msgid "Screen zoom"
+msgstr "Мащабиране на екрана"
+
+msgid "Simple CompizConfig Settings Manager"
+msgstr "Прост мениджър за настройки на CompizConfig"
+
+msgid "_Enable desktop effects"
+msgstr "_Включване на ефектите на работния плот"
+
+msgid "Configure Compiz with CompizConfig"
+msgstr "Настройка на Compiz с помощта на CompizConfig"
+
+#~ msgid "gtk-close"
+#~ msgstr "gtk-close"
+#~ msgid "gtk-help"
+#~ msgstr "gtk-help"
+

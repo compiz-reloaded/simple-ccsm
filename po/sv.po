@@ -1,0 +1,151 @@
+# simple-ccsm translation templete
+# Copyright (C) 2008 compiz-fusion.org
+# This file is distributed under the same license as the simple-ccsm package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.7.4\n"
+"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
+"POT-Creation-Date: 2008-04-30 20:47+0530\n"
+"PO-Revision-Date: 2008-07-15 19:56+0200\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
+
+msgid "Enabled"
+msgstr "Aktiverad"
+
+msgid "Disabled"
+msgstr "Inaktiverad"
+
+msgid "Zoom"
+msgstr "Zooma"
+
+msgid "Colorfilter"
+msgstr "Färgfilter"
+
+#, c-format
+msgid "%s (Cover)"
+msgstr "%s (Täck)"
+
+#, c-format
+msgid "%s (Flip)"
+msgstr "%s (Vänd)"
+
+msgid "Cover"
+msgstr "Täck"
+
+msgid "Flip"
+msgstr "Vänd"
+
+msgid "Default"
+msgstr "Standard"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>Tillgänglighet</b>"
+
+msgid "<b>Additions</b>"
+msgstr "<b>Tillägg</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>Animeringar</b>"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>Utseende</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Områdeszoom</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>Stäng fönster</b>"
+
+msgid "<b>Description</b>"
+msgstr "<b>Beskrivning</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Skrivbordskolumner</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Skrivbordsförhandsvisning</b>"
+
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Skrivbordsrader</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>Skrivbord</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>Effekter</b>"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Aktivera zoom</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>Minimera fönster</b>"
+
+msgid "<b>Open window</b>"
+msgstr "<b>Öppna fönster</b>"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Skärmkanter</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Skärmzoom</b>"
+
+msgid "<b>Switcher</b>"
+msgstr "<b>Växlare</b>"
+
+msgid "Accessibility"
+msgstr "Tillgänglighet"
+
+msgid "Animations"
+msgstr "Animeringar"
+
+msgid "Area zoom"
+msgstr "Områdeszoom"
+
+msgid "Desktop"
+msgstr "Skrivbord"
+
+msgid "Edges"
+msgstr "Kanter"
+
+msgid "Effects"
+msgstr "Effekter"
+
+msgid "Enable Blur"
+msgstr "Aktivera Suddighet"
+
+msgid "Enable Expo"
+msgstr "Aktivera Expo"
+
+msgid "Enable Scale"
+msgstr "Aktivera Skala"
+
+msgid "Enable Wobbly"
+msgstr "Aktivera Geléaktiga fönster"
+
+msgid "Enable animations"
+msgstr "Aktivera animeringar"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Profil:"
+msgstr "Profil:"
+
+msgid "Screen zoom"
+msgstr "Skärmzoom"
+
+msgid "Simple Compiz Config Settings Manager"
+msgstr "Enkel inställningshanterare för Compiz Config"
+
+msgid "gtk-close"
+msgstr "Stäng"
+
+msgid "gtk-help"
+msgstr "Hjälp"

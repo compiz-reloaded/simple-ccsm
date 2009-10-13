@@ -1,0 +1,151 @@
+# simple-ccsm translation templete
+# Copyright (C) 2008 compiz-fusion.org
+# This file is distributed under the same license as the simple-ccsm package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.7.4\n"
+"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
+"POT-Creation-Date: 2008-04-30 20:47+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Zoom"
+msgstr ""
+
+msgid "Colorfilter"
+msgstr ""
+
+#, c-format
+msgid "%s (Cover)"
+msgstr ""
+
+#, c-format
+msgid "%s (Flip)"
+msgstr ""
+
+msgid "Cover"
+msgstr ""
+
+msgid "Flip"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "<b>Accessibility</b>"
+msgstr ""
+
+msgid "<b>Additions</b>"
+msgstr ""
+
+msgid "<b>Animations</b>"
+msgstr ""
+
+msgid "<b>Appearance</b>"
+msgstr ""
+
+msgid "<b>Area zoom</b>"
+msgstr ""
+
+msgid "<b>Close Window</b>"
+msgstr ""
+
+msgid "<b>Description</b>"
+msgstr ""
+
+msgid "<b>Desktop columns</b>"
+msgstr ""
+
+msgid "<b>Desktop preview</b>"
+msgstr ""
+
+msgid "<b>Desktop rows</b>"
+msgstr ""
+
+msgid "<b>Desktop</b>"
+msgstr ""
+
+msgid "<b>Effects</b>"
+msgstr ""
+
+msgid "<b>Enable zoom</b>"
+msgstr ""
+
+msgid "<b>Minimize window</b>"
+msgstr ""
+
+msgid "<b>Open window</b>"
+msgstr ""
+
+msgid "<b>Screen Edges</b>"
+msgstr ""
+
+msgid "<b>Screen zoom</b>"
+msgstr ""
+
+msgid "<b>Switcher</b>"
+msgstr ""
+
+msgid "Accessibility"
+msgstr ""
+
+msgid "Animations"
+msgstr ""
+
+msgid "Area zoom"
+msgstr ""
+
+msgid "Desktop"
+msgstr ""
+
+msgid "Edges"
+msgstr ""
+
+msgid "Effects"
+msgstr ""
+
+msgid "Enable Blur"
+msgstr ""
+
+msgid "Enable Expo"
+msgstr ""
+
+msgid "Enable Scale"
+msgstr ""
+
+msgid "Enable Wobbly"
+msgstr ""
+
+msgid "Enable animations"
+msgstr ""
+
+msgid "Info"
+msgstr ""
+
+msgid "Profil:"
+msgstr ""
+
+msgid "Screen zoom"
+msgstr ""
+
+msgid "Simple Compiz Config Settings Manager"
+msgstr ""
+
+msgid "gtk-close"
+msgstr ""
+
+msgid "gtk-help"
+msgstr ""

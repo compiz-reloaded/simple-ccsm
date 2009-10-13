@@ -1,0 +1,151 @@
+# simple-ccsm translation templete
+# Copyright (C) 2008 compiz-fusion.org
+# This file is distributed under the same license as the simple-ccsm package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.7.4\n"
+"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
+"POT-Creation-Date: 2008-04-30 20:47+0530\n"
+"PO-Revision-Date: 2008-11-13 04:30+0100\n"
+"Last-Translator: Raylton P. Sousa <raylton.sousa@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
+
+msgid "Enabled"
+msgstr "Habilitado"
+
+msgid "Disabled"
+msgstr "Desabilitado"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "Colorfilter"
+msgstr "Filtro de Cor"
+
+#, c-format
+msgid "%s (Cover)"
+msgstr "%s (Cobertura)"
+
+#, c-format
+msgid "%s (Flip)"
+msgstr "%s (Sacudir)"
+
+msgid "Cover"
+msgstr "Cobertura"
+
+msgid "Flip"
+msgstr "Sacudir"
+
+msgid "Default"
+msgstr "Padrão"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>Acessibilidade</b>"
+
+msgid "<b>Additions</b>"
+msgstr "<b>Adições</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>Animações</b>"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>Aparência</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Zoom da area</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>Fechar janela</b>"
+
+msgid "<b>Description</b>"
+msgstr "<b>Descrição</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Colunas da área de trabalho</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Visualização da área de trabalho</b>"
+
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Linhas da área de trabalho</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>Área de trabalho</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>Efeitos</b>"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b> Ativar o zoom </ b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b> Minimizar janela </ b>"
+
+msgid "<b>Open window</b>"
+msgstr "<b> Abrir janela </ b>"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Bordas da tela</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Zoom da tela</b>"
+
+msgid "<b>Switcher</b>"
+msgstr "<b>Agitador</b> "
+
+msgid "Accessibility"
+msgstr "Acessibilidade"
+
+msgid "Animations"
+msgstr "Animações"
+
+msgid "Area zoom"
+msgstr "Área do zoom"
+
+msgid "Desktop"
+msgstr "Área de trabalho"
+
+msgid "Edges"
+msgstr "Bordas"
+
+msgid "Effects"
+msgstr "Efeitos "
+
+msgid "Enable Blur"
+msgstr "Habilitar Desfoque"
+
+msgid "Enable Expo"
+msgstr "Habilitar Expo "
+
+msgid "Enable Scale"
+msgstr "Habilitar Escala"
+
+msgid "Enable Wobbly"
+msgstr "Habilitar Oscilação "
+
+msgid "Enable animations"
+msgstr "Habilitar animações"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Profil:"
+msgstr "Perfil:"
+
+msgid "Screen zoom"
+msgstr "Zoom da tela"
+
+msgid "Simple Compiz Config Settings Manager"
+msgstr "Gerenciador de Configurações Simplificado do CompizConfig"
+
+msgid "gtk-close"
+msgstr "fechar-gtk "
+
+msgid "gtk-help"
+msgstr "ajuda-gtk"

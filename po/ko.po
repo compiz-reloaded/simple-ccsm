@@ -1,0 +1,151 @@
+# simple-ccsm translation templete
+# Copyright (C) 2008 compiz-fusion.org
+# This file is distributed under the same license as the simple-ccsm package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.7.4\n"
+"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
+"POT-Creation-Date: 2008-04-30 20:47+0530\n"
+"PO-Revision-Date: 2008-07-25 05:19+0200\n"
+"Last-Translator: Lee June Hee <bugbear5@gmail.com>\n"
+"Language-Team: Korean <bugbear5@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0\n"
+
+msgid "Enabled"
+msgstr "사용 가능"
+
+msgid "Disabled"
+msgstr "사용 불가능"
+
+msgid "Zoom"
+msgstr "확대"
+
+msgid "Colorfilter"
+msgstr "색깔 필터"
+
+#, c-format
+msgid "%s (Cover)"
+msgstr "%s (커버)"
+
+#, c-format
+msgid "%s (Flip)"
+msgstr "%s (플립)"
+
+msgid "Cover"
+msgstr "커버"
+
+msgid "Flip"
+msgstr "플립"
+
+msgid "Default"
+msgstr "기본"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>접근성</b>"
+
+msgid "<b>Additions</b>"
+msgstr "<b>추가 기능</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>애니메이션</b>"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>모양</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>영역 확대</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>창 닫기</b>"
+
+msgid "<b>Description</b>"
+msgstr "<b>설명</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr "<b>데스크탑 가로 갯수</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>데스크탑 미리보기</b>"
+
+msgid "<b>Desktop rows</b>"
+msgstr "<b>데스크탑 세로 갯수</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>데스크탑</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>효과</b>"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>확대 가능</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>창 최소화</b>"
+
+msgid "<b>Open window</b>"
+msgstr "<b>창 열기</b>"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>화면 모서리</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>화면 확대</b>"
+
+msgid "<b>Switcher</b>"
+msgstr "<b>스위처</b>"
+
+msgid "Accessibility"
+msgstr "접근성"
+
+msgid "Animations"
+msgstr "애니메이션"
+
+msgid "Area zoom"
+msgstr "영역 확대"
+
+msgid "Desktop"
+msgstr "데스크탑"
+
+msgid "Edges"
+msgstr "모서리"
+
+msgid "Effects"
+msgstr "효과"
+
+msgid "Enable Blur"
+msgstr "흐림 효과 켜기"
+
+msgid "Enable Expo"
+msgstr "엑스포 켜기"
+
+msgid "Enable Scale"
+msgstr "스케일 켜기"
+
+msgid "Enable Wobbly"
+msgstr "출렁이는 창 켜기"
+
+msgid "Enable animations"
+msgstr "애니메이션 켜기"
+
+msgid "Info"
+msgstr "정보"
+
+msgid "Profil:"
+msgstr "프로필:"
+
+msgid "Screen zoom"
+msgstr "화면 확대"
+
+msgid "Simple Compiz Config Settings Manager"
+msgstr "간단한 Compiz 설정 관리자"
+
+msgid "gtk-close"
+msgstr "닫기"
+
+msgid "gtk-help"
+msgstr "도움말"
