@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2009-03-24 12:32+0530\n"
-"PO-Revision-Date: 2009-03-15 14:25+0100\n"
-"Last-Translator: Alvin Meimoun <alvin.meimoun@laposte.net>\n"
+"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"PO-Revision-Date: 2009-04-24 14:30+0200\n"
+"Last-Translator: Bertrand CIROUX <bertrand.ciroux@gmail.com>\n"
 "Language-Team: C-F Language team <i18n@opencompositing.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
-msgstr "Minimum"
+msgstr "Minimal"
 
 msgid "Medium"
 msgstr "Moyen"
@@ -29,23 +29,24 @@ msgid "Ultimate"
 msgstr "Ultime"
 
 msgid "Provides a simple desktop environment with very few effects."
-msgstr "Fournit un environnement de bureau simple avec très peu d'effets."
+msgstr "Propose un environnement simple avec très peu d'effets."
 
-# Be careful ! performence -> performance in the english text
 msgid ""
 "Provides good balance between attractiveness and moderate performence "
 "requirements."
-msgstr "Fournit un bon équilibre entre attractivité et performances."
+msgstr ""
+"Propose un bon compromis entre attractivité et des besoins de performances "
+"peu élevés."
 
 msgid "Provides more aesthetically pleasing set of effects."
-msgstr "Fournit un agréable panel d'effets encore plus esthétiques."
+msgstr "Propose une série d'effets plus agréables esthétiquement."
 
 msgid ""
 "Provides very advanced and eye-catching set of effects. Requires faster "
 "graphics card."
 msgstr ""
-"Fournit un panel d'effets très avancées et attrayants. Nécessite une carte "
-"graphique performante."
+"Propose des effets très avancés et attrayants.Nécessite une carte graphique "
+"plus puissante."
 
 msgid "Enabled"
 msgstr "Activé"
@@ -81,9 +82,9 @@ msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
 "Would you like to cancel enabling of desktop effects or run them anyway?"
 msgstr ""
-"Les effets de bureau ne sont pas supportés par votre matériel / "
-"configuration. Voulez-vous annuler l'activation des effets de bureau ou les "
-"exécuter malgré tout ?"
+"Les effets du bureau ne sont pas supportés sur votre matériel / "
+"configuration actuel. Voulez-vous désactiver les effets du bureau ou voulez-"
+"vous les utiliser de toute façon ?"
 
 msgid "Default"
 msgstr "Par Défaut"
@@ -107,7 +108,7 @@ msgid "<b>Close Window</b>"
 msgstr "<b>Fermer la fenêtre</b>"
 
 msgid "<b>Cube Effects</b>"
-msgstr "<b>Effets du Cube</b>"
+msgstr "<b>Effets du cube</b>"
 
 msgid "<b>Description</b>"
 msgstr "<b>Description</b>"
@@ -130,9 +131,8 @@ msgstr "<b>Effets</b>"
 msgid "<b>Enable zoom</b>"
 msgstr "<b>Activer le Zoom</b>"
 
-#, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>Fermer la fenêtre</b>"
+msgstr "<b>Mettre la fenêtre au premier plan</b>"
 
 msgid "<b>Minimize window</b>"
 msgstr "<b>Réduire la fenêtre</b>"
@@ -172,19 +172,19 @@ msgid "Effects"
 msgstr "Effets"
 
 msgid "Enable 3D Windows"
-msgstr "Activer \"Fenêtres 3D\""
+msgstr "Activer les fenêtres 3D"
 
 msgid "Enable Blur"
-msgstr "Activer \"Blur\""
+msgstr "Activer le flou"
 
 msgid "Enable Expo"
 msgstr "Activer \"Expo\""
 
 msgid "Enable Reflection"
-msgstr "Activer \"Réflexion\""
+msgstr "Activer la réflexion"
 
 msgid "Enable Scale"
-msgstr "Activer \"Scale\""
+msgstr "Activer l'échelle"
 
 msgid "Enable Wobbly"
 msgstr "Activer \"Wobbly\""
@@ -192,6 +192,7 @@ msgstr "Activer \"Wobbly\""
 msgid "Enable animations"
 msgstr "Activer les animations"
 
+# It should be "Activer les animations supplémentaires", and all the others should be written like this (e.g. "Enable animations" -> "Activer les animations")
 msgid "Enable extra animations"
 msgstr "Activer les animations supplémentaires"
 
@@ -203,7 +204,6 @@ msgid "Opacity:"
 msgstr "Opacité:"
 
 # Mot transparent.
-#, fuzzy
 msgid "Profile:"
 msgstr "Profil:"
 
@@ -211,15 +211,15 @@ msgstr "Profil:"
 msgid "Screen zoom"
 msgstr "Zoom de l'écran"
 
-# Des doutes sur ce qui est Simple. -> Simplifié me semble plus approprié
+# C'est le gestionnaire qui est simple.
 msgid "Simple CompizConfig Settings Manager"
-msgstr "Gestionnaire Simplifié des Paramètres de Configuration de Compiz"
+msgstr "Gestionnaire de paramètres de configuration de Compiz simplifié"
 
 msgid "_Enable desktop effects"
-msgstr "_Activer les effets de bureau"
+msgstr "_Activer les effets du bureau"
 
 msgid "Configure Compiz with CompizConfig"
-msgstr "Configurer Compiz avec l'outil de configuration CompizConfig"
+msgstr "Configurer Compiz avec CompizConfig"
 
 #~ msgid "gtk-close"
 #~ msgstr "gtk-fermeture"

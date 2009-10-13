@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2009-03-24 12:32+0530\n"
-"PO-Revision-Date: 2009-02-14 01:52+0100\n"
+"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"PO-Revision-Date: 2009-05-11 05:33+0200\n"
 "Last-Translator: JING Cheng <jingcheng01@gmail.com>\n"
 "Language-Team: C-F Language team <i18n@opencompositing.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,32 +17,32 @@ msgstr ""
 "X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
-msgstr "初级"
+msgstr "最简"
 
 msgid "Medium"
-msgstr "中级"
+msgstr "中等"
 
 msgid "Advanced"
 msgstr "高级"
 
 msgid "Ultimate"
-msgstr "顶级"
+msgstr "完全"
 
 msgid "Provides a simple desktop environment with very few effects."
-msgstr "提供一个只有很少效果的简单桌面环境"
+msgstr "提供一个效果很少的的简单桌面环境。"
 
 msgid ""
 "Provides good balance between attractiveness and moderate performence "
 "requirements."
-msgstr "在炫目与适中的表现需求之间提供合理的平衡"
+msgstr "在吸引力与适度的性能需求之间提供很好的平衡。"
 
 msgid "Provides more aesthetically pleasing set of effects."
-msgstr "提供更多令人满意的审美效果设置"
+msgstr "提供更爽眼的效果集合。"
 
 msgid ""
 "Provides very advanced and eye-catching set of effects. Requires faster "
 "graphics card."
-msgstr "提供非常高级的吸引眼球的效果设置。需要更快的显示卡。"
+msgstr "提供非常高级、吸引眼球的效果集合。需要更快的显卡。"
 
 msgid "Enabled"
 msgstr "已启用"
@@ -76,9 +76,7 @@ msgstr "翻阅式"
 msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
 "Would you like to cancel enabling of desktop effects or run them anyway?"
-msgstr ""
-"您现在的硬件/配置不支持现在的桌面设置。您希望取消现有的桌面效果或者是仍然使用"
-"它们？"
+msgstr "你当前的硬件/配置并不支持桌面特效。你想取消启用桌面特效，或者仍然运行它们？"
 
 msgid "Default"
 msgstr "默认"
@@ -165,7 +163,7 @@ msgid "Effects"
 msgstr "特效"
 
 msgid "Enable 3D Windows"
-msgstr "启用3D窗口"
+msgstr "启用3D桌面"
 
 msgid "Enable Blur"
 msgstr "启用朦胧"
@@ -185,7 +183,6 @@ msgstr "启用震颤"
 msgid "Enable animations"
 msgstr "启用动画特效"
 
-# 启用额外的动画特效
 msgid "Enable extra animations"
 msgstr "启用附加动画特效"
 
@@ -193,7 +190,7 @@ msgid "Info"
 msgstr "信息"
 
 msgid "Opacity:"
-msgstr "透明度："
+msgstr "不透明度："
 
 msgid "Profile:"
 msgstr "配置文件："
@@ -205,10 +202,10 @@ msgid "Simple CompizConfig Settings Manager"
 msgstr "简化版CompizConfig设置管理器"
 
 msgid "_Enable desktop effects"
-msgstr "_启用桌面效果"
+msgstr "启用桌面特效"
 
 msgid "Configure Compiz with CompizConfig"
-msgstr "使用CompizConfig来配置Compiz"
+msgstr "使用CompizConfig配置Compiz"
 
 #~ msgid "gtk-close"
 #~ msgstr "关闭"

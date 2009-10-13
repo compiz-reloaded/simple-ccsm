@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Compiz\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2009-03-24 12:32+0530\n"
-"PO-Revision-Date: 2009-03-21 14:37+0100\n"
-"Last-Translator: Gabriel Ferreiro Blazetic <gbril9119@gmail.com>\n"
+"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"PO-Revision-Date: 2009-07-07 04:08+0200\n"
+"Last-Translator: Franco Guevara <francoa.bartalotta@gmail.com>\n"
 "Language-Team: C-F Language team <i18n@opencompositing.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,25 +26,27 @@ msgid "Advanced"
 msgstr "Avanzado"
 
 msgid "Ultimate"
-msgstr "Definitivo"
+msgstr "Máximo"
 
 msgid "Provides a simple desktop environment with very few effects."
-msgstr "Provee un ambiente de escritorio simple con algunos efectos."
+msgstr "Provee un ambiente de escritorio con muy pocos efectos."
 
 msgid ""
 "Provides good balance between attractiveness and moderate performence "
 "requirements."
 msgstr ""
-"Provee un buen balance entre atractivo y requerimientos moderados de "
-"funcionamiento."
+"Provee un buen equilibrio entre atractivo y requisitos de rendimiento "
+"moderados."
 
 msgid "Provides more aesthetically pleasing set of effects."
-msgstr ""
+msgstr "Provee efectos más estéticamente agradables."
 
 msgid ""
 "Provides very advanced and eye-catching set of effects. Requires faster "
 "graphics card."
 msgstr ""
+"Provee una serie de efectos muy avanzados y llamativos. Requiere un "
+"adaptador de video más rápido."
 
 msgid "Enabled"
 msgstr "Activado"
@@ -79,6 +81,9 @@ msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
 "Would you like to cancel enabling of desktop effects or run them anyway?"
 msgstr ""
+"Efectos visuales no soportados por su actual hardware / configuración. ¿Le "
+"gustaría cancelar la activación de los efectos de escritorio o ejecutarlos "
+"de todos modos?"
 
 msgid "Default"
 msgstr "Por defecto"
@@ -103,9 +108,8 @@ msgstr "<b>Zoom de área</b>"
 msgid "<b>Close Window</b>"
 msgstr "<b>Cerrar ventana</b>"
 
-#, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr "<b>Efectos</b>"
+msgstr "<b>Efectos del Cubo</b>"
 
 msgid "<b>Description</b>"
 msgstr "<b>Descripción</b>"
@@ -128,9 +132,8 @@ msgstr "<b>Efectos</b>"
 msgid "<b>Enable zoom</b>"
 msgstr "<b>Activar zoom</b>"
 
-#, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>Cerrar ventana</b>"
+msgstr "<b>Enfocar ventana</b>"
 
 msgid "<b>Minimize window</b>"
 msgstr "<b>Minimizar ventana</b>"
@@ -171,9 +174,8 @@ msgstr "Efectos"
 
 # Gelatinoso, gelatinosa, depende del contexto.
 # berylog: ¿y por qué no: "Activar Ventanas Gelatinosas"?
-#, fuzzy
 msgid "Enable 3D Windows"
-msgstr "Activar Ventanas Gelatinosas"
+msgstr "Activar Ventanas 3D"
 
 # Habilitar emborronado, dispersión
 msgid "Enable Blur"
@@ -182,13 +184,12 @@ msgstr "Habilitar difuminado"
 msgid "Enable Expo"
 msgstr "Activar Expo"
 
-#, fuzzy
 msgid "Enable Reflection"
-msgstr "Activar Animaciones"
+msgstr "Activar Reflejo"
 
 # berylog: Si es "Enable Scale" debería ser "Activar Escala" en lugar de "Activar escala"
 msgid "Enable Scale"
-msgstr "Activar Escala"
+msgstr "Activar Escalar"
 
 # Gelatinoso, gelatinosa, depende del contexto.
 # berylog: ¿y por qué no: "Activar Ventanas Gelatinosas"?
@@ -196,11 +197,10 @@ msgid "Enable Wobbly"
 msgstr "Activar Ventanas Gelatinosas"
 
 msgid "Enable animations"
-msgstr "Activar Animaciones"
+msgstr "Activar animaciones"
 
-#, fuzzy
 msgid "Enable extra animations"
-msgstr "Activar Animaciones"
+msgstr "Activar animaciones extras"
 
 msgid "Info"
 msgstr "Info"
@@ -208,19 +208,17 @@ msgstr "Info"
 msgid "Opacity:"
 msgstr "Opacidad:"
 
-#, fuzzy
 msgid "Profile:"
 msgstr "Perfil:"
 
 msgid "Screen zoom"
 msgstr "Zoom de la pantalla"
 
-#, fuzzy
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Administrador Simple de Configuraciones de Compiz"
 
 msgid "_Enable desktop effects"
-msgstr ""
+msgstr "_Activar Effectos de Escritorio"
 
 msgid "Configure Compiz with CompizConfig"
 msgstr "Configurar Compiz con CompizConfig"

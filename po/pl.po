@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2009-03-24 12:32+0530\n"
-"PO-Revision-Date: 2008-06-18 22:51+0200\n"
-"Last-Translator: Michal Kaluzniak <the_hooltay@o2.pl>\n"
+"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"PO-Revision-Date: 2009-04-14 19:38+0200\n"
+"Last-Translator: Maciej Warnecki <maciekw5@gmail.com>\n"
 "Language-Team: C-F Language team <i18n@opencompositing.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,32 +17,36 @@ msgstr ""
 "X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
-msgstr ""
+msgstr "Minimalny"
 
 msgid "Medium"
-msgstr ""
+msgstr "Średni"
 
 msgid "Advanced"
-msgstr ""
+msgstr "Zaawansowany"
 
 msgid "Ultimate"
-msgstr ""
+msgstr "Ekstremalny"
 
 msgid "Provides a simple desktop environment with very few effects."
-msgstr ""
+msgstr "Zapewnia proste środowisko pulpitu z niewieloma efektami."
 
 msgid ""
 "Provides good balance between attractiveness and moderate performence "
 "requirements."
 msgstr ""
+"Zapewnia równowagę pomiędzy atrakcyjnością i umiarkowanymi wymaganiami "
+"odnośnie wydajności."
 
 msgid "Provides more aesthetically pleasing set of effects."
-msgstr ""
+msgstr "Zapewnia zestaw bardziej zaawansowanych graficznie efektów."
 
 msgid ""
 "Provides very advanced and eye-catching set of effects. Requires faster "
 "graphics card."
 msgstr ""
+"Zapewnia najwidoczniejsze i najbardziej złożone efekty graficzne. Wymaga "
+"wydajnej karty graficznej."
 
 msgid "Enabled"
 msgstr "Włączone"
@@ -57,7 +61,7 @@ msgid "Colorfilter"
 msgstr "Filtr kolorów"
 
 msgid "None"
-msgstr ""
+msgstr "Brak"
 
 #, c-format
 msgid "%s (Cover)"
@@ -77,6 +81,8 @@ msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
 "Would you like to cancel enabling of desktop effects or run them anyway?"
 msgstr ""
+"Efekty pulpitu nie są wspierane przez aktualną / konfigurację sprzętową. Czy "
+"chciałbyś anulować włączenie tych efektów czy uruchomić je mimo to?"
 
 msgid "Default"
 msgstr "Domyślne"
@@ -99,9 +105,8 @@ msgstr "<b>Przybliżenie obszaru</b>"
 msgid "<b>Close Window</b>"
 msgstr "<b>Zamknij Okno</b>"
 
-#, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr "<b>Efekty</b>"
+msgstr "<b>Efekty kostki</b>"
 
 msgid "<b>Description</b>"
 msgstr "<b>Opis</b>"
@@ -124,9 +129,8 @@ msgstr "<b>Efekty</b>"
 msgid "<b>Enable zoom</b>"
 msgstr "<b>Włącz przybliżenie</b>"
 
-#, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>Zamknij Okno</b>"
+msgstr "<b>Wybranie Okna</b>"
 
 msgid "<b>Minimize window</b>"
 msgstr "<b>Minimalizuj okno</b>"
@@ -153,7 +157,7 @@ msgid "Area zoom"
 msgstr "Przybliżenie obszaru"
 
 msgid "Deformation:"
-msgstr ""
+msgstr "Deformacja:"
 
 msgid "Desktop"
 msgstr "Pulpit"
@@ -164,9 +168,8 @@ msgstr "Krawędzie"
 msgid "Effects"
 msgstr "Efekty"
 
-#, fuzzy
 msgid "Enable 3D Windows"
-msgstr "Włącz trzęsące się okna"
+msgstr "Włącz okna 3D"
 
 msgid "Enable Blur"
 msgstr "Włącz rozmycie"
@@ -174,46 +177,44 @@ msgstr "Włącz rozmycie"
 msgid "Enable Expo"
 msgstr "Włącz Expo"
 
-#, fuzzy
 msgid "Enable Reflection"
-msgstr "Włącz animacje"
+msgstr "Włącz odbicia"
 
-# ta nazwa nie jest tak do konca szczesliwa, ale w koncu o to chodzi w tym pluginie
+# 1)ta nazwa nie jest tak do konca szczesliwa, ale w koncu o to chodzi w tym pluginie
+# 
+# 2) (późniejsze) Szybki Wybór i tak dużo lepsze niż Scale... Kiedyś ten plugin był tłumaczony jako Skaluj, to dopiero miało sens!
 msgid "Enable Scale"
-msgstr "Włącz Szybki Wybór Okien"
+msgstr "Włącz Szybki Wybór okien"
 
 msgid "Enable Wobbly"
-msgstr "Włącz trzęsące się okna"
+msgstr "Włącz drgające okna"
 
 msgid "Enable animations"
 msgstr "Włącz animacje"
 
-#, fuzzy
 msgid "Enable extra animations"
-msgstr "Włącz animacje"
+msgstr "Włącz dodatkowe animacje"
 
 msgid "Info"
 msgstr "Informacje"
 
 msgid "Opacity:"
-msgstr ""
+msgstr "Nieprzezroczystość:"
 
-#, fuzzy
 msgid "Profile:"
 msgstr "Profil:"
 
 msgid "Screen zoom"
 msgstr "Przybliżenie ekranu"
 
-#, fuzzy
 msgid "Simple CompizConfig Settings Manager"
-msgstr "Menadżer ustawień Simple Compiz Config"
+msgstr "Menadżer ustawień Simple CompizConfig"
 
 msgid "_Enable desktop effects"
-msgstr ""
+msgstr "_Włącz efekty pulpitu"
 
 msgid "Configure Compiz with CompizConfig"
-msgstr ""
+msgstr "Konfiguruj Compiza za pomocą CompizConfig"
 
 #~ msgid "gtk-close"
 #~ msgstr "gtk-zamknij"

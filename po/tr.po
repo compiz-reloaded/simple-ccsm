@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2009-03-24 12:32+0530\n"
-"PO-Revision-Date: 2009-03-08 00:48+0100\n"
-"Last-Translator: Gürkan Gür <seqizz@gmail.com>\n"
+"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"PO-Revision-Date: 2009-05-17 02:32+0200\n"
+"Last-Translator: Levent Mukan <lmukan@gmail.com>\n"
 "Language-Team: <yerellestirme@kde.org.tr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,19 +18,19 @@ msgstr ""
 "X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
-msgstr "En düşük"
+msgstr ""
 
 msgid "Medium"
-msgstr "Orta"
+msgstr ""
 
 msgid "Advanced"
-msgstr "Gelişmiş"
+msgstr ""
 
 msgid "Ultimate"
-msgstr "İleri Seviye"
+msgstr ""
 
 msgid "Provides a simple desktop environment with very few effects."
-msgstr "Oldukça az canlandırma ile gayet sade bir masaüstü sunar."
+msgstr ""
 
 msgid ""
 "Provides good balance between attractiveness and moderate performence "
@@ -38,26 +38,26 @@ msgid ""
 msgstr ""
 
 msgid "Provides more aesthetically pleasing set of effects."
-msgstr "Göze daha fazla hitap eden bir masaüstü sunar."
+msgstr ""
 
 msgid ""
 "Provides very advanced and eye-catching set of effects. Requires faster "
 "graphics card."
 msgstr ""
-"Çok gelişmiş ve çok fazla canlandırmalı bir masaüstü sunar. Güçlü bir ekran "
-"kartı gerektirir."
 
+#, fuzzy
 msgid "Enabled"
-msgstr "Etkinleştirildi"
+msgstr "Renk Filtresini Etkinleştir"
 
 msgid "Disabled"
-msgstr "Pasifleştirildi"
+msgstr ""
 
 msgid "Zoom"
 msgstr ""
 
+#, fuzzy
 msgid "Colorfilter"
-msgstr "Renk Filtresi"
+msgstr "Renk Filtresini Yapılandır"
 
 msgid "None"
 msgstr "Hiçbiri"
@@ -74,7 +74,7 @@ msgid "Cover"
 msgstr ""
 
 msgid "Flip"
-msgstr ""
+msgstr "Çevir"
 
 msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
@@ -82,81 +82,92 @@ msgid ""
 msgstr ""
 
 msgid "Default"
-msgstr "Öntanımlı"
+msgstr "Varsayılan"
 
+#, fuzzy
 msgid "<b>Accessibility</b>"
-msgstr "<b>Erişilebilirlik:</b>"
+msgstr "<b>Erişebilirlik:</b>"
 
 #, fuzzy
 msgid "<b>Additions</b>"
-msgstr "<b>Eklemeler:</b>"
+msgstr "<b>Canlandırmalar:</b>"
 
+#, fuzzy
 msgid "<b>Animations</b>"
 msgstr "<b>Canlandırmalar:</b>"
 
+#, fuzzy
 msgid "<b>Appearance</b>"
 msgstr "<b>Görünüm</b>"
 
 msgid "<b>Area zoom</b>"
-msgstr "<b>Alan Yakınlaştırması</b>"
+msgstr ""
 
 msgid "<b>Close Window</b>"
 msgstr "<b>Pencereyi Kapat</b>"
 
 msgid "<b>Cube Effects</b>"
-msgstr "<b>Küp Canlandırmaları</b>"
+msgstr "<b>Küp Efektleri</b>"
 
+#, fuzzy
 msgid "<b>Description</b>"
-msgstr "<b>Tanım</b>"
+msgstr "<b>Masaüstü:</b>"
 
+#, fuzzy
 msgid "<b>Desktop columns</b>"
-msgstr "<b>Masaüstü sütunları</b>"
+msgstr "<b>Masaüstü:</b>"
 
+#, fuzzy
 msgid "<b>Desktop preview</b>"
-msgstr "<b>Masaüstü önizlemesi</b>"
+msgstr "Masaüstü Önizlemesi"
 
 #, fuzzy
 msgid "<b>Desktop rows</b>"
-msgstr "<b>Masaüstü sıraları</b>"
+msgstr "<b>Masaüstü:</b>"
 
+#, fuzzy
 msgid "<b>Desktop</b>"
-msgstr "<b>Masaüstü</b>"
+msgstr "<b>Masaüstü:</b>"
 
+#, fuzzy
 msgid "<b>Effects</b>"
-msgstr "<b>Canlandırmalar</b>"
+msgstr "<b>Efektler:</b>"
 
+#, fuzzy
 msgid "<b>Enable zoom</b>"
-msgstr "<b>Yakınlaştırmayı etkinleştir</b>"
+msgstr "Renk Filtresini Etkinleştir"
 
 msgid "<b>Focus window</b>"
 msgstr ""
 
+#, fuzzy
 msgid "<b>Minimize window</b>"
-msgstr "<b>Pencereyi küçült</b>"
+msgstr "<b>Canlandırmalar:</b>"
 
 msgid "<b>Open window</b>"
-msgstr "<b>Pencere aç</b>"
+msgstr ""
 
 msgid "<b>Screen Edges</b>"
-msgstr "<b>Ekran kenarları</b>"
+msgstr ""
 
 msgid "<b>Screen zoom</b>"
-msgstr "<b>Ekran yakınlaştırması</b>"
+msgstr ""
 
 msgid "<b>Switcher</b>"
 msgstr ""
 
+#, fuzzy
 msgid "Accessibility"
-msgstr "Erişilebilirlik"
+msgstr "Erişebilirlik"
 
 msgid "Animations"
 msgstr "Canlandırmalar"
 
 msgid "Area zoom"
-msgstr "Bölge yakınlaştırması"
+msgstr ""
 
 msgid "Deformation:"
-msgstr "Bozulma:"
+msgstr ""
 
 msgid "Desktop"
 msgstr "Masaüstü"
@@ -164,53 +175,62 @@ msgstr "Masaüstü"
 msgid "Edges"
 msgstr "Kenarlar"
 
+#, fuzzy
 msgid "Effects"
-msgstr "Canlandırmalar"
+msgstr "<b>Efektler:</b>"
 
 msgid "Enable 3D Windows"
-msgstr "3B Pencereleri Etkinleştir"
-
-msgid "Enable Blur"
-msgstr "Bulanıklığı Etkinleştir"
-
-msgid "Enable Expo"
 msgstr ""
 
+#, fuzzy
+msgid "Enable Blur"
+msgstr "Renk Filtresini Etkinleştir"
+
+#, fuzzy
+msgid "Enable Expo"
+msgstr "Renk Filtresini Etkinleştir"
+
+#, fuzzy
 msgid "Enable Reflection"
-msgstr "Yansımayı Etkinleştir"
+msgstr "Büyütmeyi Etkinleştir"
 
 msgid "Enable Scale"
-msgstr "Boyutlandırmayı Etkinleştir"
+msgstr ""
 
 msgid "Enable Wobbly"
-msgstr "Sallanmayı Etkinleştir"
+msgstr ""
 
+#, fuzzy
 msgid "Enable animations"
 msgstr "Canlandırmaları Etkinleştir"
 
+#, fuzzy
 msgid "Enable extra animations"
-msgstr "Daha Fazla Canlandırmayı Etkinleştir"
+msgstr "Canlandırmaları Etkinleştir"
 
 msgid "Info"
-msgstr "Bilgi"
+msgstr ""
 
 msgid "Opacity:"
-msgstr "Şeffaflık:"
+msgstr ""
 
+#, fuzzy
 msgid "Profile:"
-msgstr "Profil:"
+msgstr "Profil"
 
 msgid "Screen zoom"
-msgstr "Ekran yakınlaştırması"
+msgstr ""
 
+#, fuzzy
 msgid "Simple CompizConfig Settings Manager"
-msgstr "Basit Compiz Ayarları Yöneticisi"
+msgstr "Basit Compiz Yapılandırma Ayarları Yöneticisi"
 
+#, fuzzy
 msgid "_Enable desktop effects"
-msgstr "Masaüstü canlandırmalarını _etkinleştir"
+msgstr "Büyütmeyi Etkinleştir"
 
 msgid "Configure Compiz with CompizConfig"
-msgstr "Compiz Ayar Yöneticisi ile düzenle"
+msgstr ""
 
 #~ msgid "Close Animation"
 #~ msgstr "Canlandırmayı Kapat"

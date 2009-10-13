@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2009-03-24 12:32+0530\n"
-"PO-Revision-Date: 2008-11-06 02:08+0100\n"
+"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"PO-Revision-Date: 2009-03-30 09:26+0200\n"
 "Last-Translator: Jim Dusis <jimdusis@yahoo.gr>\n"
 "Language-Team: C-F Language team <i18n@opencompositing.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,32 +17,36 @@ msgstr ""
 "X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
-msgstr ""
+msgstr "Ελάχιστο"
 
 msgid "Medium"
-msgstr ""
+msgstr "Μεσαίο"
 
 msgid "Advanced"
-msgstr ""
+msgstr "Προχωρημένο"
 
 msgid "Ultimate"
-msgstr ""
+msgstr "Απόλυτο"
 
 msgid "Provides a simple desktop environment with very few effects."
-msgstr ""
+msgstr "Παρέχει ένα απλό περιβάλλον επιφάνειας εργασίας με πολύ λίγα εφέ."
 
 msgid ""
 "Provides good balance between attractiveness and moderate performence "
 "requirements."
 msgstr ""
+"Παρέχει μια καλή ισορροπία μεταξύ ελκυστικότητας κ μέτριων απαιτήσεων "
+"απόδοσης."
 
 msgid "Provides more aesthetically pleasing set of effects."
-msgstr ""
+msgstr "Παρέχει ενα πιο ευχάριστο αισθητικά σετ εφέ."
 
 msgid ""
 "Provides very advanced and eye-catching set of effects. Requires faster "
 "graphics card."
 msgstr ""
+"Παρέχει ένα πολύ προχωρημένο και εντυπωσιακό σετ εφέ.Απαιτεί γρηγορότερη "
+"κάρτα γραφικών."
 
 msgid "Enabled"
 msgstr "Ενεργοποιημένο"
@@ -57,7 +61,7 @@ msgid "Colorfilter"
 msgstr "Φίλτρο χρώματος"
 
 msgid "None"
-msgstr ""
+msgstr "Κανένα"
 
 #, c-format
 msgid "%s (Cover)"
@@ -77,6 +81,9 @@ msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
 "Would you like to cancel enabling of desktop effects or run them anyway?"
 msgstr ""
+"Τα εφέ επιφάνειας εργασίας δεν υποστηρίζονται στο τρέχον υλικό σας / "
+"ρύθμιση. Θα θέλατε να ακυρώσετε την ενεργοποίηση των εφέ επιφάνειας εργασίας "
+"ή να τα τρέξετε ούτως ή άλλως?"
 
 msgid "Default"
 msgstr "Προεπιλογή"
@@ -99,9 +106,8 @@ msgstr "<b>Περιοχή ζουμαρίσματος</b>"
 msgid "<b>Close Window</b>"
 msgstr "<b>Κλείσιμο Παραθύρου</b>"
 
-#, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr "<b>Εφέ</b>"
+msgstr "<b>Εφέ Κύβου</b>"
 
 msgid "<b>Description</b>"
 msgstr "<b>Περιγραφή</b>"
@@ -124,9 +130,8 @@ msgstr "<b>Εφέ</b>"
 msgid "<b>Enable zoom</b>"
 msgstr "<b>Ενεργοποίηση ζουμ</b>"
 
-#, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>Κλείσιμο Παραθύρου</b>"
+msgstr "<b>Εστίαση Παραθύρου</b>"
 
 msgid "<b>Minimize window</b>"
 msgstr "<b>Ελαχιστοποίηση παραθύρου</b>"
@@ -153,7 +158,7 @@ msgid "Area zoom"
 msgstr "Περιοχή ζουμαρίσματος"
 
 msgid "Deformation:"
-msgstr ""
+msgstr "Παραμόρφωση:"
 
 msgid "Desktop"
 msgstr "Επιφάνεια εργασίας"
@@ -164,9 +169,8 @@ msgstr "Άκρες"
 msgid "Effects"
 msgstr "Εφέ"
 
-#, fuzzy
 msgid "Enable 3D Windows"
-msgstr "Ενεργοποίηση Wobbly"
+msgstr "Ενεργοποίηση Τρισδιάστατων Παραθύρων"
 
 msgid "Enable Blur"
 msgstr "Ενεργοποίηση Θολώματος"
@@ -174,9 +178,8 @@ msgstr "Ενεργοποίηση Θολώματος"
 msgid "Enable Expo"
 msgstr "Ενεργοποίηση Expo"
 
-#, fuzzy
 msgid "Enable Reflection"
-msgstr "Ενεργοποίηση γραφικών απεικονίσεων"
+msgstr "Ενεργοποίηση Αντανάκλασης"
 
 msgid "Enable Scale"
 msgstr "Ενεργοποίηση Κλιμάκωσης"
@@ -187,32 +190,29 @@ msgstr "Ενεργοποίηση Wobbly"
 msgid "Enable animations"
 msgstr "Ενεργοποίηση γραφικών απεικονίσεων"
 
-#, fuzzy
 msgid "Enable extra animations"
-msgstr "Ενεργοποίηση γραφικών απεικονίσεων"
+msgstr "Ενεργοποίηση έξτρα γραφικών απεικονίσεων"
 
 msgid "Info"
 msgstr "Πληροφορίες"
 
 msgid "Opacity:"
-msgstr ""
+msgstr "Αδιαφάνεια:"
 
-#, fuzzy
 msgid "Profile:"
 msgstr "Προφίλ:"
 
 msgid "Screen zoom"
 msgstr "Ζουμ οθόνης"
 
-#, fuzzy
 msgid "Simple CompizConfig Settings Manager"
-msgstr "Απλός Διαχειριστής Ρυθμίσεων του Compiz"
+msgstr "Απλός Διαχειριστής Ρυθμίσεων του CompizConfig"
 
 msgid "_Enable desktop effects"
-msgstr ""
+msgstr "_Εναργοποίηση των εφέ επιφάνειας εργασίας"
 
 msgid "Configure Compiz with CompizConfig"
-msgstr ""
+msgstr "Ρύθμιση του Compiz με το CompizConfig"
 
 #~ msgid "gtk-close"
 #~ msgstr "κλείσιμο-gtk"

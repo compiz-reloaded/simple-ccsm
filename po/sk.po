@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
 "Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
-"POT-Creation-Date: 2009-03-24 12:32+0530\n"
-"PO-Revision-Date: 2008-12-14 09:07+0100\n"
+"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"PO-Revision-Date: 2009-08-09 17:39+0200\n"
 "Last-Translator: Brusnica P <pepino@pobox.sk>\n"
 "Language-Team: C-F Language team <i18n@opencompositing.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,32 +17,35 @@ msgstr ""
 "X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
-msgstr ""
+msgstr "Minimálne"
 
 msgid "Medium"
-msgstr ""
+msgstr "Stredné"
 
 msgid "Advanced"
-msgstr ""
+msgstr "Rozšírené"
 
 msgid "Ultimate"
-msgstr ""
+msgstr "Maximálne"
 
+#, fuzzy
 msgid "Provides a simple desktop environment with very few effects."
-msgstr ""
+msgstr "Poskytuje jednoduché desktopové prostredie s niekoľkými efektami."
 
 msgid ""
 "Provides good balance between attractiveness and moderate performence "
 "requirements."
-msgstr ""
+msgstr "Poskytuje dobré vyváženie medzi aktraktivitou a požiadavkami výkonu."
 
 msgid "Provides more aesthetically pleasing set of effects."
-msgstr ""
+msgstr "Poskytuje súbor efektov pre väčší estetický pôžitok."
 
 msgid ""
 "Provides very advanced and eye-catching set of effects. Requires faster "
 "graphics card."
 msgstr ""
+"Poskytuje rozšírený súbor efektov pre príťažlivosť prostredia. Vyžaduje "
+"rýchlejšiu grafickú kartu."
 
 msgid "Enabled"
 msgstr "Zapnutý"
@@ -57,7 +60,7 @@ msgid "Colorfilter"
 msgstr "Farebný filter"
 
 msgid "None"
-msgstr ""
+msgstr "Žiadne"
 
 #, c-format
 msgid "%s (Cover)"
@@ -77,6 +80,8 @@ msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
 "Would you like to cancel enabling of desktop effects or run them anyway?"
 msgstr ""
+"Efekty nie sú podporované na Vašom súčasnom hardvéri/konfigurácii. Prajete "
+"si zrušiť zapnuté efekty, alebo ich chcete zapnúť aj napriek upozorneniu?"
 
 msgid "Default"
 msgstr "Implicitné"
@@ -99,9 +104,8 @@ msgstr "<b>Oblasť priblíženia</b>"
 msgid "<b>Close Window</b>"
 msgstr "<b>Zavrieť okno</b>"
 
-#, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr "<b>Efekty</b>"
+msgstr "<b>Efekty kocky</b>"
 
 msgid "<b>Description</b>"
 msgstr "<b>Popis</b>"
@@ -124,9 +128,8 @@ msgstr "<b>Efekty</b>"
 msgid "<b>Enable zoom</b>"
 msgstr "<b>Zapnúť priblíženie</b>"
 
-#, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>Zavrieť okno</b>"
+msgstr "<b>Zaostriť okno</b>"
 
 msgid "<b>Minimize window</b>"
 msgstr "<b>Minimalizovať okno</b>"
@@ -153,7 +156,7 @@ msgid "Area zoom"
 msgstr "Oblasť priblíženia"
 
 msgid "Deformation:"
-msgstr ""
+msgstr "Deformácia:"
 
 msgid "Desktop"
 msgstr "Plocha"
@@ -164,9 +167,8 @@ msgstr "Okraje"
 msgid "Effects"
 msgstr "Efekty"
 
-#, fuzzy
 msgid "Enable 3D Windows"
-msgstr "Zapnúť trasľavosť"
+msgstr "Zapnúť 3D okná"
 
 msgid "Enable Blur"
 msgstr "Zapnúť rozmazanie"
@@ -174,9 +176,8 @@ msgstr "Zapnúť rozmazanie"
 msgid "Enable Expo"
 msgstr "Zapnúť výstavu"
 
-#, fuzzy
 msgid "Enable Reflection"
-msgstr "Zapnúť animácie"
+msgstr "Zapnúť zrkadlenie"
 
 msgid "Enable Scale"
 msgstr "Zapnúť rozsah"
@@ -187,32 +188,30 @@ msgstr "Zapnúť trasľavosť"
 msgid "Enable animations"
 msgstr "Zapnúť animácie"
 
-#, fuzzy
 msgid "Enable extra animations"
-msgstr "Zapnúť animácie"
+msgstr "Zapnúť extra animácie"
 
 msgid "Info"
 msgstr "Informácie"
 
-msgid "Opacity:"
-msgstr ""
-
 #, fuzzy
+msgid "Opacity:"
+msgstr "Nejasnosť"
+
 msgid "Profile:"
 msgstr "Profil :"
 
 msgid "Screen zoom"
 msgstr "Zväčšiť obrazovku"
 
-#, fuzzy
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Jednoduchý Compiz Config Manažér Nastavení"
 
 msgid "_Enable desktop effects"
-msgstr ""
+msgstr "_Zapnúť efekty plochy"
 
 msgid "Configure Compiz with CompizConfig"
-msgstr ""
+msgstr "Konfigurovať Compiz pomocou CompizConfig"
 
 #~ msgid "gtk-close"
 #~ msgstr "gtk-zavrieť"
