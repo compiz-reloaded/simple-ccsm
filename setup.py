@@ -97,8 +97,8 @@ if not prefix and "PREFIX" in os.environ:
 if not prefix or not len (prefix):
     prefix = "/usr/local"
 
-#if sys.argv[1] in ("install", "uninstall") and len (prefix):
-#    sys.argv += ["--prefix", prefix]
+if sys.argv[1] in ("install", "uninstall") and len (prefix):
+    sys.argv += ["--prefix", prefix]
 
 version_file = open ("VERSION", "r")
 version = version_file.read ().strip ()
