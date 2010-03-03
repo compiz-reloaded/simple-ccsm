@@ -43,6 +43,7 @@ DataDir = '@prefix@/share/simple-ccsm/'
 
 # Switcher keybinding
 SwitcherKey = "<Alt>Tab"
+ReverseSwitcherKey = "<Shift><Alt>Tab"
 
 # Since there seems no way to get the untranslated names,
 # we need to keep a list here.
@@ -693,6 +694,7 @@ class EffectPage:
     def UpdateSwitcherPlugins(self):
         self.SwitcherPlugins = {}
         self.SwitcherKeySettings = {}
+        self.ReverseSwitcherKeySettings = {}
         for pluginName in ('switcher', 'shift', 'ring', 'staticswitcher', 'stackswitch'):
             if pluginName in self.Context.Plugins:
                 plugin = self.Context.Plugins[pluginName]
@@ -705,6 +707,9 @@ class EffectPage:
 
                 setting = plugin.Display['next_key']
                 self.SwitcherKeySettings[pluginName] = setting
+                setting = plugin.Display['prev_key']
+                self.ReverseSwitcherKeySettings[pluginName] = setting
+
 
     def EffectPluginChanged(self, widget):
         if self.Block > 0:
@@ -737,6 +742,9 @@ class EffectPage:
                 setting = self.SwitcherKeySettings[plugin.Name]
                 if not setting.IsDefault and setting.DefaultValue != SwitcherKey:
                     setting.Reset()
+                setting = self.ReverseSwitcherKeySettings[plugin.Name]
+                if not setting.IsDefault and setting.DefaultValue != ReverseSwitcherKey:
+                    setting.Reset()
 
         self.Context.Write()
 
@@ -752,6 +760,12 @@ class EffectPage:
         conflict = ccm.KeyConflict(setting, SwitcherKey, settings=settings, autoResolve=True)
         if conflict.Resolve(ccm.GlobalUpdater):
             setting.Value = SwitcherKey
+
+            setting = self.ReverseSwitcherKeySettings[plugin.Name]
+            settings = self.ReverseSwitcherKeySettings.values()
+            conflict = ccm.KeyConflict(setting, SwitcherKey, settings=settings, autoResolve=True)
+            if conflict.Resolve(ccm.GlobalUpdater):
+                setting.Value = ReverseSwitcherKey
 
             # Exception for shift, since it has 2 modes
             if plugin.Name == 'shift':
