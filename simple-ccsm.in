@@ -185,9 +185,9 @@ CompizName = "compiz"
 
 # Change to your default
 CompizEnableDesktopEffects = @enable_desktop_effects@
-CompizStartCommand = "compiz-manager"
+CompizStartCommand = "compiz-manager --replace"
 CompizDryRunCommand = "CM_DRY=yes compiz-manager"
-CompizNoChecksCommand = "SKIP_CHECKS=yes compiz-manager"
+CompizNoChecksCommand = "SKIP_CHECKS=yes compiz-manager --replace"
 GnomeSession = "GNOME_DESKTOP_SESSION_ID"
 KdeSession = "KDE_FULL_SESSION"
 
