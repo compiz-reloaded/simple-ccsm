@@ -1323,7 +1323,10 @@ class MainWin:
 
             # Reset window manager config for KDE
             cmd = "kwriteconfig --file ksmserverrc --group General --key windowManager kwin".split(" ")
-            subprocess.Popen(cmd)
+            try:
+                subprocess.Popen(cmd)
+            except (IOError, OSError):
+                pass
 
             # Remove old config
             files = ("~/.config/compiz/enable-compiz", "~/.config/compiz/compiz-manager")
