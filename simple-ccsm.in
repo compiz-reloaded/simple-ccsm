@@ -192,6 +192,25 @@ GnomeSession = "GNOME_DESKTOP_SESSION_ID"
 KdeSession = "KDE_FULL_SESSION"
 
 # Utility Functions
+def GetXdgConfigHome(subdir):
+    if 'XDG_CONFIG_HOME' in os.environ and os.environ['XDG_CONFIG_HOME']:
+        xdg = os.path.expanduser(os.environ['XDG_CONFIG_HOME'])
+    else:
+        xdg = os.path.expanduser('~/.config')
+
+    if subdir:
+        ret = os.path.join(xdg, subdir)
+    else:
+        ret = xdg
+
+    # create the directory if it's not there
+    try:
+        os.makedirs(ret, 0700)
+    except Exception:
+        pass
+
+    return ret
+
 def EnablePlugin(plugin, active):
     # attempt to resolve conflicts...
     conflicts = (plugin.Enabled and plugin.DisableConflicts) or plugin.EnableConflicts
@@ -1307,8 +1326,15 @@ class MainWin:
                  pass
 
             # Create a file that indicates wether compiz is enabled or not
-            path = os.path.expanduser("~/.config/compiz/enable-compiz")
+            xdg_compiz = GetXdgConfigHome('compiz')
+            path = os.path.join(xdg_compiz, 'enable-compiz')
             open(path, "w+").close() # touch replacement
+
+            path = os.path.join(xdg_compiz, 'disable-compiz')
+            try:
+                os.remove(path)
+            except (IOError, OSError):
+                pass
         else:
             fallbackWM = ""
             if GnomeSession in os.environ and os.environ[GnomeSession]:
@@ -1328,11 +1354,19 @@ class MainWin:
             except (IOError, OSError):
                 pass
 
+            # Create a file that indicates compiz is explicitly disabled, so should not be started
+            xdg_compiz = GetXdgConfigHome('compiz')
+            path = os.path.join(xdg_compiz, 'disable-compiz')
+            open(path, "w+").close() # touch replacement
+
             # Remove old config
-            files = ("~/.config/compiz/enable-compiz", "~/.config/compiz/compiz-manager")
+            files = (os.path.join(xdg_compiz, 'enable-compiz'), os.path.join(xdg_compiz, 'compiz-manager'))
             for file in files:
                 path = os.path.expanduser(file)
-                os.remove(path)
+                try:
+                    os.remove(path)
+                except (IOError, OSError):
+                    pass
 
         self.Notebook.set_sensitive(enabled)
         self.ProfileChooser.set_sensitive(enabled)
