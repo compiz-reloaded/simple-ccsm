@@ -538,7 +538,9 @@ class ProfilePage:
                 break
         self.ZoomCheck.set_value(enabled)
 
-        enabled = self.Context.Plugins['colorfilter'].Enabled
+        enabled = False
+        if 'colorfilter' in self.Context.Plugins:
+            enabled = self.Context.Plugins['colorfilter'].Enabled
         self.ColorfilterCheck.set_value(enabled)
 
     def Update(self):
