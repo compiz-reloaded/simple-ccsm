@@ -185,9 +185,8 @@ CompizName = "compiz"
 
 # Change to your default
 CompizEnableDesktopEffects = @enable_desktop_effects@
-CompizStartCommand = "compiz-manager --replace"
-CompizDryRunCommand = "CM_DRY=yes compiz-manager"
-CompizNoChecksCommand = "SKIP_CHECKS=yes compiz-manager --replace"
+CompizStartCommand = "compiz ccp --replace --sm-disable --ignore-desktop-hints"
+CompizDryRunCommand = "compiz --version > /dev/null"
 GnomeSession = "GNOME_DESKTOP_SESSION_ID"
 KdeSession = "KDE_FULL_SESSION"
 
@@ -1272,7 +1271,7 @@ class MainWin:
         enabled = self.EnableEffectsButton.get_active()
         if enabled:
             # First try to check if compiz can be run
-            cmd = CompizDryRunCommand.split(" ")
+            cmd = CompizDryRunCommand
             proc = subprocess.Popen(cmd, shell=True)
             proc.wait()
             if proc.returncode != 0:
@@ -1294,28 +1293,6 @@ class MainWin:
                 if response != gtk.RESPONSE_OK:
                     self.EnableEffectsButton.set_active(False)
                     return
-
-            # Make compiz manager skip further checks
-            path = os.path.expanduser("~/.config/compiz/compiz-manager")
-            hasSkip = False
-
-            try:
-                config = open(path, "r")
-                for l in config.readlines():
-                    if "SKIP_CHECKS" in l:
-                        hasSkip = True
-                        break
-                config.close()
-            except IOError, e:
-                print "No compiz manager config found!"
-                dir = os.path.expanduser("~/.config/compiz/")
-                if not os.path.exists(dir):
-                    os.makedirs(dir)
-
-            if not hasSkip:
-                config = open(path, "a")
-                config.write("SKIP_CHECKS=yes")
-                config.close()
 
             # Start compiz
             cmd = CompizStartCommand.split(" ")
