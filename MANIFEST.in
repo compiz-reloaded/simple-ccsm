@@ -1,7 +1,7 @@
 include po/*
 include TODO README INSTALL AUTHORS COPYING LICENSE NEWS VERSION ChangeLog
 include simple-ccsm.in
-include simple-ccsm.glade
+include simple-ccsm.ui
 include simple-ccsm.desktop.in
 include Makefile MANIFEST.in
 recursive-include profiles *

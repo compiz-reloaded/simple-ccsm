@@ -18,14 +18,16 @@
 # Authors: Patrick Niklaus (marex@opencompositing.org)
 # Copyright (C) 2007 Patrick Niklaus
 
+import gi
+gi.require_version('Pango', '1.0')
+gi.require_version('PangoCairo', '1.0')
+gi.require_version('Gtk', '@gtkver@')
+gi.require_version('Gdk', '@gtkver@')
+from gi.repository import GObject, GLib, Gtk, Gdk
+
 import shutil
 import os
 import subprocess
-import pygtk
-import gtk
-import gobject
-import gtk.gdk as gdk
-import gtk.glade as glade
 import cairo
 import compizconfig as ccs
 import ccm
@@ -33,11 +35,8 @@ import locale
 import gettext
 import time
 from optparse import OptionParser
-from threading import Thread
 locale.setlocale(locale.LC_ALL, "")
 _ = gettext.gettext
-
-Tooltips = gtk.Tooltips()
 
 DataDir = '@prefix@/share/simple-ccsm/'
 
@@ -132,7 +131,6 @@ AnimationRatings = {\
 'Dodge': 5
 }
 
-gtk.glade.bindtextdomain("simple-ccsm", "@prefix@/share/locale")
 gettext.bindtextdomain("simple-ccsm", "@prefix@/share/locale")
 gettext.textdomain("simple-ccsm")
 
@@ -180,7 +178,6 @@ AnimationSettings = {
 'focusAnimationBox': "focus_effects"
 }
 
-Tooltips = gtk.Tooltips()
 CompizName = "compiz"
 
 # Change to your default
@@ -208,6 +205,18 @@ def GetXdgConfigHome(subdir):
 
     return ret
 
+class BuilderHandlers(object):
+    def __init__(self, backingObjects):
+        self.backingObjects = backingObjects
+
+    def __getattr__(self, name):
+        for obj in self.backingObjects:
+            if hasattr(obj, name):
+                return getattr(obj, name)
+        else:
+            raise AttributeError("%r not found on any of %r"
+              % (name, self.backingObjects))
+
 def EnablePlugin(plugin, active):
     # attempt to resolve conflicts...
     conflicts = (plugin.Enabled and plugin.DisableConflicts) or plugin.EnableConflicts
@@ -223,17 +232,17 @@ def EnablePlugin(plugin, active):
 
 def SetupBoxModel(box):
     if not box.get_model():
-        store = gtk.ListStore(gobject.TYPE_STRING)
+        store = Gtk.ListStore(GObject.TYPE_STRING)
         box.set_model(store)
-        cell = gtk.CellRendererText()
+        cell = Gtk.CellRendererText()
         box.pack_start(cell, True)
         box.add_attribute(cell, 'text', 0)
     else:
         box.get_model().clear()
 
-class DesktopPreview(gtk.Widget):
+class DesktopPreview(Gtk.Widget):
     def __init__(self, size=(0,0)):
-        gtk.Widget.__init__(self)
+        Gtk.Widget.__init__(self)
 
         self.size = size
         self.default_desktop_height = 30
@@ -243,7 +252,14 @@ class DesktopPreview(gtk.Widget):
         self.desktop_space = 5
         self.line_width = 1.0
 
-        self.set_flags(self.flags() | gtk.NO_WINDOW)
+        self.set_has_window(False)
+
+        self.connect("unrealize", self.unrealize_event)
+        self.connect("size-allocate", self.size_allocate_event)
+        if Gtk.check_version(3, 0, 0) is None:
+            self.connect("draw", self.draw_event)
+        else:
+            self.connect("expose_event", self.draw_event)
 
     def set_value(self, size):
         self.size = size
@@ -251,59 +267,74 @@ class DesktopPreview(gtk.Widget):
 
     def get_value(self):
         return self.size
-    
-    def do_unrealize(self):
-        self.window.destroy()
 
-    def do_size_request(self, req):
-        req.width = (self.default_desktop_width+self.desktop_space)*4
-        req.height = (self.default_desktop_height+self.desktop_space)*2
+    def unrealize_event(self, widget):
+        widget.get_window().destroy()
 
-    def do_size_allocate(self, allocation):
-        self.allocation = allocation
-
-        width = self.allocation.width
-        height = self.allocation.height
-        self.desktop_width = (width / self.size[0]) - self.desktop_space
+    def size_allocate_event(self, widget, allocation):
+        width = allocation.width
+        height = allocation.height
+        self.desktop_width = (float(width) / self.size[0]) - self.desktop_space
         self.desktop_height = (self.desktop_width * 3.0) / 4.0
-        factor = ((height / self.size[1]) - self.desktop_space) / self.desktop_height
-        #factor = height / ((self.desktop_height + self.desktop_space) * self.size[1])
+        factor = ((float(height) / self.size[1]) - self.desktop_space) / self.desktop_height
+        #factor = float(height) / ((self.desktop_height + self.desktop_space) * self.size[1])
 
         if factor < 1.0:
-            self.desktop_width = int(int(self.desktop_width) * factor)
-            self.desktop_height = int(int(self.desktop_height) * factor)
-        
-    def do_expose_event(self, event):
-        cr = self.window.cairo_create()
-        
-        fg = self.style.bg[gtk.STATE_SELECTED]
-        dark = self.style.fg[gtk.STATE_NORMAL]
+            self.desktop_width = int(self.desktop_width * factor)
+            self.desktop_height = int(self.desktop_height * factor)
 
-        x = self.allocation.x + self.line_width / 2.0
-        y = self.allocation.y + self.line_width / 2.0
+    def draw_event(self, widget, data=None):
+        cr = widget.get_window().cairo_create()
+
+        if Gtk.check_version(3, 6, 0) is None:
+            context = widget.get_style_context ()
+            context.save()
+            context.add_class(Gtk.STYLE_CLASS_BACKGROUND)
+            context.set_state(Gtk.StateFlags.SELECTED)
+            fg = context.get_background_color(context.get_state())
+            context.set_state(Gtk.StateFlags.NORMAL)
+            dark = context.get_color(context.get_state())
+            context.restore()
+        else:
+            fg = widget.get_style().lookup_color('selected_bg_color')
+            if fg[0] == False:
+                # If there's no selected_bg_color, let it be gray.
+                fg[1].red = 43690.0
+                fg[1].green = 43690.0
+                fg[1].blue = 43690.0
+            dark = widget.get_style().lookup_color('fg_color')
+
+        x = widget.get_allocation().x + self.line_width / 2.0
+        y = widget.get_allocation().y + self.line_width / 2.0
         for i in range(self.size[1]):
             for j in range(self.size[0]):
-                cr.set_source_rgb(fg.red/65535.0,
-                              fg.green/65535.0,
-                              fg.blue/65535.0)
+                if Gtk.check_version(3, 6, 0) is None:
+                    cr.set_source_rgb(fg.red, fg.green, fg.blue)
+                else:
+                    cr.set_source_rgb(fg[1].red/65535.0,
+                                      fg[1].green/65535.0,
+                                      fg[1].blue/65535.0)
 
                 cr.rectangle(x, y, self.desktop_width, self.desktop_height)
                 cr.fill_preserve()
-                
+
                 cr.set_line_width(self.line_width)
-                cr.set_source_rgb(dark.red/65535.0,
-                              dark.green/65535.0,
-                              dark.blue/65535.0)
+                if Gtk.check_version(3, 6, 0) is None:
+                    cr.set_source_rgb(dark.red, dark.green, dark.blue)
+                else:
+                    cr.set_source_rgb(dark[1].red/65535.0,
+                                      dark[1].green/65535.0,
+                                      dark[1].blue/65535.0)
                 cr.stroke()
 
                 x += self.desktop_width + self.desktop_space
 
-            y += self.desktop_height + self.desktop_space 
-            x = self.allocation.x + self.line_width / 2.0
+            y += self.desktop_height + self.desktop_space
+            x = widget.get_allocation().x + self.line_width / 2.0
 
-class StarScale(gtk.Widget):
+class StarScale(Gtk.Widget):
     def __init__(self, stars=0.0, max=5):
-        gtk.Widget.__init__(self)
+        Gtk.Widget.__init__(self)
 
         self.stars = stars
         self.max = max
@@ -317,8 +348,15 @@ class StarScale(gtk.Widget):
         self.surface      = None
 
         self._size_changed = False
-        
-        self.set_flags(self.flags() | gtk.NO_WINDOW)
+
+        self.set_has_window(False)
+        self.set_size_request((self.star_size+self.star_space)*self.max, self.star_size)
+
+        self.connect("size-allocate", self.size_allocate_event)
+        if Gtk.check_version(3, 0, 0) is None:
+            self.connect("draw", self.draw_event)
+        else:
+            self.connect("expose_event", self.draw_event)
 
     def set_value(self, stars):
         self.stars = stars
@@ -331,18 +369,20 @@ class StarScale(gtk.Widget):
 
     def get_value(self):
         return self.stars
-    
+
     def get_max(self):
         return self.max
 
-    def do_size_request(self, req):
-        req.height = self.star_size
-        req.width = (self.star_size+self.star_space)*self.max
+    def size_allocate_event(self, widget, allocation):
+        allocation = widget.get_allocation()
+        allocation.width = (self.star_size+self.star_space)*self.max
+        allocation.height = self.star_size
+        widget.size_allocate(allocation)
         self._size_changed = True
 
     def draw_sources(self):
-        width = self.allocation.width
-        height = self.allocation.height
+        width = self.get_allocation().width
+        height = self.get_allocation().height
         self.surface_star = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
         self.surface_dark = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
 
@@ -362,8 +402,8 @@ class StarScale(gtk.Widget):
             self.draw_sources()
             self._size_changed = False
 
-        width = self.allocation.width
-        height = self.allocation.height
+        width = self.get_allocation().width
+        height = self.get_allocation().height
         self.surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
         cr = cairo.Context(self.surface)
 
@@ -379,33 +419,33 @@ class StarScale(gtk.Widget):
         cr.rectangle(0, 0, q*width, self.star_size)
         cr.fill()
 
-    def do_expose_event(self, event):
+    def draw_event(self, widget, data=None):
         if not self.surface or self._size_changed:
             self.draw_surface()
 
-        x = self.allocation.x
-        y = self.allocation.y
-        width  = self.allocation.width
-        height = self.allocation.height
+        x = widget.get_allocation().x
+        y = widget.get_allocation().y
+        width  = widget.get_allocation().width
+        height = widget.get_allocation().height
 
-        cr = self.window.cairo_create()
+        cr = self.get_window().cairo_create()
         cr.set_source_surface(self.surface, x, y)
         cr.rectangle(x, y, width, height)
         cr.fill()
 
 
-gobject.type_register(StarScale)
-gobject.type_register(DesktopPreview)
+GObject.type_register(StarScale)
+GObject.type_register(DesktopPreview)
 
-class CheckImage(gtk.HBox):
+class CheckImage(Gtk.HBox):
     def __init__(self, text="", value=False):
-        gtk.HBox.__init__(self)
-        self.image = gtk.Image()
-        self.label = gtk.Label(text)
+        Gtk.Box.__init__(self)
+        self.image = Gtk.Image()
+        self.label = Gtk.Label(label=text)
         self.set_spacing(5)
 
-        self.pack_start(self.image, False, False)
-        self.pack_start(self.label, False, False)
+        self.pack_start(self.image, False, False, 0)
+        self.pack_start(self.label, False, False, 0)
 
         self.value = value
 
@@ -413,7 +453,7 @@ class CheckImage(gtk.HBox):
         self.label.props.xalign = 0.0
 
         self.update()
-    
+
     def set_value(self, value):
         self.value = value
 
@@ -421,20 +461,20 @@ class CheckImage(gtk.HBox):
 
     def get_value(self):
         return self.value
-    
+
     def update(self):
-        size = gtk.ICON_SIZE_BUTTON
+        size = Gtk.IconSize.BUTTON
         if self.value:
-            self.image.set_from_stock(gtk.STOCK_APPLY, size)
-            Tooltips.set_tip(self, _("Enabled"))
+            self.image.set_from_stock(Gtk.STOCK_APPLY, size)
+            self.set_tooltip_text(_("Enabled"))
         else:
-            self.image.set_from_stock(gtk.STOCK_DIALOG_ERROR, size)
-            Tooltips.set_tip(self, _("Disabled"))
+            self.image.set_from_stock(Gtk.STOCK_DIALOG_ERROR, size)
+            self.set_tooltip_text(_("Disabled"))
 
 class ProfilePage:
-    def __init__(self, context, gladeXML):
-        self.GladeXML = gladeXML
-        self.Context  = context
+    def __init__(self, context, builder):
+        self.Builder = builder
+        self.Context = context
         self.DesktopPlugins = {}
 
         # Check List
@@ -442,26 +482,24 @@ class ProfilePage:
         self.AnimationStars = StarScale()
         self.ZoomCheck = CheckImage(_("Zoom"))
         self.ColorfilterCheck = CheckImage(_("Colorfilter"))
-        effectsAlign = self.GladeXML.get_widget("effectsAlignment")
+        effectsAlign = self.Builder.get_object("effectsAlignment")
         effectsAlign.add(self.EffectStars)
-        animationAlign = self.GladeXML.get_widget("animationsAlignment")
+        animationAlign = self.Builder.get_object("animationsAlignment")
         animationAlign.add(self.AnimationStars)
-        accessibilityBox = self.GladeXML.get_widget("accessibilityBox")
-        accessibilityBox.pack_start(self.ZoomCheck, False, False)
-        accessibilityBox.pack_start(self.ColorfilterCheck, False, False)
+        accessibilityBox = self.Builder.get_object("accessibilityBox")
+        accessibilityBox.pack_start(self.ZoomCheck, False, False, 0)
+        accessibilityBox.pack_start(self.ColorfilterCheck, False, False, 0)
 
         # Desktop Label
         self.DesktopLayout = "%s"
-        self.DesktopLabel = self.GladeXML.get_widget("desktopLabel")
-
-        self.GladeXML.signal_autoconnect(self)
+        self.DesktopLabel = self.Builder.get_object("desktopLabel")
 
     def UpdateDesktopPlugins(self):
         self.DesktopPlugins = {}
         for plugin in self.Context.Plugins.values():
             if "largedesktop" in plugin.Features:
                 self.DesktopPlugins[plugin.ShortDesc] = plugin
-    
+
     def SetDesktopLabel(self, widget=None):
         for shortDesc, plugin in self.DesktopPlugins.items():
             if plugin.Enabled:
@@ -469,7 +507,7 @@ class ProfilePage:
                 break
 
     def SetDescriptionLabel(self):
-        label = self.GladeXML.get_widget("descriptionLabel")
+        label = self.Builder.get_object("descriptionLabel")
         name = self.Context.CurrentProfile.Name
 
         description = _("None")
@@ -506,14 +544,17 @@ class ProfilePage:
 
         rating = 0.0
         for box, settingName in AnimationSettings.items():
-            box = self.GladeXML.get_widget(box)
+            box = self.Builder.get_object(box)
             if not box.get_model():
                 continue
-            text = box.get_active_text()
+            try:
+                text = box.do_get_active_text (box)
+            except (AttributeError, NameError, TypeError):
+                text = box.get_active_text ()
             setting = plugin.Screens[0][settingName]
             if len(setting.Value) >= 1:
                 value = setting.Value[0]
-                if names[settingName].has_key(value):
+                if value in names[settingName]:
                     name = names[settingName][value]
                     rating += AnimationRatings[name]
                 else:
@@ -549,22 +590,20 @@ class ProfilePage:
         self.CheckAccessibility()
 
 class AnimationPage:
-    def __init__(self, context, gladeXML):
-        self.GladeXML = gladeXML
-        self.Context  = context
-        self.Block    = 0
+    def __init__(self, context, builder):
+        self.Builder = builder
+        self.Context = context
+        self.Block   = 0
         self.AnimExtensionPlugins = []
-
-        self.GladeXML.signal_autoconnect(self)
 
         if 'animation' not in self.Context.Plugins:
             # Disable animations CheckButton
-            widget = self.GladeXML.get_widget("enableAnimations")
+            widget = self.Builder.get_object("enableAnimations")
             widget.set_sensitive(False)
-            Tooltips.set_tip(widget, _(("Can't find the animation plugin.")))
+            widget.set_tooltip_text(_("Can't find the animation plugin."))
 
             # Disable extra animations CheckButton
-            widget = self.GladeXML.get_widget("enableExtraAnim")
+            widget = self.Builder.get_object("enableExtraAnim")
             widget.set_sensitive(False)
             return
 
@@ -582,9 +621,9 @@ class AnimationPage:
 
         if len(self.AnimExtensionPlugins) == 0:
             # Disable extra animations CheckButton
-            widget = self.GladeXML.get_widget("enableExtraAnim")
+            widget = self.Builder.get_object("enableExtraAnim")
             widget.set_sensitive(False)
-            Tooltips.set_tip(widget, _(("Can't find any animation extension plugins.")))
+            widget.set_tooltip_text(_("Can't find any animation extension plugins."))
 
     def EnableAnimationsChanged(self, widget):
         if self.Block > 0:
@@ -595,9 +634,9 @@ class AnimationPage:
         EnablePlugin(plugin, active)
         for prefix in ("open", "close", "minimize", "focus"):
             name = prefix + "AnimationBox"
-            widget = self.GladeXML.get_widget(name)
+            widget = self.Builder.get_object(name)
             widget.set_sensitive(active)
-        widget = self.GladeXML.get_widget('enableExtraAnim')
+        widget = self.Builder.get_object('enableExtraAnim')
         widget.set_sensitive(active)
         if active:
             if widget.get_active():
@@ -607,7 +646,7 @@ class AnimationPage:
                 # Otherwise, just fill boxes with the base animation effects
                 self.Context.UpdateExtensiblePlugins()
                 self.FillAnimationBoxes()
-    
+
     def EnableExtraAnimationsChanged(self, widget):
         if self.Block > 0:
             return
@@ -631,10 +670,13 @@ class AnimationPage:
         if self.Block > 0:
             return
 
-        name = widget.get_name()
+        name = Gtk.Buildable.get_name(widget)
         settingName = AnimationSettings[name]
 
-        text = widget.get_active_text()
+        try:
+            text = widget.do_get_active_text (widget)
+        except (AttributeError, NameError, TypeError):
+            text = widget.get_active_text ()
         plugin = self.Context.Plugins['animation']
         setting = plugin.Screens[0][settingName]
         value = setting.Value
@@ -650,7 +692,7 @@ class AnimationPage:
             self.AnimationBoxChanged(widget, settingName)
 
     def SetEnableAnimations(self):
-        widget = self.GladeXML.get_widget("enableAnimations")
+        widget = self.Builder.get_object("enableAnimations")
         active = False
         if 'animation' in self.Context.Plugins:
             plugin = self.Context.Plugins['animation']
@@ -660,7 +702,7 @@ class AnimationPage:
 
         # If at least one animation extension plugin is active,
         # make the enableExtraAnimations widget active
-        widget = self.GladeXML.get_widget("enableExtraAnim")
+        widget = self.Builder.get_object("enableExtraAnim")
         atLeastOneActive = False
         for plugin in self.AnimExtensionPlugins:
             if plugin.Enabled:
@@ -670,17 +712,17 @@ class AnimationPage:
 
         for prefix in ("open", "close", "minimize", "focus"):
             name = prefix + "AnimationBox"
-            widget = self.GladeXML.get_widget(name)
+            widget = self.Builder.get_object(name)
             widget.set_sensitive(active)
-    
+
     def FillAnimationBoxes(self):
         if 'animation' not in self.Context.Plugins:
             return
 
         plugin = self.Context.Plugins['animation']
-        
+
         for boxName, settingName in AnimationSettings.items():
-            box = self.GladeXML.get_widget(boxName)
+            box = self.Builder.get_object(boxName)
             setting = plugin.Screens[0][settingName]
             info = setting.Info[1]
             itemsByValue = info[1]
@@ -690,7 +732,7 @@ class AnimationPage:
                 box.append_text(key)
             if len(setting.Value) >= 1:
                 value = setting.Value[0]
-                if itemsByValue.has_key(value):
+                if value in itemsByValue:
                     box.set_active(itemsByValue[value][1])
             else:
                 box.set_active(0)
@@ -702,12 +744,10 @@ class AnimationPage:
         self.Block -= 1
 
 class EffectPage:
-    def __init__(self, context, gladeXML):
-        self.GladeXML = gladeXML
-        self.Context  = context
-        self.Block    = 0
-
-        self.GladeXML.signal_autoconnect(self)
+    def __init__(self, context, builder):
+        self.Builder = builder
+        self.Context = context
+        self.Block   = 0
 
     def UpdateSwitcherPlugins(self):
         self.SwitcherPlugins = {}
@@ -733,7 +773,7 @@ class EffectPage:
         if self.Block > 0:
             return
 
-        name = widget.get_name()
+        name = Gtk.Buildable.get_name(widget)
         effectPlugins = {
         'enableScale': "scale",
         'enableWobbly': "wobbly",
@@ -747,12 +787,15 @@ class EffectPage:
         value  = widget.get_active()
 
         EnablePlugin(plugin, value)
- 
+
     def SwitcherBoxChanged(self, widget):
         if self.Block > 0:
             return
 
-        text = widget.get_active_text()
+        try:
+            text = widget.do_get_active_text (widget)
+        except (AttributeError, NameError, TypeError):
+            text = widget.get_active_text ()
 
         for shortDesc, plugin in self.SwitcherPlugins.items():
             if text != shortDesc:
@@ -800,7 +843,10 @@ class EffectPage:
         if self.Block > 0:
             return
 
-        text = widget.get_active_text()
+        try:
+            text = widget.do_get_active_text (widget)
+        except (AttributeError, NameError, TypeError):
+            text = widget.get_active_text ()
         plugin = self.Context.Plugins['cubeaddon']
         setting = plugin.Screens[0]['deformation']
         value = setting.Info[2][text]
@@ -843,7 +889,7 @@ class EffectPage:
         }
 
         for pluginName, widgetName in widgets.items():
-            widget = self.GladeXML.get_widget(widgetName)
+            widget = self.Builder.get_object(widgetName)
             active = False
             sensitive = False
             if pluginName in self.Context.Plugins:
@@ -854,7 +900,7 @@ class EffectPage:
             widget.set_active(active)
 
     def SetCubeEffects(self, widget=None):
-        alignment = self.GladeXML.get_widget("cubeEffectsAlignment")
+        alignment = self.Builder.get_object("cubeEffectsAlignment")
         sensitive = False
         if 'cube' in self.Context.Plugins:
             plugin = self.Context.Plugins['cube']
@@ -862,7 +908,7 @@ class EffectPage:
         alignment.set_sensitive(sensitive)
 
     def SetOpacity(self):
-        widget = self.GladeXML.get_widget("cubeOpacity")
+        widget = self.Builder.get_object("cubeOpacity")
 
         if not 'cube' in self.Context.Plugins:
             return
@@ -873,7 +919,7 @@ class EffectPage:
         widget.set_value(int(value))
 
     def SetReflection(self):
-        widget = self.GladeXML.get_widget("enableReflection")
+        widget = self.Builder.get_object("enableReflection")
 
         if not 'cubeaddon' in self.Context.Plugins:
             return
@@ -884,7 +930,7 @@ class EffectPage:
         widget.set_active(value)
 
     def FillSwitcherBox(self):
-        box = self.GladeXML.get_widget("switcherPluginChooser")
+        box = self.Builder.get_object("switcherPluginChooser")
         SetupBoxModel(box)
         box.append_text(_("None"))
         box.set_active(0)
@@ -904,7 +950,7 @@ class EffectPage:
             i += 1
 
     def FillDeformationBox(self):
-        box = self.GladeXML.get_widget("deformationChooser")
+        box = self.Builder.get_object("deformationChooser")
         SetupBoxModel(box)
 
         if not 'cubeaddon' in self.Context.Plugins:
@@ -931,16 +977,14 @@ class EffectPage:
         self.Block -= 1
 
 class DesktopPage:
-    def __init__(self, context, gladeXML):
-        self.GladeXML = gladeXML
-        self.Context  = context
-        self.Block    = 0
-
-        self.GladeXML.signal_autoconnect(self)
+    def __init__(self, context, builder):
+        self.Builder = builder
+        self.Context = context
+        self.Block   = 0
 
         # Preview Widget
         self.DesktopPreview = DesktopPreview()
-        previewAlign = self.GladeXML.get_widget("previewAlignment")
+        previewAlign = self.Builder.get_object("previewAlignment")
         previewAlign.add(self.DesktopPreview)
 
     def UpdateDesktopPlugins(self):
@@ -948,12 +992,12 @@ class DesktopPage:
         for plugin in self.Context.Plugins.values():
             if "largedesktop" in plugin.Features:
                 self.DesktopPlugins[plugin.ShortDesc] = plugin
-    
+
     def DesktopSizeChanged(self, widget):
         if self.Block > 0:
             return
 
-        name = widget.get_name()
+        name = Gtk.Buildable.get_name(widget)
         settings = {
         'horizontalDesktops': "hsize",
         'verticalDesktops': "vsize"
@@ -969,7 +1013,10 @@ class DesktopPage:
         if self.Block > 0:
             return
 
-        text = widget.get_active_text()
+        try:
+            text = widget.do_get_active_text (widget)
+        except (AttributeError, NameError, TypeError):
+            text = widget.get_active_text ()
 
         for shortDesc, plugin in self.DesktopPlugins.items():
             if text != shortDesc:
@@ -1000,12 +1047,12 @@ class DesktopPage:
                   "verticalDesktops"   : "vsize"}
 
         for widgetName, settingName in scales.items():
-            widget = self.GladeXML.get_widget(widgetName)
+            widget = self.Builder.get_object(widgetName)
             setting = self.Context.Plugins['core'].Screens[0][settingName]
             widget.set_value(setting.Value)
 
     def FillAppearenceBox(self):
-        box = self.GladeXML.get_widget("desktopPluginChooser")
+        box = self.Builder.get_object("desktopPluginChooser")
         SetupBoxModel(box)
 
         i = 0
@@ -1024,12 +1071,10 @@ class DesktopPage:
         self.Block -= 1
 
 class ZoomPage:
-    def __init__(self, context, gladeXML):
-        self.GladeXML = gladeXML
-        self.Context  = context
-        self.Block    = 0
-
-        self.GladeXML.signal_autoconnect(self)
+    def __init__(self, context, builder):
+        self.Builder = builder
+        self.Context = context
+        self.Block   = 0
 
         # Zoom Keybindings
         self.Widgets = {}
@@ -1044,20 +1089,20 @@ class ZoomPage:
     def ZoomChanged(self, widget):
         if self.Block > 0:
             return
-        
+
         available = {}
         for name in ('ezoom', 'mag'):
             if name in self.Context.Plugins:
                 plugin = self.Context.Plugins[name]
                 available[name] = plugin
-        
-        widget = self.GladeXML.get_widget("enableZoom")
+
+        widget = self.Builder.get_object("enableZoom")
         if 'ezoom' in available:
             available['ezoom'].Enabled = widget.get_active()
         elif 'zoom' in available:
             available['ezoom'].Enabled = widget.get_active()
 
-        widget = self.GladeXML.get_widget("enableMag")
+        widget = self.Builder.get_object("enableMag")
         if 'mag' in available:
             available['mag'].Enabled = widget.get_active()
 
@@ -1069,9 +1114,9 @@ class ZoomPage:
                 continue
 
             plugin    = self.Context.Plugins[pluginName]
-            container = self.GladeXML.get_widget(containerName)
+            container = self.Builder.get_object(containerName)
             container.set_sensitive(plugin.Enabled)
-    
+
     def SetZoom(self):
         for identifier, data in self.Settings.items():
             pluginName, settingName, containerName = data
@@ -1083,8 +1128,8 @@ class ZoomPage:
                 plugin    = self.Context.Plugins[pluginName]
                 setting   = plugin.Display[settingName]
                 widget    = ccm.MakeSetting(setting)
-                container = self.GladeXML.get_widget(containerName)
-                container.pack_start(widget.EBox)
+                container = self.Builder.get_object(containerName)
+                container.pack_start(widget.EBox, True, True, 0)
                 if not plugin.Enabled:
                     container.set_sensitive(False)
                 self.Widgets[identifier] = widget
@@ -1097,7 +1142,7 @@ class ZoomPage:
                 plugin = self.Context.Plugins[name]
                 available[name] = plugin
 
-        widget = self.GladeXML.get_widget("enableZoom")
+        widget = self.Builder.get_object("enableZoom")
         widget.set_sensitive(True)
         if 'ezoom' in available:
             plugin = available['ezoom']
@@ -1109,7 +1154,7 @@ class ZoomPage:
             widget.set_sensitive(False)
             widget.set_active(False)
 
-        widget = self.GladeXML.get_widget("enableMag")
+        widget = self.Builder.get_object("enableMag")
         widget.set_sensitive(True)
         if 'mag' in available:
             plugin = available['mag']
@@ -1124,86 +1169,60 @@ class ZoomPage:
         self.Block -= 1
 
 class EdgePage:
-    def __init__(self, context, gladeXML):
-        self.GladeXML = gladeXML
-        self.Context  = context
-        self.Block    = 0
+    def __init__(self, context, builder):
+        self.Builder = builder
+        self.Context = context
+        self.Block   = 0
 
-        align = self.GladeXML.get_widget("edgesAlignment")
+        align = self.Builder.get_object("edgesAlignment")
         self.EdgeSelector = ccm.GlobalEdgeSelector(self.Context)
         align.add(self.EdgeSelector)
 
     def Update(self):
         pass
 
-class PagesThread(Thread):
-    def __init__(self, mainWin):
-        self.mainWin = mainWin
-        Thread.__init__(self)
-
-    def InitPages(self):
-        mainWin = self.mainWin
-
-        # Wait until main window is shown
-        while not mainWin.DoneUpdate:
-            time.sleep(0.1)
-
-        mainWin.EffectPage = EffectPage(mainWin.Context, mainWin.GladeXML)
-        mainWin.EffectPage.Update()
-        mainWin.Window.show_all()
-
-        mainWin.EdgePage = EdgePage(mainWin.Context, mainWin.GladeXML)
-        mainWin.EdgePage.Update()
-        mainWin.Window.show_all()
-
-    def run(self):
-        self.InitPages()
-
-    def Quit (self):
-        gtk.main_quit()
-
 class MainWin:
     def __init__(self, context, page = -1):
-        self.GladeXML = glade.XML(DataDir + "simple-ccsm.glade", domain="simple-ccsm")
-        self.GladeXML.signal_autoconnect(self)
+        self.Builder = Gtk.Builder()
+        self.Builder.set_translation_domain("simple-ccsm")
+        self.Builder.add_from_file(DataDir + "simple-ccsm.ui")
 
         self.Context = context
         self.Block = 0
 
         if page != -1 and page in Pages:
-            notebook = self.GladeXML.get_widget("notebook")
+            notebook = self.Builder.get_object("notebook")
             notebook.set_current_page (Pages[page])
 
         # Window
-        self.Window = self.GladeXML.get_widget("mainWin")
+        self.Window = self.Builder.get_object("mainWin")
 
         # Enable effects button
-        self.EnableEffectsButton = self.GladeXML.get_widget("enableEffects")
+        self.EnableEffectsButton = self.Builder.get_object("enableEffects")
         self.EnableEffectsButton.connect ("toggled", self.EnableDesktopEffectsChanged)
-        self.Notebook = self.GladeXML.get_widget("notebook")
+        self.Notebook = self.Builder.get_object("notebook")
         if not CompizEnableDesktopEffects:
-            self.EnableEffectsButton.hide_all()
+            self.EnableEffectsButton.hide()
             self.EnableEffectsButton.set_no_show_all(True)
 
         # Profile Chooser
-        self.ProfileChooser = self.GladeXML.get_widget("profileChooser")
+        self.ProfileChooser = self.Builder.get_object("profileChooser")
 
         # Pages
-        self.AnimationPage = AnimationPage(self.Context, self.GladeXML)
-        self.DesktopPage   = DesktopPage(self.Context, self.GladeXML)
-        self.ZoomPage      = ZoomPage(self.Context, self.GladeXML)
-        self.ProfilePage   = ProfilePage(self.Context, self.GladeXML)
-        self.EffectPage    = None
-        self.EdgePage      = None
+        self.AnimationPage = AnimationPage(self.Context, self.Builder)
+        self.DesktopPage   = DesktopPage(self.Context, self.Builder)
+        self.ZoomPage      = ZoomPage(self.Context, self.Builder)
+        self.ProfilePage   = ProfilePage(self.Context, self.Builder)
+        self.EffectPage    = EffectPage(self.Context, self.Builder)
+        self.EdgePage      = EdgePage(self.Context, self.Builder)
 
-        self.DoneUpdate = False
-        PagesThread(self).start()
+        self.Builder.connect_signals(BuilderHandlers([self, self.AnimationPage,
+          self.DesktopPage, self.ZoomPage, self.ProfilePage, self.EffectPage, self.EdgePage]))
 
         self.Update()
         self.Window.show_all()
-        self.DoneUpdate = True
 
-        gobject.timeout_add(1000, self.EnableIntegration)
+        GLib.timeout_add(1000, self.EnableIntegration)
 
     def EnableIntegration(self):
         if os.getenv("XDG_CURRENT_DESKTOP", "").endswith("MATE") or os.getenv("MATE_DESKTOP_SESSION_ID") is not None:
@@ -1243,12 +1262,10 @@ class MainWin:
 
         self.AnimationPage.Update()
         self.DesktopPage.Update()
-        if self.EffectPage:
-            self.EffectPage.Update()
+        self.EffectPage.Update()
         self.ZoomPage.Update()
         self.ProfilePage.Update()
-        if self.EdgePage:
-            self.EdgePage.Update()
+        self.EdgePage.Update()
 
         self.SetProfile()
         if CompizEnableDesktopEffects:
@@ -1274,21 +1291,21 @@ class MainWin:
             proc.wait()
             if proc.returncode != 0:
                 # Dry run detected problems, warn the user
-                dialog = gtk.Dialog ()
+                dialog = Gtk.Dialog ()
                 dialog.set_title("Error")
                 dialog.set_border_width(6)
-                label = gtk.Label(_("Desktop effects are not supported on your current hardware / configuration. Would you like to cancel enabling of desktop effects or run them anyway?"))
+                label = Gtk.Label(label=_("Desktop effects are not supported on your current hardware / configuration. Would you like to cancel enabling of desktop effects or run them anyway?"))
                 label.set_line_wrap(True)
                 dialog.vbox.pack_start(label,
-                                       gtk.TRUE,
-                                       gtk.FALSE,
+                                       True,
+                                       False,
                                        3)
-                dialog.add_button(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL)
-                dialog.add_button("Run anyway", gtk.RESPONSE_OK)
+                dialog.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL)
+                dialog.add_button("Run anyway", Gtk.ResponseType.OK)
                 dialog.show_all()
                 response = dialog.run()
                 dialog.destroy()
-                if response != gtk.RESPONSE_OK:
+                if response != Gtk.ResponseType.OK:
                     self.EnableEffectsButton.set_active(False)
                     return
 
@@ -1337,7 +1354,10 @@ class MainWin:
 
 
     def ApplyProfile(self, widget):
-        profile = self.ProfileChooser.get_active_text()
+        try:
+            profile = self.ProfileChooser.do_get_active_text (self.ProfileChooser)
+        except (AttributeError, NameError, TypeError):
+            profile = self.ProfileChooser.get_active_text ()
 
         if profile == _("Default"):
             self.Context.ResetProfile()
@@ -1373,8 +1393,8 @@ class MainWin:
         else:
             self.ProfileChooser.set_active(0)
 
-    def Quit(self, widget):
-        gtk.main_quit()
+    def Quit(self, widget=None):
+        Gtk.main_quit()
 
 if __name__ == "__main__":
     context = ccs.Context()
@@ -1385,7 +1405,6 @@ if __name__ == "__main__":
     (options, args) = parser.parse_args()
     if options.page:
         page = options.page
-    gtk.window_set_default_icon_name('simple-ccsm')
+    Gtk.Window.set_default_icon_name('simple-ccsm')
     mainWin = MainWin(context, page)
-    gdk.threads_init()
-    gtk.main()
+    Gtk.main()

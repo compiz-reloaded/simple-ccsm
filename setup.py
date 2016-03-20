@@ -20,7 +20,7 @@ class install (_install):
         if self.prefix:
             length += len (self.prefix)
         if length:
-            for counter in xrange (len (outputs)):
+            for counter in range (len (outputs)):
                 outputs[counter] = outputs[counter][length:]
         data = "\n".join (outputs)
         try:
@@ -60,7 +60,7 @@ class uninstall (_install):
         if self.prefix:
             prepend += self.prefix
         if len (prepend):
-            for counter in xrange (len (files)):
+            for counter in range (len (files)):
                 files[counter] = prepend + files[counter].rstrip ()
         for file in files:
             print "Uninstalling %s" % file
@@ -76,6 +76,7 @@ if len (sys.argv) < 2 or sys.argv[1] not in ops:
     raise SystemExit
 
 prefix = None
+gtkver = "3.0"
 enableDesktopEffects = False
 if "--enableDesktopEffects" in sys.argv:
     enableDesktopEffects = True
@@ -90,6 +91,17 @@ if len (sys.argv) > 2:
                 sys.argv.remove (prefix)
             elif o.startswith ("--prefix=") and len (o[9:]):
                 prefix = o[9:]
+            sys.argv.remove (o)
+        i += 1
+    i = 0
+    for o in sys.argv:
+        if o.startswith ("--with-gtk"):
+            if o == "--with-gtk":
+                if len (sys.argv) >= i:
+                    gtkver = sys.argv[i + 1]
+                sys.argv.remove (gtkver)
+            elif o.startswith ("--with-gtk=") and len (o[11:]):
+                gtkver = o[11:]
             sys.argv.remove (o)
         i += 1
 if not prefix and "PREFIX" in os.environ:
@@ -114,6 +126,7 @@ f.close ()
 data = data.replace ("@prefix@", prefix)
 data = data.replace ("@version@", version)
 data = data.replace ("@compiz_prefix@", compiz_prefix)
+data = data.replace ("@gtkver@", gtkver)
 data = data.replace ("@enable_desktop_effects@", str(enableDesktopEffects))
 f = open (os.path.join ("simple-ccsm"), "wt")
 f.write (data)
@@ -130,7 +143,7 @@ for profile in profile_files:
 
 data_files = [
                 ("share/applications", ["simple-ccsm.desktop"]),
-                ("share/simple-ccsm", ["simple-ccsm.glade"]),
+                ("share/simple-ccsm", ["simple-ccsm.ui"]),
                 ("share/simple-ccsm/profiles", profiles)
              ]
 
@@ -200,7 +213,7 @@ setup (
 os.remove ("simple-ccsm")
 if sys.argv[1] == "install":
     gtk_update_icon_cache = '''gtk-update-icon-cache -f -t %s/share/icons/hicolor''' % prefix
-    root_specified = len (filter (lambda s: s.startswith ("--root"), sys.argv)) > 0
+    root_specified = len (list (filter (lambda s: s.startswith ("--root"), sys.argv))) > 0
     if not root_specified:
         print "Updating Gtk icon cache."
         os.system (gtk_update_icon_cache)
