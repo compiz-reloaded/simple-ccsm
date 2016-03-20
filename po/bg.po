@@ -1,13 +1,13 @@
 # translation of simple-ccsm.po to Russian
 # simple-ccsm translation templete
-# Copyright (C) 2008 compiz-fusion.org
+# Copyright (C) 2008 compiz.org
 # This file is distributed under the same license as the simple-ccsm package.
 #
 # Dimitriy Ryazantcev <DJm00n@mail.ru>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm-0.8.2\n"
-"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
 "POT-Creation-Date: 2009-02-06 11:25+0530\n"
 "PO-Revision-Date: 2009-05-19 22:19+0200\n"
 "Last-Translator: Svetoslav Stefanov <lfu.project@gmail.com>\n"

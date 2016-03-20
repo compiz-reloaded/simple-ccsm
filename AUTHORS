@@ -1,6 +1,6 @@
 Lead Developers:
 --------------------------------------------
-	Patrick Niklaus <marex@opencompositing.org>
+	Patrick Niklaus <patrick.niklaus@student.kit.edu>
 
 Contributors:
 --------------------------------------------
@@ -27,4 +27,3 @@ and "Translators:".
 
 2 - Each item of the "Translators" chapter must begin by the locale keyword.
 This keyword must be followed by a space.
-	 

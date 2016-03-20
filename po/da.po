@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
-"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
 "POT-Creation-Date: 2009-02-06 11:25+0530\n"
 "PO-Revision-Date: 2009-04-05 19:14+0100\n"
 "Last-Translator: Mads Lundby <lundbymads@gmail.com>\n"

@@ -1,12 +1,12 @@
 # simple-ccsm translation templete
-# Copyright (C) 2008 compiz-fusion.org
+# Copyright (C) 2008 compiz.org
 # This file is distributed under the same license as the simple-ccsm package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.7.4\n"
-"Report-Msgid-Bugs-To: http://bugs.opencompositing.org\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
 "POT-Creation-Date: 2008-04-30 20:47+0530\n"
 "PO-Revision-Date: 2009-10-05 03:11+0200\n"
 "Last-Translator: Yichih Liu <liueigi@gmail.com>\n"
