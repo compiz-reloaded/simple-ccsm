@@ -187,7 +187,6 @@ CompizName = "compiz"
 CompizEnableDesktopEffects = @enable_desktop_effects@
 CompizStartCommand = "compiz ccp --replace --sm-disable --ignore-desktop-hints"
 CompizDryRunCommand = "compiz --version > /dev/null"
-GnomeSession = "GNOME_DESKTOP_SESSION_ID"
 
 # Utility Functions
 def GetXdgConfigHome(subdir):
@@ -1207,13 +1206,16 @@ class MainWin:
         gobject.timeout_add(1000, self.EnableIntegration)
 
     def EnableIntegration(self):
-        if GnomeSession in os.environ and os.environ[GnomeSession]:
+        if os.getenv("XDG_CURRENT_DESKTOP", "").endswith("MATE") or os.getenv("MATE_DESKTOP_SESSION_ID") is not None:
             if not self.Context.Integration:
                 self.Context.Integration = True
 
-            compat = self.Context.Plugins["gnomecompat"]
+            compat = self.Context.Plugins["matecompat"]
             if not compat.Enabled:
                 EnablePlugin(compat, True)
+        elif os.getenv("XDG_CURRENT_DESKTOP", "").endswith("GNOME") or os.getenv("GNOME_DESKTOP_SESSION_ID") is not None:
+            if not self.Context.Integration:
+                self.Context.Integration = True
 
         self.Context.Write()
 
@@ -1306,7 +1308,9 @@ class MainWin:
                 pass
         else:
             fallbackWM = ""
-            if GnomeSession in os.environ and os.environ[GnomeSession]:
+            if os.getenv("XDG_CURRENT_DESKTOP", "").endswith("MATE") or os.getenv("MATE_DESKTOP_SESSION_ID") is not None:
+                fallbackWM = "marco"
+            elif os.getenv("XDG_CURRENT_DESKTOP", "").endswith("GNOME") or os.getenv("GNOME_DESKTOP_SESSION_ID") is not None:
                 fallbackWM = "metacity"
 
             if fallbackWM:
