@@ -188,7 +188,6 @@ CompizEnableDesktopEffects = @enable_desktop_effects@
 CompizStartCommand = "compiz ccp --replace --sm-disable --ignore-desktop-hints"
 CompizDryRunCommand = "compiz --version > /dev/null"
 GnomeSession = "GNOME_DESKTOP_SESSION_ID"
-KdeSession = "KDE_FULL_SESSION"
 
 # Utility Functions
 def GetXdgConfigHome(subdir):
@@ -1215,9 +1214,6 @@ class MainWin:
             compat = self.Context.Plugins["gnomecompat"]
             if not compat.Enabled:
                 EnablePlugin(compat, True)
-        elif KdeSession in os.environ and os.environ[KdeSession]:
-            if not self.Context.Integration:
-                self.Context.Integration = True
 
         self.Context.Write()
 
@@ -1298,12 +1294,6 @@ class MainWin:
             cmd = CompizStartCommand.split(" ")
             subprocess.Popen(cmd)
 
-            # Enable compiz in kde
-            try:
-                 subprocess.call('kwriteconfig --file ksmserverrc --group General --key windowManager compiz'.split())
-            except (IOError, OSError):
-                 pass
-
             # Create a file that indicates wether compiz is enabled or not
             xdg_compiz = GetXdgConfigHome('compiz')
             path = os.path.join(xdg_compiz, 'enable-compiz')
@@ -1318,20 +1308,11 @@ class MainWin:
             fallbackWM = ""
             if GnomeSession in os.environ and os.environ[GnomeSession]:
                 fallbackWM = "metacity"
-            elif KdeSession in os.environ and os.environ[KdeSession]:
-                fallbackWM = "kwin"
 
             if fallbackWM:
                 cmd = "%s --replace" % fallbackWM
                 cmd = cmd.split(" ")
                 subprocess.Popen(cmd)
-
-            # Reset window manager config for KDE
-            cmd = "kwriteconfig --file ksmserverrc --group General --key windowManager kwin".split(" ")
-            try:
-                subprocess.Popen(cmd)
-            except (IOError, OSError):
-                pass
 
             # Create a file that indicates compiz is explicitly disabled, so should not be started
             xdg_compiz = GetXdgConfigHome('compiz')
