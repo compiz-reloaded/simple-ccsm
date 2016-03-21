@@ -82,7 +82,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                    <property name="entry-text-column">0</property>
+                    <property name="entry_text_column">0</property>
                   </object>
                   <packing>
                     <property name="expand">True</property>
@@ -403,7 +403,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="entry-text-column">0</property>
+                            <property name="entry_text_column">0</property>
                             <signal name="changed" handler="AnimationBoxChanged" swapped="no"/>
                             <signal name="changed" handler="SetAnimationRating" swapped="no"/>
                           </object>
@@ -445,7 +445,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="entry-text-column">0</property>
+                            <property name="entry_text_column">0</property>
                             <signal name="changed" handler="AnimationBoxChanged" swapped="no"/>
                             <signal name="changed" handler="SetAnimationRating" swapped="no"/>
                           </object>
@@ -487,7 +487,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="entry-text-column">0</property>
+                            <property name="entry_text_column">0</property>
                             <signal name="changed" handler="AnimationBoxChanged" swapped="no"/>
                             <signal name="changed" handler="SetAnimationRating" swapped="no"/>
                           </object>
@@ -530,7 +530,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="entry-text-column">0</property>
+                            <property name="entry_text_column">0</property>
                             <signal name="changed" handler="AnimationBoxChanged" swapped="no"/>
                             <signal name="changed" handler="SetAnimationRating" swapped="no"/>
                           </object>
@@ -596,7 +596,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="entry-text-column">0</property>
+                            <property name="entry_text_column">0</property>
                             <signal name="changed" handler="SwitcherBoxChanged" swapped="no"/>
                             <signal name="changed" handler="SetEffectRating" swapped="no"/>
                           </object>
@@ -652,7 +652,7 @@
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                                    <property name="entry-text-column">0</property>
+                                    <property name="entry_text_column">0</property>
                                     <signal name="changed" handler="DeformationBoxChanged" swapped="no"/>
                                   </object>
                                   <packing>
@@ -911,7 +911,7 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                            <property name="entry-text-column">0</property>
+                            <property name="entry_text_column">0</property>
                             <signal name="changed" handler="AppearenceBoxChanged" swapped="no"/>
                             <signal name="changed" handler="SetDesktopLabel" swapped="no"/>
                             <signal name="changed" handler="SetCubeEffects" swapped="no"/>
@@ -1324,22 +1324,6 @@
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-            <child>
-              <object class="GtkButton" id="helpButton">
-                <property name="label">gtk-help</property>
-                <property name="width_request">110</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
-                <property name="use_stock">True</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
             <child>
               <object class="GtkButton" id="closeButton">
                 <property name="label">gtk-close</property>
