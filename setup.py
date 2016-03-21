@@ -117,15 +117,11 @@ version = version_file.read ().strip ()
 if "=" in version:
     version = version.split ("=")[1]
 
-proc = subprocess.Popen (['pkg-config', '--variable=prefix', 'compiz'], stdout=subprocess.PIPE)
-compiz_prefix = proc.stdout.read () [:-1]
-
 f = open (os.path.join ("simple-ccsm.in"), "rt")
 data = f.read ()
 f.close ()
 data = data.replace ("@prefix@", prefix)
 data = data.replace ("@version@", version)
-data = data.replace ("@compiz_prefix@", compiz_prefix)
 data = data.replace ("@gtkver@", gtkver)
 data = data.replace ("@enable_desktop_effects@", str(enableDesktopEffects))
 f = open (os.path.join ("simple-ccsm"), "wt")
