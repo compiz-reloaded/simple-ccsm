@@ -1031,8 +1031,10 @@ class DesktopPage:
                 if plugin.Name == 'cube':
                     setting = self.Context.Plugins['core'].Screens[0]['vsize']
                     setting.Value = 1 # Cube can only use 1 vertical viewport
-                    EnablePlugin(self.Context.Plugins['rotate'], True)
-                    EnablePlugin(self.Context.Plugins['cubeaddon'], True)
+                    if 'rotate' in self.Context.Plugins:
+                        EnablePlugin(self.Context.Plugins['rotate'], True)
+                    if 'cubeaddon' in self.Context.Plugins:
+                        EnablePlugin(self.Context.Plugins['cubeaddon'], True)
 
         self.Context.Write()
         self.SetDesktopSize()
