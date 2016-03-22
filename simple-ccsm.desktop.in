@@ -6,6 +6,5 @@ Icon=simple-ccsm
 Exec=simple-ccsm
 Terminal=false
 Type=Application
-Categories=Compiz;Settings;DesktopSettings;
+Categories=Settings;DesktopSettings;
 StartupNotify=true
-NotShowIn=KDE;
