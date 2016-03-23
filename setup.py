@@ -139,6 +139,7 @@ for profile in profile_files:
 
 data_files = [
                 ("share/applications", ["simple-ccsm.desktop"]),
+                ("share/appdata", ["simple-ccsm.appdata.xml"]),
                 ("share/simple-ccsm", ["simple-ccsm.ui"]),
                 ("share/simple-ccsm/profiles", profiles)
              ]
