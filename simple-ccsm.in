@@ -1362,6 +1362,7 @@ class MainWin:
             profile = self.ProfileChooser.get_active_text ()
 
         if profile == _("Default"):
+            profile = "Default"
             self.Context.ResetProfile()
         elif profile in Profiles:
             profile = Profiles[profile]
