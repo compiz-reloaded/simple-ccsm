@@ -1,6 +1,7 @@
 include po/*
-include README.md INSTALL AUTHORS COPYING LICENSE VERSION
+include INSTALL AUTHORS COPYING LICENSE README.md VERSION
 include simple-ccsm.in
+exclude simple-ccsm
 include simple-ccsm.ui
 include simple-ccsm.desktop.in
 include Makefile MANIFEST.in
