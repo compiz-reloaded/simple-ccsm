@@ -1,0 +1,23 @@
+Release 0.8.12 (2016-03-23 Sorokin Alexei <sor.alexei@meowr.ru>)
+================================================================
+COMPIZ-RELOADED
+
+Replace PyGObject2, PyGtk2 dependency with PyGObject3.
+New minimal Gtk requirements are: either Gtk 2.24.10+ or Gtk 3.2+,
+and now simple-ccsm needs CCSM 0.8.12 to work (older versions
+couldn't work with CCSM 0.8.12 and higher).
+
+Add support for MATE.
+
+Drop KDE4 support hacks but now do show the desktop entry in KDE.
+
+Fix selection of the Default profile on non-English systems
+resulting in creation of the new profile.
+
+Remove compiz-manager requirement and support.
+
+Added support for Shift-Alt-Tab to reverse through windows.
+
+Don't crash when colorfilter or cubeaddon are not installed.
+
+Remove the Help button pressing which did nothing.

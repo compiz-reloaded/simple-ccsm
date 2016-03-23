@@ -1,5 +1,5 @@
 include po/*
-include INSTALL AUTHORS COPYING LICENSE README.md VERSION
+include INSTALL AUTHORS COPYING LICENSE NEWS README.md VERSION
 include simple-ccsm.in
 exclude simple-ccsm
 include simple-ccsm.ui
