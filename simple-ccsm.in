@@ -34,6 +34,7 @@ import ccm
 import locale
 import gettext
 import time
+import signal
 from optparse import OptionParser
 locale.setlocale(locale.LC_ALL, "")
 _ = gettext.gettext
@@ -1400,6 +1401,7 @@ class MainWin:
         Gtk.main_quit()
 
 if __name__ == "__main__":
+    signal.signal(signal.SIGINT, signal.SIG_DFL)
     context = ccs.Context()
     page = -1
     parser = OptionParser()
