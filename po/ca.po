@@ -1,54 +1,60 @@
 # simple-ccsm translation templete
 # Copyright (C) 2008 compiz.org
 # This file is distributed under the same license as the simple-ccsm package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.7.4\n"
-"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
+"Project-Id-Version: simple-ccsm 0.8.12\n"
+"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/"
+"issues\n"
 "POT-Creation-Date: 2009-03-24 08:14+0100\n"
-"PO-Revision-Date: 2008-06-28 16:14+0200\n"
-"Last-Translator: berylog <berylog@gmail.com>\n"
+"PO-Revision-Date: 2016-05-17 18:26+0200\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: C-F Language team <i18n@compiz.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Language: ca\n"
 
 msgid "Minimal"
-msgstr ""
+msgstr "Mínim"
 
 msgid "Medium"
-msgstr ""
+msgstr "Intermedi"
 
 msgid "Advanced"
-msgstr ""
+msgstr "Avançat"
 
 msgid "Ultimate"
-msgstr ""
+msgstr "Superior"
 
 msgid "Provides a simple desktop environment with very few effects."
-msgstr ""
+msgstr "Proporciona un entorn d'escriptori senzill amb molt pocs efectes."
 
 msgid ""
 "Provides good balance between attractiveness and moderate performence "
 "requirements."
 msgstr ""
+"Proporciona un bon equilibri entre els requeriments de bellesa i de "
+"rendiment moderat."
 
 msgid "Provides more aesthetically pleasing set of effects."
-msgstr ""
+msgstr "Proporciona un conjunt d'efectes estèticament més agradables."
 
 msgid ""
 "Provides very advanced and eye-catching set of effects. Requires faster "
 "graphics card."
 msgstr ""
+"Proporciona un conjunt molt avançat i cridaner d'efectes. Requereix una "
+"targeta gràfica més ràpida."
 
 msgid "Enabled"
-msgstr "Activat"
+msgstr "Habilitat"
 
 msgid "Disabled"
-msgstr "Desactivat"
+msgstr "Inhabilitat"
 
 msgid "Zoom"
 msgstr "Zoom"
@@ -57,36 +63,39 @@ msgid "Colorfilter"
 msgstr "Filtre de color"
 
 msgid "None"
-msgstr ""
+msgstr "Sense"
 
 # berylog: Es refereix al plugin Cover per això no faig la traducció
 #, c-format
 msgid "%s (Cover)"
-msgstr "%s (Cover)"
+msgstr "%s (coberta)"
 
 #, c-format
 msgid "%s (Flip)"
-msgstr "%s (Flip)"
+msgstr "%s (inversió)"
 
 msgid "Cover"
-msgstr "Cover"
+msgstr "Coberta"
 
 msgid "Flip"
-msgstr "Flip"
+msgstr "Inversió"
 
 msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
 "Would you like to cancel enabling of desktop effects or run them anyway?"
 msgstr ""
+"No s'admeten els efectes de l'escriptori en el vostre maquinari / "
+"configuració. Voleu cancel·lar l'habilitació dels efectes de l'escriptori o "
+"voleu executar-los de totes maneres?"
 
 msgid "Default"
-msgstr "Per defecte"
+msgstr "Predeterminat"
 
 msgid "<b>Accessibility</b>"
 msgstr "<b>Accessibilitat</b>"
 
 msgid "<b>Additions</b>"
-msgstr "<b>Afegits</b>"
+msgstr "<b>Afegiments</b>"
 
 msgid "<b>Animations</b>"
 msgstr "<b>Animacions</b>"
@@ -95,26 +104,23 @@ msgid "<b>Appearance</b>"
 msgstr "<b>Aparença</b>"
 
 msgid "<b>Area zoom</b>"
-msgstr "<b>Àrea de zoom</b>"
+msgstr "<b>Àrea del zoom</b>"
 
 msgid "<b>Close Window</b>"
-msgstr "<b>Tancar finestra</b>"
+msgstr "<b>Tancament de la finestra</b>"
 
-#, fuzzy
 msgid "<b>Cube Effects</b>"
-msgstr "<b>Efectes</b>"
+msgstr "<b>Efectes del cub</b>"
 
 msgid "<b>Description</b>"
 msgstr "<b>Descripció</b>"
 
-#, fuzzy
 msgid "<b>Desktop columns</b>"
 msgstr "<b>Columnes d'escriptoris</b>"
 
 msgid "<b>Desktop preview</b>"
-msgstr "<b>Previsualització de l'escriptori</b>"
+msgstr "<b>Vista prèvia de l'escriptori</b>"
 
-#, fuzzy
 msgid "<b>Desktop rows</b>"
 msgstr "<b>Files d'escriptoris</b>"
 
@@ -125,28 +131,25 @@ msgid "<b>Effects</b>"
 msgstr "<b>Efectes</b>"
 
 msgid "<b>Enable zoom</b>"
-msgstr "<b>Activar zoom</b>"
+msgstr "<b>Habilita el zoom</b>"
 
-#, fuzzy
 msgid "<b>Focus window</b>"
-msgstr "<b>Tancar finestra</b>"
+msgstr "<b>Enfocament de la finestra</b>"
 
 msgid "<b>Minimize window</b>"
-msgstr "<b>Minimitzar finestra</b>"
+msgstr "<b>Minimització de la finestra</b>"
 
 msgid "<b>Open window</b>"
-msgstr "<b>Obrir finestra</b>"
+msgstr "<b>Obriment de la finestra</b>"
 
-#, fuzzy
 msgid "<b>Screen Edges</b>"
 msgstr "<b>Cantonades de la pantalla</b>"
 
 msgid "<b>Screen zoom</b>"
 msgstr "<b>Zoom de la pantalla</b>"
 
-#, fuzzy
 msgid "<b>Switcher</b>"
-msgstr "<b>Switcher</b>"
+msgstr "<b>Canviador</b>"
 
 msgid "Accessibility"
 msgstr "Accessibilitat"
@@ -155,74 +158,61 @@ msgid "Animations"
 msgstr "Animacions"
 
 msgid "Area zoom"
-msgstr "Àrea de zoom"
+msgstr "Àrea del zoom"
 
 msgid "Deformation:"
-msgstr ""
+msgstr "Deformació:"
 
 msgid "Desktop"
 msgstr "Escriptori"
 
-#, fuzzy
 msgid "Edges"
 msgstr "Cantonades"
 
 msgid "Effects"
 msgstr "Efectes"
 
-#, fuzzy
 msgid "Enable 3D Windows"
-msgstr "Activar Finestres Gelatinoses"
+msgstr "Habilita les finestres 3D"
 
 msgid "Enable Blur"
-msgstr "Activar Blur"
+msgstr "Habilita el difuminat"
 
 msgid "Enable Expo"
-msgstr "Activar Expo"
+msgstr "Habilita l'exposició"
 
-#, fuzzy
 msgid "Enable Reflection"
-msgstr "Activar animacions"
+msgstr "Habilita la reflexió"
 
 msgid "Enable Scale"
-msgstr "Activar Escalar finestres"
+msgstr "Habilita l'escalament"
 
 msgid "Enable Wobbly"
-msgstr "Activar Finestres Gelatinoses"
+msgstr "Habilita l'oscil·lació"
 
 msgid "Enable animations"
-msgstr "Activar animacions"
+msgstr "Habilita les animacions"
 
-#, fuzzy
 msgid "Enable extra animations"
-msgstr "Activar animacions"
+msgstr "Habilita les animacions extres"
 
 msgid "Info"
-msgstr "Info"
+msgstr "Informació"
 
 msgid "Opacity:"
-msgstr ""
+msgstr "Opacitat:"
 
-#, fuzzy
 msgid "Profile:"
 msgstr "Perfil:"
 
-#, fuzzy
 msgid "Screen zoom"
 msgstr "Zoom de la pantalla"
 
-#, fuzzy
 msgid "Simple CompizConfig Settings Manager"
-msgstr "Configurador Simple d'Opcions de Compiz"
+msgstr "Gestor senzill dels ajusts de CompizConfig"
 
 msgid "_Enable desktop effects"
-msgstr ""
+msgstr "Habilita els _efectes de l'escriptori"
 
 msgid "Configure Compiz with CompizConfig"
-msgstr ""
-
-#~ msgid "gtk-close"
-#~ msgstr "gtk-tancar"
-
-#~ msgid "gtk-help"
-#~ msgstr "gtk-ajuda"
+msgstr "Configura Compiz amb CompizConfig"
