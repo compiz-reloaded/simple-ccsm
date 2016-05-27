@@ -200,7 +200,7 @@ def GetXdgConfigHome(subdir):
 
     # create the directory if it's not there
     try:
-        os.makedirs(ret, 0700)
+        os.makedirs(ret, 0o700)
     except Exception:
         pass
 
