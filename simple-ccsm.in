@@ -290,7 +290,7 @@ class DesktopPreview(Gtk.Widget):
         if Gtk.check_version(3, 6, 0) is None:
             context = widget.get_style_context ()
             context.save()
-            context.add_class(Gtk.STYLE_CLASS_BACKGROUND)
+            context.add_class(Gtk.STYLE_CLASS_VIEW)
             context.set_state(Gtk.StateFlags.SELECTED)
             fg = context.get_background_color(context.get_state())
             context.set_state(Gtk.StateFlags.NORMAL)
@@ -300,9 +300,9 @@ class DesktopPreview(Gtk.Widget):
             fg = widget.get_style().lookup_color('selected_bg_color')
             if fg[0] == False:
                 # If there's no selected_bg_color, let it be gray.
-                fg[1].red = 43690.0
-                fg[1].green = 43690.0
-                fg[1].blue = 43690.0
+                fg[1].red = 0xAAAA
+                fg[1].green = 0xAAAA
+                fg[1].blue = 0xAAAA
             dark = widget.get_style().lookup_color('fg_color')
 
         x = widget.get_allocation().x + self.line_width / 2.0
@@ -310,7 +310,7 @@ class DesktopPreview(Gtk.Widget):
         for i in range(self.size[1]):
             for j in range(self.size[0]):
                 if Gtk.check_version(3, 6, 0) is None:
-                    cr.set_source_rgb(fg.red, fg.green, fg.blue)
+                    cr.set_source_rgba(*fg)
                 else:
                     cr.set_source_rgb(fg[1].red/65535.0,
                                       fg[1].green/65535.0,
@@ -321,7 +321,7 @@ class DesktopPreview(Gtk.Widget):
 
                 cr.set_line_width(self.line_width)
                 if Gtk.check_version(3, 6, 0) is None:
-                    cr.set_source_rgb(dark.red, dark.green, dark.blue)
+                    cr.set_source_rgba(*dark)
                 else:
                     cr.set_source_rgb(dark[1].red/65535.0,
                                       dark[1].green/65535.0,
