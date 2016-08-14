@@ -132,6 +132,10 @@ cmd = "intltool-merge -d -u po/ simple-ccsm.desktop.in simple-ccsm.desktop".spli
 proc = subprocess.Popen(cmd)
 proc.wait()
 
+cmd = "intltool-merge -x -u po/ simple-ccsm.appdata.xml.in simple-ccsm.appdata.xml".split(" ")
+proc = subprocess.Popen(cmd)
+proc.wait()
+
 profile_files = os.listdir("profiles/")
 profiles = []
 for profile in profile_files:
