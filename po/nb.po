@@ -1,20 +1,19 @@
-# simple-ccsm translation templete
-# Copyright (C) 2008 compiz.org
+# Norwegian Bokmaal translation for simple-ccsm
+# Copyright (C) 2008 launchpad.net/compiz
 # This file is distributed under the same license as the simple-ccsm package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.7.4\n"
+"Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"POT-Creation-Date: 2017-01-12 18:19+0300\n"
 "PO-Revision-Date: 2008-06-10 22:51+0200\n"
 "Last-Translator: Markus Igeland <markusigeland@gmail.com>\n"
-"Language-Team: C-F Language team <i18n@compiz.org>\n"
+"Language-Team: Norwegian Bokmaal <nb@li.org>\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
 msgstr ""
@@ -32,7 +31,7 @@ msgid "Provides a simple desktop environment with very few effects."
 msgstr ""
 
 msgid ""
-"Provides good balance between attractiveness and moderate performence "
+"Provides good balance between attractiveness and moderate performance "
 "requirements."
 msgstr ""
 
@@ -59,6 +58,12 @@ msgstr "Fargefilter"
 msgid "None"
 msgstr ""
 
+msgid "Can't find the animation plugin."
+msgstr ""
+
+msgid "Can't find any animation extension plugins."
+msgstr ""
+
 #, c-format
 msgid "%s (Cover)"
 msgstr "%s (Skjul)"
@@ -81,144 +86,135 @@ msgstr ""
 msgid "Default"
 msgstr "Standard"
 
-msgid "<b>Accessibility</b>"
-msgstr "<b>Tilgjengelighet</b>"
-
-msgid "<b>Additions</b>"
-msgstr "<b>Tillegg</b>"
-
-msgid "<b>Animations</b>"
-msgstr "<b>Animasjoner</b>"
-
-msgid "<b>Appearance</b>"
-msgstr "<b>Utseende</b>"
-
-msgid "<b>Area zoom</b>"
-msgstr "<b>Område-zoom</b>"
-
-msgid "<b>Close Window</b>"
-msgstr "<b>Lukk vindu</b>"
-
-#, fuzzy
-msgid "<b>Cube Effects</b>"
-msgstr "<b>Effekter</b>"
-
-msgid "<b>Description</b>"
-msgstr "<b>Beskrivelse</b>"
-
-msgid "<b>Desktop columns</b>"
-msgstr "<b>Skrivebordskolonner</b>"
-
-msgid "<b>Desktop preview</b>"
-msgstr "<b>Forhåndsvisning av skrivebord</b>"
-
-msgid "<b>Desktop rows</b>"
-msgstr "<b>Skrivebordsrader</b>"
-
-msgid "<b>Desktop</b>"
-msgstr "<b>Skrivebord</b>"
-
-msgid "<b>Effects</b>"
-msgstr "<b>Effekter</b>"
-
-msgid "<b>Enable zoom</b>"
-msgstr "<b>Slå på zoom</b>"
-
-#, fuzzy
-msgid "<b>Focus window</b>"
-msgstr "<b>Lukk vindu</b>"
-
-msgid "<b>Minimize window</b>"
-msgstr "<b>Minimer vindu</b>"
-
-msgid "<b>Open window</b>"
-msgstr "<b>Åpne vindu</b>"
-
-msgid "<b>Screen Edges</b>"
-msgstr "<b>Skjermkanter</b>"
-
-msgid "<b>Screen zoom</b>"
-msgstr "<b>Skjermzoom</b>"
-
-# maybe a bad translation...?
-msgid "<b>Switcher</b>"
-msgstr "<b>Bytter</b>"
-
-msgid "Accessibility"
-msgstr "Tilgjengelighet"
-
-msgid "Animations"
-msgstr "Animasjoner"
-
-msgid "Area zoom"
-msgstr "Områdezoom"
-
-msgid "Deformation:"
-msgstr ""
-
-msgid "Desktop"
-msgstr "Skrivebord"
-
-msgid "Edges"
-msgstr "Kanter"
-
-msgid "Effects"
-msgstr "Effekter"
-
-# The effects name is "Wobbly", so I used it in this translation.
-#, fuzzy
-msgid "Enable 3D Windows"
-msgstr "Slå på \"Wobbly\""
-
-# Can't find a proper word in Norwegian for "blur"...
-msgid "Enable Blur"
-msgstr "Slå på uskarphet"
-
-# I think this is a 'OK' translation, but I'm unsure...
-msgid "Enable Expo"
-msgstr "Slå på forhåndsvisning"
-
-#, fuzzy
-msgid "Enable Reflection"
-msgstr "Slå på animasjoner"
-
-msgid "Enable Scale"
-msgstr "Slå på skalering"
-
-# The effects name is "Wobbly", so I used it in this translation.
-msgid "Enable Wobbly"
-msgstr "Slå på \"Wobbly\""
-
-msgid "Enable animations"
-msgstr "Slå på animasjoner"
-
-#, fuzzy
-msgid "Enable extra animations"
-msgstr "Slå på animasjoner"
-
-msgid "Info"
-msgstr "Info"
-
-msgid "Opacity:"
-msgstr ""
-
-#, fuzzy
-msgid "Profile:"
-msgstr "Profil:"
-
-msgid "Screen zoom"
-msgstr "Skjermzoom"
-
 # As "Simple Compiz Config Settings Manager" is a name for an application, I made up a name I think fit the application.
 #, fuzzy
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Det Enkle Compiz Konfigurasjonspanel"
 
-msgid "_Enable desktop effects"
-msgstr ""
-
 msgid "Configure Compiz with CompizConfig"
 msgstr ""
+
+#~ msgid "<b>Accessibility</b>"
+#~ msgstr "<b>Tilgjengelighet</b>"
+
+#~ msgid "<b>Additions</b>"
+#~ msgstr "<b>Tillegg</b>"
+
+#~ msgid "<b>Animations</b>"
+#~ msgstr "<b>Animasjoner</b>"
+
+#~ msgid "<b>Appearance</b>"
+#~ msgstr "<b>Utseende</b>"
+
+#~ msgid "<b>Area zoom</b>"
+#~ msgstr "<b>Område-zoom</b>"
+
+#~ msgid "<b>Close Window</b>"
+#~ msgstr "<b>Lukk vindu</b>"
+
+#, fuzzy
+#~ msgid "<b>Cube Effects</b>"
+#~ msgstr "<b>Effekter</b>"
+
+#~ msgid "<b>Description</b>"
+#~ msgstr "<b>Beskrivelse</b>"
+
+#~ msgid "<b>Desktop columns</b>"
+#~ msgstr "<b>Skrivebordskolonner</b>"
+
+#~ msgid "<b>Desktop preview</b>"
+#~ msgstr "<b>Forhåndsvisning av skrivebord</b>"
+
+#~ msgid "<b>Desktop rows</b>"
+#~ msgstr "<b>Skrivebordsrader</b>"
+
+#~ msgid "<b>Desktop</b>"
+#~ msgstr "<b>Skrivebord</b>"
+
+#~ msgid "<b>Effects</b>"
+#~ msgstr "<b>Effekter</b>"
+
+#~ msgid "<b>Enable zoom</b>"
+#~ msgstr "<b>Slå på zoom</b>"
+
+#, fuzzy
+#~ msgid "<b>Focus window</b>"
+#~ msgstr "<b>Lukk vindu</b>"
+
+#~ msgid "<b>Minimize window</b>"
+#~ msgstr "<b>Minimer vindu</b>"
+
+#~ msgid "<b>Open window</b>"
+#~ msgstr "<b>Åpne vindu</b>"
+
+#~ msgid "<b>Screen Edges</b>"
+#~ msgstr "<b>Skjermkanter</b>"
+
+#~ msgid "<b>Screen zoom</b>"
+#~ msgstr "<b>Skjermzoom</b>"
+
+# maybe a bad translation...?
+#~ msgid "<b>Switcher</b>"
+#~ msgstr "<b>Bytter</b>"
+
+#~ msgid "Accessibility"
+#~ msgstr "Tilgjengelighet"
+
+#~ msgid "Animations"
+#~ msgstr "Animasjoner"
+
+#~ msgid "Area zoom"
+#~ msgstr "Områdezoom"
+
+#~ msgid "Desktop"
+#~ msgstr "Skrivebord"
+
+#~ msgid "Edges"
+#~ msgstr "Kanter"
+
+#~ msgid "Effects"
+#~ msgstr "Effekter"
+
+# The effects name is "Wobbly", so I used it in this translation.
+#, fuzzy
+#~ msgid "Enable 3D Windows"
+#~ msgstr "Slå på \"Wobbly\""
+
+# Can't find a proper word in Norwegian for "blur"...
+#~ msgid "Enable Blur"
+#~ msgstr "Slå på uskarphet"
+
+# I think this is a 'OK' translation, but I'm unsure...
+#~ msgid "Enable Expo"
+#~ msgstr "Slå på forhåndsvisning"
+
+#, fuzzy
+#~ msgid "Enable Reflection"
+#~ msgstr "Slå på animasjoner"
+
+#~ msgid "Enable Scale"
+#~ msgstr "Slå på skalering"
+
+# The effects name is "Wobbly", so I used it in this translation.
+#~ msgid "Enable Wobbly"
+#~ msgstr "Slå på \"Wobbly\""
+
+#~ msgid "Enable animations"
+#~ msgstr "Slå på animasjoner"
+
+#, fuzzy
+#~ msgid "Enable extra animations"
+#~ msgstr "Slå på animasjoner"
+
+#~ msgid "Info"
+#~ msgstr "Info"
+
+#, fuzzy
+#~ msgid "Profile:"
+#~ msgstr "Profil:"
+
+#~ msgid "Screen zoom"
+#~ msgstr "Skjermzoom"
 
 #~ msgid "gtk-close"
 #~ msgstr "gtk-close"

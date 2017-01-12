@@ -1,20 +1,20 @@
-# simple-ccsm translation templete
-# Copyright (C) 2008 compiz.org
+# Chinese translation for simple-ccsm
+# Copyright (C) 2008 launchpad.net/compiz
 # This file is distributed under the same license as the simple-ccsm package.
 # JING Cheng <jingcheng01@gmail.com>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.7.4\n"
+"Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"POT-Creation-Date: 2017-01-12 18:19+0300\n"
 "PO-Revision-Date: 2009-05-11 05:33+0200\n"
 "Last-Translator: JING Cheng <jingcheng01@gmail.com>\n"
-"Language-Team: C-F Language team <i18n@compiz.org>\n"
+"Language-Team: Chinese <zh_CN@li.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
 msgstr "最简"
@@ -32,7 +32,7 @@ msgid "Provides a simple desktop environment with very few effects."
 msgstr "提供一个效果很少的的简单桌面环境。"
 
 msgid ""
-"Provides good balance between attractiveness and moderate performence "
+"Provides good balance between attractiveness and moderate performance "
 "requirements."
 msgstr "在吸引力与适度的性能需求之间提供很好的平衡。"
 
@@ -59,6 +59,12 @@ msgstr "颜色过滤"
 msgid "None"
 msgstr "无"
 
+msgid "Can't find the animation plugin."
+msgstr ""
+
+msgid "Can't find any animation extension plugins."
+msgstr ""
+
 #, c-format
 msgid "%s (Cover)"
 msgstr "%s (覆盖式)"
@@ -76,136 +82,137 @@ msgstr "翻阅式"
 msgid ""
 "Desktop effects are not supported on your current hardware / configuration. "
 "Would you like to cancel enabling of desktop effects or run them anyway?"
-msgstr "你当前的硬件/配置并不支持桌面特效。你想取消启用桌面特效，或者仍然运行它们？"
+msgstr ""
+"你当前的硬件/配置并不支持桌面特效。你想取消启用桌面特效，或者仍然运行它们？"
 
 msgid "Default"
 msgstr "默认"
 
-msgid "<b>Accessibility</b>"
-msgstr "<b>辅助工能</b>"
-
-msgid "<b>Additions</b>"
-msgstr "<b>附加效果</b>"
-
-msgid "<b>Animations</b>"
-msgstr "<b>动画</b>"
-
-msgid "<b>Appearance</b>"
-msgstr "<b>外观</b>"
-
-msgid "<b>Area zoom</b>"
-msgstr "<b>区域缩放</b>"
-
-msgid "<b>Close Window</b>"
-msgstr "<b>关闭窗口</b>"
-
-msgid "<b>Cube Effects</b>"
-msgstr "<b>立方体特效</b>"
-
-msgid "<b>Description</b>"
-msgstr "<b>说明</b>"
-
-msgid "<b>Desktop columns</b>"
-msgstr "<b>桌面列数</b>"
-
-msgid "<b>Desktop preview</b>"
-msgstr "<b>桌面预览</b>"
-
-msgid "<b>Desktop rows</b>"
-msgstr "<b>桌面行数</b>"
-
-msgid "<b>Desktop</b>"
-msgstr "<b>桌面</b>"
-
-msgid "<b>Effects</b>"
-msgstr "<b>特效</b>"
-
-msgid "<b>Enable zoom</b>"
-msgstr "<b>启用缩放</b>"
-
-msgid "<b>Focus window</b>"
-msgstr "<b>聚焦窗口</b>"
-
-msgid "<b>Minimize window</b>"
-msgstr "<b>最小化窗口</b>"
-
-msgid "<b>Open window</b>"
-msgstr "<b>打开窗口</b>"
-
-msgid "<b>Screen Edges</b>"
-msgstr "<b>屏幕边缘</b>"
-
-msgid "<b>Screen zoom</b>"
-msgstr "<b>屏幕缩放</b>"
-
-msgid "<b>Switcher</b>"
-msgstr "<b>切换条</b>"
-
-msgid "Accessibility"
-msgstr "辅助工具"
-
-msgid "Animations"
-msgstr "动画"
-
-msgid "Area zoom"
-msgstr "区域缩放"
-
-msgid "Deformation:"
-msgstr "变形："
-
-msgid "Desktop"
-msgstr "桌面"
-
-msgid "Edges"
-msgstr "边缘"
-
-msgid "Effects"
-msgstr "特效"
-
-msgid "Enable 3D Windows"
-msgstr "启用3D桌面"
-
-msgid "Enable Blur"
-msgstr "启用朦胧"
-
-msgid "Enable Expo"
-msgstr "启用展览"
-
-msgid "Enable Reflection"
-msgstr "启用倒影"
-
-msgid "Enable Scale"
-msgstr "启用比例排列"
-
-msgid "Enable Wobbly"
-msgstr "启用震颤"
-
-msgid "Enable animations"
-msgstr "启用动画特效"
-
-msgid "Enable extra animations"
-msgstr "启用附加动画特效"
-
-msgid "Info"
-msgstr "信息"
-
-msgid "Opacity:"
-msgstr "不透明度："
-
-msgid "Profile:"
-msgstr "配置文件："
-
-msgid "Screen zoom"
-msgstr "屏幕缩放"
-
 msgid "Simple CompizConfig Settings Manager"
 msgstr "简化版CompizConfig设置管理器"
 
-msgid "_Enable desktop effects"
-msgstr "启用桌面特效"
-
 msgid "Configure Compiz with CompizConfig"
 msgstr "使用CompizConfig配置Compiz"
+
+#~ msgid "<b>Accessibility</b>"
+#~ msgstr "<b>辅助工能</b>"
+
+#~ msgid "<b>Additions</b>"
+#~ msgstr "<b>附加效果</b>"
+
+#~ msgid "<b>Animations</b>"
+#~ msgstr "<b>动画</b>"
+
+#~ msgid "<b>Appearance</b>"
+#~ msgstr "<b>外观</b>"
+
+#~ msgid "<b>Area zoom</b>"
+#~ msgstr "<b>区域缩放</b>"
+
+#~ msgid "<b>Close Window</b>"
+#~ msgstr "<b>关闭窗口</b>"
+
+#~ msgid "<b>Cube Effects</b>"
+#~ msgstr "<b>立方体特效</b>"
+
+#~ msgid "<b>Description</b>"
+#~ msgstr "<b>说明</b>"
+
+#~ msgid "<b>Desktop columns</b>"
+#~ msgstr "<b>桌面列数</b>"
+
+#~ msgid "<b>Desktop preview</b>"
+#~ msgstr "<b>桌面预览</b>"
+
+#~ msgid "<b>Desktop rows</b>"
+#~ msgstr "<b>桌面行数</b>"
+
+#~ msgid "<b>Desktop</b>"
+#~ msgstr "<b>桌面</b>"
+
+#~ msgid "<b>Effects</b>"
+#~ msgstr "<b>特效</b>"
+
+#~ msgid "<b>Enable zoom</b>"
+#~ msgstr "<b>启用缩放</b>"
+
+#~ msgid "<b>Focus window</b>"
+#~ msgstr "<b>聚焦窗口</b>"
+
+#~ msgid "<b>Minimize window</b>"
+#~ msgstr "<b>最小化窗口</b>"
+
+#~ msgid "<b>Open window</b>"
+#~ msgstr "<b>打开窗口</b>"
+
+#~ msgid "<b>Screen Edges</b>"
+#~ msgstr "<b>屏幕边缘</b>"
+
+#~ msgid "<b>Screen zoom</b>"
+#~ msgstr "<b>屏幕缩放</b>"
+
+#~ msgid "<b>Switcher</b>"
+#~ msgstr "<b>切换条</b>"
+
+#~ msgid "Accessibility"
+#~ msgstr "辅助工具"
+
+#~ msgid "Animations"
+#~ msgstr "动画"
+
+#~ msgid "Area zoom"
+#~ msgstr "区域缩放"
+
+#~ msgid "Deformation:"
+#~ msgstr "变形："
+
+#~ msgid "Desktop"
+#~ msgstr "桌面"
+
+#~ msgid "Edges"
+#~ msgstr "边缘"
+
+#~ msgid "Effects"
+#~ msgstr "特效"
+
+#~ msgid "Enable 3D Windows"
+#~ msgstr "启用3D桌面"
+
+#~ msgid "Enable Blur"
+#~ msgstr "启用朦胧"
+
+#~ msgid "Enable Expo"
+#~ msgstr "启用展览"
+
+#~ msgid "Enable Reflection"
+#~ msgstr "启用倒影"
+
+#~ msgid "Enable Scale"
+#~ msgstr "启用比例排列"
+
+#~ msgid "Enable Wobbly"
+#~ msgstr "启用震颤"
+
+#~ msgid "Enable animations"
+#~ msgstr "启用动画特效"
+
+#~ msgid "Enable extra animations"
+#~ msgstr "启用附加动画特效"
+
+#~ msgid "Info"
+#~ msgstr "信息"
+
+#~ msgid "Opacity:"
+#~ msgstr "不透明度："
+
+#~ msgid "Profile:"
+#~ msgstr "配置文件："
+
+#~ msgid "Screen zoom"
+#~ msgstr "屏幕缩放"
+
+#~ msgid "_Enable desktop effects"
+#~ msgstr "启用桌面特效"
 
 #~ msgid "gtk-close"
 #~ msgstr "关闭"

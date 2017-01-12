@@ -1,20 +1,19 @@
-# simple-ccsm translation templete
-# Copyright (C) 2008 compiz.org
+# Euskara translation for simple-ccsm
+# Copyright (C) 2008 launchpad.net/compiz
 # This file is distributed under the same license as the simple-ccsm package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.7.4\n"
+"Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"POT-Creation-Date: 2017-01-12 18:19+0300\n"
 "PO-Revision-Date: 2008-08-08 23:59+0200\n"
 "Last-Translator: Ander Elortondo <ander.elor@gmail.com>\n"
-"Language-Team: C-F Language team <i18n@compiz.org>\n"
+"Language-Team: Euskara <eu@li.org>\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
 msgstr ""
@@ -32,7 +31,7 @@ msgid "Provides a simple desktop environment with very few effects."
 msgstr ""
 
 msgid ""
-"Provides good balance between attractiveness and moderate performence "
+"Provides good balance between attractiveness and moderate performance "
 "requirements."
 msgstr ""
 
@@ -59,6 +58,12 @@ msgstr "Kolore iragazkia"
 msgid "None"
 msgstr ""
 
+msgid "Can't find the animation plugin."
+msgstr ""
+
+msgid "Can't find any animation extension plugins."
+msgstr ""
+
 #, c-format
 msgid "%s (Cover)"
 msgstr "%s (Estali)"
@@ -81,138 +86,129 @@ msgstr ""
 msgid "Default"
 msgstr "Lehenetsia"
 
-msgid "<b>Accessibility</b>"
-msgstr "<b>Erabilerreztasuna</b>"
-
-msgid "<b>Additions</b>"
-msgstr "<b>Gehigarriak</b>"
-
-msgid "<b>Animations</b>"
-msgstr "<b>Animazioak</b>"
-
-msgid "<b>Appearance</b>"
-msgstr "<b>Itxura</b>"
-
-msgid "<b>Area zoom</b>"
-msgstr "<b>Zoom eremua</b>"
-
-msgid "<b>Close Window</b>"
-msgstr "<b>Itxi leihoa</b>"
-
-#, fuzzy
-msgid "<b>Cube Effects</b>"
-msgstr "<b>Efektuak</b>"
-
-msgid "<b>Description</b>"
-msgstr "<b>Azalpena</b>"
-
-msgid "<b>Desktop columns</b>"
-msgstr "<b>Mahaigain zutabeak</b>"
-
-msgid "<b>Desktop preview</b>"
-msgstr "<b>Mahaigain aurrebista</b>"
-
-msgid "<b>Desktop rows</b>"
-msgstr "<b>Mahaigain lerroak</b>"
-
-msgid "<b>Desktop</b>"
-msgstr "<b>Mahaigaina</b>"
-
-msgid "<b>Effects</b>"
-msgstr "<b>Efektuak</b>"
-
-msgid "<b>Enable zoom</b>"
-msgstr "<b>Gaitu zoom</b>"
-
-#, fuzzy
-msgid "<b>Focus window</b>"
-msgstr "<b>Itxi leihoa</b>"
-
-msgid "<b>Minimize window</b>"
-msgstr "<b>Txikitu leihoa</b>"
-
-msgid "<b>Open window</b>"
-msgstr "<b>Ireki leihoa</b>"
-
-msgid "<b>Screen Edges</b>"
-msgstr "<b>Pantaila Ertzak</b>"
-
-msgid "<b>Screen zoom</b>"
-msgstr "<b>Pantaila zoom</b>"
-
-msgid "<b>Switcher</b>"
-msgstr "<b>Aldatzailea</b>"
-
-msgid "Accessibility"
-msgstr "Erabilerreztasuna"
-
-msgid "Animations"
-msgstr "Animazioak"
-
-msgid "Area zoom"
-msgstr "Eremuko zoom "
-
-msgid "Deformation:"
-msgstr ""
-
-msgid "Desktop"
-msgstr "Mahaigaina"
-
-msgid "Edges"
-msgstr "Ertzak"
-
-msgid "Effects"
-msgstr "Efektuak"
-
-#, fuzzy
-msgid "Enable 3D Windows"
-msgstr "Gaitu dardara"
-
-msgid "Enable Blur"
-msgstr "Gaitu lausotzea"
-
-msgid "Enable Expo"
-msgstr "Gaitu Expo"
-
-#, fuzzy
-msgid "Enable Reflection"
-msgstr "Gaitu animazioak"
-
-msgid "Enable Scale"
-msgstr "Gaitu eskalatu"
-
-msgid "Enable Wobbly"
-msgstr "Gaitu dardara"
-
-msgid "Enable animations"
-msgstr "Gaitu animazioak"
-
-#, fuzzy
-msgid "Enable extra animations"
-msgstr "Gaitu animazioak"
-
-msgid "Info"
-msgstr "Info"
-
-msgid "Opacity:"
-msgstr ""
-
-#, fuzzy
-msgid "Profile:"
-msgstr "Perfila:"
-
-msgid "Screen zoom"
-msgstr "Pantaila zoom"
-
 #, fuzzy
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Simple Compiz Config Settings Manager"
 
-msgid "_Enable desktop effects"
-msgstr ""
-
 msgid "Configure Compiz with CompizConfig"
 msgstr ""
+
+#~ msgid "<b>Accessibility</b>"
+#~ msgstr "<b>Erabilerreztasuna</b>"
+
+#~ msgid "<b>Additions</b>"
+#~ msgstr "<b>Gehigarriak</b>"
+
+#~ msgid "<b>Animations</b>"
+#~ msgstr "<b>Animazioak</b>"
+
+#~ msgid "<b>Appearance</b>"
+#~ msgstr "<b>Itxura</b>"
+
+#~ msgid "<b>Area zoom</b>"
+#~ msgstr "<b>Zoom eremua</b>"
+
+#~ msgid "<b>Close Window</b>"
+#~ msgstr "<b>Itxi leihoa</b>"
+
+#, fuzzy
+#~ msgid "<b>Cube Effects</b>"
+#~ msgstr "<b>Efektuak</b>"
+
+#~ msgid "<b>Description</b>"
+#~ msgstr "<b>Azalpena</b>"
+
+#~ msgid "<b>Desktop columns</b>"
+#~ msgstr "<b>Mahaigain zutabeak</b>"
+
+#~ msgid "<b>Desktop preview</b>"
+#~ msgstr "<b>Mahaigain aurrebista</b>"
+
+#~ msgid "<b>Desktop rows</b>"
+#~ msgstr "<b>Mahaigain lerroak</b>"
+
+#~ msgid "<b>Desktop</b>"
+#~ msgstr "<b>Mahaigaina</b>"
+
+#~ msgid "<b>Effects</b>"
+#~ msgstr "<b>Efektuak</b>"
+
+#~ msgid "<b>Enable zoom</b>"
+#~ msgstr "<b>Gaitu zoom</b>"
+
+#, fuzzy
+#~ msgid "<b>Focus window</b>"
+#~ msgstr "<b>Itxi leihoa</b>"
+
+#~ msgid "<b>Minimize window</b>"
+#~ msgstr "<b>Txikitu leihoa</b>"
+
+#~ msgid "<b>Open window</b>"
+#~ msgstr "<b>Ireki leihoa</b>"
+
+#~ msgid "<b>Screen Edges</b>"
+#~ msgstr "<b>Pantaila Ertzak</b>"
+
+#~ msgid "<b>Screen zoom</b>"
+#~ msgstr "<b>Pantaila zoom</b>"
+
+#~ msgid "<b>Switcher</b>"
+#~ msgstr "<b>Aldatzailea</b>"
+
+#~ msgid "Accessibility"
+#~ msgstr "Erabilerreztasuna"
+
+#~ msgid "Animations"
+#~ msgstr "Animazioak"
+
+#~ msgid "Area zoom"
+#~ msgstr "Eremuko zoom "
+
+#~ msgid "Desktop"
+#~ msgstr "Mahaigaina"
+
+#~ msgid "Edges"
+#~ msgstr "Ertzak"
+
+#~ msgid "Effects"
+#~ msgstr "Efektuak"
+
+#, fuzzy
+#~ msgid "Enable 3D Windows"
+#~ msgstr "Gaitu dardara"
+
+#~ msgid "Enable Blur"
+#~ msgstr "Gaitu lausotzea"
+
+#~ msgid "Enable Expo"
+#~ msgstr "Gaitu Expo"
+
+#, fuzzy
+#~ msgid "Enable Reflection"
+#~ msgstr "Gaitu animazioak"
+
+#~ msgid "Enable Scale"
+#~ msgstr "Gaitu eskalatu"
+
+#~ msgid "Enable Wobbly"
+#~ msgstr "Gaitu dardara"
+
+#~ msgid "Enable animations"
+#~ msgstr "Gaitu animazioak"
+
+#, fuzzy
+#~ msgid "Enable extra animations"
+#~ msgstr "Gaitu animazioak"
+
+#~ msgid "Info"
+#~ msgstr "Info"
+
+#, fuzzy
+#~ msgid "Profile:"
+#~ msgstr "Perfila:"
+
+#~ msgid "Screen zoom"
+#~ msgstr "Pantaila zoom"
 
 #~ msgid "gtk-close"
 #~ msgstr "gtk-itxi"

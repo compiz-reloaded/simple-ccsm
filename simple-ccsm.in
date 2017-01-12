@@ -144,7 +144,7 @@ _("Ultimate"): 'Ultimate'
 
 Descriptions = {\
 'Minimal': _("Provides a simple desktop environment with very few effects."),
-'Medium': _("Provides good balance between attractiveness and moderate performence requirements."),
+'Medium': _("Provides good balance between attractiveness and moderate performance requirements."),
 'Advanced': _("Provides more aesthetically pleasing set of effects."),
 'Ultimate': _("Provides very advanced and eye-catching set of effects. Requires faster graphics card.")
 }

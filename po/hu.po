@@ -1,21 +1,20 @@
-# simple-ccsm translation templete
-# Copyright (C) 2008 compiz.org
+# Hungarian translation for simple-ccsm
+# Copyright (C) 2008 launchpad.net/compiz
 # This file is distributed under the same license as the simple-ccsm package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 # KAMI911 <kami911@gmail.com>, 2007-2008.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.7.4\n"
+"Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"POT-Creation-Date: 2017-01-12 18:19+0300\n"
 "PO-Revision-Date: 2008-06-13 17:05+0200\n"
 "Last-Translator: KAMI <kamihir@freemail.hu>\n"
-"Language-Team: C-F Language team <i18n@compiz.org>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
 msgstr "Minimális"
@@ -33,7 +32,7 @@ msgid "Provides a simple desktop environment with very few effects."
 msgstr "Egy asztali munkakörnyezetet biztosít kevés grafikai effektussal."
 
 msgid ""
-"Provides good balance between attractiveness and moderate performence "
+"Provides good balance between attractiveness and moderate performance "
 "requirements."
 msgstr ""
 "Jó egyesúly a látványos megjelenés és a közepes teljesítmény ígény között."
@@ -63,6 +62,12 @@ msgstr "Színszűrő"
 msgid "None"
 msgstr "Nincs"
 
+msgid "Can't find the animation plugin."
+msgstr ""
+
+msgid "Can't find any animation extension plugins."
+msgstr ""
+
 #, c-format
 msgid "%s (Cover)"
 msgstr "%s lefedés"
@@ -88,131 +93,131 @@ msgstr ""
 msgid "Default"
 msgstr "Alapértelmezett"
 
-msgid "<b>Accessibility</b>"
-msgstr "<b>Akadálymentesítés</b>"
-
-msgid "<b>Additions</b>"
-msgstr "<b>Kiegészítők</b>"
-
-msgid "<b>Animations</b>"
-msgstr "<b>Animációk</b>"
-
-msgid "<b>Appearance</b>"
-msgstr "<b>Megjelenés</b>"
-
-msgid "<b>Area zoom</b>"
-msgstr "<b>Terület nagyítása</b>"
-
-msgid "<b>Close Window</b>"
-msgstr "<b>Ablak bezárása</b>"
-
-msgid "<b>Cube Effects</b>"
-msgstr "<b>Kocka effektusok</b>"
-
-msgid "<b>Description</b>"
-msgstr "<b>Leírás</b>"
-
-msgid "<b>Desktop columns</b>"
-msgstr "<b>Asztal oszlopok</b>"
-
-msgid "<b>Desktop preview</b>"
-msgstr "<b>Asztal előnézet</b>"
-
-msgid "<b>Desktop rows</b>"
-msgstr "<b>Asztal sorok</b>"
-
-msgid "<b>Desktop</b>"
-msgstr "<b>Asztal</b>"
-
-msgid "<b>Effects</b>"
-msgstr "<b>Effektusok</b>"
-
-msgid "<b>Enable zoom</b>"
-msgstr "<b>Nagyítás engedélyezése</b>"
-
-msgid "<b>Focus window</b>"
-msgstr "<b>Ablak fókusz</b>"
-
-msgid "<b>Minimize window</b>"
-msgstr "<b>Ablak minimalizálása</b>"
-
-msgid "<b>Open window</b>"
-msgstr "<b>Ablak megnyitása</b>"
-
-msgid "<b>Screen Edges</b>"
-msgstr "<b>Képernyő élek</b>"
-
-msgid "<b>Screen zoom</b>"
-msgstr "<b>Képernyő nagyítás</b>"
-
-msgid "<b>Switcher</b>"
-msgstr "<b>Programváltó</b>"
-
-msgid "Accessibility"
-msgstr "Akadálymentesítés"
-
-msgid "Animations"
-msgstr "Animációk"
-
-msgid "Area zoom"
-msgstr "Terület nagyítása"
-
-msgid "Deformation:"
-msgstr "Alakváltozás:"
-
-msgid "Desktop"
-msgstr "Asztal"
-
-msgid "Edges"
-msgstr "Élek"
-
-msgid "Effects"
-msgstr "Effektusok"
-
-msgid "Enable 3D Windows"
-msgstr "Térbeli ablakok engedélyezése"
-
-msgid "Enable Blur"
-msgstr "Elmosás engedélyezése"
-
-msgid "Enable Expo"
-msgstr "Közszemle engedélyezése"
-
-msgid "Enable Reflection"
-msgstr "Tükröződések engedélyezése"
-
-msgid "Enable Scale"
-msgstr "Áttekintés engedélyezése"
-
-msgid "Enable Wobbly"
-msgstr "Imbolygó ablakok engedélyezése"
-
-msgid "Enable animations"
-msgstr "Animációk engedélyezése"
-
-msgid "Enable extra animations"
-msgstr "További animációk engedélyezése"
-
-msgid "Info"
-msgstr "Információk"
-
-msgid "Opacity:"
-msgstr "Átlátszatlanság"
-
-msgid "Profile:"
-msgstr "Profil:"
-
-msgid "Screen zoom"
-msgstr "Képernyő nagyítása"
-
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Egyszerűsített Compiz beállításkezelő"
 
-msgid "_Enable desktop effects"
-msgstr "_Asztali effektusok engedélyezése"
-
 msgid "Configure Compiz with CompizConfig"
 msgstr "Compiz beállítása a CompizConfig programmal"
+
+#~ msgid "<b>Accessibility</b>"
+#~ msgstr "<b>Akadálymentesítés</b>"
+
+#~ msgid "<b>Additions</b>"
+#~ msgstr "<b>Kiegészítők</b>"
+
+#~ msgid "<b>Animations</b>"
+#~ msgstr "<b>Animációk</b>"
+
+#~ msgid "<b>Appearance</b>"
+#~ msgstr "<b>Megjelenés</b>"
+
+#~ msgid "<b>Area zoom</b>"
+#~ msgstr "<b>Terület nagyítása</b>"
+
+#~ msgid "<b>Close Window</b>"
+#~ msgstr "<b>Ablak bezárása</b>"
+
+#~ msgid "<b>Cube Effects</b>"
+#~ msgstr "<b>Kocka effektusok</b>"
+
+#~ msgid "<b>Description</b>"
+#~ msgstr "<b>Leírás</b>"
+
+#~ msgid "<b>Desktop columns</b>"
+#~ msgstr "<b>Asztal oszlopok</b>"
+
+#~ msgid "<b>Desktop preview</b>"
+#~ msgstr "<b>Asztal előnézet</b>"
+
+#~ msgid "<b>Desktop rows</b>"
+#~ msgstr "<b>Asztal sorok</b>"
+
+#~ msgid "<b>Desktop</b>"
+#~ msgstr "<b>Asztal</b>"
+
+#~ msgid "<b>Effects</b>"
+#~ msgstr "<b>Effektusok</b>"
+
+#~ msgid "<b>Enable zoom</b>"
+#~ msgstr "<b>Nagyítás engedélyezése</b>"
+
+#~ msgid "<b>Focus window</b>"
+#~ msgstr "<b>Ablak fókusz</b>"
+
+#~ msgid "<b>Minimize window</b>"
+#~ msgstr "<b>Ablak minimalizálása</b>"
+
+#~ msgid "<b>Open window</b>"
+#~ msgstr "<b>Ablak megnyitása</b>"
+
+#~ msgid "<b>Screen Edges</b>"
+#~ msgstr "<b>Képernyő élek</b>"
+
+#~ msgid "<b>Screen zoom</b>"
+#~ msgstr "<b>Képernyő nagyítás</b>"
+
+#~ msgid "<b>Switcher</b>"
+#~ msgstr "<b>Programváltó</b>"
+
+#~ msgid "Accessibility"
+#~ msgstr "Akadálymentesítés"
+
+#~ msgid "Animations"
+#~ msgstr "Animációk"
+
+#~ msgid "Area zoom"
+#~ msgstr "Terület nagyítása"
+
+#~ msgid "Deformation:"
+#~ msgstr "Alakváltozás:"
+
+#~ msgid "Desktop"
+#~ msgstr "Asztal"
+
+#~ msgid "Edges"
+#~ msgstr "Élek"
+
+#~ msgid "Effects"
+#~ msgstr "Effektusok"
+
+#~ msgid "Enable 3D Windows"
+#~ msgstr "Térbeli ablakok engedélyezése"
+
+#~ msgid "Enable Blur"
+#~ msgstr "Elmosás engedélyezése"
+
+#~ msgid "Enable Expo"
+#~ msgstr "Közszemle engedélyezése"
+
+#~ msgid "Enable Reflection"
+#~ msgstr "Tükröződések engedélyezése"
+
+#~ msgid "Enable Scale"
+#~ msgstr "Áttekintés engedélyezése"
+
+#~ msgid "Enable Wobbly"
+#~ msgstr "Imbolygó ablakok engedélyezése"
+
+#~ msgid "Enable animations"
+#~ msgstr "Animációk engedélyezése"
+
+#~ msgid "Enable extra animations"
+#~ msgstr "További animációk engedélyezése"
+
+#~ msgid "Info"
+#~ msgstr "Információk"
+
+#~ msgid "Opacity:"
+#~ msgstr "Átlátszatlanság"
+
+#~ msgid "Profile:"
+#~ msgstr "Profil:"
+
+#~ msgid "Screen zoom"
+#~ msgstr "Képernyő nagyítása"
+
+#~ msgid "_Enable desktop effects"
+#~ msgstr "_Asztali effektusok engedélyezése"
 
 #~ msgid "gtk-close"
 #~ msgstr "gtk-close"

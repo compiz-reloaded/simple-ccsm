@@ -1,20 +1,19 @@
-# simple-ccsm translation templete
-# Copyright (C) 2008 compiz.org
+# Greek translation for simple-ccsm
+# Copyright (C) 2008 launchpad.net/compiz
 # This file is distributed under the same license as the simple-ccsm package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.7.4\n"
+"Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"POT-Creation-Date: 2017-01-12 18:19+0300\n"
 "PO-Revision-Date: 2009-03-30 09:26+0200\n"
 "Last-Translator: Jim Dusis <jimdusis@yahoo.gr>\n"
-"Language-Team: C-F Language team <i18n@compiz.org>\n"
+"Language-Team: Greek <el@li.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
 msgstr "Ελάχιστο"
@@ -32,7 +31,7 @@ msgid "Provides a simple desktop environment with very few effects."
 msgstr "Παρέχει ένα απλό περιβάλλον επιφάνειας εργασίας με πολύ λίγα εφέ."
 
 msgid ""
-"Provides good balance between attractiveness and moderate performence "
+"Provides good balance between attractiveness and moderate performance "
 "requirements."
 msgstr ""
 "Παρέχει μια καλή ισορροπία μεταξύ ελκυστικότητας κ μέτριων απαιτήσεων "
@@ -63,6 +62,12 @@ msgstr "Φίλτρο χρώματος"
 msgid "None"
 msgstr "Κανένα"
 
+msgid "Can't find the animation plugin."
+msgstr ""
+
+msgid "Can't find any animation extension plugins."
+msgstr ""
+
 #, c-format
 msgid "%s (Cover)"
 msgstr "%s (Κάλυψη)"
@@ -88,131 +93,131 @@ msgstr ""
 msgid "Default"
 msgstr "Προεπιλογή"
 
-msgid "<b>Accessibility</b>"
-msgstr "<b>Προσβασιμότητα</b>"
-
-msgid "<b>Additions</b>"
-msgstr "<b>Εναλλακτικές</b>"
-
-msgid "<b>Animations</b>"
-msgstr "<b>Γραφικές Απεικονίσεις</b>"
-
-msgid "<b>Appearance</b>"
-msgstr "<b>Εμφάνιση</b>"
-
-msgid "<b>Area zoom</b>"
-msgstr "<b>Περιοχή ζουμαρίσματος</b>"
-
-msgid "<b>Close Window</b>"
-msgstr "<b>Κλείσιμο Παραθύρου</b>"
-
-msgid "<b>Cube Effects</b>"
-msgstr "<b>Εφέ Κύβου</b>"
-
-msgid "<b>Description</b>"
-msgstr "<b>Περιγραφή</b>"
-
-msgid "<b>Desktop columns</b>"
-msgstr "<b>Στήλες επιφάνειας εργασίας</b>"
-
-msgid "<b>Desktop preview</b>"
-msgstr "<b>Προεπισκόπιση επιφάνειας εργασίας</b>"
-
-msgid "<b>Desktop rows</b>"
-msgstr "<b>Σειρές επιφάνειας εργασίας</b>"
-
-msgid "<b>Desktop</b>"
-msgstr "<b>Επιφάνεια εργασίας</b>"
-
-msgid "<b>Effects</b>"
-msgstr "<b>Εφέ</b>"
-
-msgid "<b>Enable zoom</b>"
-msgstr "<b>Ενεργοποίηση ζουμ</b>"
-
-msgid "<b>Focus window</b>"
-msgstr "<b>Εστίαση Παραθύρου</b>"
-
-msgid "<b>Minimize window</b>"
-msgstr "<b>Ελαχιστοποίηση παραθύρου</b>"
-
-msgid "<b>Open window</b>"
-msgstr "<b>Άνοιγμα παραθύρου</b>"
-
-msgid "<b>Screen Edges</b>"
-msgstr "<b>Άκρες οθόνης</b>"
-
-msgid "<b>Screen zoom</b>"
-msgstr "<b>Ζουμ οθόνης</b>"
-
-msgid "<b>Switcher</b>"
-msgstr "<b>Επιλογέας</b>"
-
-msgid "Accessibility"
-msgstr "Προσβασιμότητα"
-
-msgid "Animations"
-msgstr "Γραφικές Απεικονίσεις"
-
-msgid "Area zoom"
-msgstr "Περιοχή ζουμαρίσματος"
-
-msgid "Deformation:"
-msgstr "Παραμόρφωση:"
-
-msgid "Desktop"
-msgstr "Επιφάνεια εργασίας"
-
-msgid "Edges"
-msgstr "Άκρες"
-
-msgid "Effects"
-msgstr "Εφέ"
-
-msgid "Enable 3D Windows"
-msgstr "Ενεργοποίηση Τρισδιάστατων Παραθύρων"
-
-msgid "Enable Blur"
-msgstr "Ενεργοποίηση Θολώματος"
-
-msgid "Enable Expo"
-msgstr "Ενεργοποίηση Expo"
-
-msgid "Enable Reflection"
-msgstr "Ενεργοποίηση Αντανάκλασης"
-
-msgid "Enable Scale"
-msgstr "Ενεργοποίηση Κλιμάκωσης"
-
-msgid "Enable Wobbly"
-msgstr "Ενεργοποίηση Wobbly"
-
-msgid "Enable animations"
-msgstr "Ενεργοποίηση γραφικών απεικονίσεων"
-
-msgid "Enable extra animations"
-msgstr "Ενεργοποίηση έξτρα γραφικών απεικονίσεων"
-
-msgid "Info"
-msgstr "Πληροφορίες"
-
-msgid "Opacity:"
-msgstr "Αδιαφάνεια:"
-
-msgid "Profile:"
-msgstr "Προφίλ:"
-
-msgid "Screen zoom"
-msgstr "Ζουμ οθόνης"
-
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Απλός Διαχειριστής Ρυθμίσεων του CompizConfig"
 
-msgid "_Enable desktop effects"
-msgstr "_Εναργοποίηση των εφέ επιφάνειας εργασίας"
-
 msgid "Configure Compiz with CompizConfig"
 msgstr "Ρύθμιση του Compiz με το CompizConfig"
+
+#~ msgid "<b>Accessibility</b>"
+#~ msgstr "<b>Προσβασιμότητα</b>"
+
+#~ msgid "<b>Additions</b>"
+#~ msgstr "<b>Εναλλακτικές</b>"
+
+#~ msgid "<b>Animations</b>"
+#~ msgstr "<b>Γραφικές Απεικονίσεις</b>"
+
+#~ msgid "<b>Appearance</b>"
+#~ msgstr "<b>Εμφάνιση</b>"
+
+#~ msgid "<b>Area zoom</b>"
+#~ msgstr "<b>Περιοχή ζουμαρίσματος</b>"
+
+#~ msgid "<b>Close Window</b>"
+#~ msgstr "<b>Κλείσιμο Παραθύρου</b>"
+
+#~ msgid "<b>Cube Effects</b>"
+#~ msgstr "<b>Εφέ Κύβου</b>"
+
+#~ msgid "<b>Description</b>"
+#~ msgstr "<b>Περιγραφή</b>"
+
+#~ msgid "<b>Desktop columns</b>"
+#~ msgstr "<b>Στήλες επιφάνειας εργασίας</b>"
+
+#~ msgid "<b>Desktop preview</b>"
+#~ msgstr "<b>Προεπισκόπιση επιφάνειας εργασίας</b>"
+
+#~ msgid "<b>Desktop rows</b>"
+#~ msgstr "<b>Σειρές επιφάνειας εργασίας</b>"
+
+#~ msgid "<b>Desktop</b>"
+#~ msgstr "<b>Επιφάνεια εργασίας</b>"
+
+#~ msgid "<b>Effects</b>"
+#~ msgstr "<b>Εφέ</b>"
+
+#~ msgid "<b>Enable zoom</b>"
+#~ msgstr "<b>Ενεργοποίηση ζουμ</b>"
+
+#~ msgid "<b>Focus window</b>"
+#~ msgstr "<b>Εστίαση Παραθύρου</b>"
+
+#~ msgid "<b>Minimize window</b>"
+#~ msgstr "<b>Ελαχιστοποίηση παραθύρου</b>"
+
+#~ msgid "<b>Open window</b>"
+#~ msgstr "<b>Άνοιγμα παραθύρου</b>"
+
+#~ msgid "<b>Screen Edges</b>"
+#~ msgstr "<b>Άκρες οθόνης</b>"
+
+#~ msgid "<b>Screen zoom</b>"
+#~ msgstr "<b>Ζουμ οθόνης</b>"
+
+#~ msgid "<b>Switcher</b>"
+#~ msgstr "<b>Επιλογέας</b>"
+
+#~ msgid "Accessibility"
+#~ msgstr "Προσβασιμότητα"
+
+#~ msgid "Animations"
+#~ msgstr "Γραφικές Απεικονίσεις"
+
+#~ msgid "Area zoom"
+#~ msgstr "Περιοχή ζουμαρίσματος"
+
+#~ msgid "Deformation:"
+#~ msgstr "Παραμόρφωση:"
+
+#~ msgid "Desktop"
+#~ msgstr "Επιφάνεια εργασίας"
+
+#~ msgid "Edges"
+#~ msgstr "Άκρες"
+
+#~ msgid "Effects"
+#~ msgstr "Εφέ"
+
+#~ msgid "Enable 3D Windows"
+#~ msgstr "Ενεργοποίηση Τρισδιάστατων Παραθύρων"
+
+#~ msgid "Enable Blur"
+#~ msgstr "Ενεργοποίηση Θολώματος"
+
+#~ msgid "Enable Expo"
+#~ msgstr "Ενεργοποίηση Expo"
+
+#~ msgid "Enable Reflection"
+#~ msgstr "Ενεργοποίηση Αντανάκλασης"
+
+#~ msgid "Enable Scale"
+#~ msgstr "Ενεργοποίηση Κλιμάκωσης"
+
+#~ msgid "Enable Wobbly"
+#~ msgstr "Ενεργοποίηση Wobbly"
+
+#~ msgid "Enable animations"
+#~ msgstr "Ενεργοποίηση γραφικών απεικονίσεων"
+
+#~ msgid "Enable extra animations"
+#~ msgstr "Ενεργοποίηση έξτρα γραφικών απεικονίσεων"
+
+#~ msgid "Info"
+#~ msgstr "Πληροφορίες"
+
+#~ msgid "Opacity:"
+#~ msgstr "Αδιαφάνεια:"
+
+#~ msgid "Profile:"
+#~ msgstr "Προφίλ:"
+
+#~ msgid "Screen zoom"
+#~ msgstr "Ζουμ οθόνης"
+
+#~ msgid "_Enable desktop effects"
+#~ msgstr "_Εναργοποίηση των εφέ επιφάνειας εργασίας"
 
 #~ msgid "gtk-close"
 #~ msgstr "κλείσιμο-gtk"

@@ -1,20 +1,20 @@
-# Simple CompizConfig Japanese translation.
-# Copyright (C)2008 compiz.org
+# Japanese translation for simple-ccsm
+# Copyright (C) 2008 launchpad.net/compiz
 # This file is distributed under the same license as the simple-ccsm package.
-#
 # Jiro Kawada <jiro.kawada@gmail.com>, 2008.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: simple-ccsm 0.7.2\n"
+"Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"POT-Creation-Date: 2017-01-12 18:19+0300\n"
 "PO-Revision-Date: 2008-12-01 06:15+0100\n"
 "Last-Translator: jiro kawada <jiro.kawada@gmail.com>\n"
-"Language-Team: Japanese\n"
+"Language-Team: Japanese <ja@li.org>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
 msgstr "最小"
@@ -32,7 +32,7 @@ msgid "Provides a simple desktop environment with very few effects."
 msgstr "少数の効果によるシンプルなデスクトップ環境を提供します。"
 
 msgid ""
-"Provides good balance between attractiveness and moderate performence "
+"Provides good balance between attractiveness and moderate performance "
 "requirements."
 msgstr ""
 "見栄えと中程度の処理能力要求との間で適度に釣り合いを持たせた効果群を提供しま"
@@ -63,6 +63,12 @@ msgstr "カラーフィルタ"
 msgid "None"
 msgstr "なし"
 
+msgid "Can't find the animation plugin."
+msgstr ""
+
+msgid "Can't find any animation extension plugins."
+msgstr ""
+
 #, c-format
 msgid "%s (Cover)"
 msgstr "%s (カバー)"
@@ -88,128 +94,128 @@ msgstr ""
 msgid "Default"
 msgstr "デフォルト"
 
-msgid "<b>Accessibility</b>"
-msgstr "<b>アクセシビリティ</b>"
-
-msgid "<b>Additions</b>"
-msgstr "<b>追加効果</b>"
-
-msgid "<b>Animations</b>"
-msgstr "<b>アニメーション</b>"
-
-msgid "<b>Appearance</b>"
-msgstr "<b>外観</b>"
-
-msgid "<b>Area zoom</b>"
-msgstr "<b>部分ズーム</b>"
-
-msgid "<b>Close Window</b>"
-msgstr "<b>ウィンドウを閉じる</b>"
-
-msgid "<b>Cube Effects</b>"
-msgstr "<b>キューブ効果</b>"
-
-msgid "<b>Description</b>"
-msgstr "<b>説明</b>"
-
-msgid "<b>Desktop columns</b>"
-msgstr "<b>デスクトップの列</b>"
-
-msgid "<b>Desktop preview</b>"
-msgstr "<b>デスクトップのプレビュー</b>"
-
-msgid "<b>Desktop rows</b>"
-msgstr "<b>デスクトップの行</b>"
-
-msgid "<b>Desktop</b>"
-msgstr "<b>デスクトップ</b>"
-
-msgid "<b>Effects</b>"
-msgstr "<b>効果</b>"
-
-msgid "<b>Enable zoom</b>"
-msgstr "<b>ズーム有効化</b>"
-
-msgid "<b>Focus window</b>"
-msgstr "<b>ウィンドウをフォーカス</b>"
-
-msgid "<b>Minimize window</b>"
-msgstr "<b>ウィンドウを最小化</b>"
-
-msgid "<b>Open window</b>"
-msgstr "<b>ウィンドウを開く</b>"
-
-msgid "<b>Screen Edges</b>"
-msgstr "<b>スクリーンエッジ</b>"
-
-msgid "<b>Screen zoom</b>"
-msgstr "<b>画面ズーム</b>"
-
-msgid "<b>Switcher</b>"
-msgstr "<b>スイッチャー</b>"
-
-msgid "Accessibility"
-msgstr "アクセシビリティ"
-
-msgid "Animations"
-msgstr "アニメーション"
-
-msgid "Area zoom"
-msgstr "部分ズーム"
-
-msgid "Deformation:"
-msgstr "変形:"
-
-msgid "Desktop"
-msgstr "デスクトップ"
-
-msgid "Edges"
-msgstr "エッジ"
-
-msgid "Effects"
-msgstr "効果"
-
-msgid "Enable 3D Windows"
-msgstr "3D ウィンドウを有効化"
-
-msgid "Enable Blur"
-msgstr "ブラーを有効化"
-
-msgid "Enable Expo"
-msgstr "展開を有効化"
-
-msgid "Enable Reflection"
-msgstr "反射を有効化"
-
-msgid "Enable Scale"
-msgstr "スケールを有効化"
-
-msgid "Enable Wobbly"
-msgstr "揺れるウィンドウを有効化"
-
-msgid "Enable animations"
-msgstr "アニメーションを有効化"
-
-msgid "Enable extra animations"
-msgstr "追加のアニメーションを有効化"
-
-msgid "Info"
-msgstr "情報"
-
-msgid "Opacity:"
-msgstr "不透明度:"
-
-msgid "Profile:"
-msgstr "プロファイル:"
-
-msgid "Screen zoom"
-msgstr "画面ズーム"
-
 msgid "Simple CompizConfig Settings Manager"
 msgstr "簡易版 CompizConfig 設定マネージャ"
 
-msgid "_Enable desktop effects"
-msgstr "デスクトップ視覚効果を有効化(_E)"
-
 msgid "Configure Compiz with CompizConfig"
 msgstr "CompizConfig で Compiz の設定"
+
+#~ msgid "<b>Accessibility</b>"
+#~ msgstr "<b>アクセシビリティ</b>"
+
+#~ msgid "<b>Additions</b>"
+#~ msgstr "<b>追加効果</b>"
+
+#~ msgid "<b>Animations</b>"
+#~ msgstr "<b>アニメーション</b>"
+
+#~ msgid "<b>Appearance</b>"
+#~ msgstr "<b>外観</b>"
+
+#~ msgid "<b>Area zoom</b>"
+#~ msgstr "<b>部分ズーム</b>"
+
+#~ msgid "<b>Close Window</b>"
+#~ msgstr "<b>ウィンドウを閉じる</b>"
+
+#~ msgid "<b>Cube Effects</b>"
+#~ msgstr "<b>キューブ効果</b>"
+
+#~ msgid "<b>Description</b>"
+#~ msgstr "<b>説明</b>"
+
+#~ msgid "<b>Desktop columns</b>"
+#~ msgstr "<b>デスクトップの列</b>"
+
+#~ msgid "<b>Desktop preview</b>"
+#~ msgstr "<b>デスクトップのプレビュー</b>"
+
+#~ msgid "<b>Desktop rows</b>"
+#~ msgstr "<b>デスクトップの行</b>"
+
+#~ msgid "<b>Desktop</b>"
+#~ msgstr "<b>デスクトップ</b>"
+
+#~ msgid "<b>Effects</b>"
+#~ msgstr "<b>効果</b>"
+
+#~ msgid "<b>Enable zoom</b>"
+#~ msgstr "<b>ズーム有効化</b>"
+
+#~ msgid "<b>Focus window</b>"
+#~ msgstr "<b>ウィンドウをフォーカス</b>"
+
+#~ msgid "<b>Minimize window</b>"
+#~ msgstr "<b>ウィンドウを最小化</b>"
+
+#~ msgid "<b>Open window</b>"
+#~ msgstr "<b>ウィンドウを開く</b>"
+
+#~ msgid "<b>Screen Edges</b>"
+#~ msgstr "<b>スクリーンエッジ</b>"
+
+#~ msgid "<b>Screen zoom</b>"
+#~ msgstr "<b>画面ズーム</b>"
+
+#~ msgid "<b>Switcher</b>"
+#~ msgstr "<b>スイッチャー</b>"
+
+#~ msgid "Accessibility"
+#~ msgstr "アクセシビリティ"
+
+#~ msgid "Animations"
+#~ msgstr "アニメーション"
+
+#~ msgid "Area zoom"
+#~ msgstr "部分ズーム"
+
+#~ msgid "Deformation:"
+#~ msgstr "変形:"
+
+#~ msgid "Desktop"
+#~ msgstr "デスクトップ"
+
+#~ msgid "Edges"
+#~ msgstr "エッジ"
+
+#~ msgid "Effects"
+#~ msgstr "効果"
+
+#~ msgid "Enable 3D Windows"
+#~ msgstr "3D ウィンドウを有効化"
+
+#~ msgid "Enable Blur"
+#~ msgstr "ブラーを有効化"
+
+#~ msgid "Enable Expo"
+#~ msgstr "展開を有効化"
+
+#~ msgid "Enable Reflection"
+#~ msgstr "反射を有効化"
+
+#~ msgid "Enable Scale"
+#~ msgstr "スケールを有効化"
+
+#~ msgid "Enable Wobbly"
+#~ msgstr "揺れるウィンドウを有効化"
+
+#~ msgid "Enable animations"
+#~ msgstr "アニメーションを有効化"
+
+#~ msgid "Enable extra animations"
+#~ msgstr "追加のアニメーションを有効化"
+
+#~ msgid "Info"
+#~ msgstr "情報"
+
+#~ msgid "Opacity:"
+#~ msgstr "不透明度:"
+
+#~ msgid "Profile:"
+#~ msgstr "プロファイル:"
+
+#~ msgid "Screen zoom"
+#~ msgstr "画面ズーム"
+
+#~ msgid "_Enable desktop effects"
+#~ msgstr "デスクトップ視覚効果を有効化(_E)"

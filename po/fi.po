@@ -1,21 +1,21 @@
-# Simple CCSM Finnish (fi) translation
+# Finnish translation for simple-ccsm
 # Copyright (C) 2008 Timo Jyrinki
 # This file is distributed under the same license as the simple-ccsm package.
 # Timo Jyrinki <timo.jyrinki@iki.fi>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: simple-ccsm trunk\n"
+"Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2009-03-24 08:14+0100\n"
+"POT-Creation-Date: 2017-01-12 18:19+0300\n"
 "PO-Revision-Date: 2009-08-13 09:55+0200\n"
 "Last-Translator: Timo Jyrinki <timo.jyrinki@iki.fi>\n"
-"Language-Team: C-F Language team <i18n@compiz.org>\n"
+"Language-Team: Finnish <fi@li.org>\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.1.0\n"
 
 msgid "Minimal"
 msgstr "Minimaalinen"
@@ -33,7 +33,7 @@ msgid "Provides a simple desktop environment with very few effects."
 msgstr "Yksinkertainen työpöytäympäristö vähillä tehosteilla."
 
 msgid ""
-"Provides good balance between attractiveness and moderate performence "
+"Provides good balance between attractiveness and moderate performance "
 "requirements."
 msgstr "Hyvä tasapaino ulkonäön ja kohtuullisten tehovaatimusten välillä."
 
@@ -62,6 +62,12 @@ msgstr "Värisuodatin"
 msgid "None"
 msgstr "Ei mitään"
 
+msgid "Can't find the animation plugin."
+msgstr ""
+
+msgid "Can't find any animation extension plugins."
+msgstr ""
+
 #, c-format
 msgid "%s (Cover)"
 msgstr "%s (kannet)"
@@ -86,131 +92,131 @@ msgstr ""
 msgid "Default"
 msgstr "Oletus"
 
-msgid "<b>Accessibility</b>"
-msgstr "<b>Esteettömyys</b>"
-
-msgid "<b>Additions</b>"
-msgstr "<b>Lisäykset</b>"
-
-msgid "<b>Animations</b>"
-msgstr "<b>Animaatiot</b>"
-
-msgid "<b>Appearance</b>"
-msgstr "<b>Ulkoasu</b>"
-
-msgid "<b>Area zoom</b>"
-msgstr "<b>Aluesuurennus</b>"
-
-msgid "<b>Close Window</b>"
-msgstr "<b>Ikkunan sulkeminen</b>"
-
-msgid "<b>Cube Effects</b>"
-msgstr "<b>Kuutiotehosteet</b>"
-
-msgid "<b>Description</b>"
-msgstr "<b>Kuvaus</b>"
-
-msgid "<b>Desktop columns</b>"
-msgstr "<b>Työpöytäsarakkeet</b>"
-
-msgid "<b>Desktop preview</b>"
-msgstr "<b>Työpöydän esikatselu</b>"
-
-msgid "<b>Desktop rows</b>"
-msgstr "<b>Työpöytärivit</b>"
-
-msgid "<b>Desktop</b>"
-msgstr "<b>Työpöytä</b>"
-
-msgid "<b>Effects</b>"
-msgstr "<b>Tehosteet</b>"
-
-msgid "<b>Enable zoom</b>"
-msgstr "<b>Ota suurennus käyttöön</b>"
-
-msgid "<b>Focus window</b>"
-msgstr "<b>Ikkunan kohdistus</b>"
-
-msgid "<b>Minimize window</b>"
-msgstr "<b>Ikkunan pienennys</b>"
-
-msgid "<b>Open window</b>"
-msgstr "<b>Ikkunan avaus</b>"
-
-msgid "<b>Screen Edges</b>"
-msgstr "<b>Näytön reunat</b>"
-
-msgid "<b>Screen zoom</b>"
-msgstr "<b>Näytön suurennus</b>"
-
-msgid "<b>Switcher</b>"
-msgstr "<b>Vaihtaja</b>"
-
-msgid "Accessibility"
-msgstr "Esteettömyys"
-
-msgid "Animations"
-msgstr "Animaatiot"
-
-msgid "Area zoom"
-msgstr "Aluesuurennus"
-
-msgid "Deformation:"
-msgstr "Muodon käsittely:"
-
-msgid "Desktop"
-msgstr "Työpöytä"
-
-msgid "Edges"
-msgstr "Reunat"
-
-msgid "Effects"
-msgstr "Tehosteet"
-
-msgid "Enable 3D Windows"
-msgstr "Ota 3D-ikkunat käyttöön"
-
-msgid "Enable Blur"
-msgstr "Ota sumennus käyttöön"
-
-msgid "Enable Expo"
-msgstr "Ota \"expo\" käyttöön"
-
-msgid "Enable Reflection"
-msgstr "Ota heijastukset käyttöön"
-
-msgid "Enable Scale"
-msgstr "Ota skaalaus käyttöön"
-
-msgid "Enable Wobbly"
-msgstr "Ota huojuvat ikkunat käyttöön"
-
-msgid "Enable animations"
-msgstr "Ota animaatiot käyttöön"
-
-msgid "Enable extra animations"
-msgstr "Ota lisäanimaatiot käyttöön"
-
-msgid "Info"
-msgstr "Tiedot"
-
-msgid "Opacity:"
-msgstr "Läpikuultamattomuus:"
-
-msgid "Profile:"
-msgstr "Profiili:"
-
-msgid "Screen zoom"
-msgstr "Näytön suurennus"
-
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Yksinkertainen Compiz-asetusten hallinta"
 
-msgid "_Enable desktop effects"
-msgstr "Ota työpöytät_ehosteet käyttöön"
-
 msgid "Configure Compiz with CompizConfig"
 msgstr "Compiz-asetusten hallinta CompizConfigilla"
+
+#~ msgid "<b>Accessibility</b>"
+#~ msgstr "<b>Esteettömyys</b>"
+
+#~ msgid "<b>Additions</b>"
+#~ msgstr "<b>Lisäykset</b>"
+
+#~ msgid "<b>Animations</b>"
+#~ msgstr "<b>Animaatiot</b>"
+
+#~ msgid "<b>Appearance</b>"
+#~ msgstr "<b>Ulkoasu</b>"
+
+#~ msgid "<b>Area zoom</b>"
+#~ msgstr "<b>Aluesuurennus</b>"
+
+#~ msgid "<b>Close Window</b>"
+#~ msgstr "<b>Ikkunan sulkeminen</b>"
+
+#~ msgid "<b>Cube Effects</b>"
+#~ msgstr "<b>Kuutiotehosteet</b>"
+
+#~ msgid "<b>Description</b>"
+#~ msgstr "<b>Kuvaus</b>"
+
+#~ msgid "<b>Desktop columns</b>"
+#~ msgstr "<b>Työpöytäsarakkeet</b>"
+
+#~ msgid "<b>Desktop preview</b>"
+#~ msgstr "<b>Työpöydän esikatselu</b>"
+
+#~ msgid "<b>Desktop rows</b>"
+#~ msgstr "<b>Työpöytärivit</b>"
+
+#~ msgid "<b>Desktop</b>"
+#~ msgstr "<b>Työpöytä</b>"
+
+#~ msgid "<b>Effects</b>"
+#~ msgstr "<b>Tehosteet</b>"
+
+#~ msgid "<b>Enable zoom</b>"
+#~ msgstr "<b>Ota suurennus käyttöön</b>"
+
+#~ msgid "<b>Focus window</b>"
+#~ msgstr "<b>Ikkunan kohdistus</b>"
+
+#~ msgid "<b>Minimize window</b>"
+#~ msgstr "<b>Ikkunan pienennys</b>"
+
+#~ msgid "<b>Open window</b>"
+#~ msgstr "<b>Ikkunan avaus</b>"
+
+#~ msgid "<b>Screen Edges</b>"
+#~ msgstr "<b>Näytön reunat</b>"
+
+#~ msgid "<b>Screen zoom</b>"
+#~ msgstr "<b>Näytön suurennus</b>"
+
+#~ msgid "<b>Switcher</b>"
+#~ msgstr "<b>Vaihtaja</b>"
+
+#~ msgid "Accessibility"
+#~ msgstr "Esteettömyys"
+
+#~ msgid "Animations"
+#~ msgstr "Animaatiot"
+
+#~ msgid "Area zoom"
+#~ msgstr "Aluesuurennus"
+
+#~ msgid "Deformation:"
+#~ msgstr "Muodon käsittely:"
+
+#~ msgid "Desktop"
+#~ msgstr "Työpöytä"
+
+#~ msgid "Edges"
+#~ msgstr "Reunat"
+
+#~ msgid "Effects"
+#~ msgstr "Tehosteet"
+
+#~ msgid "Enable 3D Windows"
+#~ msgstr "Ota 3D-ikkunat käyttöön"
+
+#~ msgid "Enable Blur"
+#~ msgstr "Ota sumennus käyttöön"
+
+#~ msgid "Enable Expo"
+#~ msgstr "Ota \"expo\" käyttöön"
+
+#~ msgid "Enable Reflection"
+#~ msgstr "Ota heijastukset käyttöön"
+
+#~ msgid "Enable Scale"
+#~ msgstr "Ota skaalaus käyttöön"
+
+#~ msgid "Enable Wobbly"
+#~ msgstr "Ota huojuvat ikkunat käyttöön"
+
+#~ msgid "Enable animations"
+#~ msgstr "Ota animaatiot käyttöön"
+
+#~ msgid "Enable extra animations"
+#~ msgstr "Ota lisäanimaatiot käyttöön"
+
+#~ msgid "Info"
+#~ msgstr "Tiedot"
+
+#~ msgid "Opacity:"
+#~ msgstr "Läpikuultamattomuus:"
+
+#~ msgid "Profile:"
+#~ msgstr "Profiili:"
+
+#~ msgid "Screen zoom"
+#~ msgstr "Näytön suurennus"
+
+#~ msgid "_Enable desktop effects"
+#~ msgstr "Ota työpöytät_ehosteet käyttöön"
 
 #~ msgid "Simple Compiz Config Settings Manager"
 #~ msgstr "Yksinkertainen Compiz-asetusten hallinta"
