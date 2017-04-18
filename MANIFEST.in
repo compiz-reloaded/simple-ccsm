@@ -4,7 +4,7 @@ include simple-ccsm.in
 exclude simple-ccsm
 include simple-ccsm.ui
 include simple-ccsm.desktop.in
-include simple-ccsm.appdata.xml
+include simple-ccsm.appdata.xml.in
 include Makefile MANIFEST.in
 recursive-include profiles *
 recursive-include images *
