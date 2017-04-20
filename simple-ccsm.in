@@ -28,6 +28,7 @@ from gi.repository import GObject, GLib, Gtk, Gdk
 import shutil
 import os
 import subprocess
+import sys
 import cairo
 import compizconfig as ccs
 import ccm
@@ -1249,7 +1250,10 @@ class MainWin:
             psCMD = "ps -e".split(" ")
             ps = subprocess.Popen(psCMD, stdout=subprocess.PIPE)
             grepCMD = "grep compiz".split(" ")
-            grep = subprocess.Popen(grepCMD, stdin=ps.stdout, stdout=subprocess.PIPE)
+            if sys.version_info.major >= 3:
+                grep = subprocess.Popen(grepCMD, stdin=ps.stdout, stdout=subprocess.PIPE, encoding="utf-8")
+            else:
+                grep = subprocess.Popen(grepCMD, stdin=ps.stdout, stdout=subprocess.PIPE)
             grep.wait()
             lines = grep.stdout.readlines()
             for l in lines:
