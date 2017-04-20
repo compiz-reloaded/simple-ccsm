@@ -21,6 +21,7 @@
 import gi
 gi.require_version('Pango', '1.0')
 gi.require_version('PangoCairo', '1.0')
+gi.require_version('Rsvg', '2.0')
 gi.require_version('Gtk', '@gtkver@')
 gi.require_version('Gdk', '@gtkver@')
 from gi.repository import GObject, GLib, Gtk, Gdk
