@@ -1,3 +1,11 @@
+Release 0.8.14.1 (2017-04-20 Sorokin Alexei <sor.alexei@meowr.ru>)
+==================================================================
+COMPIZ-RELOADED
+
+Fix Compiz checking on Python3.
+
+Silence a RSVG API version startup warning.
+
 Release 0.8.14 (2017-04-18 Sorokin Alexei <sor.alexei@meowr.ru>)
 ================================================================
 COMPIZ-RELOADED
