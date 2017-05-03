@@ -255,6 +255,7 @@ class DesktopPreview(Gtk.Widget):
         self.desktop_space = 5
         self.line_width = 1.0
 
+        self.set_app_paintable(True)
         self.set_has_window(False)
 
         self.connect("unrealize", self.unrealize_event)
@@ -286,18 +287,26 @@ class DesktopPreview(Gtk.Widget):
             self.desktop_width = int(self.desktop_width * factor)
             self.desktop_height = int(self.desktop_height * factor)
 
-    def draw_event(self, widget, data=None):
-        cr = widget.get_window().cairo_create()
+    def draw_event(self, widget, data):
+        if Gtk.check_version(3, 0, 0) is None:
+            cr = data
+        else:
+            event = data
+            cr = event.window.cairo_create()
+            Gdk.cairo_rectangle(cr, event.area)
+            cr.clip()
+            x, y = widget.translate_coordinates(widget.get_toplevel(), 0, 0)
+            cr.translate(x, y)
 
         if Gtk.check_version(3, 6, 0) is None:
-            context = widget.get_style_context ()
-            context.save()
-            context.add_class(Gtk.STYLE_CLASS_VIEW)
-            context.set_state(Gtk.StateFlags.SELECTED)
-            fg = context.get_background_color(context.get_state())
-            context.set_state(Gtk.StateFlags.NORMAL)
-            dark = context.get_color(context.get_state())
-            context.restore()
+            style = widget.get_style_context ()
+            style.save()
+            style.add_class(Gtk.STYLE_CLASS_VIEW)
+            style.set_state(Gtk.StateFlags.SELECTED)
+            fg = style.get_background_color(style.get_state())
+            style.set_state(Gtk.StateFlags.NORMAL)
+            dark = style.get_color(style.get_state())
+            style.restore()
         else:
             fg = widget.get_style().lookup_color('selected_bg_color')
             if fg[0] == False:
@@ -307,8 +316,8 @@ class DesktopPreview(Gtk.Widget):
                 fg[1].blue = 0xAAAA
             dark = widget.get_style().lookup_color('fg_color')
 
-        x = widget.get_allocation().x + self.line_width / 2.0
-        y = widget.get_allocation().y + self.line_width / 2.0
+        x = self.line_width / 2.0
+        y = self.line_width / 2.0
         for i in range(self.size[1]):
             for j in range(self.size[0]):
                 if Gtk.check_version(3, 6, 0) is None:
@@ -333,7 +342,9 @@ class DesktopPreview(Gtk.Widget):
                 x += self.desktop_width + self.desktop_space
 
             y += self.desktop_height + self.desktop_space
-            x = widget.get_allocation().x + self.line_width / 2.0
+            x = self.line_width / 2.0
+
+        return False
 
 class StarScale(Gtk.Widget):
     def __init__(self, stars=0.0, max=5):
@@ -352,6 +363,7 @@ class StarScale(Gtk.Widget):
 
         self._size_changed = False
 
+        self.set_app_paintable(True)
         self.set_has_window(False)
         self.set_size_request((self.star_size+self.star_space)*self.max, self.star_size)
 
@@ -422,20 +434,23 @@ class StarScale(Gtk.Widget):
         cr.rectangle(0, 0, q*width, self.star_size)
         cr.fill()
 
-    def draw_event(self, widget, data=None):
+    def draw_event(self, widget, data):
         if not self.surface or self._size_changed:
             self.draw_surface()
 
-        x = widget.get_allocation().x
-        y = widget.get_allocation().y
-        width  = widget.get_allocation().width
-        height = widget.get_allocation().height
+        if Gtk.check_version(3, 0, 0) is None:
+            cr = data
+        else:
+            event = data
+            cr = event.window.cairo_create()
+            Gdk.cairo_rectangle(cr, event.area)
+            cr.clip()
+            x, y = widget.translate_coordinates(widget.get_toplevel(), 0, 0)
+            cr.translate(x, y)
+        cr.set_source_surface(self.surface, 0, 0)
+        cr.paint()
 
-        cr = self.get_window().cairo_create()
-        cr.set_source_surface(self.surface, x, y)
-        cr.rectangle(x, y, width, height)
-        cr.fill()
-
+        return False
 
 GObject.type_register(StarScale)
 GObject.type_register(DesktopPreview)
@@ -468,10 +483,10 @@ class CheckImage(Gtk.HBox):
     def update(self):
         size = Gtk.IconSize.BUTTON
         if self.value:
-            self.image.set_from_stock(Gtk.STOCK_APPLY, size)
+            self.image.set_from_icon_name("gtk-apply", size)
             self.set_tooltip_text(_("Enabled"))
         else:
-            self.image.set_from_stock(Gtk.STOCK_DIALOG_ERROR, size)
+            self.image.set_from_icon_name("dialog-error", size)
             self.set_tooltip_text(_("Disabled"))
 
 class ProfilePage:
@@ -1245,7 +1260,7 @@ class MainWin:
 
 
     def CheckForCompiz(self):
-        composited = self.Window.is_composited()
+        composited = self.Window.get_screen().is_composited()
         if composited:
             # Now do the dirty work - check if it is really Compiz
             psCMD = "ps -e".split(" ")
@@ -1308,7 +1323,8 @@ class MainWin:
                                        True,
                                        False,
                                        3)
-                dialog.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL)
+                button = dialog.add_button(_("_Cancel"), Gtk.ResponseType.CANCEL)
+                button.set_image(Gtk.Image.new_from_icon_name("gtk-cancel"))
                 dialog.add_button("Run anyway", Gtk.ResponseType.OK)
                 dialog.show_all()
                 response = dialog.run()
