@@ -1255,10 +1255,10 @@ class MainWin:
                 grep = subprocess.Popen(grepCMD, stdin=ps.stdout, stdout=subprocess.PIPE, encoding="utf-8")
             else:
                 grep = subprocess.Popen(grepCMD, stdin=ps.stdout, stdout=subprocess.PIPE)
-            grep.wait()
-            lines = grep.stdout.readlines()
+            lines = grep.communicate()[0].split("\n")
+            ps.wait()
             for l in lines:
-                name = l.replace("\n", "").split(" ")[-1]
+                name = l.split(" ")[-1]
                 if name == CompizName:
                     return True
 
