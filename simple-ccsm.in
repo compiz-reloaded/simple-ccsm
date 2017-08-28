@@ -24,20 +24,20 @@ gi.require_version('PangoCairo', '1.0')
 gi.require_version('Rsvg', '2.0')
 gi.require_version('Gtk', '@gtkver@')
 gi.require_version('Gdk', '@gtkver@')
-from gi.repository import GObject, GLib, Gtk, Gdk
+from gi.repository import GObject, GLib, Gio, Gtk, Gdk
 
-import shutil
+import gettext
+import locale
+import optparse
 import os
+import shutil
+import signal
 import subprocess
 import sys
-import cairo
-import compizconfig as ccs
-import ccm
-import locale
-import gettext
 import time
-import signal
-from optparse import OptionParser
+import cairo
+import ccm
+import compizconfig as ccs
 locale.setlocale(locale.LC_ALL, "")
 _ = gettext.gettext
 
@@ -209,6 +209,38 @@ def GetXdgConfigHome(subdir):
         pass
 
     return ret
+
+def OnCommandLine(application, cmdLine, context):
+    page = -1
+
+    parser = optparse.OptionParser()
+    parser.add_option("-p", "--page", dest="page",
+                      help="Directly jump to page PAGE", metavar="PAGE")
+    (options, _) = parser.parse_args(cmdLine.get_arguments())
+
+    if GTK_VERSION >= (3, 6, 0):
+        prevWin = application.get_active_window()
+    else:
+        prevWin = None
+        if hasattr(application, "activeWindow"):
+            prevWin = application.activeWindow
+
+    if prevWin:
+        prevWin.present()
+        return 0
+
+    if options.page:
+        page = options.page
+
+    Gtk.Window.set_default_icon_name("simple-ccsm")
+    mainWin = MainWin(context, page)
+    if GTK_VERSION >= (3, 6, 0):
+        application.add_window(mainWin.Window)
+    else:
+        application.activeWindow = mainWin.Window
+        mainWin.Application = application
+        application.hold()
+    return 0
 
 class BuilderHandlers(object):
     def __init__(self, backingObjects):
@@ -1421,18 +1453,30 @@ class MainWin:
             self.ProfileChooser.set_active(0)
 
     def Quit(self, widget=None):
-        Gtk.main_quit()
+        if GTK_VERSION >= (3, 6, 0):
+            self.Window.destroy()
+        else:
+            self.Application.release()
 
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal.SIG_DFL)
+
     context = ccs.Context()
-    page = -1
-    parser = OptionParser()
-    parser.add_option("-p", "--page", dest = "page",
-		      help = "Directly jump to page PAGE", metavar = "PAGE")
-    (options, args) = parser.parse_args()
-    if options.page:
-        page = options.page
-    Gtk.Window.set_default_icon_name('simple-ccsm')
-    mainWin = MainWin(context, page)
-    Gtk.main()
+    if GTK_VERSION >= (3, 6, 0):
+        application = Gtk.Application(application_id="org.compiz.simple-ccsm",
+                                      flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE)
+    else:
+        application = Gio.Application(application_id="org.compiz.simple-ccsm",
+                                      flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE)
+    application.connect("command-line", OnCommandLine, context)
+
+    try:
+        application.register()
+    except TypeError:
+        application.register(None)
+
+    if application.get_is_remote():
+        sys.stderr.write("Another Simple CCSM instance is already " +
+                         "running...\n")
+        Gdk.notify_startup_complete()
+    application.run(sys.argv)
