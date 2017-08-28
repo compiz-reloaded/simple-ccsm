@@ -26,9 +26,11 @@ gi.require_version('Gtk', '@gtkver@')
 gi.require_version('Gdk', '@gtkver@')
 from gi.repository import GObject, GLib, Gio, Gtk, Gdk
 
+GLIB_VERSION = (GLib.MAJOR_VERSION, GLib.MINOR_VERSION, GLib.MICRO_VERSION)
+GTK_VERSION = (Gtk.MAJOR_VERSION, Gtk.MINOR_VERSION, Gtk.MICRO_VERSION)
+
 import gettext
 import locale
-import optparse
 import os
 import shutil
 import signal
@@ -38,10 +40,11 @@ import time
 import cairo
 import ccm
 import compizconfig as ccs
+if GLIB_VERSION < (2, 42, 0):
+    import optparse
+
 locale.setlocale(locale.LC_ALL, "")
 _ = gettext.gettext
-
-GTK_VERSION = (Gtk.MAJOR_VERSION, Gtk.MINOR_VERSION, Gtk.MICRO_VERSION)
 
 DataDir = '@prefix@/share/simple-ccsm/'
 
@@ -211,12 +214,22 @@ def GetXdgConfigHome(subdir):
     return ret
 
 def OnCommandLine(application, cmdLine, context):
-    page = -1
+    options  = {"page": -1}
+    page     = -1
 
-    parser = optparse.OptionParser()
-    parser.add_option("-p", "--page", dest="page",
-                      help="Directly jump to page PAGE", metavar="PAGE")
-    (options, _) = parser.parse_args(cmdLine.get_arguments())
+    if GLIB_VERSION >= (2, 62, 0):
+        optionValues = cmdLine.get_options_dict()
+        for option in options.keys():
+            if optionValues.contains(option):
+                options.update({option:
+                                optionValues.lookup_value(option).unpack()})
+    else:
+        parser = optparse.OptionParser()
+        parser.add_option("-p", "--page", dest="page",
+                          help="Directly jump to page PAGE", metavar="PAGE")
+        (optionValues, _) = parser.parse_args(cmdLine.get_arguments())
+        for option in options.keys():
+            options.update({option: getattr(optionValues, option)})
 
     if GTK_VERSION >= (3, 6, 0):
         prevWin = application.get_active_window()
@@ -229,8 +242,8 @@ def OnCommandLine(application, cmdLine, context):
         prevWin.present()
         return 0
 
-    if options.page:
-        page = options.page
+    if options["page"]:
+        page = options["page"]
 
     Gtk.Window.set_default_icon_name("simple-ccsm")
     mainWin = MainWin(context, page)
@@ -1475,8 +1488,13 @@ if __name__ == "__main__":
     except TypeError:
         application.register(None)
 
+    if GLIB_VERSION >= (2, 62, 0):
+        application.add_main_option("page", b"p", GLib.OptionFlags.NONE,
+                                    GLib.OptionArg.STRING,
+                                    "Directly jump to page PAGE",
+                                    "PAGE")
+
     if application.get_is_remote():
-        sys.stderr.write("Another Simple CCSM instance is already " +
-                         "running...\n")
+        sys.stderr.write("Another Simple CCSM instance is already running...\n")
         Gdk.notify_startup_complete()
     application.run(sys.argv)
