@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2009-04-05 19:14+0100\n"
 "Last-Translator: Mads Lundby <lundbymads@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -99,126 +99,126 @@ msgstr "Standard"
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Simpelt værktøj til CompizConfig-indstillinger"
 
-msgid "Configure Compiz with CompizConfig"
-msgstr "Indstil Compiz med CompizConfig"
+msgid "_Enable desktop effects"
+msgstr "_Aktivér skrivebordseffekter"
 
-#~ msgid "<b>Accessibility</b>"
-#~ msgstr "<b>Tilgængelighed</b>"
+msgid "Profile:"
+msgstr "Profil:"
 
-#~ msgid "<b>Additions</b>"
-#~ msgstr "<b>Tilføjelser</b>"
+msgid "<b>Description</b>"
+msgstr "<b>Beskrivelse</b>"
 
-#~ msgid "<b>Animations</b>"
-#~ msgstr "<b>Animationer</b>"
+msgid "<b>Animations</b>"
+msgstr "<b>Animationer</b>"
 
-#~ msgid "<b>Appearance</b>"
-#~ msgstr "<b>Udseende</b>"
+msgid "<b>Effects</b>"
+msgstr "<b>Effekter</b>"
 
-#~ msgid "<b>Area zoom</b>"
-#~ msgstr "<b>Områdezoom</b>"
+msgid "<b>Desktop</b>"
+msgstr "<b>Skrivebord</b>"
 
-#~ msgid "<b>Close Window</b>"
-#~ msgstr "<b>Luk vindue</b>"
+msgid "<b>Accessibility</b>"
+msgstr "<b>Tilgængelighed</b>"
 
-#~ msgid "<b>Cube Effects</b>"
-#~ msgstr "<b>Terningeffekter</b>"
+msgid "Info"
+msgstr "Information"
 
-#~ msgid "<b>Description</b>"
-#~ msgstr "<b>Beskrivelse</b>"
+msgid "Enable animations"
+msgstr "Aktivér animationer"
 
-#~ msgid "<b>Desktop columns</b>"
-#~ msgstr "<b>Skrivebordskolonner</b>"
+msgid "Enable extra animations"
+msgstr "Aktivér ekstra animationer"
 
-#~ msgid "<b>Desktop preview</b>"
-#~ msgstr "<b>Forhåndsvisning af skriveborde</b>"
+msgid "<b>Open window</b>"
+msgstr "<b>Åbn vindue</b>"
 
-#~ msgid "<b>Desktop rows</b>"
-#~ msgstr "<b>Skrivebordsrækker</b>"
+msgid "<b>Close Window</b>"
+msgstr "<b>Luk vindue</b>"
 
-#~ msgid "<b>Desktop</b>"
-#~ msgstr "<b>Skrivebord</b>"
+msgid "<b>Focus window</b>"
+msgstr "<b>Fokusér vindue</b>"
 
-#~ msgid "<b>Effects</b>"
-#~ msgstr "<b>Effekter</b>"
+msgid "<b>Minimize window</b>"
+msgstr "<b>Minimér vindue</b>"
 
-#~ msgid "<b>Enable zoom</b>"
-#~ msgstr "<b>Aktivér zoom</b>"
-
-#~ msgid "<b>Focus window</b>"
-#~ msgstr "<b>Fokusér vindue</b>"
-
-#~ msgid "<b>Minimize window</b>"
-#~ msgstr "<b>Minimér vindue</b>"
-
-#~ msgid "<b>Open window</b>"
-#~ msgstr "<b>Åbn vindue</b>"
-
-#~ msgid "<b>Screen Edges</b>"
-#~ msgstr "<b>Skærmkanter</b>"
-
-#~ msgid "<b>Screen zoom</b>"
-#~ msgstr "<b>Skærmzoom</b>"
+msgid "Animations"
+msgstr "Animationer"
 
 # Der er reelt tale om en vinduesskifter her.
-#~ msgid "<b>Switcher</b>"
-#~ msgstr "<b>Vinduesskifter</b>"
+msgid "<b>Switcher</b>"
+msgstr "<b>Vinduesskifter</b>"
 
-#~ msgid "Accessibility"
-#~ msgstr "Tilgængelighed"
+msgid "Deformation:"
+msgstr "Deformation:"
 
-#~ msgid "Animations"
-#~ msgstr "Animationer"
+msgid "Opacity:"
+msgstr "Uigennemsigtighed:"
 
-#~ msgid "Area zoom"
-#~ msgstr "Områdezoom"
+msgid "Enable Reflection"
+msgstr "Aktivér reflekser"
 
-#~ msgid "Deformation:"
-#~ msgstr "Deformation:"
+msgid "Enable 3D Windows"
+msgstr "Aktivér 3D-vinduer"
 
-#~ msgid "Desktop"
-#~ msgstr "Skrivebord"
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Terningeffekter</b>"
 
-#~ msgid "Edges"
-#~ msgstr "Kanter"
+msgid "Enable Scale"
+msgstr "Aktivér skalering"
 
-#~ msgid "Effects"
-#~ msgstr "Effekter"
+msgid "Enable Expo"
+msgstr "Aktivér galleri"
 
-#~ msgid "Enable 3D Windows"
-#~ msgstr "Aktivér 3D-vinduer"
+msgid "Enable Blur"
+msgstr "Aktivér sløring"
 
-#~ msgid "Enable Blur"
-#~ msgstr "Aktivér sløring"
+msgid "Enable Wobbly"
+msgstr "Aktivér slingren"
 
-#~ msgid "Enable Expo"
-#~ msgstr "Aktivér galleri"
+msgid "<b>Additions</b>"
+msgstr "<b>Tilføjelser</b>"
 
-#~ msgid "Enable Reflection"
-#~ msgstr "Aktivér reflekser"
+msgid "Effects"
+msgstr "Effekter"
 
-#~ msgid "Enable Scale"
-#~ msgstr "Aktivér skalering"
+msgid "<b>Appearance</b>"
+msgstr "<b>Udseende</b>"
 
-#~ msgid "Enable Wobbly"
-#~ msgstr "Aktivér slingren"
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Skrivebordskolonner</b>"
 
-#~ msgid "Enable animations"
-#~ msgstr "Aktivér animationer"
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Skrivebordsrækker</b>"
 
-#~ msgid "Enable extra animations"
-#~ msgstr "Aktivér ekstra animationer"
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Forhåndsvisning af skriveborde</b>"
 
-#~ msgid "Info"
-#~ msgstr "Information"
+msgid "Desktop"
+msgstr "Skrivebord"
 
-#~ msgid "Opacity:"
-#~ msgstr "Uigennemsigtighed:"
+msgid "Screen zoom"
+msgstr "Skærmzoom"
 
-#~ msgid "Profile:"
-#~ msgstr "Profil:"
+msgid "Area zoom"
+msgstr "Områdezoom"
 
-#~ msgid "Screen zoom"
-#~ msgstr "Skærmzoom"
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Aktivér zoom</b>"
 
-#~ msgid "_Enable desktop effects"
-#~ msgstr "_Aktivér skrivebordseffekter"
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Skærmzoom</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Områdezoom</b>"
+
+msgid "Accessibility"
+msgstr "Tilgængelighed"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Skærmkanter</b>"
+
+msgid "Edges"
+msgstr "Kanter"
+
+msgid "Configure Compiz with CompizConfig"
+msgstr "Indstil Compiz med CompizConfig"

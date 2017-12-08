@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2009-03-26 06:49+0100\n"
 "Last-Translator: Denis Rakhmangulov <danfocus@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -104,131 +104,125 @@ msgstr "По умолчанию"
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Простой менеджер настройки CompizConfig"
 
+msgid "_Enable desktop effects"
+msgstr "_Включить эффекты рабочего стола"
+
+msgid "Profile:"
+msgstr "Профиль:"
+
+msgid "<b>Description</b>"
+msgstr "<b>Описание</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>Анимации</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>Эффекты</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>Рабочий стол</b>"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>Специальные возможности</b>"
+
+msgid "Info"
+msgstr "Информация"
+
+msgid "Enable animations"
+msgstr "Включить анимации"
+
+msgid "Enable extra animations"
+msgstr "Включить экстра анимации"
+
+msgid "<b>Open window</b>"
+msgstr "<b>Открыть окно</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>Закрыть окно</b>"
+
+msgid "<b>Focus window</b>"
+msgstr "<b>Сфокусировать окно</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>Свернуть окно</b>"
+
+msgid "Animations"
+msgstr "Анимации"
+
+msgid "<b>Switcher</b>"
+msgstr "<b>Переключатель</b>"
+
+msgid "Deformation:"
+msgstr "Деформация:"
+
+msgid "Opacity:"
+msgstr "Прозрачность:"
+
+msgid "Enable Reflection"
+msgstr "Включить отражение"
+
+msgid "Enable 3D Windows"
+msgstr "Включить 3D окна"
+
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Эффекты куба</b>"
+
+msgid "Enable Scale"
+msgstr "Включить масштабирование"
+
+msgid "Enable Expo"
+msgstr "Включить экспо"
+
+msgid "Enable Blur"
+msgstr "Включить смазывание"
+
+msgid "Enable Wobbly"
+msgstr "Включить вязкие окна"
+
+msgid "<b>Additions</b>"
+msgstr "<b>Дополнения</b>"
+
+msgid "Effects"
+msgstr "Эффекты"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>Поведение</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Столбцы рабочего стола</b>"
+
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Строки экрана</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Предварительный просмотр рабочего стола</b>"
+
+msgid "Desktop"
+msgstr "Рабочий стол"
+
+msgid "Screen zoom"
+msgstr "Масштабирование экрана"
+
+msgid "Area zoom"
+msgstr "Масштабирование области"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Разрешить масштабирование</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Масштабирование экрана</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Масштабирование области</b>"
+
+msgid "Accessibility"
+msgstr "Специальные возможности"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Края экрана</b>"
+
+msgid "Edges"
+msgstr "Грани"
+
 msgid "Configure Compiz with CompizConfig"
 msgstr "Настройте Compiz с помощью CompizConfig"
-
-#~ msgid "<b>Accessibility</b>"
-#~ msgstr "<b>Специальные возможности</b>"
-
-#~ msgid "<b>Additions</b>"
-#~ msgstr "<b>Дополнения</b>"
-
-#~ msgid "<b>Animations</b>"
-#~ msgstr "<b>Анимации</b>"
-
-#~ msgid "<b>Appearance</b>"
-#~ msgstr "<b>Поведение</b>"
-
-#~ msgid "<b>Area zoom</b>"
-#~ msgstr "<b>Масштабирование области</b>"
-
-#~ msgid "<b>Close Window</b>"
-#~ msgstr "<b>Закрыть окно</b>"
-
-#~ msgid "<b>Cube Effects</b>"
-#~ msgstr "<b>Эффекты куба</b>"
-
-#~ msgid "<b>Description</b>"
-#~ msgstr "<b>Описание</b>"
-
-#~ msgid "<b>Desktop columns</b>"
-#~ msgstr "<b>Столбцы рабочего стола</b>"
-
-#~ msgid "<b>Desktop preview</b>"
-#~ msgstr "<b>Предварительный просмотр рабочего стола</b>"
-
-#~ msgid "<b>Desktop rows</b>"
-#~ msgstr "<b>Строки экрана</b>"
-
-#~ msgid "<b>Desktop</b>"
-#~ msgstr "<b>Рабочий стол</b>"
-
-#~ msgid "<b>Effects</b>"
-#~ msgstr "<b>Эффекты</b>"
-
-#~ msgid "<b>Enable zoom</b>"
-#~ msgstr "<b>Разрешить масштабирование</b>"
-
-#~ msgid "<b>Focus window</b>"
-#~ msgstr "<b>Сфокусировать окно</b>"
-
-#~ msgid "<b>Minimize window</b>"
-#~ msgstr "<b>Свернуть окно</b>"
-
-#~ msgid "<b>Open window</b>"
-#~ msgstr "<b>Открыть окно</b>"
-
-#~ msgid "<b>Screen Edges</b>"
-#~ msgstr "<b>Края экрана</b>"
-
-#~ msgid "<b>Screen zoom</b>"
-#~ msgstr "<b>Масштабирование экрана</b>"
-
-#~ msgid "<b>Switcher</b>"
-#~ msgstr "<b>Переключатель</b>"
-
-#~ msgid "Accessibility"
-#~ msgstr "Специальные возможности"
-
-#~ msgid "Animations"
-#~ msgstr "Анимации"
-
-#~ msgid "Area zoom"
-#~ msgstr "Масштабирование области"
-
-#~ msgid "Deformation:"
-#~ msgstr "Деформация:"
-
-#~ msgid "Desktop"
-#~ msgstr "Рабочий стол"
-
-#~ msgid "Edges"
-#~ msgstr "Грани"
-
-#~ msgid "Effects"
-#~ msgstr "Эффекты"
-
-#~ msgid "Enable 3D Windows"
-#~ msgstr "Включить 3D окна"
-
-#~ msgid "Enable Blur"
-#~ msgstr "Включить смазывание"
-
-#~ msgid "Enable Expo"
-#~ msgstr "Включить экспо"
-
-#~ msgid "Enable Reflection"
-#~ msgstr "Включить отражение"
-
-#~ msgid "Enable Scale"
-#~ msgstr "Включить масштабирование"
-
-#~ msgid "Enable Wobbly"
-#~ msgstr "Включить вязкие окна"
-
-#~ msgid "Enable animations"
-#~ msgstr "Включить анимации"
-
-#~ msgid "Enable extra animations"
-#~ msgstr "Включить экстра анимации"
-
-#~ msgid "Info"
-#~ msgstr "Информация"
-
-#~ msgid "Opacity:"
-#~ msgstr "Прозрачность:"
-
-#~ msgid "Profile:"
-#~ msgstr "Профиль:"
-
-#~ msgid "Screen zoom"
-#~ msgstr "Масштабирование экрана"
-
-#~ msgid "_Enable desktop effects"
-#~ msgstr "_Включить эффекты рабочего стола"
-
-#~ msgid "gtk-close"
-#~ msgstr "gtk-close"
-
-#~ msgid "gtk-help"
-#~ msgstr "gtk-help"

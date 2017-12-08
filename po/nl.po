@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2009-05-23 19:38+0200\n"
 "Last-Translator: Alexander Cornillie <dworffish@hotmail.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -93,109 +93,133 @@ msgstr "Standaard"
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Simpele Compiz Config instellingen beheer"
 
-msgid "Configure Compiz with CompizConfig"
+msgid "_Enable desktop effects"
 msgstr ""
 
-#~ msgid "<b>Accessibility</b>"
-#~ msgstr "<b>Toegankelijkheid</b>"
+#, fuzzy
+msgid "Profile:"
+msgstr "Profiel:"
 
-#~ msgid "<b>Additions</b>"
-#~ msgstr "<b>Toevoegingen</b>"
+msgid "<b>Description</b>"
+msgstr "<b>Beschrijving</b>"
 
-#~ msgid "<b>Animations</b>"
-#~ msgstr "<b>Animaties</b>"
+msgid "<b>Animations</b>"
+msgstr "<b>Animaties</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>Effecten</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>Bureaublad</b>"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>Toegankelijkheid</b>"
+
+msgid "Info"
+msgstr "Over"
+
+msgid "Enable animations"
+msgstr "Animaties Activeren"
+
+#, fuzzy
+msgid "Enable extra animations"
+msgstr "Animaties Activeren"
+
+msgid "<b>Open window</b>"
+msgstr "<b>Venster Openen</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>Venster Sluiten</b>"
+
+#, fuzzy
+msgid "<b>Focus window</b>"
+msgstr "<b>Venster Sluiten</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>Venster Minimalizeren</b>"
+
+msgid "Animations"
+msgstr "Animaties"
+
+msgid "<b>Switcher</b>"
+msgstr "<b>Wisselaar</b>"
+
+msgid "Deformation:"
+msgstr ""
+
+msgid "Opacity:"
+msgstr ""
+
+#, fuzzy
+msgid "Enable Reflection"
+msgstr "Animaties Activeren"
+
+#, fuzzy
+msgid "Enable 3D Windows"
+msgstr "Wiebelende vensters inschakelen"
+
+#, fuzzy
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Effecten</b>"
+
+msgid "Enable Scale"
+msgstr "Verschalen inschakelen"
+
+msgid "Enable Expo"
+msgstr "Expo Activeren"
+
+msgid "Enable Blur"
+msgstr "Vervagen Activeren"
+
+msgid "Enable Wobbly"
+msgstr "Wiebelende vensters inschakelen"
+
+msgid "<b>Additions</b>"
+msgstr "<b>Toevoegingen</b>"
+
+msgid "Effects"
+msgstr "Effecten"
 
 # I don't know how this is traditionally called.
 # "Uiterlijk" is also possible.
-#~ msgid "<b>Appearance</b>"
-#~ msgstr "<b>Vormgeving</b>"
+msgid "<b>Appearance</b>"
+msgstr "<b>Vormgeving</b>"
 
-#~ msgid "<b>Area zoom</b>"
-#~ msgstr "<b>Zoomgebied</b>"
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Desktop kolommen</b>"
 
-#~ msgid "<b>Close Window</b>"
-#~ msgstr "<b>Venster Sluiten</b>"
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Bureaublad rijen</b>"
 
-#~ msgid "<b>Description</b>"
-#~ msgstr "<b>Beschrijving</b>"
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Bureaublad voorbeeld</b>"
 
-#~ msgid "<b>Desktop columns</b>"
-#~ msgstr "<b>Desktop kolommen</b>"
+msgid "Desktop"
+msgstr "Bureaublad"
 
-#~ msgid "<b>Desktop preview</b>"
-#~ msgstr "<b>Bureaublad voorbeeld</b>"
+msgid "Screen zoom"
+msgstr "Scherm zoom"
 
-#~ msgid "<b>Desktop rows</b>"
-#~ msgstr "<b>Bureaublad rijen</b>"
+msgid "Area zoom"
+msgstr "Gebiedzoom"
 
-#~ msgid "<b>Desktop</b>"
-#~ msgstr "<b>Bureaublad</b>"
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Zoom Activeren</b>"
 
-#~ msgid "<b>Effects</b>"
-#~ msgstr "<b>Effecten</b>"
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Scherm Zoom</b>"
 
-#~ msgid "<b>Enable zoom</b>"
-#~ msgstr "<b>Zoom Activeren</b>"
+msgid "<b>Area zoom</b>"
+msgstr "<b>Zoomgebied</b>"
 
-#~ msgid "<b>Minimize window</b>"
-#~ msgstr "<b>Venster Minimalizeren</b>"
+msgid "Accessibility"
+msgstr "Toegankelijkheid"
 
-#~ msgid "<b>Open window</b>"
-#~ msgstr "<b>Venster Openen</b>"
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Schermranden</b>"
 
-#~ msgid "<b>Screen Edges</b>"
-#~ msgstr "<b>Schermranden</b>"
+msgid "Edges"
+msgstr "Randen"
 
-#~ msgid "<b>Screen zoom</b>"
-#~ msgstr "<b>Scherm Zoom</b>"
-
-#~ msgid "<b>Switcher</b>"
-#~ msgstr "<b>Wisselaar</b>"
-
-#~ msgid "Accessibility"
-#~ msgstr "Toegankelijkheid"
-
-#~ msgid "Animations"
-#~ msgstr "Animaties"
-
-#~ msgid "Area zoom"
-#~ msgstr "Gebiedzoom"
-
-#~ msgid "Desktop"
-#~ msgstr "Bureaublad"
-
-#~ msgid "Edges"
-#~ msgstr "Randen"
-
-#~ msgid "Effects"
-#~ msgstr "Effecten"
-
-#~ msgid "Enable Blur"
-#~ msgstr "Vervagen Activeren"
-
-#~ msgid "Enable Expo"
-#~ msgstr "Expo Activeren"
-
-#~ msgid "Enable Scale"
-#~ msgstr "Verschalen inschakelen"
-
-#~ msgid "Enable Wobbly"
-#~ msgstr "Wiebelende vensters inschakelen"
-
-#~ msgid "Enable animations"
-#~ msgstr "Animaties Activeren"
-
-#~ msgid "Info"
-#~ msgstr "Over"
-
-#~ msgid "Profil:"
-#~ msgstr "Profiel:"
-
-#~ msgid "Screen zoom"
-#~ msgstr "Scherm zoom"
-
-#~ msgid "gtk-close"
-#~ msgstr "gtk-sluiten"
-
-#~ msgid "gtk-help"
-#~ msgstr "gtk-help"
+msgid "Configure Compiz with CompizConfig"
+msgstr ""

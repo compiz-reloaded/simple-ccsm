@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2009-07-07 04:08+0200\n"
 "Last-Translator: Franco Guevara <francoa.bartalotta@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -99,140 +99,134 @@ msgstr "Por defecto"
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Administrador Simple de Configuraciones de Compiz"
 
-msgid "Configure Compiz with CompizConfig"
-msgstr "Configurar Compiz con CompizConfig"
+msgid "_Enable desktop effects"
+msgstr "_Activar Effectos de Escritorio"
 
-#~ msgid "<b>Accessibility</b>"
-#~ msgstr "<b>Accesibilidad</b>"
+msgid "Profile:"
+msgstr "Perfil:"
+
+msgid "<b>Description</b>"
+msgstr "<b>Descripción</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>Animaciones</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>Efectos</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>Escritorio</b>"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>Accesibilidad</b>"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Enable animations"
+msgstr "Activar animaciones"
+
+msgid "Enable extra animations"
+msgstr "Activar animaciones extras"
+
+msgid "<b>Open window</b>"
+msgstr "<b>Abrir ventana</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>Cerrar ventana</b>"
+
+msgid "<b>Focus window</b>"
+msgstr "<b>Enfocar ventana</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>Minimizar ventana</b>"
+
+msgid "Animations"
+msgstr "Animaciones"
+
+# berylog: en lugar de Cambiador, dejo la palabra original Switcher
+msgid "<b>Switcher</b>"
+msgstr "<b>Switcher</b>"
+
+msgid "Deformation:"
+msgstr "Deformación:"
+
+msgid "Opacity:"
+msgstr "Opacidad:"
+
+msgid "Enable Reflection"
+msgstr "Activar Reflejo"
+
+# Gelatinoso, gelatinosa, depende del contexto.
+# berylog: ¿y por qué no: "Activar Ventanas Gelatinosas"?
+msgid "Enable 3D Windows"
+msgstr "Activar Ventanas 3D"
+
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Efectos del Cubo</b>"
+
+# berylog: Si es "Enable Scale" debería ser "Activar Escala" en lugar de "Activar escala"
+msgid "Enable Scale"
+msgstr "Activar Escalar"
+
+msgid "Enable Expo"
+msgstr "Activar Expo"
+
+# Habilitar emborronado, dispersión
+msgid "Enable Blur"
+msgstr "Habilitar difuminado"
+
+# Gelatinoso, gelatinosa, depende del contexto.
+# berylog: ¿y por qué no: "Activar Ventanas Gelatinosas"?
+msgid "Enable Wobbly"
+msgstr "Activar Ventanas Gelatinosas"
 
 # ¿Tal vez añadidos?
 # berylog: queda mejor añadidos en lugar de adiciones
-#~ msgid "<b>Additions</b>"
-#~ msgstr "<b>Añadidos</b>"
+msgid "<b>Additions</b>"
+msgstr "<b>Añadidos</b>"
 
-#~ msgid "<b>Animations</b>"
-#~ msgstr "<b>Animaciones</b>"
+msgid "Effects"
+msgstr "Efectos"
 
-#~ msgid "<b>Appearance</b>"
-#~ msgstr "<b>Apariencia</b>"
+msgid "<b>Appearance</b>"
+msgstr "<b>Apariencia</b>"
 
-#~ msgid "<b>Area zoom</b>"
-#~ msgstr "<b>Zoom de área</b>"
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Columnas del escritorio</b>"
 
-#~ msgid "<b>Close Window</b>"
-#~ msgstr "<b>Cerrar ventana</b>"
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Filas del escritorio</b>"
 
-#~ msgid "<b>Cube Effects</b>"
-#~ msgstr "<b>Efectos del Cubo</b>"
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Vista previa del escritorio</b>"
 
-#~ msgid "<b>Description</b>"
-#~ msgstr "<b>Descripción</b>"
+msgid "Desktop"
+msgstr "Escritorio"
 
-#~ msgid "<b>Desktop columns</b>"
-#~ msgstr "<b>Columnas del escritorio</b>"
+msgid "Screen zoom"
+msgstr "Zoom de la pantalla"
 
-#~ msgid "<b>Desktop preview</b>"
-#~ msgstr "<b>Vista previa del escritorio</b>"
+msgid "Area zoom"
+msgstr "Zoom de área"
 
-#~ msgid "<b>Desktop rows</b>"
-#~ msgstr "<b>Filas del escritorio</b>"
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Activar zoom</b>"
 
-#~ msgid "<b>Desktop</b>"
-#~ msgstr "<b>Escritorio</b>"
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Zoom de la pantalla</b>"
 
-#~ msgid "<b>Effects</b>"
-#~ msgstr "<b>Efectos</b>"
+msgid "<b>Area zoom</b>"
+msgstr "<b>Zoom de área</b>"
 
-#~ msgid "<b>Enable zoom</b>"
-#~ msgstr "<b>Activar zoom</b>"
+msgid "Accessibility"
+msgstr "Accesibilidad"
 
-#~ msgid "<b>Focus window</b>"
-#~ msgstr "<b>Enfocar ventana</b>"
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Bordes de la pantalla</b>"
 
-#~ msgid "<b>Minimize window</b>"
-#~ msgstr "<b>Minimizar ventana</b>"
+msgid "Edges"
+msgstr "Bordes"
 
-#~ msgid "<b>Open window</b>"
-#~ msgstr "<b>Abrir ventana</b>"
-
-#~ msgid "<b>Screen Edges</b>"
-#~ msgstr "<b>Bordes de la pantalla</b>"
-
-#~ msgid "<b>Screen zoom</b>"
-#~ msgstr "<b>Zoom de la pantalla</b>"
-
-# berylog: en lugar de Cambiador, dejo la palabra original Switcher
-#~ msgid "<b>Switcher</b>"
-#~ msgstr "<b>Switcher</b>"
-
-#~ msgid "Accessibility"
-#~ msgstr "Accesibilidad"
-
-#~ msgid "Animations"
-#~ msgstr "Animaciones"
-
-#~ msgid "Area zoom"
-#~ msgstr "Zoom de área"
-
-#~ msgid "Deformation:"
-#~ msgstr "Deformación:"
-
-#~ msgid "Desktop"
-#~ msgstr "Escritorio"
-
-#~ msgid "Edges"
-#~ msgstr "Bordes"
-
-#~ msgid "Effects"
-#~ msgstr "Efectos"
-
-# Gelatinoso, gelatinosa, depende del contexto.
-# berylog: ¿y por qué no: "Activar Ventanas Gelatinosas"?
-#~ msgid "Enable 3D Windows"
-#~ msgstr "Activar Ventanas 3D"
-
-# Habilitar emborronado, dispersión
-#~ msgid "Enable Blur"
-#~ msgstr "Habilitar difuminado"
-
-#~ msgid "Enable Expo"
-#~ msgstr "Activar Expo"
-
-#~ msgid "Enable Reflection"
-#~ msgstr "Activar Reflejo"
-
-# berylog: Si es "Enable Scale" debería ser "Activar Escala" en lugar de "Activar escala"
-#~ msgid "Enable Scale"
-#~ msgstr "Activar Escalar"
-
-# Gelatinoso, gelatinosa, depende del contexto.
-# berylog: ¿y por qué no: "Activar Ventanas Gelatinosas"?
-#~ msgid "Enable Wobbly"
-#~ msgstr "Activar Ventanas Gelatinosas"
-
-#~ msgid "Enable animations"
-#~ msgstr "Activar animaciones"
-
-#~ msgid "Enable extra animations"
-#~ msgstr "Activar animaciones extras"
-
-#~ msgid "Info"
-#~ msgstr "Info"
-
-#~ msgid "Opacity:"
-#~ msgstr "Opacidad:"
-
-#~ msgid "Profile:"
-#~ msgstr "Perfil:"
-
-#~ msgid "Screen zoom"
-#~ msgstr "Zoom de la pantalla"
-
-#~ msgid "_Enable desktop effects"
-#~ msgstr "_Activar Effectos de Escritorio"
-
-#~ msgid "gtk-close"
-#~ msgstr "gtk-cerrar"
-
-#~ msgid "gtk-help"
-#~ msgstr "gtk-ayuda"
+msgid "Configure Compiz with CompizConfig"
+msgstr "Configurar Compiz con CompizConfig"

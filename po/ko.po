@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2008-07-25 05:19+0200\n"
 "Last-Translator: Lee June Hee <bugbear5@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -93,107 +93,131 @@ msgstr "기본"
 msgid "Simple CompizConfig Settings Manager"
 msgstr "간단한 Compiz 설정 관리자"
 
-msgid "Configure Compiz with CompizConfig"
+msgid "_Enable desktop effects"
 msgstr ""
 
-#~ msgid "<b>Accessibility</b>"
-#~ msgstr "<b>접근성</b>"
+#, fuzzy
+msgid "Profile:"
+msgstr "프로필:"
 
-#~ msgid "<b>Additions</b>"
-#~ msgstr "<b>추가 기능</b>"
+msgid "<b>Description</b>"
+msgstr "<b>설명</b>"
 
-#~ msgid "<b>Animations</b>"
-#~ msgstr "<b>애니메이션</b>"
+msgid "<b>Animations</b>"
+msgstr "<b>애니메이션</b>"
 
-#~ msgid "<b>Appearance</b>"
-#~ msgstr "<b>모양</b>"
+msgid "<b>Effects</b>"
+msgstr "<b>효과</b>"
 
-#~ msgid "<b>Area zoom</b>"
-#~ msgstr "<b>영역 확대</b>"
+msgid "<b>Desktop</b>"
+msgstr "<b>데스크탑</b>"
 
-#~ msgid "<b>Close Window</b>"
-#~ msgstr "<b>창 닫기</b>"
+msgid "<b>Accessibility</b>"
+msgstr "<b>접근성</b>"
 
-#~ msgid "<b>Description</b>"
-#~ msgstr "<b>설명</b>"
+msgid "Info"
+msgstr "정보"
 
-#~ msgid "<b>Desktop columns</b>"
-#~ msgstr "<b>데스크탑 가로 갯수</b>"
+msgid "Enable animations"
+msgstr "애니메이션 켜기"
 
-#~ msgid "<b>Desktop preview</b>"
-#~ msgstr "<b>데스크탑 미리보기</b>"
+#, fuzzy
+msgid "Enable extra animations"
+msgstr "애니메이션 켜기"
 
-#~ msgid "<b>Desktop rows</b>"
-#~ msgstr "<b>데스크탑 세로 갯수</b>"
+msgid "<b>Open window</b>"
+msgstr "<b>창 열기</b>"
 
-#~ msgid "<b>Desktop</b>"
-#~ msgstr "<b>데스크탑</b>"
+msgid "<b>Close Window</b>"
+msgstr "<b>창 닫기</b>"
 
-#~ msgid "<b>Effects</b>"
-#~ msgstr "<b>효과</b>"
+#, fuzzy
+msgid "<b>Focus window</b>"
+msgstr "<b>창 닫기</b>"
 
-#~ msgid "<b>Enable zoom</b>"
-#~ msgstr "<b>확대 가능</b>"
+msgid "<b>Minimize window</b>"
+msgstr "<b>창 최소화</b>"
 
-#~ msgid "<b>Minimize window</b>"
-#~ msgstr "<b>창 최소화</b>"
+msgid "Animations"
+msgstr "애니메이션"
 
-#~ msgid "<b>Open window</b>"
-#~ msgstr "<b>창 열기</b>"
+msgid "<b>Switcher</b>"
+msgstr "<b>스위처</b>"
 
-#~ msgid "<b>Screen Edges</b>"
-#~ msgstr "<b>화면 모서리</b>"
+msgid "Deformation:"
+msgstr ""
 
-#~ msgid "<b>Screen zoom</b>"
-#~ msgstr "<b>화면 확대</b>"
+msgid "Opacity:"
+msgstr ""
 
-#~ msgid "<b>Switcher</b>"
-#~ msgstr "<b>스위처</b>"
+#, fuzzy
+msgid "Enable Reflection"
+msgstr "애니메이션 켜기"
 
-#~ msgid "Accessibility"
-#~ msgstr "접근성"
+#, fuzzy
+msgid "Enable 3D Windows"
+msgstr "출렁이는 창 켜기"
 
-#~ msgid "Animations"
-#~ msgstr "애니메이션"
+#, fuzzy
+msgid "<b>Cube Effects</b>"
+msgstr "<b>효과</b>"
 
-#~ msgid "Area zoom"
-#~ msgstr "영역 확대"
+msgid "Enable Scale"
+msgstr "스케일 켜기"
 
-#~ msgid "Desktop"
-#~ msgstr "데스크탑"
+msgid "Enable Expo"
+msgstr "엑스포 켜기"
 
-#~ msgid "Edges"
-#~ msgstr "모서리"
+msgid "Enable Blur"
+msgstr "흐림 효과 켜기"
 
-#~ msgid "Effects"
-#~ msgstr "효과"
+msgid "Enable Wobbly"
+msgstr "출렁이는 창 켜기"
 
-#~ msgid "Enable Blur"
-#~ msgstr "흐림 효과 켜기"
+msgid "<b>Additions</b>"
+msgstr "<b>추가 기능</b>"
 
-#~ msgid "Enable Expo"
-#~ msgstr "엑스포 켜기"
+msgid "Effects"
+msgstr "효과"
 
-#~ msgid "Enable Scale"
-#~ msgstr "스케일 켜기"
+msgid "<b>Appearance</b>"
+msgstr "<b>모양</b>"
 
-#~ msgid "Enable Wobbly"
-#~ msgstr "출렁이는 창 켜기"
+msgid "<b>Desktop columns</b>"
+msgstr "<b>데스크탑 가로 갯수</b>"
 
-#~ msgid "Enable animations"
-#~ msgstr "애니메이션 켜기"
+msgid "<b>Desktop rows</b>"
+msgstr "<b>데스크탑 세로 갯수</b>"
 
-#~ msgid "Info"
-#~ msgstr "정보"
+msgid "<b>Desktop preview</b>"
+msgstr "<b>데스크탑 미리보기</b>"
 
-#~ msgid "Profil:"
-#~ msgstr "프로필:"
+msgid "Desktop"
+msgstr "데스크탑"
 
-#~ msgid "Screen zoom"
-#~ msgstr "화면 확대"
+msgid "Screen zoom"
+msgstr "화면 확대"
 
-#~ msgid "gtk-close"
-#~ msgstr "닫기"
+msgid "Area zoom"
+msgstr "영역 확대"
 
-#~ msgid "gtk-help"
-#~ msgstr "도움말"
+msgid "<b>Enable zoom</b>"
+msgstr "<b>확대 가능</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>화면 확대</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>영역 확대</b>"
+
+msgid "Accessibility"
+msgstr "접근성"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>화면 모서리</b>"
+
+msgid "Edges"
+msgstr "모서리"
+
+msgid "Configure Compiz with CompizConfig"
+msgstr ""

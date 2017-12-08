@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2008-07-15 19:56+0200\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -93,107 +93,131 @@ msgstr "Standard"
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Enkel inställningshanterare för Compiz Config"
 
-msgid "Configure Compiz with CompizConfig"
+msgid "_Enable desktop effects"
 msgstr ""
 
-#~ msgid "<b>Accessibility</b>"
-#~ msgstr "<b>Tillgänglighet</b>"
+#, fuzzy
+msgid "Profile:"
+msgstr "Profil:"
 
-#~ msgid "<b>Additions</b>"
-#~ msgstr "<b>Tillägg</b>"
+msgid "<b>Description</b>"
+msgstr "<b>Beskrivning</b>"
 
-#~ msgid "<b>Animations</b>"
-#~ msgstr "<b>Animeringar</b>"
+msgid "<b>Animations</b>"
+msgstr "<b>Animeringar</b>"
 
-#~ msgid "<b>Appearance</b>"
-#~ msgstr "<b>Utseende</b>"
+msgid "<b>Effects</b>"
+msgstr "<b>Effekter</b>"
 
-#~ msgid "<b>Area zoom</b>"
-#~ msgstr "<b>Områdeszoom</b>"
+msgid "<b>Desktop</b>"
+msgstr "<b>Skrivbord</b>"
 
-#~ msgid "<b>Close Window</b>"
-#~ msgstr "<b>Stäng fönster</b>"
+msgid "<b>Accessibility</b>"
+msgstr "<b>Tillgänglighet</b>"
 
-#~ msgid "<b>Description</b>"
-#~ msgstr "<b>Beskrivning</b>"
+msgid "Info"
+msgstr "Info"
 
-#~ msgid "<b>Desktop columns</b>"
-#~ msgstr "<b>Skrivbordskolumner</b>"
+msgid "Enable animations"
+msgstr "Aktivera animeringar"
 
-#~ msgid "<b>Desktop preview</b>"
-#~ msgstr "<b>Skrivbordsförhandsvisning</b>"
+#, fuzzy
+msgid "Enable extra animations"
+msgstr "Aktivera animeringar"
 
-#~ msgid "<b>Desktop rows</b>"
-#~ msgstr "<b>Skrivbordsrader</b>"
+msgid "<b>Open window</b>"
+msgstr "<b>Öppna fönster</b>"
 
-#~ msgid "<b>Desktop</b>"
-#~ msgstr "<b>Skrivbord</b>"
+msgid "<b>Close Window</b>"
+msgstr "<b>Stäng fönster</b>"
 
-#~ msgid "<b>Effects</b>"
-#~ msgstr "<b>Effekter</b>"
+#, fuzzy
+msgid "<b>Focus window</b>"
+msgstr "<b>Stäng fönster</b>"
 
-#~ msgid "<b>Enable zoom</b>"
-#~ msgstr "<b>Aktivera zoom</b>"
+msgid "<b>Minimize window</b>"
+msgstr "<b>Minimera fönster</b>"
 
-#~ msgid "<b>Minimize window</b>"
-#~ msgstr "<b>Minimera fönster</b>"
+msgid "Animations"
+msgstr "Animeringar"
 
-#~ msgid "<b>Open window</b>"
-#~ msgstr "<b>Öppna fönster</b>"
+msgid "<b>Switcher</b>"
+msgstr "<b>Växlare</b>"
 
-#~ msgid "<b>Screen Edges</b>"
-#~ msgstr "<b>Skärmkanter</b>"
+msgid "Deformation:"
+msgstr ""
 
-#~ msgid "<b>Screen zoom</b>"
-#~ msgstr "<b>Skärmzoom</b>"
+msgid "Opacity:"
+msgstr ""
 
-#~ msgid "<b>Switcher</b>"
-#~ msgstr "<b>Växlare</b>"
+#, fuzzy
+msgid "Enable Reflection"
+msgstr "Aktivera animeringar"
 
-#~ msgid "Accessibility"
-#~ msgstr "Tillgänglighet"
+#, fuzzy
+msgid "Enable 3D Windows"
+msgstr "Aktivera Geléaktiga fönster"
 
-#~ msgid "Animations"
-#~ msgstr "Animeringar"
+#, fuzzy
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Effekter</b>"
 
-#~ msgid "Area zoom"
-#~ msgstr "Områdeszoom"
+msgid "Enable Scale"
+msgstr "Aktivera Skala"
 
-#~ msgid "Desktop"
-#~ msgstr "Skrivbord"
+msgid "Enable Expo"
+msgstr "Aktivera Expo"
 
-#~ msgid "Edges"
-#~ msgstr "Kanter"
+msgid "Enable Blur"
+msgstr "Aktivera Suddighet"
 
-#~ msgid "Effects"
-#~ msgstr "Effekter"
+msgid "Enable Wobbly"
+msgstr "Aktivera Geléaktiga fönster"
 
-#~ msgid "Enable Blur"
-#~ msgstr "Aktivera Suddighet"
+msgid "<b>Additions</b>"
+msgstr "<b>Tillägg</b>"
 
-#~ msgid "Enable Expo"
-#~ msgstr "Aktivera Expo"
+msgid "Effects"
+msgstr "Effekter"
 
-#~ msgid "Enable Scale"
-#~ msgstr "Aktivera Skala"
+msgid "<b>Appearance</b>"
+msgstr "<b>Utseende</b>"
 
-#~ msgid "Enable Wobbly"
-#~ msgstr "Aktivera Geléaktiga fönster"
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Skrivbordskolumner</b>"
 
-#~ msgid "Enable animations"
-#~ msgstr "Aktivera animeringar"
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Skrivbordsrader</b>"
 
-#~ msgid "Info"
-#~ msgstr "Info"
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Skrivbordsförhandsvisning</b>"
 
-#~ msgid "Profil:"
-#~ msgstr "Profil:"
+msgid "Desktop"
+msgstr "Skrivbord"
 
-#~ msgid "Screen zoom"
-#~ msgstr "Skärmzoom"
+msgid "Screen zoom"
+msgstr "Skärmzoom"
 
-#~ msgid "gtk-close"
-#~ msgstr "Stäng"
+msgid "Area zoom"
+msgstr "Områdeszoom"
 
-#~ msgid "gtk-help"
-#~ msgstr "Hjälp"
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Aktivera zoom</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Skärmzoom</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Områdeszoom</b>"
+
+msgid "Accessibility"
+msgstr "Tillgänglighet"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Skärmkanter</b>"
+
+msgid "Edges"
+msgstr "Kanter"
+
+msgid "Configure Compiz with CompizConfig"
+msgstr ""

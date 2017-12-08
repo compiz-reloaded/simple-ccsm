@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2009-04-24 14:30+0200\n"
 "Last-Translator: Bertrand CIROUX <bertrand.ciroux@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -101,136 +101,130 @@ msgstr "Par Défaut"
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Gestionnaire de paramètres de configuration de Compiz simplifié"
 
-msgid "Configure Compiz with CompizConfig"
-msgstr "Configurer Compiz avec CompizConfig"
+msgid "_Enable desktop effects"
+msgstr "_Activer les effets du bureau"
 
-#~ msgid "<b>Accessibility</b>"
-#~ msgstr "<b>Accessibilité</b>"
+# Mot transparent.
+msgid "Profile:"
+msgstr "Profil:"
 
-#~ msgid "<b>Additions</b>"
-#~ msgstr "<b>Ajouts</b>"
+msgid "<b>Description</b>"
+msgstr "<b>Description</b>"
 
-#~ msgid "<b>Animations</b>"
-#~ msgstr "<b>Animations</b>"
+msgid "<b>Animations</b>"
+msgstr "<b>Animations</b>"
 
-#~ msgid "<b>Appearance</b>"
-#~ msgstr "<b>Apparence</b>"
+msgid "<b>Effects</b>"
+msgstr "<b>Effets</b>"
 
-#~ msgid "<b>Area zoom</b>"
-#~ msgstr "<b>Zone de zoom</b>"
+msgid "<b>Desktop</b>"
+msgstr "<b>Bureau</b>"
 
-#~ msgid "<b>Close Window</b>"
-#~ msgstr "<b>Fermer la fenêtre</b>"
+msgid "<b>Accessibility</b>"
+msgstr "<b>Accessibilité</b>"
 
-#~ msgid "<b>Cube Effects</b>"
-#~ msgstr "<b>Effets du cube</b>"
+# Mot transparent.
+msgid "Info"
+msgstr "Info"
 
-#~ msgid "<b>Description</b>"
-#~ msgstr "<b>Description</b>"
-
-#~ msgid "<b>Desktop columns</b>"
-#~ msgstr "<b>Colonnes du Bureau</b>"
-
-#~ msgid "<b>Desktop preview</b>"
-#~ msgstr "<b>Aperçu du Bureau</b>"
-
-#~ msgid "<b>Desktop rows</b>"
-#~ msgstr "<b>Lignes du Bureau</b>"
-
-#~ msgid "<b>Desktop</b>"
-#~ msgstr "<b>Bureau</b>"
-
-#~ msgid "<b>Effects</b>"
-#~ msgstr "<b>Effets</b>"
-
-#~ msgid "<b>Enable zoom</b>"
-#~ msgstr "<b>Activer le Zoom</b>"
-
-#~ msgid "<b>Focus window</b>"
-#~ msgstr "<b>Mettre la fenêtre au premier plan</b>"
-
-#~ msgid "<b>Minimize window</b>"
-#~ msgstr "<b>Réduire la fenêtre</b>"
-
-#~ msgid "<b>Open window</b>"
-#~ msgstr "<b>Ouvrir la fenêtre</b>"
-
-#~ msgid "<b>Screen Edges</b>"
-#~ msgstr "<b>Bordures de l'écran</b>"
-
-#~ msgid "<b>Screen zoom</b>"
-#~ msgstr "<b>Zoom de l'écran</b>"
-
-# Ce mot ne semble pas être le plus adapté.
-#~ msgid "<b>Switcher</b>"
-#~ msgstr "<b>Basculeur</b>"
-
-#~ msgid "Accessibility"
-#~ msgstr "Accessibilité"
-
-#~ msgid "Animations"
-#~ msgstr "Animations"
-
-#~ msgid "Area zoom"
-#~ msgstr "Zone de Zoom"
-
-#~ msgid "Deformation:"
-#~ msgstr "Déformation:"
-
-#~ msgid "Desktop"
-#~ msgstr "Bureau"
-
-#~ msgid "Edges"
-#~ msgstr "Bordures"
-
-#~ msgid "Effects"
-#~ msgstr "Effets"
-
-#~ msgid "Enable 3D Windows"
-#~ msgstr "Activer les fenêtres 3D"
-
-#~ msgid "Enable Blur"
-#~ msgstr "Activer le flou"
-
-#~ msgid "Enable Expo"
-#~ msgstr "Activer \"Expo\""
-
-#~ msgid "Enable Reflection"
-#~ msgstr "Activer la réflexion"
-
-#~ msgid "Enable Scale"
-#~ msgstr "Activer l'échelle"
-
-#~ msgid "Enable Wobbly"
-#~ msgstr "Activer \"Wobbly\""
-
-#~ msgid "Enable animations"
-#~ msgstr "Activer les animations"
+msgid "Enable animations"
+msgstr "Activer les animations"
 
 # It should be "Activer les animations supplémentaires", and all the others should be written like this (e.g. "Enable animations" -> "Activer les animations")
-#~ msgid "Enable extra animations"
-#~ msgstr "Activer les animations supplémentaires"
+msgid "Enable extra animations"
+msgstr "Activer les animations supplémentaires"
 
-# Mot transparent.
-#~ msgid "Info"
-#~ msgstr "Info"
+msgid "<b>Open window</b>"
+msgstr "<b>Ouvrir la fenêtre</b>"
 
-#~ msgid "Opacity:"
-#~ msgstr "Opacité:"
+msgid "<b>Close Window</b>"
+msgstr "<b>Fermer la fenêtre</b>"
 
-# Mot transparent.
-#~ msgid "Profile:"
-#~ msgstr "Profil:"
+msgid "<b>Focus window</b>"
+msgstr "<b>Mettre la fenêtre au premier plan</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>Réduire la fenêtre</b>"
+
+msgid "Animations"
+msgstr "Animations"
+
+# Ce mot ne semble pas être le plus adapté.
+msgid "<b>Switcher</b>"
+msgstr "<b>Basculeur</b>"
+
+msgid "Deformation:"
+msgstr "Déformation:"
+
+msgid "Opacity:"
+msgstr "Opacité:"
+
+msgid "Enable Reflection"
+msgstr "Activer la réflexion"
+
+msgid "Enable 3D Windows"
+msgstr "Activer les fenêtres 3D"
+
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Effets du cube</b>"
+
+msgid "Enable Scale"
+msgstr "Activer l'échelle"
+
+msgid "Enable Expo"
+msgstr "Activer \"Expo\""
+
+msgid "Enable Blur"
+msgstr "Activer le flou"
+
+msgid "Enable Wobbly"
+msgstr "Activer \"Wobbly\""
+
+msgid "<b>Additions</b>"
+msgstr "<b>Ajouts</b>"
+
+msgid "Effects"
+msgstr "Effets"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>Apparence</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Colonnes du Bureau</b>"
+
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Lignes du Bureau</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Aperçu du Bureau</b>"
+
+msgid "Desktop"
+msgstr "Bureau"
 
 # Mot ambigu.
-#~ msgid "Screen zoom"
-#~ msgstr "Zoom de l'écran"
+msgid "Screen zoom"
+msgstr "Zoom de l'écran"
 
-#~ msgid "_Enable desktop effects"
-#~ msgstr "_Activer les effets du bureau"
+msgid "Area zoom"
+msgstr "Zone de Zoom"
 
-#~ msgid "gtk-close"
-#~ msgstr "gtk-fermeture"
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Activer le Zoom</b>"
 
-#~ msgid "gtk-help"
-#~ msgstr "gtk-aide"
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Zoom de l'écran</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Zone de zoom</b>"
+
+msgid "Accessibility"
+msgstr "Accessibilité"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Bordures de l'écran</b>"
+
+msgid "Edges"
+msgstr "Bordures"
+
+msgid "Configure Compiz with CompizConfig"
+msgstr "Configurer Compiz avec CompizConfig"

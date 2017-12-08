@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2008-11-03 23:01+0100\n"
 "Last-Translator: Jan Brázdil <ja.brazdil@post.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -92,86 +92,137 @@ msgstr "Původní"
 msgid "Simple CompizConfig Settings Manager"
 msgstr ""
 
-msgid "Configure Compiz with CompizConfig"
+msgid "_Enable desktop effects"
 msgstr ""
 
-#~ msgid "<b>Accessibility</b>"
-#~ msgstr "<b>Přístupnost</b>"
+#, fuzzy
+msgid "Profile:"
+msgstr "Profil:"
 
-#~ msgid "<b>Additions</b>"
-#~ msgstr "<b>Přídavky</b>"
+msgid "<b>Description</b>"
+msgstr "<b>Popis</b>"
 
-#~ msgid "<b>Animations</b>"
-#~ msgstr "<b>Animace</b>"
+msgid "<b>Animations</b>"
+msgstr "<b>Animace</b>"
 
-#~ msgid "<b>Appearance</b>"
-#~ msgstr "<b>Vzhled</b>"
+msgid "<b>Effects</b>"
+msgstr "<b>Efekty</b>"
 
-#~ msgid "<b>Area zoom</b>"
-#~ msgstr "<b>Přiblížení oblasti</b>"
+#, fuzzy
+msgid "<b>Desktop</b>"
+msgstr "<b>Popis</b>"
 
-#~ msgid "<b>Close Window</b>"
-#~ msgstr "<b>Zavřít okno</b>"
+msgid "<b>Accessibility</b>"
+msgstr "<b>Přístupnost</b>"
 
-#~ msgid "<b>Description</b>"
-#~ msgstr "<b>Popis</b>"
+msgid "Info"
+msgstr "Info"
 
-#~ msgid "<b>Effects</b>"
-#~ msgstr "<b>Efekty</b>"
+msgid "Enable animations"
+msgstr "Povolit animace"
 
-#~ msgid "<b>Enable zoom</b>"
-#~ msgstr "<b>Povolit zoom</b>"
+#, fuzzy
+msgid "Enable extra animations"
+msgstr "Povolit animace"
 
-#~ msgid "<b>Minimize window</b>"
-#~ msgstr "<b>Minimalizovat okno</b>"
+msgid "<b>Open window</b>"
+msgstr "<b>Otevřít okno</b>"
 
-#~ msgid "<b>Open window</b>"
-#~ msgstr "<b>Otevřít okno</b>"
+msgid "<b>Close Window</b>"
+msgstr "<b>Zavřít okno</b>"
 
-#~ msgid "<b>Screen zoom</b>"
-#~ msgstr "<b>Přiblížení obrazovky</b>"
+#, fuzzy
+msgid "<b>Focus window</b>"
+msgstr "<b>Zavřít okno</b>"
 
-#~ msgid "<b>Switcher</b>"
-#~ msgstr "<b>Přepínač</b>"
+msgid "<b>Minimize window</b>"
+msgstr "<b>Minimalizovat okno</b>"
 
-#~ msgid "Accessibility"
-#~ msgstr "Přístupnost"
+msgid "Animations"
+msgstr "Animace"
 
-#~ msgid "Animations"
-#~ msgstr "Animace"
+msgid "<b>Switcher</b>"
+msgstr "<b>Přepínač</b>"
 
-#~ msgid "Desktop"
-#~ msgstr "Plocha"
+msgid "Deformation:"
+msgstr ""
 
-#~ msgid "Edges"
-#~ msgstr "Okraje"
+msgid "Opacity:"
+msgstr ""
 
-#~ msgid "Effects"
-#~ msgstr "Efekty"
+#, fuzzy
+msgid "Enable Reflection"
+msgstr "Povolit animace"
 
-#~ msgid "Enable Blur"
-#~ msgstr "Povolit rozmazání"
+msgid "Enable 3D Windows"
+msgstr ""
 
-#~ msgid "Enable Expo"
-#~ msgstr "Povolit Expo"
+#, fuzzy
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Efekty</b>"
 
-#~ msgid "Enable Scale"
-#~ msgstr "Povolit zvětšení"
+msgid "Enable Scale"
+msgstr "Povolit zvětšení"
 
-#~ msgid "Enable animations"
-#~ msgstr "Povolit animace"
+msgid "Enable Expo"
+msgstr "Povolit Expo"
 
-#~ msgid "Info"
-#~ msgstr "Info"
+msgid "Enable Blur"
+msgstr "Povolit rozmazání"
 
-#~ msgid "Profil:"
-#~ msgstr "Profil:"
+#, fuzzy
+msgid "Enable Wobbly"
+msgstr "Povolit rozmazání"
 
-#~ msgid "Screen zoom"
-#~ msgstr "Přiblížení obrazovky"
+msgid "<b>Additions</b>"
+msgstr "<b>Přídavky</b>"
 
-#~ msgid "gtk-close"
-#~ msgstr "gtk-close"
+msgid "Effects"
+msgstr "Efekty"
 
-#~ msgid "gtk-help"
-#~ msgstr "gtk-help"
+msgid "<b>Appearance</b>"
+msgstr "<b>Vzhled</b>"
+
+#, fuzzy
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Popis</b>"
+
+#, fuzzy
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Popis</b>"
+
+#, fuzzy
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Popis</b>"
+
+msgid "Desktop"
+msgstr "Plocha"
+
+msgid "Screen zoom"
+msgstr "Přiblížení obrazovky"
+
+#, fuzzy
+msgid "Area zoom"
+msgstr "<b>Přiblížení oblasti</b>"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Povolit zoom</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Přiblížení obrazovky</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Přiblížení oblasti</b>"
+
+msgid "Accessibility"
+msgstr "Přístupnost"
+
+#, fuzzy
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Přiblížení obrazovky</b>"
+
+msgid "Edges"
+msgstr "Okraje"
+
+msgid "Configure Compiz with CompizConfig"
+msgstr ""

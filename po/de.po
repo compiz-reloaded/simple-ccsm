@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2009-10-13 18:16+0200\n"
 "Last-Translator: sven knoblach <s.knoblach@web.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -103,132 +103,132 @@ msgstr "Standard"
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Einfacher CompizConfig Einstellungs-Manager"
 
+msgid "_Enable desktop effects"
+msgstr "Arbeitsflächeneffekte aktivieren"
+
+msgid "Profile:"
+msgstr "Profil:"
+
+msgid "<b>Description</b>"
+msgstr "<b>Beschreibung</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>Animationen</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>Effekte</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>Arbeitsfläche</b>"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>Barrierefreiheit</b>"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Enable animations"
+msgstr "Animationen aktivieren"
+
+msgid "Enable extra animations"
+msgstr "Zusätzliche Animationen aktivieren"
+
+msgid "<b>Open window</b>"
+msgstr "<b>Fenster öffnen</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>Fenster schließen</b>"
+
+msgid "<b>Focus window</b>"
+msgstr "<b>Fenster fokussieren</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>Fenster minimieren</b>"
+
+msgid "Animations"
+msgstr "Animationen"
+
+msgid "<b>Switcher</b>"
+msgstr "<b>Anwendungsumschalter</b>"
+
+msgid "Deformation:"
+msgstr "Deformation"
+
+msgid "Opacity:"
+msgstr "Sichtbarkeit"
+
+msgid "Enable Reflection"
+msgstr "Reflektion aktivieren"
+
+msgid "Enable 3D Windows"
+msgstr "3D Fenster aktivieren"
+
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Desktop-Würfel Effekte</b>"
+
+msgid "Enable Scale"
+msgstr "Skalieren aktivieren"
+
+msgid "Enable Expo"
+msgstr "Expo aktivieren"
+
+msgid "Enable Blur"
+msgstr "Unschärfe aktivieren"
+
+msgid "Enable Wobbly"
+msgstr "Wobbly aktivieren"
+
+# FIXME
+msgid "<b>Additions</b>"
+msgstr "<b>Ergänzungen</b>"
+
+msgid "Effects"
+msgstr "Effekte"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>Aussehen</b>"
+
+# FIXME
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Arbeitsflächen Spalten</b>"
+
+# FIXME
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Arbeitsflächen Zeilen</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Arbeitsflächen Vorschau</b>"
+
+msgid "Desktop"
+msgstr "Arbeitsfläche"
+
+msgid "Screen zoom"
+msgstr "Bildschirmzoom"
+
+msgid "Area zoom"
+msgstr "Bereichszoom"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Zoom aktivieren</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Bildschirmzoom</b>"
+
+# FIXME
+msgid "<b>Area zoom</b>"
+msgstr "<b>Bereichszoom</b>"
+
+msgid "Accessibility"
+msgstr "Barrierefreiheit"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Bildschirmecken</b>"
+
+msgid "Edges"
+msgstr "Ecken"
+
 msgid "Configure Compiz with CompizConfig"
 msgstr "Konfiguriere Compiz mit CompizConfig"
-
-#~ msgid "<b>Accessibility</b>"
-#~ msgstr "<b>Barrierefreiheit</b>"
-
-# FIXME
-#~ msgid "<b>Additions</b>"
-#~ msgstr "<b>Ergänzungen</b>"
-
-#~ msgid "<b>Animations</b>"
-#~ msgstr "<b>Animationen</b>"
-
-#~ msgid "<b>Appearance</b>"
-#~ msgstr "<b>Aussehen</b>"
-
-# FIXME
-#~ msgid "<b>Area zoom</b>"
-#~ msgstr "<b>Bereichszoom</b>"
-
-#~ msgid "<b>Close Window</b>"
-#~ msgstr "<b>Fenster schließen</b>"
-
-#~ msgid "<b>Cube Effects</b>"
-#~ msgstr "<b>Desktop-Würfel Effekte</b>"
-
-#~ msgid "<b>Description</b>"
-#~ msgstr "<b>Beschreibung</b>"
-
-# FIXME
-#~ msgid "<b>Desktop columns</b>"
-#~ msgstr "<b>Arbeitsflächen Spalten</b>"
-
-#~ msgid "<b>Desktop preview</b>"
-#~ msgstr "<b>Arbeitsflächen Vorschau</b>"
-
-# FIXME
-#~ msgid "<b>Desktop rows</b>"
-#~ msgstr "<b>Arbeitsflächen Zeilen</b>"
-
-#~ msgid "<b>Desktop</b>"
-#~ msgstr "<b>Arbeitsfläche</b>"
-
-#~ msgid "<b>Effects</b>"
-#~ msgstr "<b>Effekte</b>"
-
-#~ msgid "<b>Enable zoom</b>"
-#~ msgstr "<b>Zoom aktivieren</b>"
-
-#~ msgid "<b>Focus window</b>"
-#~ msgstr "<b>Fenster fokussieren</b>"
-
-#~ msgid "<b>Minimize window</b>"
-#~ msgstr "<b>Fenster minimieren</b>"
-
-#~ msgid "<b>Open window</b>"
-#~ msgstr "<b>Fenster öffnen</b>"
-
-#~ msgid "<b>Screen Edges</b>"
-#~ msgstr "<b>Bildschirmecken</b>"
-
-#~ msgid "<b>Screen zoom</b>"
-#~ msgstr "<b>Bildschirmzoom</b>"
-
-#~ msgid "<b>Switcher</b>"
-#~ msgstr "<b>Anwendungsumschalter</b>"
-
-#~ msgid "Accessibility"
-#~ msgstr "Barrierefreiheit"
-
-#~ msgid "Animations"
-#~ msgstr "Animationen"
-
-#~ msgid "Area zoom"
-#~ msgstr "Bereichszoom"
-
-#~ msgid "Deformation:"
-#~ msgstr "Deformation"
-
-#~ msgid "Desktop"
-#~ msgstr "Arbeitsfläche"
-
-#~ msgid "Edges"
-#~ msgstr "Ecken"
-
-#~ msgid "Effects"
-#~ msgstr "Effekte"
-
-#~ msgid "Enable 3D Windows"
-#~ msgstr "3D Fenster aktivieren"
-
-#~ msgid "Enable Blur"
-#~ msgstr "Unschärfe aktivieren"
-
-#~ msgid "Enable Expo"
-#~ msgstr "Expo aktivieren"
-
-#~ msgid "Enable Reflection"
-#~ msgstr "Reflektion aktivieren"
-
-#~ msgid "Enable Scale"
-#~ msgstr "Skalieren aktivieren"
-
-#~ msgid "Enable Wobbly"
-#~ msgstr "Wobbly aktivieren"
-
-#~ msgid "Enable animations"
-#~ msgstr "Animationen aktivieren"
-
-#~ msgid "Enable extra animations"
-#~ msgstr "Zusätzliche Animationen aktivieren"
-
-#~ msgid "Info"
-#~ msgstr "Info"
-
-#~ msgid "Opacity:"
-#~ msgstr "Sichtbarkeit"
-
-#~ msgid "Profile:"
-#~ msgstr "Profil:"
-
-#~ msgid "Screen zoom"
-#~ msgstr "Bildschirmzoom"
-
-#~ msgid "_Enable desktop effects"
-#~ msgstr "Arbeitsflächeneffekte aktivieren"
 
 #~ msgid "Profile"
 #~ msgstr "Profil"
@@ -236,12 +236,6 @@ msgstr "Konfiguriere Compiz mit CompizConfig"
 # FIXME
 #~ msgid "<b>Zoom out</b>"
 #~ msgstr "<b>Heraus zoomen</b>"
-
-#~ msgid "gtk-close"
-#~ msgstr "gtk-close"
-
-#~ msgid "gtk-help"
-#~ msgstr "gtk-help"
 
 #~ msgid "Close Animation"
 #~ msgstr "Beenden Animation"

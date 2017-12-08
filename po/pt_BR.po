@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2008-11-13 04:30+0100\n"
 "Last-Translator: Raylton P. Sousa <raylton.sousa@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
@@ -93,107 +93,131 @@ msgstr "Padrão"
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Gerenciador de Configurações Simplificado do CompizConfig"
 
-msgid "Configure Compiz with CompizConfig"
+msgid "_Enable desktop effects"
 msgstr ""
 
-#~ msgid "<b>Accessibility</b>"
-#~ msgstr "<b>Acessibilidade</b>"
+#, fuzzy
+msgid "Profile:"
+msgstr "Perfil:"
 
-#~ msgid "<b>Additions</b>"
-#~ msgstr "<b>Adições</b>"
+msgid "<b>Description</b>"
+msgstr "<b>Descrição</b>"
 
-#~ msgid "<b>Animations</b>"
-#~ msgstr "<b>Animações</b>"
+msgid "<b>Animations</b>"
+msgstr "<b>Animações</b>"
 
-#~ msgid "<b>Appearance</b>"
-#~ msgstr "<b>Aparência</b>"
+msgid "<b>Effects</b>"
+msgstr "<b>Efeitos</b>"
 
-#~ msgid "<b>Area zoom</b>"
-#~ msgstr "<b>Zoom da area</b>"
+msgid "<b>Desktop</b>"
+msgstr "<b>Área de trabalho</b>"
 
-#~ msgid "<b>Close Window</b>"
-#~ msgstr "<b>Fechar janela</b>"
+msgid "<b>Accessibility</b>"
+msgstr "<b>Acessibilidade</b>"
 
-#~ msgid "<b>Description</b>"
-#~ msgstr "<b>Descrição</b>"
+msgid "Info"
+msgstr "Info"
 
-#~ msgid "<b>Desktop columns</b>"
-#~ msgstr "<b>Colunas da área de trabalho</b>"
+msgid "Enable animations"
+msgstr "Habilitar animações"
 
-#~ msgid "<b>Desktop preview</b>"
-#~ msgstr "<b>Visualização da área de trabalho</b>"
+#, fuzzy
+msgid "Enable extra animations"
+msgstr "Habilitar animações"
 
-#~ msgid "<b>Desktop rows</b>"
-#~ msgstr "<b>Linhas da área de trabalho</b>"
+msgid "<b>Open window</b>"
+msgstr "<b> Abrir janela </ b>"
 
-#~ msgid "<b>Desktop</b>"
-#~ msgstr "<b>Área de trabalho</b>"
+msgid "<b>Close Window</b>"
+msgstr "<b>Fechar janela</b>"
 
-#~ msgid "<b>Effects</b>"
-#~ msgstr "<b>Efeitos</b>"
+#, fuzzy
+msgid "<b>Focus window</b>"
+msgstr "<b>Fechar janela</b>"
 
-#~ msgid "<b>Enable zoom</b>"
-#~ msgstr "<b> Ativar o zoom </ b>"
+msgid "<b>Minimize window</b>"
+msgstr "<b> Minimizar janela </ b>"
 
-#~ msgid "<b>Minimize window</b>"
-#~ msgstr "<b> Minimizar janela </ b>"
+msgid "Animations"
+msgstr "Animações"
 
-#~ msgid "<b>Open window</b>"
-#~ msgstr "<b> Abrir janela </ b>"
+msgid "<b>Switcher</b>"
+msgstr "<b>Agitador</b> "
 
-#~ msgid "<b>Screen Edges</b>"
-#~ msgstr "<b>Bordas da tela</b>"
+msgid "Deformation:"
+msgstr ""
 
-#~ msgid "<b>Screen zoom</b>"
-#~ msgstr "<b>Zoom da tela</b>"
+msgid "Opacity:"
+msgstr ""
 
-#~ msgid "<b>Switcher</b>"
-#~ msgstr "<b>Agitador</b> "
+#, fuzzy
+msgid "Enable Reflection"
+msgstr "Habilitar animações"
 
-#~ msgid "Accessibility"
-#~ msgstr "Acessibilidade"
+#, fuzzy
+msgid "Enable 3D Windows"
+msgstr "Habilitar Oscilação "
 
-#~ msgid "Animations"
-#~ msgstr "Animações"
+#, fuzzy
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Efeitos</b>"
 
-#~ msgid "Area zoom"
-#~ msgstr "Área do zoom"
+msgid "Enable Scale"
+msgstr "Habilitar Escala"
 
-#~ msgid "Desktop"
-#~ msgstr "Área de trabalho"
+msgid "Enable Expo"
+msgstr "Habilitar Expo "
 
-#~ msgid "Edges"
-#~ msgstr "Bordas"
+msgid "Enable Blur"
+msgstr "Habilitar Desfoque"
 
-#~ msgid "Effects"
-#~ msgstr "Efeitos "
+msgid "Enable Wobbly"
+msgstr "Habilitar Oscilação "
 
-#~ msgid "Enable Blur"
-#~ msgstr "Habilitar Desfoque"
+msgid "<b>Additions</b>"
+msgstr "<b>Adições</b>"
 
-#~ msgid "Enable Expo"
-#~ msgstr "Habilitar Expo "
+msgid "Effects"
+msgstr "Efeitos "
 
-#~ msgid "Enable Scale"
-#~ msgstr "Habilitar Escala"
+msgid "<b>Appearance</b>"
+msgstr "<b>Aparência</b>"
 
-#~ msgid "Enable Wobbly"
-#~ msgstr "Habilitar Oscilação "
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Colunas da área de trabalho</b>"
 
-#~ msgid "Enable animations"
-#~ msgstr "Habilitar animações"
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Linhas da área de trabalho</b>"
 
-#~ msgid "Info"
-#~ msgstr "Info"
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Visualização da área de trabalho</b>"
 
-#~ msgid "Profil:"
-#~ msgstr "Perfil:"
+msgid "Desktop"
+msgstr "Área de trabalho"
 
-#~ msgid "Screen zoom"
-#~ msgstr "Zoom da tela"
+msgid "Screen zoom"
+msgstr "Zoom da tela"
 
-#~ msgid "gtk-close"
-#~ msgstr "fechar-gtk "
+msgid "Area zoom"
+msgstr "Área do zoom"
 
-#~ msgid "gtk-help"
-#~ msgstr "ajuda-gtk"
+msgid "<b>Enable zoom</b>"
+msgstr "<b> Ativar o zoom </ b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Zoom da tela</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Zoom da area</b>"
+
+msgid "Accessibility"
+msgstr "Acessibilidade"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Bordas da tela</b>"
+
+msgid "Edges"
+msgstr "Bordas"
+
+msgid "Configure Compiz with CompizConfig"
+msgstr ""

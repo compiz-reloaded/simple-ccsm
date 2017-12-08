@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2009-05-19 22:19+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
@@ -97,6 +97,126 @@ msgstr "Default"
 
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Simple CompizConfig Settings Manager"
+
+msgid "_Enable desktop effects"
+msgstr "_Enable desktop effects"
+
+msgid "Profile:"
+msgstr "Profile:"
+
+msgid "<b>Description</b>"
+msgstr "<b>Description</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>Animations</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>Effects</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>Desktop</b>"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>Accessibility</b>"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Enable animations"
+msgstr "Enable animations"
+
+msgid "Enable extra animations"
+msgstr "Enable extra animations"
+
+msgid "<b>Open window</b>"
+msgstr "<b>Open window</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>Close Window</b>"
+
+msgid "<b>Focus window</b>"
+msgstr "<b>Focus window</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>Minimise window</b>"
+
+msgid "Animations"
+msgstr "Animations"
+
+msgid "<b>Switcher</b>"
+msgstr "<b>Switcher</b>"
+
+msgid "Deformation:"
+msgstr "Deformation:"
+
+msgid "Opacity:"
+msgstr "Opacity:"
+
+msgid "Enable Reflection"
+msgstr "Enable Reflection"
+
+msgid "Enable 3D Windows"
+msgstr "Enable 3D Windows"
+
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Cube Effects</b>"
+
+msgid "Enable Scale"
+msgstr "Enable Scale"
+
+msgid "Enable Expo"
+msgstr "Enable Expo"
+
+msgid "Enable Blur"
+msgstr "Enable Blur"
+
+msgid "Enable Wobbly"
+msgstr "Enable Wobbly"
+
+msgid "<b>Additions</b>"
+msgstr "<b>Additions</b>"
+
+msgid "Effects"
+msgstr "Effects"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>Appearance</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Desktop columns</b>"
+
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Desktop rows</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Desktop preview</b>"
+
+msgid "Desktop"
+msgstr "Desktop"
+
+msgid "Screen zoom"
+msgstr "Screen zoom"
+
+msgid "Area zoom"
+msgstr "Area zoom"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Enable zoom</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Screen zoom</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Area zoom</b>"
+
+msgid "Accessibility"
+msgstr "Accessibility"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Screen Edges</b>"
+
+msgid "Edges"
+msgstr "Edges"
 
 msgid "Configure Compiz with CompizConfig"
 msgstr "Configure Compiz with CompizConfig"

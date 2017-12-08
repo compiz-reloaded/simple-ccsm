@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2009-05-24 18:00+0200\n"
 "Last-Translator: Fran Diéguez <fran.dieguez@glug.es>\n"
 "Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
@@ -99,131 +99,125 @@ msgstr "Predeterminado"
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Xestor simple de configuracións de Compiz"
 
+msgid "_Enable desktop effects"
+msgstr "_Activar efectos de escritorio"
+
+msgid "Profile:"
+msgstr "Perfil:"
+
+msgid "<b>Description</b>"
+msgstr "<b>Descrición</b>"
+
+msgid "<b>Animations</b>"
+msgstr "<b>Animacións</b>"
+
+msgid "<b>Effects</b>"
+msgstr "<b>Efectos</b>"
+
+msgid "<b>Desktop</b>"
+msgstr "<b>Escritorio</b>"
+
+msgid "<b>Accessibility</b>"
+msgstr "<b>Accesibilidade</b>"
+
+msgid "Info"
+msgstr "Información"
+
+msgid "Enable animations"
+msgstr "Activar animacións"
+
+msgid "Enable extra animations"
+msgstr "Activar animacións adicionais"
+
+msgid "<b>Open window</b>"
+msgstr "<b>Animación ao abrir unha xanela</b>"
+
+msgid "<b>Close Window</b>"
+msgstr "<b>Animación ao pechar unha xanela</b>"
+
+msgid "<b>Focus window</b>"
+msgstr "<b>Animación ao enfocar unha xanela</b>"
+
+msgid "<b>Minimize window</b>"
+msgstr "<b>Animación ao minimizar unha xanela</b>"
+
+msgid "Animations"
+msgstr "Animacións"
+
+msgid "<b>Switcher</b>"
+msgstr "<b>Trocador de xanelas</b>"
+
+msgid "Deformation:"
+msgstr "Deformación:"
+
+msgid "Opacity:"
+msgstr "Opacidade:"
+
+msgid "Enable Reflection"
+msgstr "Activar reflexos"
+
+msgid "Enable 3D Windows"
+msgstr "Activar xanelas 3D"
+
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Efectos do cubo de escritorios</b>"
+
+msgid "Enable Scale"
+msgstr "Activar escalado"
+
+msgid "Enable Expo"
+msgstr "Activar modo de exposición"
+
+msgid "Enable Blur"
+msgstr "Activar desenfoque"
+
+msgid "Enable Wobbly"
+msgstr "Activar xanelas de xelatina"
+
+msgid "<b>Additions</b>"
+msgstr "<b>Engadidos</b>"
+
+msgid "Effects"
+msgstr "Efectos"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>Aparencia</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Número de columnas de escritorios</b>"
+
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Número de ringleiras de escritorios</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Vista previa da disposición dos escritorios</b>"
+
+msgid "Desktop"
+msgstr "Escritorio"
+
+msgid "Screen zoom"
+msgstr "Zoom de pantalla"
+
+msgid "Area zoom"
+msgstr "Área de zoom"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Activar zoom</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Zoom da pantalla</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Área de zoom</b>"
+
+msgid "Accessibility"
+msgstr "Accesibilidade"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Límites de pantalla</b>"
+
+msgid "Edges"
+msgstr "Límites"
+
 msgid "Configure Compiz with CompizConfig"
 msgstr "Configurar Compiz con CompizConfig"
-
-#~ msgid "<b>Accessibility</b>"
-#~ msgstr "<b>Accesibilidade</b>"
-
-#~ msgid "<b>Additions</b>"
-#~ msgstr "<b>Engadidos</b>"
-
-#~ msgid "<b>Animations</b>"
-#~ msgstr "<b>Animacións</b>"
-
-#~ msgid "<b>Appearance</b>"
-#~ msgstr "<b>Aparencia</b>"
-
-#~ msgid "<b>Area zoom</b>"
-#~ msgstr "<b>Área de zoom</b>"
-
-#~ msgid "<b>Close Window</b>"
-#~ msgstr "<b>Animación ao pechar unha xanela</b>"
-
-#~ msgid "<b>Cube Effects</b>"
-#~ msgstr "<b>Efectos do cubo de escritorios</b>"
-
-#~ msgid "<b>Description</b>"
-#~ msgstr "<b>Descrición</b>"
-
-#~ msgid "<b>Desktop columns</b>"
-#~ msgstr "<b>Número de columnas de escritorios</b>"
-
-#~ msgid "<b>Desktop preview</b>"
-#~ msgstr "<b>Vista previa da disposición dos escritorios</b>"
-
-#~ msgid "<b>Desktop rows</b>"
-#~ msgstr "<b>Número de ringleiras de escritorios</b>"
-
-#~ msgid "<b>Desktop</b>"
-#~ msgstr "<b>Escritorio</b>"
-
-#~ msgid "<b>Effects</b>"
-#~ msgstr "<b>Efectos</b>"
-
-#~ msgid "<b>Enable zoom</b>"
-#~ msgstr "<b>Activar zoom</b>"
-
-#~ msgid "<b>Focus window</b>"
-#~ msgstr "<b>Animación ao enfocar unha xanela</b>"
-
-#~ msgid "<b>Minimize window</b>"
-#~ msgstr "<b>Animación ao minimizar unha xanela</b>"
-
-#~ msgid "<b>Open window</b>"
-#~ msgstr "<b>Animación ao abrir unha xanela</b>"
-
-#~ msgid "<b>Screen Edges</b>"
-#~ msgstr "<b>Límites de pantalla</b>"
-
-#~ msgid "<b>Screen zoom</b>"
-#~ msgstr "<b>Zoom da pantalla</b>"
-
-#~ msgid "<b>Switcher</b>"
-#~ msgstr "<b>Trocador de xanelas</b>"
-
-#~ msgid "Accessibility"
-#~ msgstr "Accesibilidade"
-
-#~ msgid "Animations"
-#~ msgstr "Animacións"
-
-#~ msgid "Area zoom"
-#~ msgstr "Área de zoom"
-
-#~ msgid "Deformation:"
-#~ msgstr "Deformación:"
-
-#~ msgid "Desktop"
-#~ msgstr "Escritorio"
-
-#~ msgid "Edges"
-#~ msgstr "Límites"
-
-#~ msgid "Effects"
-#~ msgstr "Efectos"
-
-#~ msgid "Enable 3D Windows"
-#~ msgstr "Activar xanelas 3D"
-
-#~ msgid "Enable Blur"
-#~ msgstr "Activar desenfoque"
-
-#~ msgid "Enable Expo"
-#~ msgstr "Activar modo de exposición"
-
-#~ msgid "Enable Reflection"
-#~ msgstr "Activar reflexos"
-
-#~ msgid "Enable Scale"
-#~ msgstr "Activar escalado"
-
-#~ msgid "Enable Wobbly"
-#~ msgstr "Activar xanelas de xelatina"
-
-#~ msgid "Enable animations"
-#~ msgstr "Activar animacións"
-
-#~ msgid "Enable extra animations"
-#~ msgstr "Activar animacións adicionais"
-
-#~ msgid "Info"
-#~ msgstr "Información"
-
-#~ msgid "Opacity:"
-#~ msgstr "Opacidade:"
-
-#~ msgid "Profile:"
-#~ msgstr "Perfil:"
-
-#~ msgid "Screen zoom"
-#~ msgstr "Zoom de pantalla"
-
-#~ msgid "_Enable desktop effects"
-#~ msgstr "_Activar efectos de escritorio"
-
-#~ msgid "gtk-close"
-#~ msgstr "Pechar"
-
-#~ msgid "gtk-help"
-#~ msgstr "Axuda"

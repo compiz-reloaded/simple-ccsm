@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2009-08-09 17:39+0200\n"
 "Last-Translator: Brusnica P <pepino@pobox.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -97,132 +97,126 @@ msgstr "Implicitné"
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Jednoduchý Compiz Config Manažér Nastavení"
 
-msgid "Configure Compiz with CompizConfig"
-msgstr "Konfigurovať Compiz pomocou CompizConfig"
+msgid "_Enable desktop effects"
+msgstr "_Zapnúť efekty plochy"
 
-#~ msgid "<b>Accessibility</b>"
-#~ msgstr "<b>Prístupnosť</b>"
+msgid "Profile:"
+msgstr "Profil :"
 
-#~ msgid "<b>Additions</b>"
-#~ msgstr "<b>Prídavky</b>"
+msgid "<b>Description</b>"
+msgstr "<b>Popis</b>"
 
-#~ msgid "<b>Animations</b>"
-#~ msgstr "<b>Animácie</b>"
+msgid "<b>Animations</b>"
+msgstr "<b>Animácie</b>"
 
-#~ msgid "<b>Appearance</b>"
-#~ msgstr "<b>Vzhľad</b>"
+msgid "<b>Effects</b>"
+msgstr "<b>Efekty</b>"
 
-#~ msgid "<b>Area zoom</b>"
-#~ msgstr "<b>Oblasť priblíženia</b>"
+msgid "<b>Desktop</b>"
+msgstr "<b>Plocha</b>"
 
-#~ msgid "<b>Close Window</b>"
-#~ msgstr "<b>Zavrieť okno</b>"
+msgid "<b>Accessibility</b>"
+msgstr "<b>Prístupnosť</b>"
 
-#~ msgid "<b>Cube Effects</b>"
-#~ msgstr "<b>Efekty kocky</b>"
+msgid "Info"
+msgstr "Informácie"
 
-#~ msgid "<b>Description</b>"
-#~ msgstr "<b>Popis</b>"
+msgid "Enable animations"
+msgstr "Zapnúť animácie"
 
-#~ msgid "<b>Desktop columns</b>"
-#~ msgstr "<b>Stĺpce plochy</b>"
+msgid "Enable extra animations"
+msgstr "Zapnúť extra animácie"
 
-#~ msgid "<b>Desktop preview</b>"
-#~ msgstr "<b>Náhľad plochy</b>"
+msgid "<b>Open window</b>"
+msgstr "<b>Otvoriť okno</b>"
 
-#~ msgid "<b>Desktop rows</b>"
-#~ msgstr "<b>Riadky plochy</b>"
+msgid "<b>Close Window</b>"
+msgstr "<b>Zavrieť okno</b>"
 
-#~ msgid "<b>Desktop</b>"
-#~ msgstr "<b>Plocha</b>"
+msgid "<b>Focus window</b>"
+msgstr "<b>Zaostriť okno</b>"
 
-#~ msgid "<b>Effects</b>"
-#~ msgstr "<b>Efekty</b>"
+msgid "<b>Minimize window</b>"
+msgstr "<b>Minimalizovať okno</b>"
 
-#~ msgid "<b>Enable zoom</b>"
-#~ msgstr "<b>Zapnúť priblíženie</b>"
+msgid "Animations"
+msgstr "Animácie"
 
-#~ msgid "<b>Focus window</b>"
-#~ msgstr "<b>Zaostriť okno</b>"
+msgid "<b>Switcher</b>"
+msgstr "<b>Prepínač</b>"
 
-#~ msgid "<b>Minimize window</b>"
-#~ msgstr "<b>Minimalizovať okno</b>"
-
-#~ msgid "<b>Open window</b>"
-#~ msgstr "<b>Otvoriť okno</b>"
-
-#~ msgid "<b>Screen Edges</b>"
-#~ msgstr "<b>Okraje obrazovky</b>"
-
-#~ msgid "<b>Screen zoom</b>"
-#~ msgstr "<b>Priblíženie obrazovky</b>"
-
-#~ msgid "<b>Switcher</b>"
-#~ msgstr "<b>Prepínač</b>"
-
-#~ msgid "Accessibility"
-#~ msgstr "Prístupnosť"
-
-#~ msgid "Animations"
-#~ msgstr "Animácie"
-
-#~ msgid "Area zoom"
-#~ msgstr "Oblasť priblíženia"
-
-#~ msgid "Deformation:"
-#~ msgstr "Deformácia:"
-
-#~ msgid "Desktop"
-#~ msgstr "Plocha"
-
-#~ msgid "Edges"
-#~ msgstr "Okraje"
-
-#~ msgid "Effects"
-#~ msgstr "Efekty"
-
-#~ msgid "Enable 3D Windows"
-#~ msgstr "Zapnúť 3D okná"
-
-#~ msgid "Enable Blur"
-#~ msgstr "Zapnúť rozmazanie"
-
-#~ msgid "Enable Expo"
-#~ msgstr "Zapnúť výstavu"
-
-#~ msgid "Enable Reflection"
-#~ msgstr "Zapnúť zrkadlenie"
-
-#~ msgid "Enable Scale"
-#~ msgstr "Zapnúť rozsah"
-
-#~ msgid "Enable Wobbly"
-#~ msgstr "Zapnúť trasľavosť"
-
-#~ msgid "Enable animations"
-#~ msgstr "Zapnúť animácie"
-
-#~ msgid "Enable extra animations"
-#~ msgstr "Zapnúť extra animácie"
-
-#~ msgid "Info"
-#~ msgstr "Informácie"
+msgid "Deformation:"
+msgstr "Deformácia:"
 
 #, fuzzy
-#~ msgid "Opacity:"
-#~ msgstr "Nejasnosť"
+msgid "Opacity:"
+msgstr "Nejasnosť"
 
-#~ msgid "Profile:"
-#~ msgstr "Profil :"
+msgid "Enable Reflection"
+msgstr "Zapnúť zrkadlenie"
 
-#~ msgid "Screen zoom"
-#~ msgstr "Zväčšiť obrazovku"
+msgid "Enable 3D Windows"
+msgstr "Zapnúť 3D okná"
 
-#~ msgid "_Enable desktop effects"
-#~ msgstr "_Zapnúť efekty plochy"
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Efekty kocky</b>"
 
-#~ msgid "gtk-close"
-#~ msgstr "gtk-zavrieť"
+msgid "Enable Scale"
+msgstr "Zapnúť rozsah"
 
-#~ msgid "gtk-help"
-#~ msgstr "gtk-pomoc"
+msgid "Enable Expo"
+msgstr "Zapnúť výstavu"
+
+msgid "Enable Blur"
+msgstr "Zapnúť rozmazanie"
+
+msgid "Enable Wobbly"
+msgstr "Zapnúť trasľavosť"
+
+msgid "<b>Additions</b>"
+msgstr "<b>Prídavky</b>"
+
+msgid "Effects"
+msgstr "Efekty"
+
+msgid "<b>Appearance</b>"
+msgstr "<b>Vzhľad</b>"
+
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Stĺpce plochy</b>"
+
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Riadky plochy</b>"
+
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Náhľad plochy</b>"
+
+msgid "Desktop"
+msgstr "Plocha"
+
+msgid "Screen zoom"
+msgstr "Zväčšiť obrazovku"
+
+msgid "Area zoom"
+msgstr "Oblasť priblíženia"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Zapnúť priblíženie</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Priblíženie obrazovky</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Oblasť priblíženia</b>"
+
+msgid "Accessibility"
+msgstr "Prístupnosť"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Okraje obrazovky</b>"
+
+msgid "Edges"
+msgstr "Okraje"
+
+msgid "Configure Compiz with CompizConfig"
+msgstr "Konfigurovať Compiz pomocou CompizConfig"

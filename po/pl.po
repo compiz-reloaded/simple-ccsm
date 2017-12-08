@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2009-04-14 19:38+0200\n"
 "Last-Translator: Maciej Warnecki <maciekw5@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -98,134 +98,128 @@ msgstr "Domyślne"
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Menadżer ustawień Simple CompizConfig"
 
-msgid "Configure Compiz with CompizConfig"
-msgstr "Konfiguruj Compiza za pomocą CompizConfig"
+msgid "_Enable desktop effects"
+msgstr "_Włącz efekty pulpitu"
 
-#~ msgid "<b>Accessibility</b>"
-#~ msgstr "<b>Dostępność</b>"
+msgid "Profile:"
+msgstr "Profil:"
 
-#~ msgid "<b>Additions</b>"
-#~ msgstr "<b>Dodatki</b>"
+msgid "<b>Description</b>"
+msgstr "<b>Opis</b>"
 
-#~ msgid "<b>Animations</b>"
-#~ msgstr "<b>Animacje</b>"
+msgid "<b>Animations</b>"
+msgstr "<b>Animacje</b>"
 
-#~ msgid "<b>Appearance</b>"
-#~ msgstr "<b>Wygląd</b>"
+msgid "<b>Effects</b>"
+msgstr "<b>Efekty</b>"
 
-#~ msgid "<b>Area zoom</b>"
-#~ msgstr "<b>Przybliżenie obszaru</b>"
+msgid "<b>Desktop</b>"
+msgstr "<b>Pulpit</b>"
 
-#~ msgid "<b>Close Window</b>"
-#~ msgstr "<b>Zamknij Okno</b>"
+msgid "<b>Accessibility</b>"
+msgstr "<b>Dostępność</b>"
 
-#~ msgid "<b>Cube Effects</b>"
-#~ msgstr "<b>Efekty kostki</b>"
+msgid "Info"
+msgstr "Informacje"
 
-#~ msgid "<b>Description</b>"
-#~ msgstr "<b>Opis</b>"
+msgid "Enable animations"
+msgstr "Włącz animacje"
 
-#~ msgid "<b>Desktop columns</b>"
-#~ msgstr "<b>Kolumny pulpitu</b>"
+msgid "Enable extra animations"
+msgstr "Włącz dodatkowe animacje"
 
-#~ msgid "<b>Desktop preview</b>"
-#~ msgstr "<b>Podgląd pulpitu</b>"
+msgid "<b>Open window</b>"
+msgstr "<b>Otwórz okno</b>"
 
-#~ msgid "<b>Desktop rows</b>"
-#~ msgstr "<b>Wiersze pulpitu</b>"
+msgid "<b>Close Window</b>"
+msgstr "<b>Zamknij Okno</b>"
 
-#~ msgid "<b>Desktop</b>"
-#~ msgstr "<b>Pulpit</b>"
+msgid "<b>Focus window</b>"
+msgstr "<b>Wybranie Okna</b>"
 
-#~ msgid "<b>Effects</b>"
-#~ msgstr "<b>Efekty</b>"
+msgid "<b>Minimize window</b>"
+msgstr "<b>Minimalizuj okno</b>"
 
-#~ msgid "<b>Enable zoom</b>"
-#~ msgstr "<b>Włącz przybliżenie</b>"
+msgid "Animations"
+msgstr "Animacje"
 
-#~ msgid "<b>Focus window</b>"
-#~ msgstr "<b>Wybranie Okna</b>"
+msgid "<b>Switcher</b>"
+msgstr "<b>Przełącznik</b>"
 
-#~ msgid "<b>Minimize window</b>"
-#~ msgstr "<b>Minimalizuj okno</b>"
+msgid "Deformation:"
+msgstr "Deformacja:"
 
-#~ msgid "<b>Open window</b>"
-#~ msgstr "<b>Otwórz okno</b>"
+msgid "Opacity:"
+msgstr "Nieprzezroczystość:"
 
-#~ msgid "<b>Screen Edges</b>"
-#~ msgstr "<b>Krawędzie ekranu</b>"
+msgid "Enable Reflection"
+msgstr "Włącz odbicia"
 
-#~ msgid "<b>Screen zoom</b>"
-#~ msgstr "<b>Przybliżenie ekranu</b>"
+msgid "Enable 3D Windows"
+msgstr "Włącz okna 3D"
 
-#~ msgid "<b>Switcher</b>"
-#~ msgstr "<b>Przełącznik</b>"
-
-#~ msgid "Accessibility"
-#~ msgstr "Dostępność"
-
-#~ msgid "Animations"
-#~ msgstr "Animacje"
-
-#~ msgid "Area zoom"
-#~ msgstr "Przybliżenie obszaru"
-
-#~ msgid "Deformation:"
-#~ msgstr "Deformacja:"
-
-#~ msgid "Desktop"
-#~ msgstr "Pulpit"
-
-#~ msgid "Edges"
-#~ msgstr "Krawędzie"
-
-#~ msgid "Effects"
-#~ msgstr "Efekty"
-
-#~ msgid "Enable 3D Windows"
-#~ msgstr "Włącz okna 3D"
-
-#~ msgid "Enable Blur"
-#~ msgstr "Włącz rozmycie"
-
-#~ msgid "Enable Expo"
-#~ msgstr "Włącz Expo"
-
-#~ msgid "Enable Reflection"
-#~ msgstr "Włącz odbicia"
+msgid "<b>Cube Effects</b>"
+msgstr "<b>Efekty kostki</b>"
 
 # 1)ta nazwa nie jest tak do konca szczesliwa, ale w koncu o to chodzi w tym pluginie
 #
 # 2) (późniejsze) Szybki Wybór i tak dużo lepsze niż Scale... Kiedyś ten plugin był tłumaczony jako Skaluj, to dopiero miało sens!
-#~ msgid "Enable Scale"
-#~ msgstr "Włącz Szybki Wybór okien"
+msgid "Enable Scale"
+msgstr "Włącz Szybki Wybór okien"
 
-#~ msgid "Enable Wobbly"
-#~ msgstr "Włącz drgające okna"
+msgid "Enable Expo"
+msgstr "Włącz Expo"
 
-#~ msgid "Enable animations"
-#~ msgstr "Włącz animacje"
+msgid "Enable Blur"
+msgstr "Włącz rozmycie"
 
-#~ msgid "Enable extra animations"
-#~ msgstr "Włącz dodatkowe animacje"
+msgid "Enable Wobbly"
+msgstr "Włącz drgające okna"
 
-#~ msgid "Info"
-#~ msgstr "Informacje"
+msgid "<b>Additions</b>"
+msgstr "<b>Dodatki</b>"
 
-#~ msgid "Opacity:"
-#~ msgstr "Nieprzezroczystość:"
+msgid "Effects"
+msgstr "Efekty"
 
-#~ msgid "Profile:"
-#~ msgstr "Profil:"
+msgid "<b>Appearance</b>"
+msgstr "<b>Wygląd</b>"
 
-#~ msgid "Screen zoom"
-#~ msgstr "Przybliżenie ekranu"
+msgid "<b>Desktop columns</b>"
+msgstr "<b>Kolumny pulpitu</b>"
 
-#~ msgid "_Enable desktop effects"
-#~ msgstr "_Włącz efekty pulpitu"
+msgid "<b>Desktop rows</b>"
+msgstr "<b>Wiersze pulpitu</b>"
 
-#~ msgid "gtk-close"
-#~ msgstr "gtk-zamknij"
+msgid "<b>Desktop preview</b>"
+msgstr "<b>Podgląd pulpitu</b>"
 
-#~ msgid "gtk-help"
-#~ msgstr "gtk-pomoc"
+msgid "Desktop"
+msgstr "Pulpit"
+
+msgid "Screen zoom"
+msgstr "Przybliżenie ekranu"
+
+msgid "Area zoom"
+msgstr "Przybliżenie obszaru"
+
+msgid "<b>Enable zoom</b>"
+msgstr "<b>Włącz przybliżenie</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>Przybliżenie ekranu</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>Przybliżenie obszaru</b>"
+
+msgid "Accessibility"
+msgstr "Dostępność"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>Krawędzie ekranu</b>"
+
+msgid "Edges"
+msgstr "Krawędzie"
+
+msgid "Configure Compiz with CompizConfig"
+msgstr "Konfiguruj Compiza za pomocą CompizConfig"

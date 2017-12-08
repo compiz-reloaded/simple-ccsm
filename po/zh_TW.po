@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
 "Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
-"POT-Creation-Date: 2017-05-04 15:31+0300\n"
+"POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2009-10-05 03:11+0200\n"
 "Last-Translator: Yichih Liu <liueigi@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) <zh_TW@li.org>\n"
@@ -93,107 +93,131 @@ msgstr "預設值"
 msgid "Simple CompizConfig Settings Manager"
 msgstr "Compiz簡易設定管理程式"
 
-msgid "Configure Compiz with CompizConfig"
+msgid "_Enable desktop effects"
 msgstr ""
 
-#~ msgid "<b>Accessibility</b>"
-#~ msgstr "<b>無障礙功能</b>"
+#, fuzzy
+msgid "Profile:"
+msgstr "設定檔"
 
-#~ msgid "<b>Additions</b>"
-#~ msgstr "<b>附加功能</b>"
+msgid "<b>Description</b>"
+msgstr "<b>描述</b>"
 
-#~ msgid "<b>Animations</b>"
-#~ msgstr "<b>動畫功能</b>"
+msgid "<b>Animations</b>"
+msgstr "<b>動畫功能</b>"
 
-#~ msgid "<b>Appearance</b>"
-#~ msgstr "<b>外觀功能</b>"
+msgid "<b>Effects</b>"
+msgstr "<b>特效</b>"
 
-#~ msgid "<b>Area zoom</b>"
-#~ msgstr "<b>區域縮放</b>"
+msgid "<b>Desktop</b>"
+msgstr "<b>桌面</b>"
 
-#~ msgid "<b>Close Window</b>"
-#~ msgstr "<b>關閉視窗</b>"
+msgid "<b>Accessibility</b>"
+msgstr "<b>無障礙功能</b>"
 
-#~ msgid "<b>Description</b>"
-#~ msgstr "<b>描述</b>"
+msgid "Info"
+msgstr "資訊"
 
-#~ msgid "<b>Desktop columns</b>"
-#~ msgstr "<b>桌面欄數</b>"
+msgid "Enable animations"
+msgstr "啟用動畫效果"
 
-#~ msgid "<b>Desktop preview</b>"
-#~ msgstr "<b>桌面預覽</b>"
+#, fuzzy
+msgid "Enable extra animations"
+msgstr "啟用動畫效果"
 
-#~ msgid "<b>Desktop rows</b>"
-#~ msgstr "<b>桌面行數</b>"
+msgid "<b>Open window</b>"
+msgstr "<b>開啟視窗</b>"
 
-#~ msgid "<b>Desktop</b>"
-#~ msgstr "<b>桌面</b>"
+msgid "<b>Close Window</b>"
+msgstr "<b>關閉視窗</b>"
 
-#~ msgid "<b>Effects</b>"
-#~ msgstr "<b>特效</b>"
+#, fuzzy
+msgid "<b>Focus window</b>"
+msgstr "<b>關閉視窗</b>"
 
-#~ msgid "<b>Enable zoom</b>"
-#~ msgstr "<b>啟用縮放</b>"
+msgid "<b>Minimize window</b>"
+msgstr "<b>最小化視窗</b>"
 
-#~ msgid "<b>Minimize window</b>"
-#~ msgstr "<b>最小化視窗</b>"
+msgid "Animations"
+msgstr "動畫功能"
 
-#~ msgid "<b>Open window</b>"
-#~ msgstr "<b>開啟視窗</b>"
+msgid "<b>Switcher</b>"
+msgstr "<b>視窗切換</b>"
 
-#~ msgid "<b>Screen Edges</b>"
-#~ msgstr "<b>顯示畫面邊界</b>"
+msgid "Deformation:"
+msgstr ""
 
-#~ msgid "<b>Screen zoom</b>"
-#~ msgstr "<b>顯示畫面縮放</b>"
+msgid "Opacity:"
+msgstr ""
 
-#~ msgid "<b>Switcher</b>"
-#~ msgstr "<b>視窗切換</b>"
+#, fuzzy
+msgid "Enable Reflection"
+msgstr "啟用動畫效果"
 
-#~ msgid "Accessibility"
-#~ msgstr "無障礙功能"
+#, fuzzy
+msgid "Enable 3D Windows"
+msgstr "啟用視窗布丁效果"
 
-#~ msgid "Animations"
-#~ msgstr "動畫功能"
+#, fuzzy
+msgid "<b>Cube Effects</b>"
+msgstr "<b>特效</b>"
 
-#~ msgid "Area zoom"
-#~ msgstr "區域縮放"
+msgid "Enable Scale"
+msgstr "啟用視窗總覽功能"
 
-#~ msgid "Desktop"
-#~ msgstr "桌面"
+msgid "Enable Expo"
+msgstr "啟用桌面總覽功能"
 
-#~ msgid "Edges"
-#~ msgstr "邊緣"
+msgid "Enable Blur"
+msgstr "啟用模糊效果功能"
 
-#~ msgid "Effects"
-#~ msgstr "特效"
+msgid "Enable Wobbly"
+msgstr "啟用視窗布丁效果"
 
-#~ msgid "Enable Blur"
-#~ msgstr "啟用模糊效果功能"
+msgid "<b>Additions</b>"
+msgstr "<b>附加功能</b>"
 
-#~ msgid "Enable Expo"
-#~ msgstr "啟用桌面總覽功能"
+msgid "Effects"
+msgstr "特效"
 
-#~ msgid "Enable Scale"
-#~ msgstr "啟用視窗總覽功能"
+msgid "<b>Appearance</b>"
+msgstr "<b>外觀功能</b>"
 
-#~ msgid "Enable Wobbly"
-#~ msgstr "啟用視窗布丁效果"
+msgid "<b>Desktop columns</b>"
+msgstr "<b>桌面欄數</b>"
 
-#~ msgid "Enable animations"
-#~ msgstr "啟用動畫效果"
+msgid "<b>Desktop rows</b>"
+msgstr "<b>桌面行數</b>"
 
-#~ msgid "Info"
-#~ msgstr "資訊"
+msgid "<b>Desktop preview</b>"
+msgstr "<b>桌面預覽</b>"
 
-#~ msgid "Profil:"
-#~ msgstr "設定檔"
+msgid "Desktop"
+msgstr "桌面"
 
-#~ msgid "Screen zoom"
-#~ msgstr "畫面縮放"
+msgid "Screen zoom"
+msgstr "畫面縮放"
 
-#~ msgid "gtk-close"
-#~ msgstr "gtk-close"
+msgid "Area zoom"
+msgstr "區域縮放"
 
-#~ msgid "gtk-help"
-#~ msgstr "gtk-求助"
+msgid "<b>Enable zoom</b>"
+msgstr "<b>啟用縮放</b>"
+
+msgid "<b>Screen zoom</b>"
+msgstr "<b>顯示畫面縮放</b>"
+
+msgid "<b>Area zoom</b>"
+msgstr "<b>區域縮放</b>"
+
+msgid "Accessibility"
+msgstr "無障礙功能"
+
+msgid "<b>Screen Edges</b>"
+msgstr "<b>顯示畫面邊界</b>"
+
+msgid "Edges"
+msgstr "邊緣"
+
+msgid "Configure Compiz with CompizConfig"
+msgstr ""
