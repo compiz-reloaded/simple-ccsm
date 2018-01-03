@@ -217,7 +217,7 @@ def OnCommandLine(application, cmdLine, context):
     options  = {"page": -1}
     page     = -1
 
-    if GLIB_VERSION >= (2, 62, 0):
+    if GLIB_VERSION >= (2, 42, 0):
         optionValues = cmdLine.get_options_dict()
         for option in options.keys():
             if optionValues.contains(option):
@@ -1488,7 +1488,7 @@ if __name__ == "__main__":
     except TypeError:
         application.register(None)
 
-    if GLIB_VERSION >= (2, 62, 0):
+    if GLIB_VERSION >= (2, 42, 0):
         application.add_main_option("page", b"p", GLib.OptionFlags.NONE,
                                     GLib.OptionArg.STRING,
                                     "Directly jump to page PAGE",
