@@ -201,7 +201,7 @@ setup (
         description      = "Simple CompizConfig Settings Manager",
         author           = "Patrick Niklaus",
         author_email     = "patrick.niklaus@student.kit.edu",
-        url              = "https://github.com/compiz-reloaded/simple-ccsm",
+        url              = "https://gitlab.com/compiz/simple-ccsm",
         license          = "GPLv2+",
         data_files       = data_files,
         packages         = [],

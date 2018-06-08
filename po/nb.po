@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: simple-ccsm\n"
-"Report-Msgid-Bugs-To: https://github.com/compiz-reloaded/simple-ccsm/issues\n"
+"Report-Msgid-Bugs-To: https://gitlab.com/compiz/simple-ccsm/issues\n"
 "POT-Creation-Date: 2017-12-09 01:20+0300\n"
 "PO-Revision-Date: 2008-06-10 22:51+0200\n"
 "Last-Translator: Markus Igeland <markusigeland@gmail.com>\n"
