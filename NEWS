@@ -1,3 +1,19 @@
+Release 0.8.16 (2018-11-11 Sorokin Alexei <sor.alexei@meowr.ru>)
+==================================================================
+COMPIZ-RELOADED
+
+Fix Compiz checking
+
+Fix some GTK+ deprecations
+
+Use GApplication for command line option parsing
+
+Prevent multiple instances using GtkApplication
+
+setup.py: Exit 1 for invalid arguments
+
+Update translations
+
 Release 0.8.14.1 (2017-04-20 Sorokin Alexei <sor.alexei@meowr.ru>)
 ==================================================================
 COMPIZ-RELOADED
